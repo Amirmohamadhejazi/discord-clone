@@ -1,0 +1,59 @@
+{
+    // vscode general
+    "scm.diffDecorationsIgnoreTrimWhitespace": "true",
+    "files.trimTrailingWhitespace": true,
+
+    // eslint extension options
+    "eslint.enable": true,
+    "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
+
+    // prettier extension setting
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.configPath": ".prettierrc.json",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+
+    // json formatter
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "cSpell.language": "en,fa",
+
+    "cSpell.words": [
+        "antd",
+        "Bakh",
+        "Bonyad",
+        "DOTP",
+        "esbenp",
+        "hookform",
+        "iranyekanweblightfanum",
+        "mantine",
+        "TAFAKOL",
+        "takafol",
+        "tanstack",
+        "unoptimized",
+        "yekan",
+        "zustand",
+        "حفوظ",
+        "کدملی",
+        "میشود",
+        "میکنم"
+    ]
+}
