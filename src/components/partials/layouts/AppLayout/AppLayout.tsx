@@ -1,10 +1,12 @@
 import React, { type ReactNode } from 'react'
 
+import { Sidebar } from './resources'
+
 const AppLayout = ({ children }: { children: ReactNode }) => {
     return (
         <div className='flex h-screen bg-cyan-200 text-white'>
             {/* Sidebar */}
-            <div className='w-[72px] bg-[#1e1f22]'></div>
+            <Sidebar />
 
             {/* Main Content */}
             <div className='flex-auto flex '>
