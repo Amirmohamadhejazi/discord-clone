@@ -17,9 +17,7 @@ const Sidebar = () => {
                     ></path>
                 </svg>
             </div>
-            <div className=' w-full px-4 py-2'>
-                <hr className='border-[#313237] border-[1.8px]' />
-            </div>
+            <hr className='w-10 my-2 border-[#313237] border-[1.8px]' />
         </div>
     )
 }
