@@ -2,10 +2,15 @@
     // vscode general
     "scm.diffDecorationsIgnoreTrimWhitespace": "true",
     "files.trimTrailingWhitespace": true,
+    "css.lint.unknownAtRules": "ignore",
+    "explorer.compactFolders": false,
 
     // eslint extension options
     "eslint.enable": true,
     "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
 
     // prettier extension setting
     "editor.formatOnSave": true,
@@ -22,9 +27,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "prettier.configPath": ".prettierrc.json",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
 
     // json formatter
     "[json]": {
@@ -37,23 +39,14 @@
     "cSpell.language": "en,fa",
 
     "cSpell.words": [
-        "antd",
-        "Bakh",
-        "Bonyad",
-        "DOTP",
+        "commitlint",
         "esbenp",
         "hookform",
-        "iranyekanweblightfanum",
         "mantine",
-        "TAFAKOL",
-        "takafol",
+        "svgr",
+        "tabler",
+        "tailwindcss",
         "tanstack",
-        "unoptimized",
-        "yekan",
-        "zustand",
-        "حفوظ",
-        "کدملی",
-        "میشود",
-        "میکنم"
+        "Zustand"
     ]
 }

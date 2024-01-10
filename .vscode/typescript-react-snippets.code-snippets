@@ -1,0 +1,44 @@
+{
+    "Console Log": {
+        "prefix": "cl",
+        "body": ["console.log($1);"]
+    },
+    "React useState": {
+        "prefix": "us",
+        "body": ["const [${1:example}, set${2:Example}] = useState($3)"]
+    },
+    "React useEffect": {
+        "prefix": "ue",
+        "body": ["useEffect(() => {", "  $1", "}, [$2]);"]
+    },
+    "React useCallback": {
+        "prefix": "ucb",
+        "body": ["useCallback(() => {", "  $1", "}, [$2]);"]
+    },
+    "React useMemo": {
+        "prefix": "umm",
+        "body": ["useMemo(() => {", "  $1", "}, [$2]);"]
+    },
+    "TSArrowFunctionComponentWithPropsNameExport": {
+        "key": "TSArrowFunctionComponentWithPropsNameExport",
+        "prefix": "afcwpne",
+        "body": [
+            "interface I$1Props {}",
+            "",
+            "const $1 = ({}: I$1Props) => {",
+            "  return <div>$1</div>",
+            "}",
+            "",
+            "export { $1 }"
+        ],
+        "description": "Creates a Arrow Function Component with ES7 module system and TypeScript interface as its props",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "TSArrowFunctionComponentWithoutPropsNameExport": {
+        "key": "TSArrowFunctionComponentWithoutPropsNameExport",
+        "prefix": "afcwopne",
+        "body": ["const $1 = () => {", "  return <div>$1</div>", "}", "", "export { $1 }"],
+        "description": "Creates a Arrow Function Component with ES7 module system",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    }
+}

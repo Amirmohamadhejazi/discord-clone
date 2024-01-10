@@ -1,5 +1,5 @@
 {
-    "name": "test",
+    "name": "advanced-nextjs-starter-kit",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -7,28 +7,41 @@
         "build": "next build",
         "start": "next start",
         "lint": "eslint ./src --max-warnings=0",
-        "prettier": "prettier --write ./src",
+        "prettier": "prettier --write .",
         "prepare": "husky install"
     },
     "dependencies": {
-        "@commitlint/config-conventional": "^18.4.4",
-        "commitlint": "^18.4.4",
-        "lint": "^0.8.19",
-        "next": "14.0.4",
-        "prettier": "^3.1.1",
-        "react": "^18",
-        "react-dom": "^18"
+        "@tabler/icons-react": "^2.44.0",
+        "@tanstack/react-query": "^5.14.2",
+        "@tanstack/react-query-devtools": "^5.14.5",
+        "axios": "^1.6.2",
+        "cookies-next": "^4.1.0",
+        "next": "14.0.3",
+        "next-intl": "^3.4.0",
+        "next-query-params": "^5.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "use-query-params": "^2.2.1"
     },
     "devDependencies": {
-        "@types/node": "^20",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "autoprefixer": "^10.0.1",
+        "@commitlint/cli": "^18.4.3",
+        "@commitlint/config-conventional": "^18.4.3",
+        "@svgr/webpack": "^8.1.0",
+        "@types/node": "^20.10.5",
+        "@types/qs": "^6.9.11",
+        "@types/react": "^18.2.45",
+        "@types/react-dom": "^18.2.18",
+        "@typescript-eslint/eslint-plugin": "^6.15.0",
+        "autoprefixer": "^10.4.16",
         "eslint": "^8.56.0",
-        "eslint-config-next": "14.0.4",
+        "eslint-config-next": "14.0.3",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-simple-import-sort": "^10.0.0",
         "husky": "^8.0.3",
-        "postcss": "^8",
-        "tailwindcss": "^3.3.0",
-        "typescript": "^5"
+        "postcss": "^8.4.32",
+        "prettier": "^3.1.1",
+        "qs": "^6.11.2",
+        "tailwindcss": "^3.4.0",
+        "typescript": "^5.3.3"
     }
 }

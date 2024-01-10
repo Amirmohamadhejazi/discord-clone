@@ -1,0 +1,7 @@
+/* Components */
+
+/* Vendors */
+@import './vendors/tailwind.css';
+
+/* Base */
+@import './base/base.css';
