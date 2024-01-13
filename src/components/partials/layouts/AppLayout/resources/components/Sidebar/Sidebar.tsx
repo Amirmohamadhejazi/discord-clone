@@ -22,7 +22,7 @@ const Sidebar = () => {
                         <div className=' cursor-pointer relative group'>
                             <div className='flex items-center justify-center w-[48px] h-[48px] rounded-full hover:rounded-xl overflow-hidden bg-[#313338] '>
                                 {items.icon ? (
-                                    <img src={items.icon} className='text-white' alt={items.icon} />
+                                    <img src={items.icon} alt={items.icon} />
                                 ) : (
                                     <FaDiscord className='text-3xl' />
                                 )}

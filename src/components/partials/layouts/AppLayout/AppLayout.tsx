@@ -1,6 +1,6 @@
-import React, { type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 
-import { Sidebar } from './resources'
+import { InternalSidebar, Sidebar } from './resources'
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
     return (
@@ -10,7 +10,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
 
             {/* Main Content */}
             <div className='flex-auto flex '>
-                <div className='w-60 bg-[#2b2d31] '></div>
+                <InternalSidebar />
                 <div className='flex-auto bg-[#313338]'>{children}</div>
             </div>
         </div>
