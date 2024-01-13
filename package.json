@@ -11,6 +11,9 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "@mantine/core": "^7.4.1",
+        "@mantine/hooks": "^7.4.1",
+        "@mantine/modals": "^7.4.1",
         "@tabler/icons-react": "^2.44.0",
         "@tanstack/react-query": "^5.14.2",
         "@tanstack/react-query-devtools": "^5.14.5",
@@ -21,6 +24,7 @@
         "next-query-params": "^5.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-icons": "^5.0.1",
         "use-query-params": "^2.2.1"
     },
     "devDependencies": {
