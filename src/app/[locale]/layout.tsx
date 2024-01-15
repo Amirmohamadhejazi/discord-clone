@@ -10,7 +10,7 @@ import { LOCALES } from '@core/configs/i18n'
 import '@styles/globals.css'
 
 export const metadata: Metadata = {
-    title: 'discord',
+    title: 'discord clone',
     description: 'discord clone'
 }
 

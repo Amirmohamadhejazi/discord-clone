@@ -22,7 +22,7 @@ const InternalSidebar = () => {
                             href={`/${itemsMe.href}`}
                             className={`px-[8px] ${
                                 path === `/${itemsMe.href}` && 'bg-[#404249]'
-                            }  text-white rounded-md flex grow`}
+                            }   rounded-md flex grow`}
                             key={itemsMe.id}
                         >
                             <div className='flex items-center gap-3 '>

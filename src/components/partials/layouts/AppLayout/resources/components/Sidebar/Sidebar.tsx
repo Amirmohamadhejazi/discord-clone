@@ -20,11 +20,15 @@ const Sidebar = () => {
                         key={items.id}
                     >
                         <div className=' cursor-pointer relative group'>
-                            <div className='flex items-center justify-center w-[48px] h-[48px] rounded-full hover:rounded-xl overflow-hidden bg-[#313338] '>
+                            <div
+                                className={`flex items-center duration-500 justify-center w-[48px] h-[48px] rounded-full hover:rounded-xl overflow-hidden ${
+                                    sidebarState === 'me' ? 'bg-[#5865f2]' : ' bg-[#313338]'
+                                }`}
+                            >
                                 {items.icon ? (
                                     <img src={items.icon} alt={items.icon} />
                                 ) : (
-                                    <FaDiscord className='text-3xl' />
+                                    <FaDiscord className='text-3xl  text-white' />
                                 )}
                             </div>
                             <div
