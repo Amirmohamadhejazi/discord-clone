@@ -121,7 +121,13 @@ const HomeTemplate = () => {
                 </div>
             </div>
             <div className='flex flex-1  '>
-                <div className='flex-1 p-2  '></div>
+                <div className='flex-1 p-2  text-center'>
+                    {tab === 1 && <span className='w-full text-center'>online</span>}
+                    {tab === 2 && <span className='w-full text-center'>All</span>}
+                    {tab === 3 && <span className='w-full text-center'>pending</span>}
+                    {tab === 4 && <span className='w-full text-center'>Suggestions</span>}
+                    {tab === 5 && <span className='w-full text-center'>Blocked</span>}
+                </div>
                 <div className='flex flex-col w-[360px] py-[16px] px-[8px] shadow-md p-2  '>
                     <span className='text-xl font-semibold text-white my-[16mx] px-[8px]'>Active Now</span>
                     <div className='py-[16px]  '>
