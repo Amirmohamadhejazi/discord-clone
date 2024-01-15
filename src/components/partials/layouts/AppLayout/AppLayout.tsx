@@ -4,7 +4,7 @@ import { InternalSidebar, Sidebar } from './resources'
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <div className='flex h-screen bg-cyan-200 text-[#949ba4]'>
+        <div className='flex h-screen bg-cyan-200 text-[#949ba4] select-none'>
             {/* Sidebar */}
             <Sidebar />
 

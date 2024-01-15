@@ -20,7 +20,7 @@ const InternalSidebar = () => {
                     {static_data_me.map((itemsMe) => (
                         <Link
                             href={`/${itemsMe.href}`}
-                            className={`px-[8px]  duration-300 ${
+                            className={`px-[8px] duration-300 ${
                                 path === `/${itemsMe.href}`
                                     ? 'bg-[#404249] text-white'
                                     : 'hover:bg-[#35373c] hover:text-[#dbdee1]'

@@ -11,7 +11,7 @@ const Sidebar = () => {
     const sidebarState = path.split('/')[2]
 
     return (
-        <div className='w-[72px] flex flex-col items-center justify-start py-5 bg-[#1e1f22]'>
+        <div className='w-[72px] flex flex-col items-center justify-start py-3 bg-[#1e1f22]'>
             <div className='flex flex-col gap-2'>
                 {static_data.map((items, index) => (
                     <Link
@@ -23,7 +23,7 @@ const Sidebar = () => {
                             <div
                                 className={`flex items-center justify-center w-[48px] h-[48px]  overflow-hidden ${
                                     sidebarState === 'me' ? 'bg-[#5865f2]' : ' bg-[#313338]'
-                                } ${sidebarState === items.id ? ' rounded-xl  ' : 'rounded-full hover:rounded-xl'}`}
+                                } ${sidebarState === items.id ? ' rounded-2xl  ' : 'rounded-full hover:rounded-2xl'}`}
                             >
                                 {items.icon ? (
                                     <img src={items.icon} alt={items.icon} />
