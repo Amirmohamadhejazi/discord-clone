@@ -21,9 +21,9 @@ const Sidebar = () => {
                     >
                         <div className=' cursor-pointer relative group'>
                             <div
-                                className={`flex items-center duration-500 justify-center w-[48px] h-[48px] rounded-full hover:rounded-xl overflow-hidden ${
+                                className={`flex items-center justify-center w-[48px] h-[48px]  overflow-hidden ${
                                     sidebarState === 'me' ? 'bg-[#5865f2]' : ' bg-[#313338]'
-                                }`}
+                                } ${sidebarState === items.id ? ' rounded-xl  ' : 'rounded-full hover:rounded-xl'}`}
                             >
                                 {items.icon ? (
                                     <img src={items.icon} alt={items.icon} />
