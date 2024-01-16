@@ -123,9 +123,9 @@ const HomeTemplate = () => {
                         >
                             <path
                                 fill='currentColor'
-                                fill-rule='evenodd'
+                                fillRule='evenodd'
                                 d='M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5ZM4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v6c0 .83-.67 1.5-1.5 1.5h-2.65c-.5 0-.85.5-.85 1a3 3 0 1 1-6 0c0-.5-.35-1-.85-1H5.5A1.5 1.5 0 0 1 4 11.5v-6Z'
-                                clip-rule='evenodd'
+                                clipRule='evenodd'
                                 className=''
                             ></path>
                         </svg>
@@ -146,9 +146,9 @@ const HomeTemplate = () => {
                             <circle cx='12' cy='12' r='10' fill='transparent' className=''></circle>
                             <path
                                 fill='currentColor'
-                                fill-rule='evenodd'
+                                fillRule='evenodd'
                                 d='M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm-.28-16c-.98 0-1.81.47-2.27 1.14A1 1 0 1 1 7.8 7.01 4.73 4.73 0 0 1 11.72 5c2.5 0 4.65 1.88 4.65 4.38 0 2.1-1.54 3.77-3.52 4.24l.14 1a1 1 0 0 1-1.98.27l-.28-2a1 1 0 0 1 .99-1.14c1.54 0 2.65-1.14 2.65-2.38 0-1.23-1.1-2.37-2.65-2.37ZM13 17.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0Z'
-                                clip-rule='evenodd'
+                                clipRule='evenodd'
                                 className=''
                             ></path>
                         </svg>
@@ -157,12 +157,6 @@ const HomeTemplate = () => {
             </div>
             <div className='flex flex-1  '>
                 <div className='flex-1 ml-[30px] mr-[20px] pt-5'>
-                    {/* {tab === 1 && <span className='w-full text-center'>online</span>}
-                    {tab === 2 && <span className='w-full text-center'>All</span>}
-                    {tab === 3 && <span className='w-full text-center'>pending</span>}
-                    {tab === 4 && <span className='w-full text-center'>Suggestions</span>}
-                    {tab === 5 && <span className='w-full text-center'>Blocked</span>} */}
-
                     <div className='flex flex-col text-sm gap-y-1 '>
                         <span className='font-semibold'>
                             {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
@@ -235,9 +229,9 @@ const HomeTemplate = () => {
                                                 >
                                                     <path
                                                         fill='currentColor'
-                                                        fill-rule='evenodd'
+                                                        fillRule='evenodd'
                                                         d='M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z'
-                                                        clip-rule='evenodd'
+                                                        clipRule='evenodd'
                                                         className=''
                                                     ></path>
                                                 </svg>

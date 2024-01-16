@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CgHashtag } from 'react-icons/cg'
@@ -15,6 +16,14 @@ const InternalSidebar = () => {
     const path = usePathname()
     const sidebarState = path.split('/')
     const dataSidebar = static_data.find((items) => items.id === sidebarState[2])
+    const [divHeight, setDivHeight] = useState(0)
+
+    useEffect(() => {
+        if (typeof document !== 'undefined') {
+            const height = document.getElementById('heightOverflow')?.offsetHeight || 0
+            setDivHeight(height)
+        }
+    }, [])
 
     return (
         <div className='w-60 h-full flex flex-col gap-2 bg-[#2b2d31] text-[#80848e] p-[8px]'>
@@ -68,13 +77,20 @@ const InternalSidebar = () => {
                 <span className='text-xs'>Direct Messages</span>
                 <span>+</span>
             </div>
-            <div className='flex flex-col gap-y-2 max-h-[calc(100vh-248px)] p-1   overflow-auto'>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10].map((items) => (
-                    <div className='flex items-center justify-center gap-x-2' key={items}>
-                        <div className='bg-[#313338] p-4 rounded-full ' />
-                        <div className='flex-1 h-2/3 bg-[#313338]  rounded-md'></div>
-                    </div>
-                ))}
+            <div
+                className='flex flex-col gap-y-2 grow p-1  overflow-auto'
+                id='heightOverflow'
+                style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
+            >
+                {divHeight !== 0 &&
+                    [0, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map(
+                        (items, index) => (
+                            <div className='flex items-center justify-center gap-x-2' key={index}>
+                                <div className='bg-[#313338] p-4 rounded-full ' />
+                                <div className='flex-1 h-2/3 bg-[#313338]  rounded-md'></div>
+                            </div>
+                        )
+                    )}
             </div>
             <div className='w-full flex justify-between'>
                 <div className='flex items-center gap-1'>
