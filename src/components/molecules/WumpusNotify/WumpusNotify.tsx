@@ -1,20 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import { type FC } from 'react'
 
-import { type TCriticalAnyType } from '@core/types/common/critical-any'
+import { wumpus1Img, wumpus2Img, wumpus3Img, wumpus4Img } from '@public/images'
 
-import { wumpus1Img } from '@public/images'
-
-const WumpusNotify: FC<{ image: TCriticalAnyType; notification: string }> = ({
-    image = wumpus1Img.src,
-    notification = '# ... .. .'
-}) => {
-    console.log(image, notification)
+const WumpusNotify: FC<{ notification?: string | null; type: number | null }> = ({ type = 1, notification }) => {
+    const imageWumpus =
+        type === 1
+            ? { image: wumpus1Img.src, text: "No one's around to play with Wumpus." }
+            : type === 2
+              ? { image: wumpus2Img.src, text: 'Wumpus is waiting on friends. You don’t have to though!' }
+              : type === 3
+                ? { image: wumpus3Img.src, text: "There are no pending friend requests. Here's Wumpus for now." }
+                : { image: wumpus4Img.src, text: "You can't unblock the Wumpus." }
 
     return (
-        <div className='flex flex-col text-center gap-3 select-none'>
-            <img src={image.src} alt='' />
-            <span className=' font-semibold'>{notification}</span>
+        <div className='flex flex-col items-center text-center gap-3 select-none'>
+            <img src={imageWumpus.image} className='w-full h-full object-cover' alt='' />
+            <span className=' font-semibold'>{notification || imageWumpus.text}</span>
         </div>
     )
 }
