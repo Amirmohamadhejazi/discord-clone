@@ -1,4 +1,5 @@
 import avatar1Img from './avatar1.webp'
+import avatarAmirmohamad from './avatarAmirmohamad.webp'
 import avatarBardia from './avatarBardia.webp'
 import avatarDany from './avatarDany.webp'
 import avatarErfan from './avatarErfan.webp'
@@ -27,6 +28,7 @@ export {
     logo,
     BrokenImg,
     dis1Img,
+    avatarAmirmohamad,
     dis2Img,
     dis3Img,
     dis4Img,

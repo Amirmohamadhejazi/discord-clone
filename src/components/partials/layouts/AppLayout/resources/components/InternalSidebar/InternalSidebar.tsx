@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -6,6 +7,8 @@ import { FaUserPlus } from 'react-icons/fa6'
 import { IoMdSettings } from 'react-icons/io'
 import { PiLockKeyFill } from 'react-icons/pi'
 import { static_data_me } from '.'
+
+import { avatarAmirmohamad, onlineStatus } from '@public/images'
 
 import { static_data } from '../Sidebar/resources/constants/static-data'
 const InternalSidebar = () => {
@@ -61,26 +64,39 @@ const InternalSidebar = () => {
                     <h1 className='text-lg font-bold'>Channel Id is Incorrect!</h1>
                 </div>
             )}
-            {/* <div className='flex grow flex-col px-[10px] '> */}
             <div className='flex items-center justify-between'>
                 <span className='text-xs'>Direct Messages</span>
                 <span>+</span>
             </div>
-            {/* <div className='flex flex-col gap-y-2 max-h-[450px] overflow-auto'>
-
-                </div> */}
             <div className='flex flex-col gap-y-2 grow p-1   overflow-auto'>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map((items) => (
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((items) => (
                     <div className='flex items-center justify-center gap-x-2' key={items}>
                         <div className='bg-[#313338] p-4 rounded-full ' />
                         <div className='flex-1 h-2/3 bg-[#313338]  rounded-md'></div>
                     </div>
                 ))}
             </div>
-            <div className='flex gap-2 '>
-                <span>seeting</span>
+            <div className='w-full flex justify-between'>
+                <div className='flex items-center gap-1'>
+                    <div className='w-9 h-9 relative'>
+                        <img src={avatarAmirmohamad.src} className='w-full h-full rounded-full object-cover' alt='' />
+                        <div className='absolute -right-1 -bottom-0   '>
+                            <div className='w-4 h-4 bg-[#313338] flex items-center justify-center rounded-full'>
+                                <img src={onlineStatus.src} className='w-full h-full mb-1 object-cover' alt='' />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='flex flex-col justify-center text-xs'>
+                        <span>Amirmohamad</span>
+                        <span>amirmohamad</span>
+                    </div>
+                </div>
+                <div className='flex gap-1'>
+                    <span>1</span>
+                    <span>1</span>
+                    <span>1</span>
+                </div>
             </div>
-            {/* </div> */}
         </div>
     )
 }
