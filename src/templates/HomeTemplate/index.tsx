@@ -43,7 +43,7 @@ const HomeTemplate = () => {
     }
 
     return (
-        <div className='flex flex-col grow h-full '>
+        <div className='flex flex-col grow h-full'>
             <div className='w-full whitespace-nowrap flex-wrap  flex items-center justify-between shadow-md p-[4px]'>
                 <div className=' flex items-center  flex-wrap gap-2 sm:gap-7   relative'>
                     <div className='flex items-center  gap-3 '>
@@ -54,8 +54,8 @@ const HomeTemplate = () => {
                             <div
                                 className={`px-2 py-1 duration-300 text-sm font-semibold cursor-pointer ${
                                     tab === itemStep.id
-                                        ? 'bg-[#43444b] text-white'
-                                        : 'hover:bg-[#393c41] hover:text-[#dbdee1]'
+                                        ? ' bg-general-gray-600 text-white'
+                                        : 'hover:bg-general-gray-400 hover:text-general-gray-950'
                                 }`}
                                 key={itemStep.id}
                                 onClick={() => setTab(itemStep.id)}
@@ -147,10 +147,9 @@ const HomeTemplate = () => {
                                     {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
                                     {dataMembersHandler()?.length}
                                 </span>
-                                {/* <hr className='border-[#46474e] border-[1.5px]' /> */}
                                 {dataMembersHandler().map((itemSocial: TCriticalAnyType) => (
-                                    <div className='border-t border-[#3f4147] ' key={itemSocial.useId}>
-                                        <div className='flex items-center justify-between hover:bg-[#393c41] px-2 py-2 rounded-lg cursor-pointer duration-300 group'>
+                                    <div className='border-t border-general-border ' key={itemSocial.useId}>
+                                        <div className='flex items-center justify-between hover:bg-general-gray-400 px-2 py-2 rounded-lg cursor-pointer duration-300 group'>
                                             <div className='flex items-center gap-x-3'>
                                                 <div className='w-9 h-9 relative'>
                                                     <img
@@ -159,7 +158,7 @@ const HomeTemplate = () => {
                                                         alt=''
                                                     />
                                                     <div className='absolute -right-1 -bottom-0   '>
-                                                        <div className='w-4 h-4 bg-[#313338] flex items-center justify-center rounded-full'>
+                                                        <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
                                                             <img
                                                                 src={statusHandler(itemSocial.status)}
                                                                 className='w-full h-full mb-1 object-cover'
@@ -178,8 +177,8 @@ const HomeTemplate = () => {
                                                     <span className='text-xs'>{itemSocial.status}</span>
                                                 </div>
                                             </div>
-                                            <div className='flex gap-x-2 text-[#b5bac1] *:hover:text-white'>
-                                                <div className='p-2 bg-[#2b2d31] rounded-full'>
+                                            <div className='flex gap-x-2 text-general-gray-900 *:hover:text-white'>
+                                                <div className='p-2  bg-general-gray-50 rounded-full'>
                                                     <svg
                                                         className='icon__7215c'
                                                         aria-hidden='true'
@@ -197,7 +196,7 @@ const HomeTemplate = () => {
                                                         ></path>
                                                     </svg>
                                                 </div>
-                                                <div className='p-2 bg-[#2b2d31] rounded-full'>
+                                                <div className='p-2  bg-general-gray-50 rounded-full'>
                                                     <svg
                                                         className='icon__7215c'
                                                         aria-hidden='true'
@@ -239,7 +238,7 @@ const HomeTemplate = () => {
                                 it here!
                             </span>
                         </div>
-                        {/* <div className='flex items-center gap-2 bg-[#2b2d31] border border-gray-700 rounded-xl px-1 py-8 animate-pulse'>
+                        {/* <div className='flex items-center gap-2  bg-general-gray-50 border border-gray-700 rounded-xl px-1 py-8 animate-pulse'>
                             <div className='p-6 rounded-full bg-gray-900'></div>
                             <span>... .. .</span>
                         </div> */}

@@ -10,7 +10,7 @@ const Sidebar = () => {
     const path = usePathname()
     const sidebarState = path.split('/')[2]
     return (
-        <div className='w-[72px] h-full flex flex-col items-center justify-start py-3 bg-[#1e1f22]'>
+        <div className='w-[72px] h-full flex flex-col items-center justify-start py-3  bg-general-gray'>
             <div className='flex flex-col gap-2'>
                 {static_data.map((items, index) => (
                     <Link
@@ -21,7 +21,7 @@ const Sidebar = () => {
                         <div className=' cursor-pointer relative group'>
                             <div
                                 className={`flex items-center justify-center w-[48px] h-[48px]  overflow-hidden ${
-                                    sidebarState === 'me' ? 'bg-[#5865f2]' : ' bg-[#313338]'
+                                    sidebarState === 'me' ? 'bg-general-blue' : '  bg-general-gray-100'
                                 } ${sidebarState === items.id ? ' rounded-2xl  ' : 'rounded-full hover:rounded-2xl'}`}
                             >
                                 {items.icon ? (
@@ -40,7 +40,7 @@ const Sidebar = () => {
                                 <div className='h-full w-full bg-white rounded-r-2xl rounded-l-none' />
                             </div>
                         </div>
-                        {index === 0 && <hr className='w-10 my-2 border-[#313237] border-[1.8px]' />}
+                        {index === 0 && <hr className='w-10 my-2 border-general-border border-[1.8px]' />}
                     </Link>
                 ))}
             </div>

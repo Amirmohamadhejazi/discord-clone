@@ -27,7 +27,7 @@ const InternalSidebar = () => {
     }, [])
 
     return (
-        <div className='w-60 h-full flex flex-col gap-2 bg-[#2b2d31] text-[#80848e] '>
+        <div className='w-60 h-full flex flex-col gap-2  bg-general-gray-50 text-general-gray-700 '>
             <div className='px-[8px] pt-[8px]'>
                 {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
                     <div className='flex flex-col   gap-2 font-semibold *:py-2'>
@@ -36,8 +36,8 @@ const InternalSidebar = () => {
                                 href={`/${itemsMe.href}`}
                                 className={`px-[8px] duration-300 ${
                                     path === `/${itemsMe.href}`
-                                        ? 'bg-[#404249] text-white'
-                                        : 'hover:bg-[#35373c] hover:text-[#dbdee1]'
+                                        ? ' bg-general-gray-500 text-white'
+                                        : 'hover:bg-general-gray-200 hover:text-general-gray-950'
                                 }   rounded-md flex grow`}
                                 key={itemsMe.id}
                             >
@@ -53,7 +53,7 @@ const InternalSidebar = () => {
                         <Link
                             key={itemsChannel.href}
                             href={`/channels/${sidebarState[2]}/${itemsChannel.href}`}
-                            className='flex items-center justify-between font-bold hover:bg-[#404249] px-[8px] py-[6px] rounded-md cursor-pointer'
+                            className='flex items-center justify-between font-bold hover:bg-general-gray-500 px-[8px] py-[6px] rounded-md cursor-pointer'
                         >
                             <div className='flex items-center gap-1 '>
                                 <div className='relative '>
@@ -89,17 +89,17 @@ const InternalSidebar = () => {
                     [0, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map(
                         (items, index) => (
                             <div className='flex items-center justify-center gap-x-2' key={index}>
-                                <div className='bg-[#313338] p-4 rounded-full ' />
-                                <div className='flex-1 h-2/3 bg-[#313338]  rounded-md'></div>
+                                <div className=' bg-general-gray-100 p-4 rounded-full ' />
+                                <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'></div>
                             </div>
                         )
                     )}
             </div>
-            <div className='w-full flex justify-between bg-[#232428] p-[8px] group'>
+            <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group'>
                 <div className='w-9 h-9 relative'>
                     <img src={avatarAmirmohamad.src} className='w-full h-full rounded-full object-cover' alt='' />
                     <div className='absolute -right-1 -bottom-0   '>
-                        <div className='w-4 h-4 bg-[#313338] flex items-center justify-center rounded-full'>
+                        <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
                             <img src={onlineStatus.src} className='w-full h-full mb-1 object-cover' alt='' />
                         </div>
                     </div>

@@ -1,11 +1,203 @@
-export const tailwindColorPalette = {
-    // General Color: Text, Brand Color, Surface,border Colors
+const tailwindColorPalette = {
+    // #232428 #5865f2 #3f4147
     general: {
-        brand: '#002D80',
-        brandBackground: '#E6EFFF',
-        surface: '#F4F7FE',
-        white: '#FFFFFF',
-        border: '#F4F7FE',
-        darkBorder: '#E5E6EB'
+        gray: {
+            DEFAULT: '#1e1f22',
+            50: '#2b2d31',
+            100: '#313338',
+            200: '#35373c',
+            300: '#232428',
+            400: '#393c41',
+            500: '#404249',
+            600: ' #43444b',
+            700: ' #80848e',
+            800: '#949ba4',
+            900: '#b5bac1',
+            950: '#dbdee1'
+        },
+        blue: '#5865f2',
+        border: '#46474e'
+    },
+    //
+
+    // The Chart Color is Pie, Map, Area Chart “Col” Color
+    chart: {
+        green: '#14C9C9',
+        pink: '#C8A8F1',
+        orange: '#FF7A00',
+        blue: '#3491FA',
+        yellow: '#F7BA1E',
+        purple: '#722ED1'
+    },
+
+    // The Neutral Color is Your Text, Label, input Color
+    typography: {
+        DEFAULT: '#373737',
+        50: '#ebeaea',
+        100: '#d6d6d6',
+        150: '#c2c1c1',
+        200: '#adadac',
+        250: '#999898',
+        300: '#848383',
+        350: '#706E6E',
+        400: '#5b5a59',
+        450: '#474645',
+        500: '#2d2c2b',
+        550: '#282726',
+        600: '#232222',
+        650: '#1e1d1d',
+        700: '#191918',
+        750: '#141413',
+        800: '#0f0f0e',
+        850: '#0a0a0a',
+        900: '#050505'
+    },
+
+    // other colors
+    primary: {
+        DEFAULT: '#0051e6',
+        50: '#e6efff',
+        100: '#ccdeff',
+        150: '#b3ceff',
+        200: '#99BDFF',
+        250: '#669cff',
+        300: '#5a94ff',
+        350: '#4d8cff',
+        400: '#337bff',
+        450: '#196bff',
+        500: '#0051e6',
+        550: '#0048cc',
+        600: '#003fb3',
+        650: '#003699',
+        700: '#002d80',
+        750: '#002466',
+        800: '#001b4d',
+        850: '#001233',
+        900: '#000919'
+    },
+    secondary: {
+        DEFAULT: '#FFA500',
+        50: '#fff6e6',
+        100: '#ffedcc',
+        150: '#ffe4b3',
+        200: '#ffdb99',
+        250: '#ffd280',
+        300: '#ffc966',
+        350: '#ffc04d',
+        400: '#ffb733',
+        450: '#ffae19',
+        500: '#e69500',
+        550: '#cc8400',
+        600: '#b37300',
+        650: '#996300',
+        700: '#805300',
+        750: '#664200',
+        800: '#4d3200',
+        850: '#332100',
+        900: '#191000'
+    },
+    success: {
+        DEFAULT: '#00A86B',
+        50: '#e6f6f0',
+        100: '#cceee1',
+        150: '#b3e5d3',
+        200: '#99dcc4',
+        250: '#80d4b5',
+        300: '#66cba6',
+        350: '#4dc297',
+        400: '#33b989',
+        450: '#19b17a',
+        500: '#009760',
+        550: '#008656',
+        600: '#00764b',
+        650: '#006540',
+        700: '#005436',
+        750: '#00432b',
+        800: '#003220',
+        850: '#002215',
+        900: '#00110b'
+    },
+    error: {
+        DEFAULT: '#F53F3F',
+        50: '#f6e6ec',
+        100: '#eeccd8',
+        150: '#e5b3c5',
+        200: '#dc99b1',
+        250: '#d4809e',
+        300: '#cb668b',
+        350: '#c24d77',
+        400: '#b93364',
+        450: '#b11950',
+        500: '#970037',
+        550: '#860031',
+        600: '#76002b',
+        650: '#650025',
+        700: '#54001f',
+        750: '#430018',
+        800: '#320012',
+        850: '#22000c',
+        900: '#110006'
+    },
+
+    'light-blue': {
+        DEFAULT: '#e6efff',
+        100: '#fafcff',
+        200: '#f5f8ff',
+        300: '#f0f5ff',
+        400: '#ebf2ff',
+        500: '#e6efff',
+        600: '#e0ebff',
+        700: '#dbe8ff',
+        800: '#d6e5ff',
+        900: '#d1e1ff'
+    },
+    'light-peach': {
+        DEFAULT: '#fff6e6',
+        100: '#fffefd',
+        200: '#fffdfa',
+        300: '#fffcf8',
+        400: '#fffbf5',
+        500: '#fffbf3',
+        600: '#fffaf0',
+        700: '#fff9ee',
+        800: '#fff8eb',
+        900: '#fff7e9'
+    },
+    'light-red': {
+        DEFAULT: '#f6e6ec',
+        100: '#fefdfd',
+        200: '#fdfafb',
+        300: '#fcf8f9',
+        400: '#fbf5f7',
+        500: '#fbf3f6',
+        600: '#faf0f4',
+        700: '#f9eef2',
+        800: '#f8ebf0',
+        900: '#f7e9ee'
+    },
+    'light-green': {
+        DEFAULT: '#e6f6f0',
+        100: '#fdfefe',
+        200: '#fafdfc',
+        300: '#f8fcfb',
+        400: '#f5fbf9',
+        500: '#f3fbf8',
+        600: '#f0faf6',
+        700: '#eef9f5',
+        800: '#ebf8f3',
+        900: '#e9f7f2'
+    },
+    'light-gray': {
+        DEFAULT: '#ebeaea',
+        100: '#fdfdfd',
+        200: '#fbfbfb',
+        300: '#f9f9f9',
+        400: '#f7f7f7',
+        500: '#f5f5f5',
+        600: '#f3f2f2',
+        700: '#f1f0f0',
+        800: '#efeeee',
+        900: '#edecec'
     }
 }
+export default tailwindColorPalette

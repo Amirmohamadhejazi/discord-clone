@@ -1,3 +1,3 @@
-import { tailwindColorPalette } from './tailwindColorPalette'
+import tailwindColorPalette from './tailwindColorPalette'
 
 export { tailwindColorPalette }

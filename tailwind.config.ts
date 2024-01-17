@@ -1,8 +1,8 @@
-import type { Config } from 'tailwindcss'
+/** @type {import('tailwindcss').Config} */
 
-import { tailwindColorPalette } from '@core/utils/colors/tailwind-color-palette'
+import { tailwindColorPalette } from './src/core/utils/colors/tailwind-color-palette'
 
-const config: Config = {
+const config = {
     important: true,
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
@@ -14,15 +14,7 @@ const config: Config = {
             '2xl': '1440px'
         },
         extend: {
-            colors: tailwindColorPalette,
-            boxShadow: {
-                sm: '-2px 2px 15px -1px rgba(113, 113, 113, 0.12)',
-                md: '-2px 2px 20px -1px rgba(113, 113, 113, 0.20)',
-                lg: '0px 4px 6px -2px rgba(16, 24, 40, 0.05), 0px 12px 16px -4px rgba(16, 24, 40, 0.10)'
-            },
-            fontFamily: {
-                'iran-yekan': ['var(--font-iran-yekan)']
-            }
+            colors: tailwindColorPalette
         }
     },
     plugins: []

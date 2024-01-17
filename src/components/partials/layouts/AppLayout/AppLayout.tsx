@@ -4,7 +4,7 @@ import { InternalSidebar, Sidebar } from './resources'
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <div className='flex min-h-screen text-[#949ba4] select-none'>
+        <div className='flex min-h-screen text-general-gray-800 select-none'>
             {/* Sidebar */}
             <div className='hidden md:block'>
                 <Sidebar />
@@ -14,7 +14,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
                 <div className='h-full hidden xl:block'>
                     <InternalSidebar />
                 </div>
-                <div className='flex-auto bg-[#313338]'>{children}</div>
+                <div className='flex-auto  bg-general-gray-100'>{children}</div>
             </div>
         </div>
     )
