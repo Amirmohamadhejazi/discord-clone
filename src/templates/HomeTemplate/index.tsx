@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
@@ -178,7 +179,10 @@ const HomeTemplate = () => {
                                                 </div>
                                             </div>
                                             <div className='flex gap-x-2 text-general-gray-900 *:hover:text-white'>
-                                                <div className='p-2  bg-general-gray-50 rounded-full'>
+                                                <Link
+                                                    href={`me/${itemSocial.useId}`}
+                                                    className='p-2  bg-general-gray-50 rounded-full'
+                                                >
                                                     <svg
                                                         className='icon__7215c'
                                                         aria-hidden='true'
@@ -195,7 +199,7 @@ const HomeTemplate = () => {
                                                             className=''
                                                         ></path>
                                                     </svg>
-                                                </div>
+                                                </Link>
                                                 <div className='p-2  bg-general-gray-50 rounded-full'>
                                                     <svg
                                                         className='icon__7215c'
