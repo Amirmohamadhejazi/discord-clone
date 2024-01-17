@@ -6,7 +6,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
     return (
         <div className='flex min-h-screen text-[#949ba4] select-none'>
             {/* Sidebar */}
-            <div className='hidden md:block bg-red-200'>
+            <div className='hidden md:block'>
                 <Sidebar />
             </div>
             {/* Main Content */}

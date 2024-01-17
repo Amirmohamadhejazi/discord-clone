@@ -9,7 +9,6 @@ import { static_data } from './resources/constants/static-data'
 const Sidebar = () => {
     const path = usePathname()
     const sidebarState = path.split('/')[2]
-
     return (
         <div className='w-[72px] h-full flex flex-col items-center justify-start py-3 bg-[#1e1f22]'>
             <div className='flex flex-col gap-2'>
