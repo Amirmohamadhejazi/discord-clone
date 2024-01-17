@@ -44,30 +44,12 @@ const HomeTemplate = () => {
 
     return (
         <div className='flex flex-col grow h-full '>
-            <div className='w-full whitespace-nowrap overflow-auto flex items-center justify-between shadow-md p-[8px]'>
-                <div className='h-full flex items-center  gap-7   relative'>
-                    <div className='flex items-center gap-3 '>
-                        <svg
-                            className='linkButtonIcon__2f35b w-6 h-6'
-                            aria-hidden='true'
-                            role='img'
-                            xmlns='http://www.w3.org/2000/svg'
-                            width='16'
-                            height='16'
-                            fill='none'
-                            viewBox='0 0 24 24'
-                        >
-                            <path fill='currentColor' d='M13 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z' className=''></path>
-                            <path
-                                fill='currentColor'
-                                d='M3 5v-.75C3 3.56 3.56 3 4.25 3s1.24.56 1.33 1.25C6.12 8.65 9.46 12 13 12h1a8 8 0 0 1 8 8 2 2 0 0 1-2 2 .21.21 0 0 1-.2-.15 7.65 7.65 0 0 0-1.32-2.3c-.15-.2-.42-.06-.39.17l.25 2c.02.15-.1.28-.25.28H9a2 2 0 0 1-2-2v-2.22c0-1.57-.67-3.05-1.53-4.37A15.85 15.85 0 0 1 3 5Z'
-                                className=''
-                            ></path>
-                        </svg>
-                        <span className='font-medium text-white'>Friends</span>
+            <div className='w-full whitespace-nowrap flex-wrap  flex items-center justify-between shadow-md p-[4px]'>
+                <div className=' flex items-center  flex-wrap gap-2 sm:gap-7   relative'>
+                    <div className='flex items-center  gap-3 '>
+                        <span className='font-medium text-white '>Friends</span>
                     </div>
-
-                    <div className='flex gap-2 items-center *:rounded-md'>
+                    <div className='flex gap-2 flex-wrap items-center *:rounded-md'>
                         {static_data_menu.map((itemStep) => (
                             <div
                                 className={`px-2 py-1 duration-300 text-sm font-semibold cursor-pointer ${
@@ -83,7 +65,7 @@ const HomeTemplate = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex gap-3 items-center divide-x-1'>
+                <div className='w-full md:w-auto justify-end flex gap-3 items-center  divide-x-1'>
                     <div className='hover:text-white cursor-pointer duration-300'>
                         <svg
                             x='0'
@@ -157,7 +139,7 @@ const HomeTemplate = () => {
                 </div>
             </div>
             <div className='flex flex-1  '>
-                <div className='flex-1 ml-[30px] mr-[20px] pt-5'>
+                <div className='flex-1 mx-2 xl:ml-[30px] xl:mr-[20px] pt-5'>
                     <div className='h-full flex flex-col text-sm gap-y-1 '>
                         {dataMembersHandler()?.length > 0 ? (
                             <>
@@ -165,13 +147,10 @@ const HomeTemplate = () => {
                                     {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
                                     {dataMembersHandler()?.length}
                                 </span>
-                                <hr className='border-[#46474e] border-[1.5px]' />
-                                {dataMembersHandler().map((itemSocial: TCriticalAnyType, index: number) => (
-                                    <>
-                                        <div
-                                            className='flex items-center justify-between hover:bg-[#393c41] px-2 py-2 rounded-lg cursor-pointer duration-300 group'
-                                            key={itemSocial.useId}
-                                        >
+                                {/* <hr className='border-[#46474e] border-[1.5px]' /> */}
+                                {dataMembersHandler().map((itemSocial: TCriticalAnyType) => (
+                                    <div className='border-t border-[#3f4147] ' key={itemSocial.useId}>
+                                        <div className='flex items-center justify-between hover:bg-[#393c41] px-2 py-2 rounded-lg cursor-pointer duration-300 group'>
                                             <div className='flex items-center gap-x-3'>
                                                 <div className='w-9 h-9 relative'>
                                                     <img
@@ -240,10 +219,7 @@ const HomeTemplate = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        {dataMembersHandler().length !== index + 1 && (
-                                            <hr className='border-[#46474e] border-[1.5px]' />
-                                        )}
-                                    </>
+                                    </div>
                                 ))}
                             </>
                         ) : (
