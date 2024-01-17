@@ -26,7 +26,6 @@ const InternalSidebar = () => {
         }
     }, [])
 
-
     return (
         <div className='w-60 h-full flex flex-col gap-2 bg-[#2b2d31] text-[#80848e] '>
             <div className='px-[8px] pt-[8px]'>
@@ -95,7 +94,6 @@ const InternalSidebar = () => {
                             </div>
                         )
                     )}
-
             </div>
             <div className='w-full flex justify-between bg-[#232428] p-[8px] group'>
                 <div className='w-9 h-9 relative'>
