@@ -1,5 +1,5 @@
 /* Components */
-
+@import './components/scroll-bar.css';
 /* Vendors */
 @import './vendors/tailwind.css';
 

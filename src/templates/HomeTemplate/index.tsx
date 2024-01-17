@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useState } from 'react'
@@ -43,7 +44,7 @@ const HomeTemplate = () => {
 
     return (
         <div className='flex flex-col grow h-full '>
-            <div className='flex items-center justify-between shadow-md p-[8px]'>
+            <div className='w-full whitespace-nowrap overflow-auto flex items-center justify-between shadow-md p-[8px]'>
                 <div className='h-full flex items-center  gap-7   relative'>
                     <div className='flex items-center gap-3 '>
                         <svg
@@ -157,7 +158,7 @@ const HomeTemplate = () => {
             </div>
             <div className='flex flex-1  '>
                 <div className='flex-1 ml-[30px] mr-[20px] pt-5'>
-                    <div className='flex flex-col text-sm gap-y-1 '>
+                    <div className='h-full flex flex-col text-sm gap-y-1 '>
                         <span className='font-semibold'>
                             {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
                             {dataMembersHandler()?.length}
@@ -244,19 +245,26 @@ const HomeTemplate = () => {
                                 </>
                             ))
                         ) : (
-                            <div className='flex items-center justify-center '>
+                            <div className='flex flex-col gap-y-2 grow p-1 justify-center items-center   overflow-auto'>
                                 <WumpusNotify type={tab} />
                             </div>
                         )}
                     </div>
                 </div>
-                <div className='flex flex-col w-[360px] py-[16px] px-[8px] shadow-md p-2  '>
+                <div className=' flex-col w-[360px] py-[16px] px-[8px] shadow-md p-2 hidden xl:flex'>
                     <span className='text-xl font-semibold text-white my-[16mx] px-[8px]'>Active Now</span>
-                    <div className='py-[16px]  '>
-                        <div className='flex items-center gap-2 bg-[#2b2d31] border border-gray-700 rounded-xl px-1 py-8 animate-pulse'>
+                    <div className='py-8 '>
+                        <div className='flex flex-col gap-y-2 text-sm text-center'>
+                            <span className='text-white font-bold'>It's quiet for now...</span>
+                            <span>
+                                When a friend starts an activity—like playing a game or hanging out on voice—we’ll show
+                                it here!
+                            </span>
+                        </div>
+                        {/* <div className='flex items-center gap-2 bg-[#2b2d31] border border-gray-700 rounded-xl px-1 py-8 animate-pulse'>
                             <div className='p-6 rounded-full bg-gray-900'></div>
                             <span>... .. .</span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

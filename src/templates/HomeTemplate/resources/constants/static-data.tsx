@@ -83,5 +83,24 @@ const static_data_social = [
     }
 ]
 
+const static_data_directs = [
+    {
+        audienceId: '214280633692717056',
+        // messagesDirect sort by this date
+        lastUpdateData: '01/17/2024',
+        messages: [
+            {
+                message: 'hi where are you Amir?',
+                messageId: '1',
+                date: '01/17/2024'
+            },
+            {
+                message: 'hi',
+                messageId: '1',
+                date: '05/01/2023'
+            }
+        ]
+    }
+]
 // online offline idle doNotDisturb
-export { static_data_menu, static_data_social }
+export { static_data_menu, static_data_social, static_data_directs }
