@@ -95,7 +95,7 @@ const InternalSidebar = () => {
                         )
                     )}
             </div>
-            <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group'>
+            <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group cursor-pointer'>
                 <div className='w-9 h-9 relative'>
                     <img src={avatarAmirmohamad.src} className='w-full h-full rounded-full object-cover' alt='' />
                     <div className='absolute -right-1 -bottom-0   '>
@@ -106,10 +106,10 @@ const InternalSidebar = () => {
                 </div>
                 <div className='flex flex-col grow justify-center text-sm pl-2'>
                     <span className='truncate'>Amirmohamad</span>
-                    <span className='truncate block group-hover:hidden'>amirmohamad</span>
-                    <span className='truncate hidden group-hover:block  '>online</span>
+                    <span className='truncate block group-hover:hidden'>online</span>
+                    <span className='truncate hidden group-hover:block  '>amirmohamad</span>
                 </div>
-                <div className='flex items-center justify-center gap-1 text-xl gap-x-2 *:cursor-pointer  '>
+                <div className='flex items-center justify-center gap-1 text-xl gap-x-2   '>
                     <IoMic className='hover:text-white duration-300 ' />
                     <IoHeadset className='hover:text-white duration-300 ' />
                     <IoSettingsSharp className='hover:text-white duration-300 ' />
