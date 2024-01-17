@@ -44,7 +44,7 @@ const HomeTemplate = () => {
 
     return (
         <div className='flex flex-col grow h-full'>
-            <div className='w-full whitespace-nowrap flex-wrap  flex items-center justify-between shadow-md p-[4px]'>
+            <div className='w-full min-h-[48px] shadow-lg p-[8px] whitespace-nowrap flex-wrap  flex items-center justify-between '>
                 <div className=' flex items-center  flex-wrap gap-2 sm:gap-7   relative'>
                     <div className='flex items-center  gap-3 '>
                         <span className='font-medium text-white '>Friends</span>

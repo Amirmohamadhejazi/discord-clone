@@ -28,6 +28,11 @@ const InternalSidebar = () => {
 
     return (
         <div className='w-60 h-full flex flex-col gap-2  bg-general-gray-50 text-general-gray-700 '>
+            <div className='min-h-[48px] shadow-lg p-[8px]'>
+                <div className='bg-general-gray w-full h-full flex items-center rounded-md pl-1'>
+                    <span className=' text-general-gray-800 text-xs'>Find or start a conversation</span>
+                </div>
+            </div>
             <div className='px-[8px] pt-[8px]'>
                 {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
                     <div className='flex flex-col   gap-2 font-semibold *:py-2'>
@@ -90,7 +95,9 @@ const InternalSidebar = () => {
                         (items, index) => (
                             <div className='flex items-center justify-center gap-x-2' key={index}>
                                 <div className=' bg-general-gray-100 p-4 rounded-full ' />
-                                <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'></div>
+                                <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
+                                    {index + 23 + items}
+                                </div>
                             </div>
                         )
                     )}
