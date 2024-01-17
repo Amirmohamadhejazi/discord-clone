@@ -159,91 +159,93 @@ const HomeTemplate = () => {
             <div className='flex flex-1  '>
                 <div className='flex-1 ml-[30px] mr-[20px] pt-5'>
                     <div className='h-full flex flex-col text-sm gap-y-1 '>
-                        <span className='font-semibold'>
-                            {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
-                            {dataMembersHandler()?.length}
-                        </span>
-                        <hr className='border-[#46474e] border-[1.5px]' />
                         {dataMembersHandler()?.length > 0 ? (
-                            dataMembersHandler().map((itemSocial: TCriticalAnyType, index: number) => (
-                                <>
-                                    <div
-                                        className='flex items-center justify-between hover:bg-[#393c41] px-2 py-2 rounded-lg cursor-pointer duration-300 group'
-                                        key={itemSocial.useId}
-                                    >
-                                        <div className='flex items-center gap-x-3'>
-                                            <div className='w-9 h-9 relative'>
-                                                <img
-                                                    src={itemSocial.avatar.src}
-                                                    className='w-full h-full rounded-full object-cover'
-                                                    alt=''
-                                                />
-                                                <div className='absolute -right-1 -bottom-0   '>
-                                                    <div className='w-4 h-4 bg-[#313338] flex items-center justify-center rounded-full'>
-                                                        <img
-                                                            src={statusHandler(itemSocial.status)}
-                                                            className='w-full h-full mb-1 object-cover'
-                                                            alt=''
-                                                        />
+                            <>
+                                <span className='font-semibold'>
+                                    {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
+                                    {dataMembersHandler()?.length}
+                                </span>
+                                <hr className='border-[#46474e] border-[1.5px]' />
+                                {dataMembersHandler().map((itemSocial: TCriticalAnyType, index: number) => (
+                                    <>
+                                        <div
+                                            className='flex items-center justify-between hover:bg-[#393c41] px-2 py-2 rounded-lg cursor-pointer duration-300 group'
+                                            key={itemSocial.useId}
+                                        >
+                                            <div className='flex items-center gap-x-3'>
+                                                <div className='w-9 h-9 relative'>
+                                                    <img
+                                                        src={itemSocial.avatar.src}
+                                                        className='w-full h-full rounded-full object-cover'
+                                                        alt=''
+                                                    />
+                                                    <div className='absolute -right-1 -bottom-0   '>
+                                                        <div className='w-4 h-4 bg-[#313338] flex items-center justify-center rounded-full'>
+                                                            <img
+                                                                src={statusHandler(itemSocial.status)}
+                                                                className='w-full h-full mb-1 object-cover'
+                                                                alt=''
+                                                            />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className='flex flex-col justify-between'>
-                                                <div className='flex gap-x-2'>
-                                                    <span className='text-white'>{itemSocial.displayName}</span>
-                                                    <span className='hidden group-hover:block '>
-                                                        {itemSocial.username}
-                                                    </span>
+                                                <div className='flex flex-col justify-between'>
+                                                    <div className='flex gap-x-2'>
+                                                        <span className='text-white'>{itemSocial.displayName}</span>
+                                                        <span className='hidden group-hover:block '>
+                                                            {itemSocial.username}
+                                                        </span>
+                                                    </div>
+                                                    <span className='text-xs'>{itemSocial.status}</span>
                                                 </div>
-                                                <span className='text-xs'>{itemSocial.status}</span>
+                                            </div>
+                                            <div className='flex gap-x-2 text-[#b5bac1] *:hover:text-white'>
+                                                <div className='p-2 bg-[#2b2d31] rounded-full'>
+                                                    <svg
+                                                        className='icon__7215c'
+                                                        aria-hidden='true'
+                                                        role='img'
+                                                        xmlns='http://www.w3.org/2000/svg'
+                                                        width='20'
+                                                        height='20'
+                                                        fill='none'
+                                                        viewBox='0 0 24 24'
+                                                    >
+                                                        <path
+                                                            fill='currentColor'
+                                                            d='M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z'
+                                                            className=''
+                                                        ></path>
+                                                    </svg>
+                                                </div>
+                                                <div className='p-2 bg-[#2b2d31] rounded-full'>
+                                                    <svg
+                                                        className='icon__7215c'
+                                                        aria-hidden='true'
+                                                        role='img'
+                                                        xmlns='http://www.w3.org/2000/svg'
+                                                        width='20'
+                                                        height='20'
+                                                        fill='none'
+                                                        viewBox='0 0 24 24'
+                                                    >
+                                                        <path
+                                                            fill='currentColor'
+                                                            fillRule='evenodd'
+                                                            d='M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z'
+                                                            clipRule='evenodd'
+                                                            className=''
+                                                        ></path>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className='flex gap-x-2 text-[#b5bac1] *:hover:text-white'>
-                                            <div className='p-2 bg-[#2b2d31] rounded-full'>
-                                                <svg
-                                                    className='icon__7215c'
-                                                    aria-hidden='true'
-                                                    role='img'
-                                                    xmlns='http://www.w3.org/2000/svg'
-                                                    width='20'
-                                                    height='20'
-                                                    fill='none'
-                                                    viewBox='0 0 24 24'
-                                                >
-                                                    <path
-                                                        fill='currentColor'
-                                                        d='M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z'
-                                                        className=''
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                            <div className='p-2 bg-[#2b2d31] rounded-full'>
-                                                <svg
-                                                    className='icon__7215c'
-                                                    aria-hidden='true'
-                                                    role='img'
-                                                    xmlns='http://www.w3.org/2000/svg'
-                                                    width='20'
-                                                    height='20'
-                                                    fill='none'
-                                                    viewBox='0 0 24 24'
-                                                >
-                                                    <path
-                                                        fill='currentColor'
-                                                        fillRule='evenodd'
-                                                        d='M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z'
-                                                        clipRule='evenodd'
-                                                        className=''
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {dataMembersHandler().length !== index + 1 && (
-                                        <hr className='border-[#46474e] border-[1.5px]' />
-                                    )}
-                                </>
-                            ))
+                                        {dataMembersHandler().length !== index + 1 && (
+                                            <hr className='border-[#46474e] border-[1.5px]' />
+                                        )}
+                                    </>
+                                ))}
+                            </>
                         ) : (
                             <div className='flex flex-col gap-y-2 grow p-1 justify-center items-center   overflow-auto'>
                                 <WumpusNotify type={tab} />
