@@ -7,14 +7,26 @@ import Link from 'next/link'
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
-import { statusHandler } from '@core/utils/common/statusHandler'
+
+import { doNotDisturbStatus, idleStatus, offlineStatus, onlineStatus } from '@public/images'
 
 import { static_data_menu } from './resources'
 import { static_data_social } from './resources/constants/static-data'
 
 const HomeTemplate = () => {
     const [tab, setTab] = useState<number | null>(1)
-
+    const statusHandler = (status?: string | null) => {
+        switch (status) {
+            case 'online':
+                return onlineStatus.src
+            case 'offline':
+                return offlineStatus.src
+            case 'idle':
+                return idleStatus.src
+            case 'doNotDisturb':
+                return doNotDisturbStatus.src
+        }
+    }
     const onlineMembers = static_data_social.filter((itemsMember) => itemsMember.status !== 'offline')
     const dataMembersHandler = (): TCriticalAnyType => {
         switch (tab) {
