@@ -3,24 +3,12 @@
 
 import { static_data_social } from '@templates/HomeTemplate/resources/constants/static-data'
 
-import { doNotDisturbStatus, idleStatus, offlineStatus, onlineStatus } from '@public/images'
+import { statusHandler } from '@core/utils/common/statusHandler'
 
 const userDirect = ({ params }: { params: { userId: string } }) => {
     const data = static_data_social.filter((items) => items.useId === params.userId)[0]
     console.log(params.userId)
 
-    const statusHandler = (status?: string | null) => {
-        switch (status) {
-            case 'online':
-                return onlineStatus.src
-            case 'offline':
-                return offlineStatus.src
-            case 'idle':
-                return idleStatus.src
-            case 'doNotDisturb':
-                return doNotDisturbStatus.src
-        }
-    }
     return (
         <div className='flex flex-col '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
