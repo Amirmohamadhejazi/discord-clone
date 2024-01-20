@@ -13,6 +13,7 @@ import dis1Img from './avatar/dis1.webp'
 import dis2Img from './avatar/dis2.png'
 import dis3Img from './avatar/dis3.webp'
 import dis4Img from './avatar/dis4.webp'
+import nitroBg from './background/nitrobg.png'
 import doNotDisturbStatus from './icon/donotdisturbStatus.png'
 import idleStatus from './icon/idleStatus.png'
 import logo from './icon/logo.png'
@@ -22,7 +23,6 @@ import wumpus1Img from './wumpus/wumpus1.png'
 import wumpus2Img from './wumpus/wumpus2.png'
 import wumpus3Img from './wumpus/wumpus3.png'
 import wumpus4Img from './wumpus/wumpus4.png'
-
 export {
     logo,
     dis1Img,
@@ -47,5 +47,6 @@ export {
     idleStatus,
     onlineStatus,
     offlineStatus,
-    avatarNereix
+    avatarNereix,
+    nitroBg
 }
