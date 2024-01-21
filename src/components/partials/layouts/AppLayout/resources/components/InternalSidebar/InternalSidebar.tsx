@@ -10,8 +10,13 @@ import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { PiLockKeyFill } from 'react-icons/pi'
 import { static_data_me } from '.'
 
+import { static_data_directs } from '@templates/HomeTemplate/resources/constants/static-data'
+
+import { type TCriticalAnyType } from '@core/types/common/critical-any'
+
 import { avatarAmirmohamad, onlineStatus } from '@public/images'
 
+import { Direct } from './resources/components'
 import { static_data } from '../Sidebar/resources/constants/static-data'
 const InternalSidebar = () => {
     const path = usePathname()
@@ -90,17 +95,26 @@ const InternalSidebar = () => {
                 id='heightOverflow'
                 style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
             >
-                {divHeight !== 0 &&
-                    [0, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map(
-                        (items, index) => (
-                            <div className='flex items-center justify-center gap-x-2' key={index}>
-                                <div className=' bg-general-gray-100 p-4 rounded-full ' />
-                                <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
-                                    {index + 23 + items}
-                                </div>
+                {divHeight !== 0 && (
+                    <>
+                        {static_data_directs.length > 0 ? (
+                            <div className='flex flex-col gap-y-1'>
+                                {static_data_directs.map((itemDirects: TCriticalAnyType) => (
+                                    <Direct dataDirect={itemDirects} key={itemDirects.audienceId} />
+                                ))}
                             </div>
-                        )
-                    )}
+                        ) : (
+                            [0, 1, 2].map((items, index) => (
+                                <div className='flex items-center justify-center gap-x-2' key={index}>
+                                    <div className=' bg-general-gray-100 p-4 rounded-full ' />
+                                    <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
+                                        {index + 23 + items}
+                                    </div>
+                                </div>
+                            ))
+                        )}
+                    </>
+                )}
             </div>
             <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group  '>
                 <div className='w-9 h-9 relative'>

@@ -82,7 +82,8 @@ const static_data_social = [
         status: 'online'
     }
 ]
-
+//
+//
 const static_data_directs = [
     {
         audienceId: '214280633692717056',
@@ -96,6 +97,40 @@ const static_data_directs = [
             },
             {
                 message: 'hi',
+                messageId: '1',
+                date: '05/01/2023'
+            }
+        ]
+    },
+    {
+        audienceId: '218498762350395405',
+        // messagesDirect sort by this date
+        lastUpdateData: '01/16/2024',
+        messages: [
+            {
+                message: 'hi where are22 you Amir?',
+                messageId: '1',
+                date: '01/17/2024'
+            },
+            {
+                message: 'hi22',
+                messageId: '1',
+                date: '05/01/2023'
+            }
+        ]
+    },
+    {
+        audienceId: '505051488779894794',
+        // messagesDirect sort by this date
+        lastUpdateData: '01/15/2024',
+        messages: [
+            {
+                message: 'hi where33 are you Amir?',
+                messageId: '1',
+                date: '01/17/2024'
+            },
+            {
+                message: 'hi33',
                 messageId: '1',
                 date: '05/01/2023'
             }
