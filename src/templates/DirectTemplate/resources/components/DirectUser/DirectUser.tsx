@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { type FC } from 'react'
@@ -23,14 +22,14 @@ const DirectUser: FC<{
 }> = ({ dataDirect, dataUser }) => {
     const { messages } = dataDirect
     return (
-        <div className='flex flex-col gap-y-2'>
+        <div className='flex flex-col gap-y-1 my-2 '>
             {messages.map((itemDirect, index) => {
                 const userOrMe = itemDirect.sender === 'me'
                 const prevMessage = index > 0 ? messages[index - 1].sender === messages[index].sender : false
 
                 if (!prevMessage) {
                     return (
-                        <div className='flex items-center gap-x-3' key={itemDirect.messageId}>
+                        <div className='flex items-center gap-x-4 ' key={itemDirect.messageId}>
                             <div className='w-10 h-10'>
                                 <img
                                     src={userOrMe ? static_data_me.avatar.src : dataUser.avatar.src}
@@ -52,7 +51,7 @@ const DirectUser: FC<{
                 }
                 if (prevMessage) {
                     return (
-                        <span className='text-white text-sm ml-[52px]' key={itemDirect.messageId}>
+                        <span className='text-white text-sm ml-14 ' key={itemDirect.messageId}>
                             {itemDirect.message}
                         </span>
                     )

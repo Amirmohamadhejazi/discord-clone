@@ -101,7 +101,12 @@ export const static_data_directs = [
                 messageId: '1',
                 date: ''
             },
-            { sender: 'audience', message: 'im in front of your home where are you?', messageId: '2', date: '' },
+            {
+                sender: 'audience',
+                message: 'im in front of your home where are you? we want buy ice cream 🥶',
+                messageId: '2',
+                date: ''
+            },
             { sender: 'me', message: `hi doesn't feel like having fun`, messageId: '3', date: '' },
             {
                 sender: 'audience',
@@ -123,7 +128,7 @@ export const static_data_directs = [
             },
             {
                 sender: 'me',
-                message: `ok shayan <3`,
+                message: `ok shayan ❤`,
                 messageId: '7',
                 date: ''
             }
@@ -136,7 +141,7 @@ export const static_data_directs = [
         messages: [
             {
                 sender: 'audience',
-                message: 'hi Amir this is fun! dont cry brother ... .. .',
+                message: 'hi Amir this is fun! dont cry brother 😢',
                 messageId: '1',
                 date: ''
             },
@@ -163,6 +168,20 @@ export const static_data_directs = [
             { sender: 'audience', message: 'voice?', messageId: '2', date: '' },
             { sender: 'me', message: 'ok i call you in dm!', messageId: '3', date: '' },
             { sender: 'audience', message: '😔😔😔😔', messageId: '4', date: '' }
+        ]
+    },
+    {
+        personId: '179939072075235329',
+        // messagesDirect sort by this date
+        lastUpdateData: '',
+        messages: [
+            { sender: 'audience', message: 'Hi amir are you have ac 2016 for sell?', messageId: '1', date: '' },
+            { sender: 'me', message: '2016: 50$', messageId: '2', date: '' },
+            { sender: 'me', message: '2017: 45$', messageId: '3', date: '' },
+            { sender: 'me', message: '2018: 30$', messageId: '4', date: '' },
+            { sender: 'me', message: '2019: 10$', messageId: '5', date: '' },
+            { sender: 'audience', message: 'this is very expensive brooo', messageId: '6', date: '' },
+            { sender: 'audience', message: '😔😔😔😔', messageId: '7', date: '' }
         ]
     }
 ]

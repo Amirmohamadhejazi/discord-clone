@@ -25,7 +25,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
     }, [])
 
     return (
-        <div className='w-full h-full flex flex-col gap-2    p-1 '>
+        <div className='w-full h-full flex flex-col gap-2 p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
                 <div className='w-7 h-7 relative'>
                     <img src={dataUser.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
