@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CgHashtag } from 'react-icons/cg'
 import { FaUserPlus } from 'react-icons/fa6'
+import { HiMiniPlus } from 'react-icons/hi2'
 import { IoMdSettings } from 'react-icons/io'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { PiLockKeyFill } from 'react-icons/pi'
@@ -88,7 +89,7 @@ const InternalSidebar = () => {
             </div>
             <div className='flex items-center justify-between px-[8px]'>
                 <span className='text-xs'>Direct Messages</span>
-                <span>+</span>
+                <HiMiniPlus className='text-lg' />
             </div>
             <div
                 className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'

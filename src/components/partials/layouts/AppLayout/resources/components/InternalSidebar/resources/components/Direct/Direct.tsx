@@ -28,7 +28,7 @@ const Direct: FC<{
     return (
         <Link
             href={`/channels/me/${userDetail?.useId}`}
-            className={`flex items-center group justify-between text-sm font-semibold ${
+            className={`flex items-center group justify-between text-sm font-semibold duration-300 ${
                 userDirect ? 'bg-general-gray-200' : 'hover:bg-general-gray-200 '
             } rounded-md p-1`}
         >

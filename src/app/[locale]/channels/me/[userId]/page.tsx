@@ -1,18 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
+import { useEffect, useState } from 'react'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
+import { Textarea } from '@mantine/core'
 
 import { static_data_social } from '@templates/HomeTemplate/resources/constants/static-data'
 
 import { statusHandler } from '@core/utils/common/statusHandler'
 
-const userDirect = ({ params }: { params: { userId: string } }) => {
+const UserDirect = ({ params }: { params: { userId: string } }) => {
     const data = static_data_social.filter((items) => items.useId === params.userId)[0]
+    const [textMessage, setTestMessage] = useState('')
+    const [divHeightDirect, setDivHeightDirect] = useState(0)
 
+    useEffect(() => {
+        if (typeof document !== 'undefined') {
+            const height = document.getElementById('heightOverflowDirect')?.offsetHeight || 0
+            setDivHeightDirect(height)
+        }
+    }, [])
     return (
-        <div className='h-full flex flex-col justify-between'>
+        <div className='w-full h-full flex flex-col gap-2    p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
                 <div className='w-7 h-7 relative'>
                     <img src={data.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
@@ -24,15 +34,32 @@ const userDirect = ({ params }: { params: { userId: string } }) => {
                 </div>
                 <span className='text-white font-semibold'>{data.displayName}</span>
             </div>
-            <div className='flex items-center justify-center  ml-4 h-full'>
-                <span className='bg-general-gray-600 rounded-md px-2 py-1 text-xs font-bold'>
-                    Direct {data.displayName}
-                </span>
+            <div
+                className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
+                id='heightOverflowDirect'
+                style={{ maxHeight: `${divHeightDirect !== 0 && `${divHeightDirect}px`}` }}
+            >
+                {divHeightDirect > 0 && (
+                    <div className='flex flex-col gap-3'>
+                        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((items, index) => (
+                            <div className='bg-general-gray-500 animate-pulse p-12 rounded-md' key={index}></div>
+                        ))}
+                    </div>
+                )}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-start gap-x-2'>
                     <HiMiniPlusCircle className='text-general-gray-900 hover:text-general-gray-950 cursor-pointer text-3xl' />
-
+                    <Textarea
+                        classNames={{
+                            root: 'w-full',
+                            input: 'bg-transparent w-full focus:outline-none  resize-none	'
+                        }}
+                        value={textMessage}
+                        onChange={(e) => setTestMessage(e.target.value)}
+                        variant='unstyled'
+                        placeholder={`Message to @${data.username}`}
+                    />
                     <div className='flex items-center gap-x-3 '>
                         <div className='hover:text-general-gray-950 duration-300 cursor-pointer'>
                             <svg
@@ -107,17 +134,8 @@ const userDirect = ({ params }: { params: { userId: string } }) => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className='bg-cyan-950 h-[] overflow-y-auto p-1'>
-                    <div className='bg-red-200 p-1 h-[1000px]'>
-
-                    </div>
-            </div> */}
-            {/* <span>displayname: {data.displayName}</span>
-            <span>username: {data.username}</span>
-            <span>userId: {params.userId}</span> */}
         </div>
     )
 }
 
-export default userDirect
+export default UserDirect
