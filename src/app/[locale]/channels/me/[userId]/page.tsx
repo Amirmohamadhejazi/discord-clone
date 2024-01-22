@@ -6,12 +6,26 @@ import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
 import { Textarea } from '@mantine/core'
 
-import { static_data_social } from '@templates/HomeTemplate/resources/constants/static-data'
+import { static_data_directs, static_data_social } from '@templates/HomeTemplate/resources/constants/static-data'
 
 import { statusHandler } from '@core/utils/common/statusHandler'
 
+import {
+    wumpus1_gif,
+    wumpus2_gif,
+    wumpus3_gif,
+    wumpus4_gif,
+    wumpus5_gif,
+    wumpus6_gif,
+    wumpus7_gif,
+    wumpus8_gif,
+    wumpus9_gif,
+    wumpus10_gif
+} from '@public/images'
+
 const UserDirect = ({ params }: { params: { userId: string } }) => {
     const data = static_data_social.filter((items) => items.useId === params.userId)[0]
+    const dataDirect = static_data_directs.filter((items) => items.audienceId === params.userId)[0]
     const [textMessage, setTestMessage] = useState('')
     const [divHeightDirect, setDivHeightDirect] = useState(0)
 
@@ -21,6 +35,21 @@ const UserDirect = ({ params }: { params: { userId: string } }) => {
             setDivHeightDirect(height)
         }
     }, [])
+
+    const images = [
+        wumpus1_gif,
+        wumpus2_gif,
+        wumpus3_gif,
+        wumpus4_gif,
+        wumpus5_gif,
+        wumpus6_gif,
+        wumpus7_gif,
+        wumpus8_gif,
+        wumpus9_gif,
+        wumpus10_gif
+    ]
+
+    const randomImage = images[Math.floor(Math.random() * images.length)]
     return (
         <div className='w-full h-full flex flex-col gap-2    p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
@@ -35,29 +64,55 @@ const UserDirect = ({ params }: { params: { userId: string } }) => {
                 <span className='text-white font-semibold'>{data.displayName}</span>
             </div>
             <div
-                className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
+                className='flex flex-col gap-y-2 grow justify-end  overflow-auto mx-4'
                 id='heightOverflowDirect'
                 style={{ maxHeight: `${divHeightDirect !== 0 && `${divHeightDirect}px`}` }}
             >
                 {divHeightDirect > 0 && (
-                    <div className='flex flex-col gap-3'>
-                        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((items, index) => (
-                            <div className='bg-general-gray-500 animate-pulse p-12 rounded-md' key={index}></div>
-                        ))}
+                    <div className='flex items-start flex-col gap-y-2'>
+                        <div className='w-24 h-24'>
+                            <img src={data.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
+                        </div>
+                        <span className='text-3xl font-semibold'>{data.displayName}</span>
+                        <span>{data.username}</span>
+                        {dataDirect?.messages.length > 0 ? (
+                            'por'
+                        ) : (
+                            <div className='flex flex-col items-start gap-y-3 mb-3'>
+                                {/* when this user do not have a direct */}
+                                <span className='text-sm'>
+                                    This is the beginning of your direct message history with{' '}
+                                </span>
+                                <div className='w-36'>
+                                    <img
+                                        src={randomImage.src}
+                                        className='w-full h-full rounded-full object-cover'
+                                        alt='image direct'
+                                    />
+                                </div>
+                                <div className='bg-general-blue hover:bg-[#4752c4] duration-300 cursor-pointer text-white font-semibold px-12 py-2 rounded-md text-sm '>
+                                    Wave to {data.displayName}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
-                <div className='flex justify-between items-start gap-x-2'>
-                    <HiMiniPlusCircle className='text-general-gray-900 hover:text-general-gray-950 cursor-pointer text-3xl' />
+                <div className='flex justify-between items-start gap-x-2 min-h-[35px]'>
+                    <div className='flex'>
+                        <HiMiniPlusCircle className='text-general-gray-900  hover:text-general-gray-950 cursor-pointer text-3xl' />
+                    </div>
                     <Textarea
                         classNames={{
-                            root: 'w-full',
-                            input: 'bg-transparent w-full focus:outline-none  resize-none	'
+                            root: 'w-full mt-1',
+                            input: 'bg-transparent w-full focus:outline-none  resize-none placeholder:text-sm placeholder:truncate'
                         }}
                         value={textMessage}
                         onChange={(e) => setTestMessage(e.target.value)}
                         variant='unstyled'
+                        autosize
+                        maxRows={1}
                         placeholder={`Message to @${data.username}`}
                     />
                     <div className='flex items-center gap-x-3 '>

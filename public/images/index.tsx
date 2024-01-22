@@ -23,6 +23,16 @@ import wumpus1Img from './wumpus/wumpus1.png'
 import wumpus2Img from './wumpus/wumpus2.png'
 import wumpus3Img from './wumpus/wumpus3.png'
 import wumpus4Img from './wumpus/wumpus4.png'
+import wumpus1_gif from './wumpusgifs/wumpus1.gif'
+import wumpus2_gif from './wumpusgifs/wumpus2.gif'
+import wumpus3_gif from './wumpusgifs/wumpus3.gif'
+import wumpus4_gif from './wumpusgifs/wumpus4.gif'
+import wumpus5_gif from './wumpusgifs/wumpus5.gif'
+import wumpus6_gif from './wumpusgifs/wumpus6.gif'
+import wumpus7_gif from './wumpusgifs/wumpus7.gif'
+import wumpus8_gif from './wumpusgifs/wumpus8.gif'
+import wumpus9_gif from './wumpusgifs/wumpus9.gif'
+import wumpus10_gif from './wumpusgifs/wumpus10.gif'
 export {
     logo,
     dis1Img,
@@ -48,5 +58,15 @@ export {
     onlineStatus,
     offlineStatus,
     avatarNereix,
-    nitroBg
+    nitroBg,
+    wumpus1_gif,
+    wumpus2_gif,
+    wumpus3_gif,
+    wumpus4_gif,
+    wumpus5_gif,
+    wumpus6_gif,
+    wumpus7_gif,
+    wumpus8_gif,
+    wumpus9_gif,
+    wumpus10_gif
 }
