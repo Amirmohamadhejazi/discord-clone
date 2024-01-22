@@ -1,4 +1,4 @@
-const static_data_me = [
+const static_data_menu_me = [
     {
         label: 'Friends',
         href: 'channels/me',
@@ -80,4 +80,4 @@ const static_data_me = [
     }
 ]
 
-export { static_data_me }
+export { static_data_menu_me }

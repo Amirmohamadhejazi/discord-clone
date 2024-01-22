@@ -6,11 +6,9 @@ import Link from 'next/link'
 
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
+import { static_data_menu, static_data_social } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { statusHandler } from '@core/utils/common/statusHandler'
-
-import { static_data_menu } from './resources'
-import { static_data_social } from './resources/constants/static-data'
 
 const HomeTemplate = () => {
     const [tab, setTab] = useState<number | null>(1)

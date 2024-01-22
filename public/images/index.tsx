@@ -1,5 +1,5 @@
+import avatar_me from './avatar/avatar_me.webp'
 import avatar1Img from './avatar/avatar1.webp'
-import avatarAmirmohamad from './avatar/avatarAmirmohamad.webp'
 import avatarBardia from './avatar/avatarBardia.webp'
 import avatarDany from './avatar/avatarDany.webp'
 import avatarErfan from './avatar/avatarErfan.webp'
@@ -36,7 +36,7 @@ import wumpus10_gif from './wumpusgifs/wumpus10.gif'
 export {
     logo,
     dis1Img,
-    avatarAmirmohamad,
+    avatar_me,
     dis2Img,
     dis3Img,
     dis4Img,

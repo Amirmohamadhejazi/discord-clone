@@ -9,13 +9,12 @@ import { HiMiniPlus } from 'react-icons/hi2'
 import { IoMdSettings } from 'react-icons/io'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { PiLockKeyFill } from 'react-icons/pi'
-import { static_data_me } from '.'
+import { static_data_menu_me } from '.'
 
-import { static_data_directs } from '@templates/HomeTemplate/resources/constants/static-data'
-
+import { static_data_directs, static_data_me } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
-import { avatarAmirmohamad, onlineStatus } from '@public/images'
+import { onlineStatus } from '@public/images'
 
 import { Direct } from './resources/components'
 import { static_data } from '../Sidebar/resources/constants/static-data'
@@ -42,7 +41,7 @@ const InternalSidebar = () => {
             <div className='px-[8px] pt-[8px]'>
                 {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
                     <div className='flex flex-col   gap-2 font-semibold *:py-2'>
-                        {static_data_me.map((itemsMe) => (
+                        {static_data_menu_me.map((itemsMe) => (
                             <Link
                                 href={`/${itemsMe.href}`}
                                 className={`px-[8px] duration-300 ${
@@ -101,7 +100,7 @@ const InternalSidebar = () => {
                         {static_data_directs.length > 0 ? (
                             <div className='flex flex-col gap-y-1'>
                                 {static_data_directs.map((itemDirects: TCriticalAnyType) => (
-                                    <Direct dataDirect={itemDirects} key={itemDirects.audienceId} />
+                                    <Direct dataDirect={itemDirects} key={itemDirects.personId} />
                                 ))}
                             </div>
                         ) : (
@@ -119,7 +118,7 @@ const InternalSidebar = () => {
             </div>
             <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group  '>
                 <div className='w-9 h-9 relative'>
-                    <img src={avatarAmirmohamad.src} className='w-full h-full rounded-full object-cover' alt='' />
+                    <img src={static_data_me.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
                     <div className='absolute -right-1 -bottom-0   '>
                         <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
                             <img src={onlineStatus.src} className='w-full h-full mb-1 object-cover' alt='' />
@@ -127,9 +126,9 @@ const InternalSidebar = () => {
                     </div>
                 </div>
                 <div className='flex flex-col grow justify-center text-sm pl-2'>
-                    <span className='truncate'>Amirmohamad</span>
+                    <span className='truncate'>{static_data_me.displayName}</span>
                     <span className='truncate block group-hover:hidden'>online</span>
-                    <span className='truncate hidden group-hover:block  '>amirmohamad</span>
+                    <span className='truncate hidden group-hover:block  '>{static_data_me.username}</span>
                 </div>
                 <div className='flex items-center justify-center gap-1 text-xl gap-x-2 *:cursor-pointer  '>
                     <IoMic className='hover:text-white duration-300 ' />

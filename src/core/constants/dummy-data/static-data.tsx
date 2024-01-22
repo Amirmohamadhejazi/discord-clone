@@ -1,4 +1,5 @@
 import {
+    avatar_me,
     avatarBardia,
     avatarDany,
     avatarErfan,
@@ -10,14 +11,20 @@ import {
     avatarYounes
 } from '@public/images'
 
-const static_data_menu = [
+export const static_data_menu = [
     { name: 'Online', id: 1 },
     { name: 'All', id: 2 },
     { name: 'Pending', id: 3 },
     // { name: 'Suggestions', id: 4 },
     { name: 'Blocked', id: 4 }
 ]
-const static_data_social = [
+export const static_data_me = {
+    displayName: 'Amirmohamad',
+    username: 'amirmohamad',
+    avatar: avatar_me,
+    useId: '991284573726060615'
+}
+export const static_data_social = [
     {
         displayName: 'TriTium',
         username: 'thetritium',
@@ -82,60 +89,54 @@ const static_data_social = [
         status: 'online'
     }
 ]
-//
-//
-const static_data_directs = [
+export const static_data_directs = [
     {
-        audienceId: '214280633692717056',
+        personId: '214280633692717056',
         // messagesDirect sort by this date
-        lastUpdateData: '01/17/2024',
+        lastUpdateData: '',
         messages: [
             {
+                sender: 'audience',
                 message: 'hi where are you Amir?',
                 messageId: '1',
-                date: '01/17/2024'
+                date: ''
             },
-            {
-                message: 'hi',
-                messageId: '1',
-                date: '05/01/2023'
-            }
+            { sender: 'audience', message: 'hi', messageId: '1', date: '' },
+            { sender: 'me', message: 'hi Im well', messageId: '1', date: '' }
         ]
     },
     {
-        audienceId: '218498762350395405',
+        personId: '218498762350395405',
         // messagesDirect sort by this date
-        lastUpdateData: '01/16/2024',
+        lastUpdateData: '',
         messages: [
             {
                 message: 'hi where are22 you Amir?',
                 messageId: '1',
-                date: '01/17/2024'
+                date: ''
             },
             {
                 message: 'hi22',
                 messageId: '1',
-                date: '05/01/2023'
+                date: ''
             }
         ]
     },
     {
-        audienceId: '505051488779894794',
+        personId: '505051488779894794',
         // messagesDirect sort by this date
-        lastUpdateData: '01/15/2024',
+        lastUpdateData: '',
         messages: [
             {
                 message: 'hi where33 are you Amir?',
                 messageId: '1',
-                date: '01/17/2024'
+                date: ''
             },
             {
                 message: 'hi33',
                 messageId: '1',
-                date: '05/01/2023'
+                date: ''
             }
         ]
     }
 ]
-// online offline idle doNotDisturb
-export { static_data_menu, static_data_social, static_data_directs }

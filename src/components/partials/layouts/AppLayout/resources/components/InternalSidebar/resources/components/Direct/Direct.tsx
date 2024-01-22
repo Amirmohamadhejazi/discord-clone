@@ -5,13 +5,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { IoClose } from 'react-icons/io5'
 
-import { static_data_social } from '@templates/HomeTemplate/resources/constants/static-data'
-
+import { static_data_social } from '@core/constants/dummy-data'
 import { statusHandler } from '@core/utils/common/statusHandler'
 
 const Direct: FC<{
     dataDirect: {
-        audienceId: string
+        personId: string
         lastUpdateData: string
         messages: {
             message: string
@@ -22,7 +21,7 @@ const Direct: FC<{
 }> = ({ dataDirect }) => {
     const path = usePathname()
 
-    const userDetail = static_data_social.find((items) => items.useId === dataDirect.audienceId)
+    const userDetail = static_data_social.find((items) => items.useId === dataDirect.personId)
     const userDirect = path.split('/')[3] === userDetail?.useId
 
     return (
