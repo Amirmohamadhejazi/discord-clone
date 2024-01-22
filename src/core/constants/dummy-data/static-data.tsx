@@ -101,8 +101,32 @@ export const static_data_directs = [
                 messageId: '1',
                 date: ''
             },
-            { sender: 'audience', message: 'hi', messageId: '1', date: '' },
-            { sender: 'me', message: 'hi Im well', messageId: '1', date: '' }
+            { sender: 'audience', message: 'im in front of your home where are you?', messageId: '2', date: '' },
+            { sender: 'me', message: `hi doesn't feel like having fun`, messageId: '3', date: '' },
+            {
+                sender: 'audience',
+                message: `younes is here, come down`,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: 'audience',
+                message: `please amir`,
+                messageId: '5',
+                date: ''
+            },
+            {
+                sender: 'audience',
+                message: `come on amir`,
+                messageId: '6',
+                date: ''
+            },
+            {
+                sender: 'me',
+                message: `ok shayan <3`,
+                messageId: '7',
+                date: ''
+            }
         ]
     },
     {
@@ -111,13 +135,21 @@ export const static_data_directs = [
         lastUpdateData: '',
         messages: [
             {
-                message: 'hi where are22 you Amir?',
+                sender: 'audience',
+                message: 'hi Amir this is fun! dont cry brother ... .. .',
                 messageId: '1',
                 date: ''
             },
             {
-                message: 'hi22',
-                messageId: '1',
+                sender: 'audience',
+                message: 'dont delete your ac .. give me your ac dont delete 😂😂😂😂',
+                messageId: '2',
+                date: ''
+            },
+            {
+                sender: 'me',
+                message: 'hey life is dead',
+                messageId: '3',
                 date: ''
             }
         ]
@@ -127,16 +159,10 @@ export const static_data_directs = [
         // messagesDirect sort by this date
         lastUpdateData: '',
         messages: [
-            {
-                message: 'hi where33 are you Amir?',
-                messageId: '1',
-                date: ''
-            },
-            {
-                message: 'hi33',
-                messageId: '1',
-                date: ''
-            }
+            { sender: 'audience', message: 'Amir what are you doing?', messageId: '1', date: '' },
+            { sender: 'audience', message: 'voice?', messageId: '2', date: '' },
+            { sender: 'me', message: 'ok i call you in dm!', messageId: '3', date: '' },
+            { sender: 'audience', message: '😔😔😔😔', messageId: '4', date: '' }
         ]
     }
 ]
