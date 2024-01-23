@@ -16,7 +16,7 @@ import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
 
-import { Direct } from './resources/components'
+import { Direct, Servers } from './resources/components'
 import { static_data } from '../Sidebar/resources/constants/static-data'
 const InternalSidebar = () => {
     const path = usePathname()
@@ -38,9 +38,9 @@ const InternalSidebar = () => {
                     <span className=' text-general-gray-800 text-xs'>Find or start a conversation</span>
                 </div>
             </div>
-            <div className='px-[8px] pt-[8px]'>
+            <div className='px-[8px]  '>
                 {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
-                    <div className='flex flex-col   gap-2 font-semibold *:py-2'>
+                    <div className='flex flex-col gap-2 font-semibold *:py-2 '>
                         {static_data_menu_me.map((itemsMe) => (
                             <Link
                                 href={`/${itemsMe.href}`}
@@ -86,36 +86,48 @@ const InternalSidebar = () => {
                     </div>
                 )}
             </div>
-            <div className='flex items-center justify-between px-[8px]'>
-                <span className='text-xs'>Direct Messages</span>
-                <HiMiniPlus className='text-lg' />
-            </div>
-            <div
-                className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
-                id='heightOverflow'
-                style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
-            >
-                {divHeight !== 0 && (
-                    <>
-                        {static_data_directs.length > 0 ? (
-                            <div className='flex flex-col gap-y-1'>
-                                {static_data_directs.map((itemDirects: TCriticalAnyType) => (
-                                    <Direct dataDirect={itemDirects} key={itemDirects.personId} />
-                                ))}
-                            </div>
-                        ) : (
-                            [0, 1, 2].map((items, index) => (
-                                <div className='flex items-center justify-center gap-x-2' key={index}>
-                                    <div className=' bg-general-gray-100 p-4 rounded-full ' />
-                                    <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
-                                        {index + 23 + items}
+            {sidebarState[2] === 'me' ? (
+                <>
+                    <div className='flex items-center justify-between px-[8px]'>
+                        <span className='text-xs'>Direct Messages</span>
+                        <HiMiniPlus className='text-lg' />
+                    </div>
+                    <div
+                        className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
+                        id='heightOverflow'
+                        style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
+                    >
+                        {divHeight !== 0 && (
+                            <>
+                                {static_data_directs.length > 0 ? (
+                                    <div className='flex flex-col gap-y-1'>
+                                        {static_data_directs.map((itemDirects: TCriticalAnyType) => (
+                                            <Direct dataDirect={itemDirects} key={itemDirects.personId} />
+                                        ))}
                                     </div>
-                                </div>
-                            ))
+                                ) : (
+                                    [0, 1, 2].map((items, index) => (
+                                        <div className='flex items-center justify-center gap-x-2' key={index}>
+                                            <div className=' bg-general-gray-100 p-4 rounded-full ' />
+                                            <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
+                                                {index + 23 + items}
+                                            </div>
+                                        </div>
+                                    ))
+                                )}
+                            </>
                         )}
-                    </>
-                )}
-            </div>
+                    </div>
+                </>
+            ) : (
+                <div
+                    className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
+                    id='heightOverflow'
+                    style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
+                >
+                    {divHeight !== 0 && <Servers />}
+                </div>
+            )}
             <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group  '>
                 <div className='w-9 h-9 relative'>
                     <img src={static_data_me.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />

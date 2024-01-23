@@ -1,3 +1,3 @@
 import Direct from './Direct/Direct'
-
-export { Direct }
+import Servers from './Servers/servers'
+export { Direct, Servers }
