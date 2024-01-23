@@ -1,5 +1,4 @@
 import { type ReactNode } from 'react'
-import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { RootProvider } from '@partials/providers/RootProvider'
@@ -8,11 +7,6 @@ import { inter } from '@core/configs/fonts'
 import { LOCALES } from '@core/configs/i18n'
 
 import '@styles/globals.css'
-
-export const metadata: Metadata = {
-    title: 'discord clone',
-    description: 'discord clone'
-}
 
 interface IRootLayoutProps {
     children: ReactNode

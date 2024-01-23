@@ -1,8 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
+import { type Metadata } from 'next'
 
 import { nitroBg } from '@public/images'
 
+export const metadata: Metadata = {
+    title: 'Nitro',
+    description: 'Nitro'
+}
 const Nitro = () => {
     return (
         <div className='flex flex-col'>
