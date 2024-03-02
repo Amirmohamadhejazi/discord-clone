@@ -53,20 +53,12 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 id='heightOverflowDirect'
                 style={{ maxHeight: `${divHeightDirect !== 0 && `${divHeightDirect}px`}` }}
             >
-                {divHeightDirect > 0 && (
-                    <div className='flex items-start flex-col gap-y-2'>
-                        <div className='w-24 h-24'>
-                            <img src={dataUser.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
-                        </div>
-                        <span className='text-3xl font-semibold'>{dataUser.displayName}</span>
-                        <span>{dataUser.username}</span>
-                        {dataDirect?.messages.length > 0 ? (
-                            <DirectUser dataDirect={dataDirect} dataUser={dataUser} />
-                        ) : (
-                            <EmptyDirect dataUser={dataUser} />
-                        )}
-                    </div>
-                )}
+                {divHeightDirect > 0 &&
+                    (dataDirect?.messages.length > 0 ? (
+                        <DirectUser dataDirect={dataDirect} dataUser={dataUser} />
+                    ) : (
+                        <EmptyDirect dataUser={dataUser} />
+                    ))}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
                 <div className='flex justify-between items-start gap-x-2 min-h-[35px]'>

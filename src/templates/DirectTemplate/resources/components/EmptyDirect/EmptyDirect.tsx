@@ -41,14 +41,21 @@ const EmptyDirect: FC<{
 
     const randomImage = images[Math.floor(Math.random() * images.length)]
     return (
-        <div className='flex flex-col items-start gap-y-3 mb-3'>
-            {/* when this user do not have a direct */}
-            <span className='text-sm'>This is the beginning of your direct message history with </span>
-            <div className='w-36'>
-                <img src={randomImage.src} className='w-full h-full rounded-full object-cover' alt='image direct' />
+        <div className='flex items-start flex-col gap-y-2 overflow-auto'>
+            <div className='w-24 h-24'>
+                <img src={dataUser.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
             </div>
-            <div className='bg-general-blue hover:bg-[#4752c4] duration-300 cursor-pointer text-white font-semibold px-12 py-2 rounded-md text-sm '>
-                Wave to {dataUser.displayName}
+            <span className='text-3xl font-semibold'>{dataUser.displayName}</span>
+            <span>{dataUser.username}</span>
+            <div className='flex flex-col items-start gap-y-3 mb-3'>
+                {/* when this user do not have a direct */}
+                <span className='text-sm'>This is the beginning of your direct message history with </span>
+                <div className='w-36'>
+                    <img src={randomImage.src} className='w-full h-full rounded-full object-cover' alt='image direct' />
+                </div>
+                <div className='bg-general-blue hover:bg-[#4752c4] duration-300 cursor-pointer text-white font-semibold px-12 py-2 rounded-md text-sm '>
+                    Wave to {dataUser.displayName}
+                </div>
             </div>
         </div>
     )
