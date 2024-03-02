@@ -86,7 +86,8 @@ const InternalSidebar = () => {
                     </div>
                 )}
             </div>
-            {sidebarState[2] === 'me' ? (
+            {/* nitro shop */}
+            {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
                 <>
                     <div className='flex items-center justify-between px-[8px]'>
                         <span className='text-xs'>Direct Messages</span>

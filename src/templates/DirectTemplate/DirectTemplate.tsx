@@ -16,6 +16,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
     const [textMessage, setTestMessage] = useState('')
     const [divHeightDirect, setDivHeightDirect] = useState(0)
+    console.log(dataUser)
 
     useEffect(() => {
         if (typeof document !== 'undefined') {
@@ -23,7 +24,13 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
             setDivHeightDirect(height)
         }
     }, [])
-
+    if (dataUser === undefined) {
+        return (
+            <div className='w-full h-full flex items-center justify-center'>
+                <h1 className='text-lg font-bold'>Dm Not Found!</h1>
+            </div>
+        )
+    }
     return (
         <div className='w-full h-full flex flex-col gap-2 p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>

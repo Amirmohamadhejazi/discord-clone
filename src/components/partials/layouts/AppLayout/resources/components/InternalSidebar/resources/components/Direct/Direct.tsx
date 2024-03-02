@@ -8,17 +8,9 @@ import { IoClose } from 'react-icons/io5'
 import { static_data_social } from '@core/constants/dummy-data'
 import { statusHandler } from '@core/utils/common/statusHandler'
 
-const Direct: FC<{
-    dataDirect: {
-        personId: string
-        lastUpdateData: string
-        messages: {
-            message: string
-            messageId: string
-            date: string
-        }
-    }
-}> = ({ dataDirect }) => {
+import { type IDirectProps } from './resources'
+
+const Direct: FC<IDirectProps> = ({ dataDirect }) => {
     const path = usePathname()
 
     const userDetail = static_data_social.find((items) => items.useId === dataDirect.personId)
