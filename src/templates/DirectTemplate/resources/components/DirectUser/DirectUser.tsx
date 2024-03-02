@@ -3,9 +3,10 @@
 
 import { type FC, useEffect, useRef } from 'react'
 
+import { DMenu } from '@atoms/DMenu'
+
 import { static_data_me } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
-
 const DirectUser: FC<{
     dataUser: {
         displayName: string
@@ -23,7 +24,6 @@ const DirectUser: FC<{
     const { messages } = dataDirect
 
     const scrollContainerRef = useRef(null)
-
     useEffect(() => {
         // Scroll to the end when the component mounts
         const scrollContainer: TCriticalAnyType = scrollContainerRef.current
@@ -33,13 +33,13 @@ const DirectUser: FC<{
     })
 
     return (
-        <div className='flex items-start flex-col gap-y-2 overflow-auto duration-700' ref={scrollContainerRef}>
-            <div className='w-24 h-24'>
+        <div className='flex items-start flex-col gap-y-1 overflow-auto duration-700' ref={scrollContainerRef}>
+            <div className='w-24 h-24 mt-5'>
                 <img src={dataUser.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
             </div>
             <span className='text-3xl font-semibold'>{dataUser.displayName}</span>
             <span>{dataUser.username}</span>
-            <div className='flex flex-col gap-y-1 my-2'>
+            <div className='flex flex-col gap-y-2 my-2 '>
                 {messages.map((itemDirect, index) => {
                     const userOrMe = itemDirect.sender === 'me'
                     const prevMessage = index > 0 ? messages[index - 1].sender === messages[index].sender : false
@@ -61,14 +61,16 @@ const DirectUser: FC<{
                                         </span>
                                         <span className='text-xs'>--,--,----</span>
                                     </div>
-                                    <span className='text-white text-sm'>{itemDirect.message}</span>
+                                    <DMenu>
+                                        <span className='text-white text-sm'>{itemDirect.message}</span>
+                                    </DMenu>
                                 </div>
                             </div>
                         )
                     }
                     if (prevMessage) {
                         return (
-                            <span className='text-white text-sm ml-14 ' key={index}>
+                            <span className='text-white text-sm ml-14 -mt-2' key={index}>
                                 {itemDirect.message}
                             </span>
                         )

@@ -78,7 +78,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 <span className='text-white font-semibold'>{dataUser.displayName}</span>
             </div>
             <div
-                className='flex flex-col gap-y-2 grow justify-end  overflow-auto mx-4'
+                className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'
                 id='heightOverflowDirect'
                 style={{ maxHeight: `${divHeightDirect !== 0 && `${divHeightDirect}px`}` }}
             >
