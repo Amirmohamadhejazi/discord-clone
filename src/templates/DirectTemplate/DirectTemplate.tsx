@@ -16,7 +16,6 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
     const [textMessage, setTestMessage] = useState('')
     const [divHeightDirect, setDivHeightDirect] = useState(0)
-    console.log(dataUser)
 
     useEffect(() => {
         if (typeof document !== 'undefined') {

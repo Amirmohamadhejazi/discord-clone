@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import { type ReactNode, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
@@ -12,10 +13,9 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
             setStateTitle(document.getElementsByTagName('title')[0]?.text)
         }
     }, [path])
-    console.log(stateTitle)
 
     return (
-        <div className='flex min-h-screen text-general-gray-800 select-none'>
+        <div className='flex min-h-screen text-general-gray-800'>
             {/* Sidebar */}
             <div className='hidden md:block'>
                 <Sidebar />
