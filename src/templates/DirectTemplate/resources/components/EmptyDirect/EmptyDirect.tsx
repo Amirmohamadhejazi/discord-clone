@@ -1,6 +1,6 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
-import { type FC } from 'react'
+import React, { type FC } from 'react'
 
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
@@ -61,4 +61,4 @@ const EmptyDirect: FC<{
     )
 }
 
-export default EmptyDirect
+export default React.memo(EmptyDirect)

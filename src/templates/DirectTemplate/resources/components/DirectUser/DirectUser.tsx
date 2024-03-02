@@ -30,7 +30,8 @@ const DirectUser: FC<{
         if (scrollContainer) {
             scrollContainer.scrollTop = scrollContainer.scrollHeight
         }
-    }, [])
+    })
+
     return (
         <div className='flex items-start flex-col gap-y-2 overflow-auto duration-700' ref={scrollContainerRef}>
             <div className='w-24 h-24'>
@@ -45,7 +46,7 @@ const DirectUser: FC<{
 
                     if (!prevMessage) {
                         return (
-                            <div className='flex items-center gap-x-4' key={itemDirect.messageId}>
+                            <div className='flex items-center gap-x-4' key={index}>
                                 <div className='w-10 h-10'>
                                     <img
                                         src={userOrMe ? static_data_me.avatar.src : dataUser.avatar.src}
@@ -67,7 +68,7 @@ const DirectUser: FC<{
                     }
                     if (prevMessage) {
                         return (
-                            <span className='text-white text-sm ml-14 ' key={itemDirect.messageId}>
+                            <span className='text-white text-sm ml-14 ' key={index}>
                                 {itemDirect.message}
                             </span>
                         )

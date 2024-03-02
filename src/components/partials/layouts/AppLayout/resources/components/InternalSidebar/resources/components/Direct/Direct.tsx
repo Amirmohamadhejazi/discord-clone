@@ -15,7 +15,6 @@ const Direct: FC<IDirectProps> = ({ dataDirect }) => {
 
     const userDetail = static_data_social.find((items) => items.useId === dataDirect.personId)
     const userDirect = path.split('/')[3] === userDetail?.useId
-
     return (
         <Link
             href={`/channels/me/${userDetail?.useId}`}

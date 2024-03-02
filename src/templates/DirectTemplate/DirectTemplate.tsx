@@ -4,18 +4,20 @@
 import { useEffect, useState } from 'react'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
-import { Textarea } from '@mantine/core'
+import { TextInput } from '@mantine/core'
 
 import { static_data_directs, static_data_social } from '@core/constants/dummy-data'
+import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { statusHandler } from '@core/utils/common/statusHandler'
 
 import { DirectUser, EmptyDirect } from './resources/components'
 
 const DirectTemplate = ({ userId }: { userId: string }) => {
     const dataUser = static_data_social.filter((items) => items.useId === userId)[0]
+
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
-    const [textMessage, setTestMessage] = useState('')
     const [divHeightDirect, setDivHeightDirect] = useState(0)
+    const [textMessage, setTestMessage] = useState('')
 
     useEffect(() => {
         if (typeof document !== 'undefined') {
@@ -29,6 +31,34 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 <h1 className='text-lg font-bold'>Dm Not Found!</h1>
             </div>
         )
+    }
+    const formHandler = (e: TCriticalAnyType) => {
+        e.preventDefault()
+        if (dataDirect) {
+            if (textMessage.trim()) {
+                dataDirect.messages.push({
+                    sender: 'me',
+                    message: textMessage,
+                    messageId: `${dataDirect.messages.length + 1}`,
+                    date: ''
+                })
+                setTestMessage('')
+            }
+        } else {
+            static_data_directs.push({
+                lastUpdateData: '',
+                messages: [
+                    {
+                        sender: 'me',
+                        message: textMessage,
+                        messageId: `1`,
+                        date: ''
+                    }
+                ],
+                personId: userId
+            })
+        }
+        setTestMessage('')
     }
     return (
         <div className='w-full h-full flex flex-col gap-2 p-1 '>
@@ -64,18 +94,20 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                     <div className='flex'>
                         <HiMiniPlusCircle className='text-general-gray-900  hover:text-general-gray-950 cursor-pointer text-3xl' />
                     </div>
-                    <Textarea
-                        classNames={{
-                            root: 'w-full mt-1',
-                            input: 'bg-transparent w-full focus:outline-none  resize-none placeholder:text-sm placeholder:truncate'
-                        }}
-                        value={textMessage}
-                        onChange={(e) => setTestMessage(e.target.value)}
-                        variant='unstyled'
-                        autosize
-                        maxRows={1}
-                        placeholder={`Message to @${dataUser.username}`}
-                    />
+                    <form className='w-full' onSubmit={formHandler}>
+                        <TextInput
+                            classNames={{
+                                root: 'w-full mt-1',
+                                input: 'bg-transparent w-full focus:outline-none  resize-none placeholder:text-sm placeholder:truncate'
+                            }}
+                            value={textMessage}
+                            onChange={(e) => setTestMessage(e.target.value)}
+                            variant='unstyled'
+                            // autosize
+                            // maxRows={1}
+                            placeholder={`Message to @${dataUser.username}`}
+                        />
+                    </form>
                     <div className='flex items-center gap-x-3 '>
                         <div className='hover:text-general-gray-950 duration-300 cursor-pointer'>
                             <svg
