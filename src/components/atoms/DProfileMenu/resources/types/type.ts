@@ -5,6 +5,17 @@ import { type TCriticalAnyType } from '@core/types/common/critical-any'
 interface IMenuProps {
     classNames?: TCriticalAnyType
     children: ReactNode
+    dataProfile: {
+        displayName: string
+        username: string
+        avatar: TCriticalAnyType
+        banner?: TCriticalAnyType
+        created?: string
+        about?: string
+        useId: string
+        colors?: string[]
+        status: string
+    }
     position?:
         | 'bottom-start'
         | 'bottom-end'
@@ -18,6 +29,5 @@ interface IMenuProps {
         | 'right-start'
         | 'right-end'
         | 'right'
-    type?: 'messageInChannel' | 'socialInChat' | 'socialFriend'
 }
 export type { IMenuProps }

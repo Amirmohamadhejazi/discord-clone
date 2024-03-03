@@ -14,6 +14,7 @@ import dis2Img from './avatar/dis2.png'
 import dis3Img from './avatar/dis3.webp'
 import dis4Img from './avatar/dis4.webp'
 import nitroBg from './background/nitrobg.png'
+import bannerTheCode from './baner/thecode.png'
 import doNotDisturbStatus from './icon/donotdisturbStatus.png'
 import idleStatus from './icon/idleStatus.png'
 import logo from './icon/logo.png'
@@ -68,5 +69,6 @@ export {
     wumpus7_gif,
     wumpus8_gif,
     wumpus9_gif,
-    wumpus10_gif
+    wumpus10_gif,
+    bannerTheCode
 }

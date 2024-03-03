@@ -4,6 +4,7 @@
 import { type FC, useEffect, useRef } from 'react'
 
 import { DMenu } from '@atoms/DMenu'
+import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_data_me } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
@@ -47,7 +48,7 @@ const DirectUser: FC<{
                     if (!prevMessage) {
                         return (
                             <div className='flex items-center gap-x-4' key={index}>
-                                <DMenu type='socialInChat'>
+                                <DProfileMenu dataProfile={itemDirect.sender === 'me' ? static_data_me : dataUser}>
                                     <div className='w-10 h-10'>
                                         <img
                                             src={userOrMe ? static_data_me.avatar.src : dataUser.avatar.src}
@@ -55,7 +56,7 @@ const DirectUser: FC<{
                                             alt=''
                                         />
                                     </div>
-                                </DMenu>
+                                </DProfileMenu>
 
                                 <div className='w-full flex flex-col'>
                                     <DMenu type='socialInChat'>
@@ -63,11 +64,12 @@ const DirectUser: FC<{
                                             <span className='font-semibold text-white'>
                                                 {userOrMe ? static_data_me.displayName : dataUser.displayName}
                                             </span>
+                                            {/* date text */}
                                             <span className='text-xs'>--,--,----</span>
                                         </div>
                                     </DMenu>
 
-                                    <DMenu type='message'>
+                                    <DMenu type='messageInChannel'>
                                         <span className='text-white text-sm'>{itemDirect.message}</span>
                                     </DMenu>
                                 </div>
@@ -76,7 +78,7 @@ const DirectUser: FC<{
                     }
                     if (prevMessage) {
                         return (
-                            <DMenu type='message' key={index}>
+                            <DMenu type='messageInChannel' key={index}>
                                 <p className='w-full text-white text-sm ml-14  '>{itemDirect.message}</p>
                             </DMenu>
                         )

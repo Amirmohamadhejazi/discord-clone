@@ -8,7 +8,8 @@ import {
     avatarShayan,
     avatarSobhan,
     avatarTheCode,
-    avatarYounes
+    avatarYounes,
+    bannerTheCode
 } from '@public/images'
 
 export const static_data_menu = [
@@ -20,75 +21,110 @@ export const static_data_menu = [
 ]
 export const static_data_me = {
     displayName: 'Amirmohamad',
+    colors: [],
     username: 'amirmohamad',
+    created: 'May 11, 2015',
     avatar: avatar_me,
-    useId: '991284573726060615'
+    useId: '991284573726060615',
+    status: 'online',
+    about: 'i need another life with life soda'
 }
+
 export const static_data_social = [
     {
         displayName: 'TriTium',
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
         username: 'thetritium',
+        created: 'May 12, 2015',
         avatar: avatarShayan,
         useId: '214280633692717056',
-        status: 'doNotDisturb'
+        status: 'doNotDisturb',
+        about: 'Always stay curious and keep learning!'
     },
     {
         displayName: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
+        colors: [],
         username: 'younes_hidden',
+        created: 'May 13, 2015',
         avatar: avatarYounes,
         useId: '218498762350395405',
-        status: 'online'
+        status: 'online',
+        about: 'Success is a journey, not a destination. Enjoy the process!'
     },
     {
         displayName: '- Erfan AtRisk',
+        colors: [],
         username: 'atri3k',
+        created: 'May 11, 2016',
         avatar: avatarErfan,
         useId: '185842812888023040',
-        status: 'idle'
+        status: 'idle',
+        about: 'Take risks and embrace challenges; that’s where growth happens.'
     },
     {
         displayName: '- Bardia',
+        colors: [],
         username: 'bardiaxv',
+        created: 'May 11, 2016',
         avatar: avatarBardia,
         useId: '180204915942096896',
-        status: 'doNotDisturb'
+        status: 'doNotDisturb',
+        about: 'Balance is the key to a happy and successful life.'
     },
     {
         displayName: 'Mont',
+        colors: [],
         username: 'freezemont',
+        created: 'May 11, 2016',
         avatar: avatarMont,
         useId: '505051488779894794',
-        status: 'doNotDisturb'
+        status: 'doNotDisturb',
+        about: "Don’t be afraid to fail; it's a stepping stone to success."
     },
     {
         displayName: '- The.Code',
+        colors: ['hsla(222, 100%, 30%, 1)', 'hsla(286, 70.9%, 41.8%, 1)'],
         username: 'thecode',
+        created: 'May 11, 2016',
         avatar: avatarTheCode,
         useId: '179939072075235329',
-        status: 'doNotDisturb'
+        banner: bannerTheCode,
+
+        status: 'doNotDisturb',
+        about: 'Coding is like solving puzzles; enjoy the problem-solving process.'
     },
     {
         displayName: 'NothingToSay',
+        colors: [],
         username: 'nereix',
+        created: 'May 11, 2016',
         avatar: avatarNereix,
         useId: '1095366826797576344',
-        status: 'doNotDisturb'
+        status: 'doNotDisturb',
+        about: 'Find joy in the simple moments of life.'
     },
     {
         displayName: 'خــودِ دَنــی',
+        colors: [],
         username: 'daniyartune',
+        created: 'May 11, 2016',
         avatar: avatarDany,
         useId: '325301808543170569',
-        status: 'offline'
+        status: 'offline',
+        about: 'Disconnect to reconnect; take time for yourself.'
     },
     {
         displayName: '!sobhan!',
+        colors: [],
         username: 'sobhan002',
+        created: 'May 11, 2016',
         avatar: avatarSobhan,
         useId: '510109656098537475',
-        status: 'online'
+        status: 'online',
+        about: 'Surround yourself with positive energy and like-minded people.'
     }
 ]
+
 export const static_data_directs = [
     // messagesDirect sort by this date
     {

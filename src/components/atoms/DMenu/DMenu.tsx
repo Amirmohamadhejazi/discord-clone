@@ -14,7 +14,7 @@ import { Menu } from '@mantine/core'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { type IMenuProps } from './resources'
-const DMenu: FC<IMenuProps> = ({ classNames, children, type = 'message', ...res }) => {
+const DMenu: FC<IMenuProps> = ({ classNames, children, type = 'message', position = 'bottom-start', ...res }) => {
     const [opened, setOpened] = useState(false)
     const handleContextMenu = (e: TCriticalAnyType) => {
         e.preventDefault()
@@ -22,7 +22,7 @@ const DMenu: FC<IMenuProps> = ({ classNames, children, type = 'message', ...res 
     }
     const menuItemsHandler = () => {
         switch (type) {
-            case 'message':
+            case 'messageInChannel':
                 return (
                     <>
                         <Menu.Item
@@ -214,7 +214,7 @@ const DMenu: FC<IMenuProps> = ({ classNames, children, type = 'message', ...res 
     return (
         <div className='font-light cursor-pointer' onContextMenu={(e) => handleContextMenu(e)}>
             <Menu
-                position='bottom-end'
+                position={position}
                 withinPortal={false}
                 closeOnEscape={true}
                 shadow={'md'}
