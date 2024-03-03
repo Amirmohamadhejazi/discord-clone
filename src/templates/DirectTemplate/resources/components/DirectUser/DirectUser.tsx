@@ -39,7 +39,7 @@ const DirectUser: FC<{
             </div>
             <span className='text-3xl font-semibold'>{dataUser.displayName}</span>
             <span>{dataUser.username}</span>
-            <div className='flex flex-col gap-y-2 my-2 '>
+            <div className='flex flex-col gap-y-1 my-2 '>
                 {messages.map((itemDirect, index) => {
                     const userOrMe = itemDirect.sender === 'me'
                     const prevMessage = index > 0 ? messages[index - 1].sender === messages[index].sender : false
@@ -47,21 +47,27 @@ const DirectUser: FC<{
                     if (!prevMessage) {
                         return (
                             <div className='flex items-center gap-x-4' key={index}>
-                                <div className='w-10 h-10'>
-                                    <img
-                                        src={userOrMe ? static_data_me.avatar.src : dataUser.avatar.src}
-                                        className='w-full h-full rounded-full object-cover'
-                                        alt=''
-                                    />
-                                </div>
-                                <div className='flex flex-col'>
-                                    <div className='flex items-end gap-x-2'>
-                                        <span className='font-semibold text-white'>
-                                            {userOrMe ? static_data_me.displayName : dataUser.displayName}
-                                        </span>
-                                        <span className='text-xs'>--,--,----</span>
+                                <DMenu type='socialInChat'>
+                                    <div className='w-10 h-10'>
+                                        <img
+                                            src={userOrMe ? static_data_me.avatar.src : dataUser.avatar.src}
+                                            className='w-full h-full rounded-full object-cover'
+                                            alt=''
+                                        />
                                     </div>
-                                    <DMenu>
+                                </DMenu>
+
+                                <div className='w-full flex flex-col'>
+                                    <DMenu type='socialInChat'>
+                                        <div className='flex items-end gap-x-2'>
+                                            <span className='font-semibold text-white'>
+                                                {userOrMe ? static_data_me.displayName : dataUser.displayName}
+                                            </span>
+                                            <span className='text-xs'>--,--,----</span>
+                                        </div>
+                                    </DMenu>
+
+                                    <DMenu type='message'>
                                         <span className='text-white text-sm'>{itemDirect.message}</span>
                                     </DMenu>
                                 </div>
@@ -70,9 +76,9 @@ const DirectUser: FC<{
                     }
                     if (prevMessage) {
                         return (
-                            <span className='text-white text-sm ml-14 -mt-2' key={index}>
-                                {itemDirect.message}
-                            </span>
+                            <DMenu type='message' key={index}>
+                                <p className='w-full text-white text-sm ml-14  '>{itemDirect.message}</p>
+                            </DMenu>
                         )
                     }
                 })}

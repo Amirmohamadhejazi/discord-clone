@@ -90,14 +90,14 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                     ))}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
-                <div className='flex justify-between items-start gap-x-2 min-h-[35px]'>
+                <div className='flex justify-between items-center gap-x-2 min-h-[35px]'>
                     <div className='flex'>
                         <HiMiniPlusCircle className='text-general-gray-900  hover:text-general-gray-950 cursor-pointer text-3xl' />
                     </div>
                     <form className='w-full' onSubmit={formHandler}>
                         <TextInput
                             classNames={{
-                                root: 'w-full mt-1',
+                                root: 'w-full ',
                                 input: 'bg-transparent w-full focus:outline-none  resize-none placeholder:text-sm placeholder:truncate'
                             }}
                             value={textMessage}

@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
+import { DMenu } from '@atoms/DMenu'
+
 import { static_data_menu, static_data_social } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { statusHandler } from '@core/utils/common/statusHandler'
@@ -137,32 +139,38 @@ const HomeTemplate = () => {
                                 {dataMembersHandler().map((itemSocial: TCriticalAnyType) => (
                                     <div className='border-t border-general-border ' key={itemSocial.useId}>
                                         <div className='flex items-center justify-between hover:bg-general-gray-400 px-2 py-2 rounded-lg cursor-pointer duration-300 group'>
-                                            <div className='flex items-center gap-x-3'>
-                                                <div className='w-9 h-9 relative'>
-                                                    <img
-                                                        src={itemSocial.avatar.src}
-                                                        className='w-full h-full rounded-full object-cover'
-                                                        alt=''
-                                                    />
-                                                    <div className='absolute -right-1 -bottom-0   '>
-                                                        <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
+                                            <div className='grow'>
+                                                <DMenu type='socialFriend'>
+                                                    <div className='flex  items-center gap-x-3 '>
+                                                        <div className='w-9 h-9 relative'>
                                                             <img
-                                                                src={statusHandler(itemSocial.status)}
-                                                                className='w-full h-full mb-1 object-cover'
+                                                                src={itemSocial.avatar.src}
+                                                                className='w-full h-full rounded-full object-cover'
                                                                 alt=''
                                                             />
+                                                            <div className='absolute -right-1 -bottom-0   '>
+                                                                <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
+                                                                    <img
+                                                                        src={statusHandler(itemSocial.status)}
+                                                                        className='w-full h-full mb-1 object-cover'
+                                                                        alt=''
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className='flex flex-col justify-between'>
+                                                            <div className='flex gap-x-2'>
+                                                                <span className='text-white'>
+                                                                    {itemSocial.displayName}
+                                                                </span>
+                                                                <span className='hidden group-hover:block '>
+                                                                    {itemSocial.username}
+                                                                </span>
+                                                            </div>
+                                                            <span className='text-xs'>{itemSocial.status}</span>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div className='flex flex-col justify-between'>
-                                                    <div className='flex gap-x-2'>
-                                                        <span className='text-white'>{itemSocial.displayName}</span>
-                                                        <span className='hidden group-hover:block '>
-                                                            {itemSocial.username}
-                                                        </span>
-                                                    </div>
-                                                    <span className='text-xs'>{itemSocial.status}</span>
-                                                </div>
+                                                </DMenu>
                                             </div>
                                             <div className='flex gap-x-2 text-general-gray-900 *:hover:text-white'>
                                                 <Link
