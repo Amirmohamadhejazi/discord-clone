@@ -64,7 +64,6 @@ const DirectUser: FC<{
                                             <span className='font-semibold text-white'>
                                                 {userOrMe ? static_data_me.displayName : dataUser.displayName}
                                             </span>
-                                            {/* date text */}
                                             <span className='text-xs'>--,--,----</span>
                                         </div>
                                     </DMenu>
@@ -79,7 +78,9 @@ const DirectUser: FC<{
                     if (prevMessage) {
                         return (
                             <DMenu type='messageInChannel' key={index}>
-                                <p className='w-full text-white text-sm ml-14'>{itemDirect.message}</p>
+                                <div className='flex ml-14'>
+                                    <p className='w-full text-white text-sm'>{itemDirect.message}</p>
+                                </div>
                             </DMenu>
                         )
                     }
