@@ -10,6 +10,7 @@ interface IMenuProps {
         username: string
         avatar: TCriticalAnyType
         banner?: TCriticalAnyType
+        badges?: TCriticalAnyType
         created?: string
         about?: string
         useId: string

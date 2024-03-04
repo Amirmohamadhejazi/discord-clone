@@ -27,9 +27,16 @@ export const static_data_me = {
     avatar: avatar_me,
     useId: '991284573726060615',
     status: 'online',
+    badges: [
+        { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+        { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 18 },
+        { name: 'id', userName: 'Amirmohamad#0001' }
+    ],
     about: 'i need another life with life soda'
 }
-
+//  Moderator Program Alumni Badge - HypeSquad Events - hypeSquad
+//  bugHunter - Active developer - bot developer
+//  Early Supporter - nit - boost - id
 export const static_data_social = [
     {
         displayName: 'TriTium',
@@ -39,6 +46,18 @@ export const static_data_social = [
         avatar: avatarShayan,
         useId: '214280633692717056',
         status: 'doNotDisturb',
+        badges: [
+            { name: 'moderator-program' },
+            { name: 'hypeSquad-events' },
+            // { name: 'hypeSquad', type: 'balance' },
+            // { name: 'bug-hunter' , level:2 },
+            // { name: 'active-developer' },
+            { name: 'bot-developer' },
+            { name: 'early-supporter' },
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'tritium#0001' }
+        ],
         about: 'Always stay curious and keep learning!'
     },
     {
@@ -48,6 +67,13 @@ export const static_data_social = [
         created: 'May 13, 2015',
         avatar: avatarYounes,
         useId: '218498762350395405',
+        badges: [
+            { name: 'bot-developer' },
+            { name: 'early-supporter' },
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'younes#0001' }
+        ],
         status: 'online',
         about: 'Success is a journey, not a destination. Enjoy the process!'
     },
@@ -59,6 +85,11 @@ export const static_data_social = [
         avatar: avatarErfan,
         useId: '185842812888023040',
         status: 'idle',
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'erfan#0001' }
+        ],
         about: 'Take risks and embrace challenges; that’s where growth happens.'
     },
     {
@@ -69,6 +100,11 @@ export const static_data_social = [
         avatar: avatarBardia,
         useId: '180204915942096896',
         status: 'doNotDisturb',
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'bardia#0001' }
+        ],
         about: 'Balance is the key to a happy and successful life.'
     },
     {
@@ -79,19 +115,28 @@ export const static_data_social = [
         avatar: avatarMont,
         useId: '505051488779894794',
         status: 'doNotDisturb',
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'freezemont#0001' }
+        ],
         about: "Don’t be afraid to fail; it's a stepping stone to success."
     },
     {
         displayName: '- The.Code',
-        colors: ['hsla(222, 100%, 30%, 1)', 'hsla(286, 70.9%, 41.8%, 1)'],
         username: 'thecode',
         created: 'May 11, 2016',
         avatar: avatarTheCode,
-        useId: '179939072075235329',
         banner: bannerTheCode,
-
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'radin#0001' }
+        ],
+        colors: ['hsla(222, 100%, 30%, 1)', 'hsla(286, 70.9%, 41.8%, 1)'],
         status: 'doNotDisturb',
-        about: 'Coding is like solving puzzles; enjoy the problem-solving process.'
+        about: 'Coding is like  solving puzzles; enjoy the problem-solving process.',
+        useId: '179939072075235329'
     },
     {
         displayName: 'NothingToSay',
@@ -101,6 +146,11 @@ export const static_data_social = [
         avatar: avatarNereix,
         useId: '1095366826797576344',
         status: 'doNotDisturb',
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'reza#0001' }
+        ],
         about: 'Find joy in the simple moments of life.'
     },
     {
@@ -111,6 +161,11 @@ export const static_data_social = [
         avatar: avatarDany,
         useId: '325301808543170569',
         status: 'offline',
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+            { name: 'id', userName: 'dany#0001' }
+        ],
         about: 'Disconnect to reconnect; take time for yourself.'
     },
     {
@@ -121,7 +176,12 @@ export const static_data_social = [
         avatar: avatarSobhan,
         useId: '510109656098537475',
         status: 'online',
-        about: 'Surround yourself with positive energy and like-minded people.'
+        about: 'Surround yourself with positive energy and like-minded people.',
+        badges: [
+            { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+            { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 9 },
+            { name: 'id', userName: 'sobhan#0001' }
+        ]
     }
 ]
 

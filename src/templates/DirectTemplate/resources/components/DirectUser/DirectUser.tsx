@@ -79,7 +79,7 @@ const DirectUser: FC<{
                     if (prevMessage) {
                         return (
                             <DMenu type='messageInChannel' key={index}>
-                                <p className='w-full text-white text-sm ml-14  '>{itemDirect.message}</p>
+                                <p className='w-full text-white text-sm ml-14'>{itemDirect.message}</p>
                             </DMenu>
                         )
                     }

@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 import { type FC, useState } from 'react'
-import { Menu } from '@mantine/core'
+import { Menu, Tooltip } from '@mantine/core'
 
-import { statusHandler } from '@core/utils/common/statusHandler'
+import { type TCriticalAnyType } from '@core/types/common/critical-any'
+import { badgeHandler } from '@core/utils/common/badgeHandler/badgeHandler'
 
 import { type IMenuProps } from './resources'
 const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, position = 'right-start', ...res }) => {
@@ -35,35 +37,62 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
 
                 <Menu.Dropdown
                     style={{
-                        background: `linear-gradient(to bottom, ${colors[0] || 'black'} 30%, ${colors[1] || 'gray'}`
+                        background: `linear-gradient(to bottom, ${colors[0] || 'gray'} 30%, ${colors[1] || 'white'}`
                     }}
                 >
                     <div
-                        className={`flex  flex-col items-center justify-between w-[290px] ${
-                            banner ? 'min-h-[335px]' : 'min-h-[280px]'
-                        } max-h-[550px] m-[3px]  rounded-md overflow-hidden`}
+                        className={`flex  flex-col items-center w-[290px]  max-h-[550px] m-[3px]  rounded-md overflow-hidden`}
                     >
                         <div className={`w-full ${banner ? 'h-[110px]' : 'h-16'}  relative bg-black`}>
                             {banner && <img src={banner.src} alt='avatar' className='w-full h-full object-cover' />}
-                            <div className='w-20 h-20 p-1 bg-black bg-opacity-35 absolute -bottom-10 left-5 rounded-full'>
+                            <div className='w-20 h-20 p-[3px] bg-black bg-opacity-35 absolute -bottom-9 left-5 rounded-full'>
                                 <div className='relative'>
                                     <img
                                         src={avatar.src}
                                         alt='avatar'
-                                        className='w-full h-full object-cover rounded-full'
+                                        className='w-full h-full object-cover rounded-full '
                                     />
-                                    <div className='w-5 h-5  absolute -right-1 bg-general-gray-100 -bottom-0 rounded-full'>
+                                    {/* <div className='w-5 h-5  absolute right-1  -bottom-0 rounded-full'>
                                         <img
                                             src={statusHandler(status)}
                                             className='w-full h-full  object-cover  '
                                             alt=''
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
-                        <div className='w-full p-3 text-white'>
-                            <div className='w-full min-h-32 flex flex-col justify-between bg-black bg-opacity-65  rounded-md p-3'>
+                        <div className='w-full h-full flex flex-col gap-y-2 px-3 mb-3 '>
+                            <div className=' flex justify-end p-1 mt-2 min-h-[36px] '>
+                                {dataProfile?.badges?.length > 0 && (
+                                    <div className='max-w-40 flex flex-wrap justify-end items-center gap-[2px] bg-general-gray-50 rounded-md p-1'>
+                                        {dataProfile?.badges?.map((itemsBadge: TCriticalAnyType, index: number) => {
+                                            const dataProfile: TCriticalAnyType = badgeHandler(itemsBadge)
+                                            if (dataProfile) {
+                                                const { name, img } = dataProfile
+                                                return (
+                                                    <Tooltip
+                                                        label={name}
+                                                        withArrow
+                                                        multiline
+                                                        offset={9}
+                                                        classNames={{ tooltip: 'text-[10px] font-bold max-w-36   ' }}
+                                                        className='bg-general-gray-50'
+                                                        key={index}
+                                                    >
+                                                        <img
+                                                            src={img}
+                                                            className='w-[20px] h-[20px] cursor-pointer  '
+                                                            alt={name}
+                                                        />
+                                                    </Tooltip>
+                                                )
+                                            }
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                            <div className='w-full min-h-32  flex flex-col justify-between bg-black bg-opacity-65 text-white rounded-md p-3'>
                                 <div className='flex flex-col gap-2 font-semibold '>
                                     <div className='flex flex-col'>
                                         <span className='font-bold'>{displayName}</span>

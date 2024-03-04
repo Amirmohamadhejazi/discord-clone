@@ -98,7 +98,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                         <TextInput
                             classNames={{
                                 root: 'w-full ',
-                                input: 'bg-transparent w-full focus:outline-none  resize-none placeholder:text-sm placeholder:truncate'
+                                input: 'bg-transparent w-full focus:outline-none text-white resize-none placeholder:text-sm placeholder:truncate'
                             }}
                             value={textMessage}
                             onChange={(e) => setTestMessage(e.target.value)}

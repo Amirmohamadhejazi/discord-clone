@@ -14,6 +14,27 @@ import dis2Img from './avatar/dis2.png'
 import dis3Img from './avatar/dis3.webp'
 import dis4Img from './avatar/dis4.webp'
 import nitroBg from './background/nitrobg.png'
+import activeDeveloperImg from './badge-icons/activeDeveloper.png'
+import botDeveloperImg from './badge-icons/botDeveloper.png'
+import bugHunter1 from './badge-icons/bug-hunter/bugHunter1.png'
+import bugHunter2 from './badge-icons/bug-hunter/bugHunter2.png'
+import earlySupporterImg from './badge-icons/earlySupporter.png'
+import hypeSquadBalance from './badge-icons/hype-squad/balance.png'
+import hypeSquadBravery from './badge-icons/hype-squad/Bravery.webp'
+import hypeSquadBrilliance from './badge-icons/hype-squad/brilliance.png'
+import hypeSquadEvent from './badge-icons/hypeSquadEvent.png'
+import idBadgeImg from './badge-icons/id.png'
+import moderatorProgram from './badge-icons/moderatorProgram.png'
+import nitroBoost1MonthsImg from './badge-icons/nitro/1-months.png'
+import nitroBoost2MonthsImg from './badge-icons/nitro/2-months.png'
+import nitroBoost3MonthsImg from './badge-icons/nitro/3-months.png'
+import nitroBoost6MonthsImg from './badge-icons/nitro/6-months.png'
+import nitroBoost9MonthsImg from './badge-icons/nitro/9-months.png'
+import nitroBoost12MonthsImg from './badge-icons/nitro/12-months.png'
+import nitroBoost15MonthsImg from './badge-icons/nitro/15-months.png'
+import nitroBoost18MonthsImg from './badge-icons/nitro/18-months.png'
+import nitroBoost24MonthsImg from './badge-icons/nitro/24-months.png'
+import nitroIconImg from './badge-icons/nitro/nitro.png'
 import bannerTheCode from './baner/thecode.png'
 import doNotDisturbStatus from './icon/donotdisturbStatus.png'
 import idleStatus from './icon/idleStatus.png'
@@ -35,31 +56,53 @@ import wumpus8_gif from './wumpusgifs/wumpus8.gif'
 import wumpus9_gif from './wumpusgifs/wumpus9.gif'
 import wumpus10_gif from './wumpusgifs/wumpus10.gif'
 export {
-    logo,
-    dis1Img,
     avatar_me,
+    avatar1Img,
+    avatarBardia,
+    avatarDany,
+    avatarErfan,
+    avatarMont,
+    avatarNereix,
+    avatarShayan,
+    avatarSobhan,
+    avatarTheCode,
+    avatarYounes,
+    dis1Img,
     dis2Img,
     dis3Img,
     dis4Img,
+    nitroBg,
+    activeDeveloperImg,
+    botDeveloperImg,
+    bugHunter1,
+    bugHunter2,
+    earlySupporterImg,
+    hypeSquadBalance,
+    hypeSquadBravery,
+    hypeSquadBrilliance,
+    idBadgeImg,
+    moderatorProgram,
+    nitroBoost1MonthsImg,
+    nitroBoost2MonthsImg,
+    nitroBoost3MonthsImg,
+    nitroBoost6MonthsImg,
+    nitroBoost9MonthsImg,
+    nitroBoost12MonthsImg,
+    nitroBoost15MonthsImg,
+    hypeSquadEvent,
+    nitroBoost18MonthsImg,
+    nitroBoost24MonthsImg,
+    nitroIconImg,
+    bannerTheCode,
+    doNotDisturbStatus,
+    idleStatus,
+    logo,
+    offlineStatus,
+    onlineStatus,
     wumpus1Img,
     wumpus2Img,
     wumpus3Img,
     wumpus4Img,
-    avatar1Img,
-    avatarSobhan,
-    avatarBardia,
-    avatarErfan,
-    avatarShayan,
-    avatarTheCode,
-    avatarYounes,
-    avatarMont,
-    avatarDany,
-    doNotDisturbStatus,
-    idleStatus,
-    onlineStatus,
-    offlineStatus,
-    avatarNereix,
-    nitroBg,
     wumpus1_gif,
     wumpus2_gif,
     wumpus3_gif,
@@ -69,6 +112,5 @@ export {
     wumpus7_gif,
     wumpus8_gif,
     wumpus9_gif,
-    wumpus10_gif,
-    bannerTheCode
+    wumpus10_gif
 }
