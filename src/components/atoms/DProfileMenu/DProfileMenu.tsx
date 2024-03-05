@@ -2,6 +2,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { type FC, useState } from 'react'
 import { Menu, Overlay, Tooltip } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
+
+import { DModal } from '@atoms/DModal'
+import { DProfileLarge } from '@atoms/DProfileLarge'
 
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { badgeHandler } from '@core/utils/common/badgeHandler/badgeHandler'
@@ -11,6 +15,7 @@ import { nitroIconImg } from '@public/images'
 import { type IMenuProps } from './resources'
 const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, position = 'right-start', ...res }) => {
     const [opened, setOpened] = useState(false)
+    const [openedProfileLarge, { open: openProfileLarge, close: closeProfileLarge }] = useDisclosure(false)
     const { colors = [], displayName, username, avatar, banner, created, about, status } = dataProfile
 
     return (
@@ -57,10 +62,16 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                                     </div>
                                 </div>
                             )}
-                            <div className='w-20 h-20 p-[3px] bg-black bg-opacity-35 absolute -bottom-9 left-5 rounded-full'>
+                            <div
+                                className='w-20 h-20 p-[3px] bg-black bg-opacity-35 absolute -bottom-9 left-5 rounded-full'
+                                onClick={() => {
+                                    openProfileLarge()
+                                    setOpened(false)
+                                }}
+                            >
                                 <div
                                     className="relative rounded-full overflow-hidden cursor-pointer
-                                    before:bg-black before:bg-opacity-0 before:duration-300 before:flex before:items-center before:justify-center hover:before:content-['view\_profile']
+                                    before:bg-black before:bg-opacity-0 before:duration-150 before:flex before:items-center before:justify-center hover:before:content-['view\profile']
                                     before:text-[11px] before:text-white before:font-medium hover:before:bg-opacity-60 before:p-2 before:absolute
                                     before:top-0 before:w-full before:h-full"
                                 >
@@ -131,6 +142,10 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                     </div>
                 </Menu.Dropdown>
             </Menu>
+
+            <DModal classNames={{ root: 'bg-red-200' }} opened={openedProfileLarge} onClose={closeProfileLarge}>
+                <DProfileLarge dataProfile={dataProfile} />
+            </DModal>
         </div>
     )
 }

@@ -28,6 +28,8 @@ export const static_data_me = {
     useId: '991284573726060615',
     status: 'online',
     badges: [
+        { name: 'hypeSquad-events' },
+        { name: 'bot-developer' },
         { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
         { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 18 },
         { name: 'id', userName: 'Amirmohamad#0001' }
