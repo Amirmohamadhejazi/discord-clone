@@ -44,10 +44,11 @@ const DirectUser: FC<{
                 {messages.map((itemDirect, index) => {
                     const userOrMe = itemDirect.sender === 'me'
                     const prevMessage = index > 0 ? messages[index - 1].sender === messages[index].sender : false
+                    const nextMessage = messages[index + 1]?.sender === messages[index].sender || false
 
                     if (!prevMessage) {
                         return (
-                            <div className='flex items-center gap-x-4' key={index}>
+                            <div className={`flex items-center gap-x-4 ${!nextMessage ? 'mb-2 ' : ''}`} key={index}>
                                 <DProfileMenu dataProfile={itemDirect.sender === 'me' ? static_data_me : dataUser}>
                                     <div className='w-10 h-10'>
                                         <img
@@ -78,7 +79,7 @@ const DirectUser: FC<{
                     if (prevMessage) {
                         return (
                             <DMenu type='messageInChannel' key={index}>
-                                <div className='flex ml-14'>
+                                <div className={`flex ml-14 ${nextMessage ? '' : 'mb-2 '}`}>
                                     <p className='w-full text-white text-sm'>{itemDirect.message}</p>
                                 </div>
                             </DMenu>

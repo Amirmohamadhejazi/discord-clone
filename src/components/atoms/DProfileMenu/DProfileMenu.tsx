@@ -48,7 +48,7 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                     }}
                 >
                     <div
-                        className={`flex  flex-col items-center w-[290px]  max-h-[550px] m-[3px]  rounded-md overflow-hidden group`}
+                        className={`flex bg-opacity-40 bg-black flex-col items-center w-[290px]  max-h-[550px] m-[3px]  rounded-md overflow-hidden group`}
                     >
                         <div className={`w-full ${banner ? 'h-[110px]' : 'h-16'}  relative bg-black`}>
                             {banner && (
@@ -143,7 +143,7 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                 </Menu.Dropdown>
             </Menu>
 
-            <DModal classNames={{ root: 'bg-red-200' }} opened={openedProfileLarge} onClose={closeProfileLarge}>
+            <DModal opened={openedProfileLarge} onClose={closeProfileLarge}>
                 <DProfileLarge dataProfile={dataProfile} />
             </DModal>
         </div>

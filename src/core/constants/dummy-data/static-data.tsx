@@ -34,6 +34,7 @@ export const static_data_me = {
         { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 18 },
         { name: 'id', userName: 'Amirmohamad#0001' }
     ],
+    me: true,
     about: 'i need another life with life soda'
 }
 //  Moderator Program Alumni Badge - HypeSquad Events - hypeSquad
