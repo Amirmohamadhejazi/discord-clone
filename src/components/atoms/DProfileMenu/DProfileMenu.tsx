@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 import { type FC, useState } from 'react'
-import { Menu, Overlay, Tooltip } from '@mantine/core'
+import { Menu, Overlay, TextInput, Tooltip } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 import { DModal } from '@atoms/DModal'
@@ -88,7 +88,7 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                             </div>
                         </div>
                         <div className='w-full h-full flex flex-col gap-y-2 px-3 mb-3 '>
-                            <div className=' flex justify-end p-1 mt-2 min-h-[36px] '>
+                            <div className='flex justify-end p-1 mt-2 min-h-[36px] '>
                                 {dataProfile?.badges?.length > 0 && (
                                     <div className='max-w-40 flex flex-wrap justify-end items-center gap-[2px] bg-general-gray-50 rounded-md p-1'>
                                         {dataProfile?.badges?.map((itemsBadge: TCriticalAnyType, index: number) => {
@@ -123,18 +123,34 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                                         <span className='font-bold'>{displayName}</span>
                                         <span className='text-xs'>{username}</span>
                                     </div>
-                                    <hr />
-                                    <div className='flex flex-col gap-y-1 max-h-32 overflow-auto'>
+                                    <hr className='border-general-border' />
+                                    <div className='flex flex-col gap-y-1 max-h-48  overflow-auto'>
                                         <div className='flex flex-col text-xs'>
-                                            <span className='font-bold'>About me</span>
+                                            <span className='font-medium'>About me</span>
                                             <div className='flex text-[10px]'>
                                                 <span>{about}</span>
                                             </div>
                                         </div>
                                         <div className='flex flex-col text-xs'>
-                                            <span className='font-bold'>MEMBER SINCE</span>
-                                            <span className=' text-[10px]'>{created}</span>
+                                            <span className='font-medium '>MEMBER SINCE</span>
+                                            <span className='text-[10px]'>{created}</span>
                                         </div>
+                                        <TextInput
+                                            classNames={{
+                                                input: 'bg-transparent text-white border-transparent px-1 focus:bg-black focus:placeholder-black text-xs placeholder-opacity-0 duration-300',
+                                                label: 'text-xs  font-medium'
+                                            }}
+                                            label='Note'
+                                            placeholder='Click to add a note'
+                                        />
+                                        <TextInput
+                                            classNames={{
+                                                input: `bg-transparent text-white px-1 border-[2px] focus:bg-black focus:placeholder-black text-xs placeholder-opacity-0 duration-300`,
+                                                label: 'text-xs  font-medium'
+                                            }}
+                                            placeholder={`Message to @${username}`}
+                                            styles={{ input: { borderColor: colors[1] || 'white' } }}
+                                        />
                                     </div>
                                 </div>
                             </div>

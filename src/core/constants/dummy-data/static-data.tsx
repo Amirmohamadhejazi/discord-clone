@@ -21,7 +21,8 @@ export const static_data_menu = [
 ]
 export const static_data_me = {
     displayName: 'Amirmohamad',
-    colors: [],
+    colors: ['black', 'hsla(257, 100%, 26.3%, 1)'],
+
     username: 'amirmohamad',
     created: 'May 11, 2015',
     avatar: avatar_me,
@@ -33,6 +34,13 @@ export const static_data_me = {
         { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
         { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 18 },
         { name: 'id', userName: 'Amirmohamad#0001' }
+    ],
+    social: [
+        { name: 'Amirmohamad9731', type: 'spotify', link: 'https://open.spotify.com/user/3sj5vwqgdthqmrernetdo8lld' },
+        { name: 'Amirmohamad', type: 'steam', link: 'https://steamcommunity.com/profiles/76561198073694544' },
+        { name: 'amirmohamad_hr', type: 'twitch', link: 'https://www.twitch.tv/amirmohamad_hr' },
+        { name: 'amirmohamad_hr', type: 'instagram', link: 'https://www.instagram.com/amirmohamad_hr' },
+        { name: 'amirmohamadhr', type: 'twitter', link: 'https://twitter.com/amirmohamadhr' }
     ],
     me: true,
     about: 'i need another life with life soda'
@@ -52,20 +60,25 @@ export const static_data_social = [
         badges: [
             { name: 'moderator-program' },
             { name: 'hypeSquad-events' },
-            // { name: 'hypeSquad', type: 'balance' },
-            // { name: 'bug-hunter' , level:2 },
-            // { name: 'active-developer' },
             { name: 'bot-developer' },
             { name: 'early-supporter' },
             { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
             { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
             { name: 'id', userName: 'tritium#0001' }
         ],
+        social: [
+            {
+                name: 'TriTium-SS',
+                type: 'spotify',
+                link: 'https://open.spotify.com/user/4h86kvn0oq4b2irftxds2c3ob'
+            }
+        ],
         about: 'Always stay curious and keep learning!'
     },
     {
         displayName: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
-        colors: [],
+        colors: ['hsla(340, 91.7%, 23.7%, 1)', 'black'],
+
         username: 'younes_hidden',
         created: 'May 13, 2015',
         avatar: avatarYounes,
@@ -78,11 +91,19 @@ export const static_data_social = [
             { name: 'id', userName: 'younes#0001' }
         ],
         status: 'online',
+        social: [
+            {
+                name: 'Younes_XD',
+                type: 'spotify',
+                link: 'https://open.spotify.com/user/kczxhdbz83hq20mz3qox60ejj'
+            }
+        ],
         about: 'Success is a journey, not a destination. Enjoy the process!'
     },
     {
         displayName: '- Erfan AtRisk',
-        colors: [],
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
         username: 'atri3k',
         created: 'May 11, 2016',
         avatar: avatarErfan,
@@ -97,7 +118,8 @@ export const static_data_social = [
     },
     {
         displayName: '- Bardia',
-        colors: [],
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
         username: 'bardiaxv',
         created: 'May 11, 2016',
         avatar: avatarBardia,
@@ -112,7 +134,8 @@ export const static_data_social = [
     },
     {
         displayName: 'Mont',
-        colors: [],
+        colors: ['black', '#013c5e'],
+
         username: 'freezemont',
         created: 'May 11, 2016',
         avatar: avatarMont,
@@ -139,11 +162,19 @@ export const static_data_social = [
         colors: ['hsla(222, 100%, 30%, 1)', 'hsla(286, 70.9%, 41.8%, 1)'],
         status: 'doNotDisturb',
         about: 'Coding is like  solving puzzles; enjoy the problem-solving process.',
+        social: [
+            {
+                name: 'The Code',
+                type: 'spotify',
+                link: 'https://open.spotify.com/user/kwsb9pnyi0tud8juzpthq39w1'
+            }
+        ],
         useId: '179939072075235329'
     },
     {
         displayName: 'NothingToSay',
-        colors: [],
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
         username: 'nereix',
         created: 'May 11, 2016',
         avatar: avatarNereix,
@@ -158,7 +189,8 @@ export const static_data_social = [
     },
     {
         displayName: 'خــودِ دَنــی',
-        colors: [],
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
         username: 'daniyartune',
         created: 'May 11, 2016',
         avatar: avatarDany,
@@ -173,7 +205,8 @@ export const static_data_social = [
     },
     {
         displayName: '!sobhan!',
-        colors: [],
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
         username: 'sobhan002',
         created: 'May 11, 2016',
         avatar: avatarSobhan,

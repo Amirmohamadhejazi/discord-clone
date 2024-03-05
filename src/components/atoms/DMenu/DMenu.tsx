@@ -102,7 +102,7 @@ const DMenu: FC<IMenuProps> = ({ classNames, children, type = 'message', positio
                         >
                             Delete Message
                         </Menu.Item>
-                        <hr className='border-general-gray-500 my-1' />
+                        <hr className='border-general-border my-1' />
                         <Menu.Item
                             color='white'
                             className='hover:bg-general-blue hover:text-white'
