@@ -4,6 +4,8 @@ import { Button } from '@mantine/core'
 
 import { Gift_icon, NitroBadge_icon } from '@molecules/icons'
 
+import { CardNitro } from '@atoms/CardNitro'
+
 import {
     ExploreWhatsNew_EarlyAccess,
     ExploreWhatsNew_SpecialMemberPricing,
@@ -23,7 +25,8 @@ const NitroTemplate = () => {
             name: 'Special Member Pricing',
             title: 'Snag sweet discounts on any - or every! - item at the Shop.',
             description: 'Exclusive savings are reserved for Nitro members only.',
-            img: ExploreWhatsNew_SpecialMemberPricing.src
+            img: ExploreWhatsNew_SpecialMemberPricing.src,
+            button: 'Visit the Shop'
         },
         {
             name: 'Unlimited Super Reactions',
@@ -65,66 +68,7 @@ const NitroTemplate = () => {
 
                             <div className='grid items-start h-full duration-100 grid-cols-3 gap-5  transition-all'>
                                 {dataExploreWhatsNew.map((itemsExplore, index) => (
-                                    <div
-                                        className='flex flex-col justify-center hover:-translate-y-3 group duration-100 ease-in-out rounded-3xl bg-general-gray-300'
-                                        key={index}
-                                    >
-                                        <div className='flex flex-col  pt-5 px-5'>
-                                            <span className='text-2xl font-semibold'>{itemsExplore.name}</span>
-                                            <span className='text-xs font-light pt-2  '>{itemsExplore.title}</span>
-                                        </div>
-                                        <div className=' p-4 group-hover:px-0 group-hover:pb-0 duration-100 w-full relative'>
-                                            <div className='w-full '>
-                                                <img
-                                                    src={itemsExplore.img}
-                                                    className='w-full   h-[220px] object-cover duration-100 rounded-xl  group-hover:rounded-3xl '
-                                                    alt=''
-                                                />
-                                            </div>
-                                            <p
-                                                className='p-5 left-0 absolute top-2 invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-100 text-xs w-full h-full ease-in-out bg-opacity-30 rounded-b-3xl'
-                                                style={{
-                                                    background: `linear-gradient(to bottom, ${'#232428'} 20%, transparent`
-                                                }}
-                                            >
-                                                {itemsExplore.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className='flex flex-col gap-5'>
-                            <span className='text-2xl font-extrabold ml-5'>Explore Whats New</span>
-
-                            <div className='grid items-start h-full duration-100 grid-cols-3 gap-5  transition-all'>
-                                {dataExploreWhatsNew.map((itemsExplore, index) => (
-                                    <div
-                                        className='flex flex-col justify-center hover:-translate-y-3 group duration-100 ease-in-out rounded-3xl bg-general-gray-300'
-                                        key={index}
-                                    >
-                                        <div className='flex flex-col  pt-5 px-5'>
-                                            <span className='text-2xl font-semibold'>{itemsExplore.name}</span>
-                                            <span className='text-xs font-light pt-2  '>{itemsExplore.title}</span>
-                                        </div>
-                                        <div className=' p-4 group-hover:px-0 group-hover:pb-0 duration-100 w-full relative'>
-                                            <div className='w-full '>
-                                                <img
-                                                    src={itemsExplore.img}
-                                                    className='w-full   h-[220px] object-cover duration-100 rounded-xl  group-hover:rounded-3xl '
-                                                    alt=''
-                                                />
-                                            </div>
-                                            <p
-                                                className='p-5 left-0 absolute top-2 invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-100 text-xs w-full h-full ease-in-out bg-opacity-30 rounded-b-3xl'
-                                                style={{
-                                                    background: `linear-gradient(to bottom, ${'#232428'} 20%, transparent`
-                                                }}
-                                            >
-                                                {itemsExplore.description}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <CardNitro itemsCard={itemsExplore} key={index} />
                                 ))}
                             </div>
                         </div>
