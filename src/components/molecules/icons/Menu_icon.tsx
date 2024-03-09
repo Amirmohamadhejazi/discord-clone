@@ -1,6 +1,6 @@
 import React, { type FC } from 'react'
 
-const Menu_icon: FC<{ size: 'lg' | 'md' }> = ({ size }) => {
+const Menu_icon: FC<{ size: 'lg' | 'md' }> = ({ size = 'md' }) => {
     const sizeIcon = () => {
         switch (size) {
             case 'lg':

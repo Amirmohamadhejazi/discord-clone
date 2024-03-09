@@ -32,6 +32,7 @@ const HomeTemplate = () => {
                 return []
         }
     }
+    const dataMembers = dataMembersHandler()
 
     return (
         <div className='flex flex-col grow h-full'>
@@ -71,13 +72,13 @@ const HomeTemplate = () => {
             <div className='flex flex-1  '>
                 <div className='flex-1 mx-2 xl:ml-[30px] xl:mr-[20px] pt-5'>
                     <div className='h-full flex flex-col text-sm gap-y-1 '>
-                        {dataMembersHandler()?.length > 0 ? (
+                        {dataMembers?.length > 0 ? (
                             <>
                                 <span className='font-semibold'>
                                     {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
-                                    {dataMembersHandler()?.length}
+                                    {dataMembers?.length}
                                 </span>
-                                {dataMembersHandler().map((itemSocial: TCriticalAnyType) => (
+                                {dataMembers.map((itemSocial: TCriticalAnyType) => (
                                     <div className='border-t border-general-border ' key={itemSocial.useId}>
                                         <div className='flex items-center justify-between hover:bg-general-gray-400 px-2 py-2 rounded-lg cursor-pointer duration-300 group'>
                                             <div className='grow'>

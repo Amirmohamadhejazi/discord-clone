@@ -15,7 +15,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
     }, [path])
 
     return (
-        <div className='flex min-h-screen text-general-gray-800'>
+        <div className='flex  h-screen text-general-gray-800'>
             {/* Sidebar */}
             <div className='hidden md:block'>
                 <Sidebar />

@@ -41,6 +41,9 @@ import idleStatus from './icon/idleStatus.png'
 import logo from './icon/logo.png'
 import offlineStatus from './icon/offlineStatus.png'
 import onlineStatus from './icon/onlineStatus.png'
+import ExploreWhatsNew_EarlyAccess from './nitro/ExploreWhatsNew/EarlyAccess.png'
+import ExploreWhatsNew_SpecialMemberPricing from './nitro/ExploreWhatsNew/SpecialMemberPricing.png'
+import ExploreWhatsNew_UnlimitedSuperReactions from './nitro/ExploreWhatsNew/UnlimitedSuperReactions.png'
 import wumpus1Img from './wumpus/wumpus1.png'
 import wumpus2Img from './wumpus/wumpus2.png'
 import wumpus3Img from './wumpus/wumpus3.png'
@@ -112,5 +115,8 @@ export {
     wumpus7_gif,
     wumpus8_gif,
     wumpus9_gif,
-    wumpus10_gif
+    wumpus10_gif,
+    ExploreWhatsNew_EarlyAccess,
+    ExploreWhatsNew_SpecialMemberPricing,
+    ExploreWhatsNew_UnlimitedSuperReactions
 }
