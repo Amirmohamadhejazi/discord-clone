@@ -10,6 +10,8 @@ import { RiTwitterXLine } from 'react-icons/ri'
 import { SiSpotify } from 'react-icons/si'
 import { ActionIcon, TextInput, Tooltip } from '@mantine/core'
 
+import { ArrowLink_icon, Menu_icon } from '@molecules/icons'
+
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { badgeHandler } from '@core/utils/common/badgeHandler/badgeHandler'
 
@@ -104,24 +106,7 @@ const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
                                         </div>
                                     </ActionIcon>
                                     <ActionIcon classNames={{ root: 'w-auto' }}>
-                                        <svg
-                                            className='additionalActionsIcon__33de0'
-                                            aria-hidden='true'
-                                            role='img'
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='24'
-                                            height='24'
-                                            fill='none'
-                                            viewBox='0 0 24 24'
-                                        >
-                                            <path
-                                                fill='currentColor'
-                                                fillRule='evenodd'
-                                                d='M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z'
-                                                clip-rule='evenodd'
-                                                className=''
-                                            ></path>
-                                        </svg>
+                                        <Menu_icon />
                                     </ActionIcon>
                                 </>
                             )}
@@ -170,20 +155,7 @@ const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
                                                     </div>
                                                     <div className='rotate-45 '>
                                                         <Link href={items.link} target='_blank'>
-                                                            <svg
-                                                                aria-hidden='true'
-                                                                role='img'
-                                                                width='17'
-                                                                height='17'
-                                                                className='connectedAccountOpenIcon_df549d right__309a5 cursor-pointer'
-                                                                viewBox='0 0 24 24'
-                                                            >
-                                                                <polygon
-                                                                    fill='currentColor'
-                                                                    fillRule='nonzero'
-                                                                    points='13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8'
-                                                                ></polygon>
-                                                            </svg>
+                                                            <ArrowLink_icon />
                                                         </Link>
                                                     </div>
                                                 </div>
