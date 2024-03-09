@@ -121,7 +121,7 @@ const HomeTemplate = () => {
                                                     <Dm_icon />
                                                 </Link>
                                                 <div className='p-2  bg-general-gray-50 rounded-full'>
-                                                    <Menu_icon />
+                                                    <Menu_icon size='md' />
                                                 </div>
                                             </div>
                                         </div>
@@ -145,10 +145,6 @@ const HomeTemplate = () => {
                                 it here!
                             </span>
                         </div>
-                        {/* <div className='flex items-center gap-2  bg-general-gray-50 border border-gray-700 rounded-xl px-1 py-8 animate-pulse'>
-                            <div className='p-6 rounded-full bg-gray-900'></div>
-                            <span>... .. .</span>
-                        </div> */}
                     </div>
                 </div>
             </div>

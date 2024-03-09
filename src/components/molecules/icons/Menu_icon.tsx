@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const Menu_icon = () => {
+const Menu_icon: FC<{ size: 'lg' | 'md' }> = ({ size }) => {
+    const sizeIcon = () => {
+        switch (size) {
+            case 'lg':
+                return '24'
+            case 'md':
+                return '20'
+        }
+    }
     return (
         <svg
             className='additionalActionsIcon__33de0'
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
+            width={sizeIcon()}
+            height={sizeIcon()}
             fill='none'
             viewBox='0 0 24 24'
         >

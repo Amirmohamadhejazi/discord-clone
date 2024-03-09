@@ -145,7 +145,7 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                                         />
                                         <TextInput
                                             classNames={{
-                                                input: `bg-transparent text-white px-1 border-[2px] focus:bg-black focus:placeholder-black text-xs placeholder-opacity-0 duration-300`,
+                                                input: `bg-transparent text-white px-1 border-[2px] text-xs placeholder-opacity-0 duration-300`,
                                                 label: 'text-xs  font-medium'
                                             }}
                                             placeholder={`Message to @${username}`}
