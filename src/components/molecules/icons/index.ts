@@ -1,5 +1,6 @@
 import AddDm_icon from './AddDm_icon'
 import ArrowLink_icon from './ArrowLink_icon'
+import ArrowSendMessage_icon from './ArrowSendMessage_icon'
 import Dm_icon from './Dm_icon'
 import Frog_icon from './Frog_icon'
 import Gif_icon from './Gif_icon'
@@ -26,5 +27,6 @@ export {
     NitroBadge_icon,
     Shop_icon,
     Sticker_icon,
-    UserAvatar_icon
+    UserAvatar_icon,
+    ArrowSendMessage_icon
 }

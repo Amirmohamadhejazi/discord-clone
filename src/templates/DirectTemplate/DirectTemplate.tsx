@@ -2,11 +2,16 @@
 'use client'
 
 import { useState } from 'react'
-import { HiMiniPlusCircle } from 'react-icons/hi2'
+import { HiMiniBars3, HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
-import { Textarea } from '@mantine/core'
+import { ActionIcon, Textarea } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
 
-import { Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
+import { InternalSidebar, Sidebar } from '@partials/layouts/AppLayout/resources'
+
+import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
+
+import { DModal } from '@atoms/DModal'
 
 import { static_data_directs, static_data_social } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
@@ -16,9 +21,10 @@ import { DirectUser, EmptyDirect } from './resources/components'
 
 const DirectTemplate = ({ userId }: { userId: string }) => {
     const dataUser = static_data_social.filter((items) => items.useId === userId)[0]
+    const [openedDrawer, { open: openDrawer, close: closeDrawer }] = useDisclosure(false)
 
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
-    const [textMessage, setTestMessage] = useState('')
+    const [textMessage, setTextMessage] = useState('')
 
     if (dataUser === undefined) {
         return (
@@ -37,7 +43,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                     messageId: `${dataDirect.messages.length + 1}`,
                     date: ''
                 })
-                setTestMessage('')
+                setTextMessage('')
             }
         } else {
             static_data_directs.push({
@@ -53,11 +59,16 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 personId: userId
             })
         }
-        setTestMessage('')
+        setTextMessage('')
     }
     return (
         <div className='w-full h-full flex flex-col gap-2 p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
+                <div className='md:hidden' onClick={openDrawer}>
+                    <ActionIcon classNames={{ root: 'w-auto' }}>
+                        <HiMiniBars3 size={22} />
+                    </ActionIcon>
+                </div>
                 <div className='w-7 h-7 relative'>
                     <img src={dataUser.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
                     <div className='absolute -right-1 -bottom-0   '>
@@ -72,7 +83,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 </div>
                 <span className='text-white font-semibold'>{dataUser.displayName}</span>
             </div>
-            <div className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'>
+            <div className='flex flex-col gap-y-2  grow justify-end  overflow-hidden mx-4'>
                 {dataDirect?.messages.length > 0 ? (
                     <DirectUser dataDirect={dataDirect} dataUser={dataUser} />
                 ) : (
@@ -80,7 +91,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 )}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
-                <div className='flex justify-between items-start gap-x-2 min-h-[35px] max-h-[240px] overflow-y-auto'>
+                <div className='flex justify-between items-start gap-x-2 min-h-[35px]  max-h-[150px] md:max-h-[240px] overflow-y-auto'>
                     <div className='sticky top-0 flex pt-[2px]'>
                         <HiMiniPlusCircle className='text-general-gray-900  hover:text-general-gray-950 cursor-pointer text-3xl' />
                     </div>
@@ -91,14 +102,14 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                                 input: 'bg-transparent w-full focus:outline-none text-white resize-none placeholder:text-sm placeholder:truncate'
                             }}
                             value={textMessage}
-                            onChange={(e) => setTestMessage(e.target.value)}
+                            onChange={(e) => setTextMessage(e.target.value)}
                             variant='unstyled'
                             autosize
                             // maxRows={1}
                             placeholder={`Message to @${dataUser.username}`}
                         />
                     </form>
-                    <div className='sticky top-0  flex items-center gap-x-3 pt-[2px]'>
+                    <div className='hidden md:flex sticky top-0 items-center gap-x-3 pt-[2px]'>
                         <div className='hover:text-general-gray-950 duration-300 cursor-pointer'>
                             <Gift_icon />
                         </div>
@@ -110,8 +121,31 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                         </div>
                         <RiEmojiStickerFill className='text-2xl hover:text-general-gray-950 duration-300 cursor-pointer' />
                     </div>
+                    <div className='sticky md:hidden top-0  flex items-center gap-x-3 pt-[2px]'>
+                        <div className='flex items-center gap-x-2'>
+                            <RiEmojiStickerFill className='text-2xl hover:text-general-gray-950 duration-300 cursor-pointer' />
+                            <div className='h-6 w-[1px] bg-general-border rounded-md'> </div>
+                            <ArrowSendMessage_icon className='hover:text-general-blue duration-200 cursor-pointer' />
+                        </div>
+                    </div>
                 </div>
             </div>
+            <DModal
+                className='md:hidden'
+                onClose={closeDrawer}
+                opened={openedDrawer}
+                transitionProps={{ duration: 0 }}
+                fullScreen={true}
+            >
+                <div className='flex  h-screen text-general-gray-800'>
+                    {/* Sidebar */}
+                    <Sidebar />
+                    {/* Main Content */}
+                    <div className='flex-auto flex '>
+                        <InternalSidebar fullWidth />
+                    </div>
+                </div>
+            </DModal>
         </div>
     )
 }

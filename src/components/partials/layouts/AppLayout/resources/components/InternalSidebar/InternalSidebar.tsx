@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+import { type FC } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CgHashtag } from 'react-icons/cg'
@@ -8,7 +9,7 @@ import { HiMiniPlus } from 'react-icons/hi2'
 import { IoMdSettings } from 'react-icons/io'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { PiLockKeyFill } from 'react-icons/pi'
-import { static_data_menu_me } from '.'
+import { type IInternalSideBar, static_data_menu_me } from '.'
 
 import { static_data_directs, static_data_me } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
@@ -17,13 +18,17 @@ import { onlineStatus } from '@public/images'
 
 import { Direct, Servers } from './resources/components'
 import { static_data } from '../Sidebar/resources/constants/static-data'
-const InternalSidebar = () => {
+const InternalSidebar: FC<IInternalSideBar> = ({ fullWidth }) => {
     const path = usePathname()
     const [, , routeState] = path.split('/')
     const dataSidebar = static_data.find((items) => items.id === routeState)
 
     return (
-        <div className='w-60 h-full flex flex-col gap-2  bg-general-gray-50 text-general-gray-700 overflow-y-auto '>
+        <div
+            className={`${
+                fullWidth ? 'w-full' : 'w-60'
+            } h-full flex flex-col gap-2  bg-general-gray-50 text-general-gray-700 overflow-y-auto`}
+        >
             <div className='min-h-[48px] shadow-lg p-3'>
                 <div className='bg-general-gray w-full h-full flex items-center rounded-md pl-1'>
                     <span className=' text-general-gray-800 text-xs'>Find or start a conversation</span>

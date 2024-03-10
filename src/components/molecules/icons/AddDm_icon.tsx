@@ -2,12 +2,12 @@ import React, { type FC } from 'react'
 
 import { type IIconProps } from './resources/types/types'
 
-const AddDm_icon: FC<IIconProps> = ({ size = '24' }) => {
+const AddDm_icon: FC<IIconProps> = ({ size = '24', className }) => {
     return (
         <svg
             x='0'
             y='0'
-            className='icon__4cb88'
+            className={`icon__4cb88 ${className}`}
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'

@@ -22,10 +22,10 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
             </div>
             {/* Main Content */}
             <div className='flex-auto flex '>
-                <div className='h-full hidden xl:block'>
+                <div className='h-full hidden md:block'>
                     <InternalSidebar />
                 </div>
-                <div className='flex-auto  bg-general-gray-100'>{children}</div>
+                <div className='flex-auto bg-general-gray-100'>{children}</div>
             </div>
         </div>
     )
