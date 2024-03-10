@@ -2,39 +2,15 @@
 
 import { Button } from '@mantine/core'
 
-import { Gift_icon, NitroBadge_icon } from '@molecules/icons'
+import { Frog_icon, Gift_icon, NitroBadge_icon } from '@molecules/icons'
 
 import { CardNitro } from '@atoms/CardNitro'
 
-import {
-    ExploreWhatsNew_EarlyAccess,
-    ExploreWhatsNew_SpecialMemberPricing,
-    ExploreWhatsNew_UnlimitedSuperReactions,
-    nitroBg
-} from '@public/images'
+import { NitroBanner, nitroBg } from '@public/images'
+
+import { staticData } from './resources/constants/dummy-data'
 
 const NitroTemplate = () => {
-    const dataExploreWhatsNew = [
-        {
-            name: 'Early Access',
-            title: 'Get exclusive access to certain new features before they’re released to everyone.',
-            description: 'Nitro members, get ready to get your hands on the latest and greatest before everyone else.',
-            img: ExploreWhatsNew_EarlyAccess.src
-        },
-        {
-            name: 'Special Member Pricing',
-            title: 'Snag sweet discounts on any - or every! - item at the Shop.',
-            description: 'Exclusive savings are reserved for Nitro members only.',
-            img: ExploreWhatsNew_SpecialMemberPricing.src,
-            button: 'Visit the Shop'
-        },
-        {
-            name: 'Unlimited Super Reactions',
-            title: 'We made Super Reactions unlimited so you can unleash the chaos in your chats.',
-            description: 'Now available on Nitro and Nitro Basic.',
-            img: ExploreWhatsNew_UnlimitedSuperReactions.src
-        }
-    ]
     return (
         <div className='flex flex-col h-full'>
             <div className='w-full bg-general-gray-100  min-h-[48px] shadow-lg p-[8px] whitespace-nowrap flex-wrap  flex items-center justify-between '>
@@ -48,9 +24,9 @@ const NitroTemplate = () => {
                 </div>
             </div>
             <div className='h-full overflow-auto  '>
-                <div className='flex flex-col relative'>
-                    <div className='bg-general-gray-100 relative '>
-                        <img src={nitroBg.src} alt='nitroBg' />
+                <div className='flex flex-col items-center relative'>
+                    <div className='w-full bg-general-gray-100 relative '>
+                        <img src={nitroBg.src} className='w-full object-cover' alt='nitroBg' />
                         <div className='flex flex-col text-center items-center gap-3 absolute top-16 w-full '>
                             <p className='  text-6xl font-extrabold text-white'>Welcome to Your Nitro Home</p>
 
@@ -62,17 +38,41 @@ const NitroTemplate = () => {
                             </Button>
                         </div>
                     </div>
-                    <div className='px-4 w-full flex flex-col gap-8 absolute top-[80%] text-white '>
-                        <div className='flex flex-col gap-5'>
-                            <span className='text-2xl font-extrabold ml-5'>Explore Whats New</span>
+                    <div className='px-4 container flex flex-col gap-8 absolute top-[55%] text-white '>
+                        {staticData.map((items, indexNitro) => (
+                            <div className='flex flex-col gap-5' key={indexNitro}>
+                                <span className='text-2xl font-extrabold ml-5'>{items.category}</span>
 
-                            <div className='grid items-start h-full duration-100 grid-cols-3 gap-5  transition-all'>
-                                {dataExploreWhatsNew.map((itemsExplore, index) => (
-                                    <CardNitro itemsCard={itemsExplore} key={index} />
-                                ))}
+                                <div className='grid items-start h-full duration-100 grid-cols-3 gap-5  transition-all'>
+                                    {items.cards.map((itemsExplore, index) => (
+                                        <CardNitro itemsCard={itemsExplore} key={index} />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                        <div className='grid grid-cols-2 gap-52  bg-general-gray-300 rounded-xl  overflow-hidden mt-12'>
+                            <div className=''>
+                                <div className='flex flex-col gap-2 px-12 pt-8 pb-10'>
+                                    <span className='font-bold'>Gift Nitro</span>
+                                    <span className='text-xs'>
+                                        Gift someone Nitro to give them access to profile customization, emoji, and
+                                        superpowered chat features.
+                                    </span>
+                                    <Button className='border-2 border-red-100'>
+                                        <div className='flex items-center gap-2'>
+                                            <Gift_icon />
+                                            <span>Gift Nitro</span>
+                                        </div>
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className='h-36 '>
+                                <img src={NitroBanner.src} className='object-cover' alt='' />
                             </div>
                         </div>
-                        <div className='w-2 h-[1000px]'></div>
+                        <div className='flex justify-center w-full mt-12'>
+                            <Frog_icon />
+                        </div>
                     </div>
                 </div>
             </div>
