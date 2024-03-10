@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const NitroBadge_icon = () => {
+import { type IIconProps } from './resources/types/types'
+
+const NitroBadge_icon: FC<IIconProps> = ({ size = '20' }) => {
     return (
         <svg
             className='linkButtonIcon__2f35b'
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'
-            width='20'
-            height='20'
+            width={size}
+            height={size}
             fill='none'
             viewBox='0 0 24 24'
         >

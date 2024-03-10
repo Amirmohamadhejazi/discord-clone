@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const Gift_icon = () => {
+import { type IIconProps } from './resources/types/types'
+
+const Gift_icon: FC<IIconProps> = ({ size = '24' }) => {
     return (
         <svg
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
+            width={size}
+            height={size}
             fill='none'
             viewBox='0 0 24 24'
         >

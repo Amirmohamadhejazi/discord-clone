@@ -32,7 +32,7 @@ const NitroTemplate = () => {
 
                             <Button className=' bg-blue-500' classNames={{ root: 'p-2' }}>
                                 <div className='flex text-sm items-center gap-2'>
-                                    <Gift_icon />
+                                    <Gift_icon size={'20'} />
                                     <span>Give the gift of Nitro</span>
                                 </div>
                             </Button>
@@ -50,17 +50,17 @@ const NitroTemplate = () => {
                                 </div>
                             </div>
                         ))}
-                        <div className='grid grid-cols-2 gap-52  bg-general-gray-300 rounded-xl  overflow-hidden mt-12'>
+                        <div className='grid grid-cols-2 gap-52 bg-general-gray-300 rounded-xl  overflow-hidden mt-12'>
                             <div className=''>
                                 <div className='flex flex-col gap-2 px-12 pt-8 pb-10'>
                                     <span className='font-bold'>Gift Nitro</span>
                                     <span className='text-xs'>
                                         Gift someone Nitro to give them access to profile customization, emoji, and
-                                        superpowered chat features.
+                                        superPowered chat features.
                                     </span>
                                     <Button className='border-2 border-red-100'>
                                         <div className='flex items-center gap-2'>
-                                            <Gift_icon />
+                                            <Gift_icon size={'20'} />
                                             <span>Gift Nitro</span>
                                         </div>
                                     </Button>

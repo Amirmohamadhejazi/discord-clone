@@ -1,19 +1,14 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useState } from 'react'
-import Link from 'next/link'
 
-import { AddDm_icon, Dm_icon, Inbox_icon, Menu_icon } from '@molecules/icons'
+import { FriendsActivity, FriendsList } from '@organisms/HomeOrganisms'
+
+import { AddDm_icon, Inbox_icon } from '@molecules/icons'
 import Help_icon from '@molecules/icons/Help_icon'
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
-import { DMenu } from '@atoms/DMenu'
-
 import { static_data_menu, static_data_social } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
-import { statusHandler } from '@core/utils/common/statusHandler'
-
 const HomeTemplate = () => {
     const [tab, setTab] = useState<number | null>(1)
 
@@ -74,60 +69,11 @@ const HomeTemplate = () => {
                     <div className='h-full flex flex-col text-sm gap-y-1 '>
                         {dataMembers?.length > 0 ? (
                             <>
-                                <span className='font-semibold'>
+                                <span className='font-semibold  '>
                                     {tab === 1 ? 'online' : tab === 2 ? 'All' : tab === 3 ? 'pending' : 'Blocked'}-{' '}
                                     {dataMembers?.length}
                                 </span>
-                                {dataMembers.map((itemSocial: TCriticalAnyType) => (
-                                    <div className='border-t border-general-border ' key={itemSocial.useId}>
-                                        <div className='flex items-center justify-between hover:bg-general-gray-400 px-2 py-2 rounded-lg cursor-pointer duration-300 group'>
-                                            <div className='grow'>
-                                                <DMenu type='socialFriend'>
-                                                    <div className='flex  items-center gap-x-3 '>
-                                                        <div className='w-9 h-9 relative'>
-                                                            <img
-                                                                src={itemSocial.avatar.src}
-                                                                className='w-full h-full rounded-full object-cover'
-                                                                alt=''
-                                                            />
-                                                            <div className='absolute -right-1 -bottom-0   '>
-                                                                <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
-                                                                    <img
-                                                                        src={statusHandler(itemSocial.status)}
-                                                                        className='w-full h-full mb-1 object-cover'
-                                                                        alt=''
-                                                                    />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className='flex flex-col justify-between'>
-                                                            <div className='flex gap-x-2'>
-                                                                <span className='text-white'>
-                                                                    {itemSocial.displayName}
-                                                                </span>
-                                                                <span className='hidden group-hover:block '>
-                                                                    {itemSocial.username}
-                                                                </span>
-                                                            </div>
-                                                            <span className='text-xs'>{itemSocial.status}</span>
-                                                        </div>
-                                                    </div>
-                                                </DMenu>
-                                            </div>
-                                            <div className='flex gap-x-2 text-general-gray-900 *:hover:text-white'>
-                                                <Link
-                                                    href={`me/${itemSocial.useId}`}
-                                                    className='p-2  bg-general-gray-50 rounded-full'
-                                                >
-                                                    <Dm_icon />
-                                                </Link>
-                                                <div className='p-2  bg-general-gray-50 rounded-full'>
-                                                    <Menu_icon size='md' />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                                <FriendsList friendsData={dataMembers} />
                             </>
                         ) : (
                             <div className='flex flex-col gap-y-2 grow p-1 justify-center items-center   overflow-auto'>
@@ -136,18 +82,7 @@ const HomeTemplate = () => {
                         )}
                     </div>
                 </div>
-                <div className=' flex-col w-[360px] py-[16px] px-[8px] shadow-md p-2 hidden xl:flex'>
-                    <span className='text-xl font-semibold text-white my-[16mx] px-[8px]'>Active Now</span>
-                    <div className='py-8 '>
-                        <div className='flex flex-col gap-y-2 text-sm text-center'>
-                            <span className='text-white font-bold'>It's quiet for now...</span>
-                            <span>
-                                When a friend starts an activity—like playing a game or hanging out on voice—we’ll show
-                                it here!
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                <FriendsActivity />
             </div>
         </div>
     )

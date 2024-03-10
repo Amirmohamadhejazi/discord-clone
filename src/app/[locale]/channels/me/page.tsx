@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     title: 'home',
     description: 'home'
 }
+
 const home = () => {
     return <HomeTemplate />
 }

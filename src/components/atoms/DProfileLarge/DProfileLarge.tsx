@@ -106,7 +106,7 @@ const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
                                         </div>
                                     </ActionIcon>
                                     <ActionIcon classNames={{ root: 'w-auto' }}>
-                                        <Menu_icon size='lg' />
+                                        <Menu_icon />
                                     </ActionIcon>
                                 </>
                             )}

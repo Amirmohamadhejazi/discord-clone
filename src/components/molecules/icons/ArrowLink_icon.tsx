@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const ArrowLink_icon = () => {
+import { type IIconProps } from './resources/types/types'
+
+const ArrowLink_icon: FC<IIconProps> = ({ size = '17' }) => {
     return (
         <svg
             aria-hidden='true'
             role='img'
-            width='17'
-            height='17'
+            width={size}
+            height={size}
             className='connectedAccountOpenIcon_df549d right__309a5 cursor-pointer'
             viewBox='0 0 24 24'
         >

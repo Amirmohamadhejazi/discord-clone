@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const Shop_icon = () => {
+import { type IIconProps } from './resources/types/types'
+
+const Shop_icon: FC<IIconProps> = ({ size = '23' }) => {
     return (
         <svg
             className='linkButtonIcon__2f35b'
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'
-            width='23'
-            height='23'
+            width={size}
+            height={size}
             fill='none'
             viewBox='0 0 24 24'
         >

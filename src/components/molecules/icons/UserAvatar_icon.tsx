@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const UserAvatar_icon = () => {
+import { type IIconProps } from './resources/types/types'
+
+const UserAvatar_icon: FC<IIconProps> = ({ size = '16' }) => {
     return (
         <svg
             className='linkButtonIcon__2f35b w-6 h-6'
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'
-            width='16'
-            height='16'
+            width={size}
+            height={size}
             fill='none'
             viewBox='0 0 24 24'
         >
