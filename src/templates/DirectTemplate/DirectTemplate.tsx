@@ -4,7 +4,7 @@
 import { useState } from 'react'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
-import { TextInput } from '@mantine/core'
+import { Textarea } from '@mantine/core'
 
 import { Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
 
@@ -80,12 +80,12 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 )}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
-                <div className='flex justify-between items-center gap-x-2 min-h-[35px]'>
-                    <div className='flex'>
+                <div className='flex justify-between items-start gap-x-2 min-h-[35px] max-h-[240px] overflow-y-auto'>
+                    <div className='sticky top-0 flex pt-[2px]'>
                         <HiMiniPlusCircle className='text-general-gray-900  hover:text-general-gray-950 cursor-pointer text-3xl' />
                     </div>
                     <form className='w-full' onSubmit={formHandler}>
-                        <TextInput
+                        <Textarea
                             classNames={{
                                 root: 'w-full ',
                                 input: 'bg-transparent w-full focus:outline-none text-white resize-none placeholder:text-sm placeholder:truncate'
@@ -93,12 +93,12 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                             value={textMessage}
                             onChange={(e) => setTestMessage(e.target.value)}
                             variant='unstyled'
-                            // autosize
+                            autosize
                             // maxRows={1}
                             placeholder={`Message to @${dataUser.username}`}
                         />
                     </form>
-                    <div className='flex items-center gap-x-3 '>
+                    <div className='sticky top-0  flex items-center gap-x-3 pt-[2px]'>
                         <div className='hover:text-general-gray-950 duration-300 cursor-pointer'>
                             <Gift_icon />
                         </div>
