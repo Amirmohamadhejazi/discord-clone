@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
 import { TextInput } from '@mantine/core'
@@ -18,15 +18,8 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
     const dataUser = static_data_social.filter((items) => items.useId === userId)[0]
 
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
-    const [divHeightDirect, setDivHeightDirect] = useState(0)
     const [textMessage, setTestMessage] = useState('')
 
-    useEffect(() => {
-        if (typeof document !== 'undefined') {
-            const height = document.getElementById('heightOverflowDirect')?.offsetHeight || 0
-            setDivHeightDirect(height)
-        }
-    }, [])
     if (dataUser === undefined) {
         return (
             <div className='w-full h-full flex items-center justify-center'>
@@ -79,17 +72,12 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                 </div>
                 <span className='text-white font-semibold'>{dataUser.displayName}</span>
             </div>
-            <div
-                className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'
-                id='heightOverflowDirect'
-                style={{ maxHeight: `${divHeightDirect !== 0 && `${divHeightDirect}px`}` }}
-            >
-                {divHeightDirect > 0 &&
-                    (dataDirect?.messages.length > 0 ? (
-                        <DirectUser dataDirect={dataDirect} dataUser={dataUser} />
-                    ) : (
-                        <EmptyDirect dataUser={dataUser} />
-                    ))}
+            <div className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'>
+                {dataDirect?.messages.length > 0 ? (
+                    <DirectUser dataDirect={dataDirect} dataUser={dataUser} />
+                ) : (
+                    <EmptyDirect dataUser={dataUser} />
+                )}
             </div>
             <div className='bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
                 <div className='flex justify-between items-center gap-x-2 min-h-[35px]'>

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CgHashtag } from 'react-icons/cg'
@@ -20,27 +19,19 @@ import { Direct, Servers } from './resources/components'
 import { static_data } from '../Sidebar/resources/constants/static-data'
 const InternalSidebar = () => {
     const path = usePathname()
-    const sidebarState = path.split('/')
-    const dataSidebar = static_data.find((items) => items.id === sidebarState[2])
-    const [divHeight, setDivHeight] = useState(0)
-
-    useEffect(() => {
-        if (typeof document !== 'undefined') {
-            const height = document.getElementById('heightOverflow')?.offsetHeight || 0
-            setDivHeight(height)
-        }
-    }, [])
+    const [, , routeState] = path.split('/')
+    const dataSidebar = static_data.find((items) => items.id === routeState)
 
     return (
-        <div className='w-60 h-full flex flex-col gap-2  bg-general-gray-50 text-general-gray-700 '>
-            <div className='min-h-[48px] shadow-lg p-[8px]'>
+        <div className='w-60 h-full flex flex-col gap-2  bg-general-gray-50 text-general-gray-700 overflow-y-auto '>
+            <div className='min-h-[48px] shadow-lg p-3'>
                 <div className='bg-general-gray w-full h-full flex items-center rounded-md pl-1'>
                     <span className=' text-general-gray-800 text-xs'>Find or start a conversation</span>
                 </div>
             </div>
             <div className='px-[8px]  '>
-                {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
-                    <div className='flex flex-col gap-2 font-semibold *:py-2 '>
+                {routeState === 'me' || routeState === 'nitro' || routeState === 'shop' ? (
+                    <div className='flex flex-col gap-1 font-semibold *:py-2 '>
                         {static_data_menu_me.map((itemsMe) => (
                             <Link
                                 href={`/${itemsMe.href}`}
@@ -51,7 +42,7 @@ const InternalSidebar = () => {
                                 }   rounded-md flex grow`}
                                 key={itemsMe.id}
                             >
-                                <div className='flex items-center gap-3 '>
+                                <div className='flex items-center gap-3 text-sm'>
                                     {itemsMe.icon}
                                     <span>{itemsMe.label}</span>
                                 </div>
@@ -62,7 +53,7 @@ const InternalSidebar = () => {
                     dataSidebar?.channels.map((itemsChannel) => (
                         <Link
                             key={itemsChannel.href}
-                            href={`/channels/${sidebarState[2]}/${itemsChannel.href}`}
+                            href={`/channels/${routeState}/${itemsChannel.href}`}
                             className='flex items-center justify-between font-bold hover:bg-general-gray-500 px-[8px] py-[6px] rounded-md cursor-pointer'
                         >
                             <div className='flex items-center gap-1 '>
@@ -87,46 +78,36 @@ const InternalSidebar = () => {
                 )}
             </div>
             {/* nitro shop */}
-            {sidebarState[2] === 'me' || sidebarState[2] === 'nitro' || sidebarState[2] === 'shop' ? (
+            {routeState === 'me' || routeState === 'nitro' || routeState === 'shop' ? (
                 <>
                     <div className='flex items-center justify-between px-[8px]'>
                         <span className='text-xs'>Direct Messages</span>
                         <HiMiniPlus className='text-lg' />
                     </div>
-                    <div
-                        className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
-                        id='heightOverflow'
-                        style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
-                    >
-                        {divHeight !== 0 && (
-                            <>
-                                {static_data_directs.length > 0 ? (
-                                    <div className='flex flex-col gap-y-1'>
-                                        {static_data_directs.map((itemDirects: TCriticalAnyType) => (
-                                            <Direct dataDirect={itemDirects} key={itemDirects.personId} />
-                                        ))}
-                                    </div>
-                                ) : (
-                                    [0, 1, 2].map((items, index) => (
-                                        <div className='flex items-center justify-center gap-x-2' key={index}>
-                                            <div className=' bg-general-gray-100 p-4 rounded-full ' />
-                                            <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
-                                                {index + 23 + items}
-                                            </div>
+                    <div className='flex flex-col gap-y-2 grow overflow-auto px-[12px]'>
+                        <>
+                            {static_data_directs.length > 0 ? (
+                                <div className='flex flex-col gap-y-1'>
+                                    {static_data_directs.map((itemDirects: TCriticalAnyType) => (
+                                        <Direct dataDirect={itemDirects} key={itemDirects.personId} />
+                                    ))}
+                                </div>
+                            ) : (
+                                [0, 1, 2].map((items, index) => (
+                                    <div className='flex items-center justify-center gap-x-2' key={index}>
+                                        <div className=' bg-general-gray-100 p-4 rounded-full ' />
+                                        <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
+                                            {index + 23 + items}
                                         </div>
-                                    ))
-                                )}
-                            </>
-                        )}
+                                    </div>
+                                ))
+                            )}
+                        </>
                     </div>
                 </>
             ) : (
-                <div
-                    className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'
-                    id='heightOverflow'
-                    style={{ maxHeight: `${divHeight !== 0 && `${divHeight}px`}` }}
-                >
-                    {divHeight !== 0 && <Servers />}
+                <div className='flex flex-col gap-y-2 grow   overflow-auto px-[12px]'>
+                    <Servers />
                 </div>
             )}
             <div className='w-full flex justify-between bg-general-gray-300 p-[8px] group  '>

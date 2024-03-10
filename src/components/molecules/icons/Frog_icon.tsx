@@ -7,7 +7,7 @@ const Frog_icon = () => {
                 d='M6.62086 5.91995L4.80526 9.20879C4.42303 9.94878 5.28305 10.771 6.23863 10.4421L10.0609 8.87991C10.3476 8.79769 10.6343 8.79769 10.921 8.87991L14.7433 10.4421C15.6033 10.771 16.5589 10.031 16.1766 9.20879L14.3611 5.91995C14.2655 5.67329 14.2655 5.42663 14.3611 5.17997L16.1766 1.89113C16.4633 1.06892 15.5077 0.328934 14.6477 0.657818L10.8254 2.22001C10.5387 2.30224 10.2521 2.30224 9.96539 2.22001L6.14307 0.657818C5.28305 0.328934 4.32747 1.06892 4.7097 1.89113L6.5253 5.17997C6.71642 5.34441 6.71642 5.67329 6.62086 5.91995Z'
                 fill='#FCA800'
             />
-            <g clip-path='url(#clip0_1280_102143)'>
+            <g clipPath='url(#clip0_1280_102143)'>
                 <path
                     d='M62.0391 66.6096C68.6947 74.9167 76.3628 82.3607 84.8607 88.7674C87.1761 90.4935 90.3213 90.5931 92.7446 89.0163C95.9728 87.008 96.9686 82.7674 94.9686 79.5308C94.9188 79.4561 94.869 79.3814 94.8192 79.3068C85.8566 65.7797 76.8109 52.4187 76.8109 52.4187L62.0391 66.6096Z'
                     fill='url(#paint0_linear_1280_102143)'
@@ -15,9 +15,9 @@ const Frog_icon = () => {
                 <path
                     d='M71.9971 66.5266L83.6983 84.452'
                     stroke='#0EC2BC'
-                    stroke-width='1.1315'
-                    stroke-miterlimit='10'
-                    stroke-linecap='round'
+                    strokeWidth='1.1315'
+                    strokeMiterlimit='10'
+                    strokeLinecap='round'
                 />
                 <path
                     d='M35.8145 62.7092C22.5365 64.8669 20.5448 74.4105 15.8145 87.6056C11.0842 100.801 28.0137 99.8878 39.383 99.8878C50.7523 99.8878 71.4163 95.1575 76.8105 66.1117L35.8145 62.7092Z'
@@ -42,16 +42,16 @@ const Frog_icon = () => {
                 <path
                     d='M37.3076 39.7218C40.2952 39.6389 42.0379 40.6347 43.4487 42.5434'
                     stroke='#0EC2BC'
-                    stroke-width='1.1315'
-                    stroke-miterlimit='10'
-                    stroke-linecap='round'
+                    strokeWidth='1.1315'
+                    strokeMiterlimit='10'
+                    strokeLinecap='round'
                 />
                 <path
                     d='M76.8104 39.9707C74.9017 45.9458 73.4909 52.4189 68.6776 53.1658C63.8643 53.9127 55.9805 47.9375 47.8477 42.4603'
                     stroke='black'
-                    stroke-width='1.601'
-                    stroke-miterlimit='10'
-                    stroke-linecap='round'
+                    strokeWidth='1.601'
+                    strokeMiterlimit='10'
+                    strokeLinecap='round'
                 />
                 <path
                     d='M76.3112 37.3979C78.0539 37.1489 81.2904 38.4767 81.7054 40.8834C82.1203 43.29 78.2199 42.8751 76.1452 41.1323C75.3319 40.5597 74.8423 39.6386 74.8174 38.6427C74.8174 38.0618 75.3983 37.4809 76.3112 37.3979Z'
@@ -160,10 +160,10 @@ const Frog_icon = () => {
                     y2='64.4753'
                     gradientUnits='userSpaceOnUse'
                 >
-                    <stop offset='0.04' stop-color='#2AE5C4' />
-                    <stop offset='0.27' stop-color='#25DFC3' />
-                    <stop offset='0.56' stop-color='#19CFBF' />
-                    <stop offset='0.73' stop-color='#0EC2BC' />
+                    <stop offset='0.04' stopColor='#2AE5C4' />
+                    <stop offset='0.27' stopColor='#25DFC3' />
+                    <stop offset='0.56' stopColor='#19CFBF' />
+                    <stop offset='0.73' stopColor='#0EC2BC' />
                 </linearGradient>
                 <linearGradient
                     id='paint1_linear_1280_102143'
@@ -173,8 +173,8 @@ const Frog_icon = () => {
                     y2='64.7989'
                     gradientUnits='userSpaceOnUse'
                 >
-                    <stop stop-color='#2AE5C4' />
-                    <stop offset='0.9' stop-color='#0EC2BC' />
+                    <stop stopColor='#2AE5C4' />
+                    <stop offset='0.9' stopColor='#0EC2BC' />
                 </linearGradient>
                 <clipPath id='clip0_1280_102143'>
                     <rect width='93.6133' height='68' fill='white' transform='translate(0 16.5496)' />

@@ -10,7 +10,7 @@ const Sidebar = () => {
     const path = usePathname()
     const sidebarState = path.split('/')[2]
     return (
-        <div className='w-[72px] h-full flex flex-col items-center justify-start py-3  bg-general-gray'>
+        <div className='w-16 h-full flex flex-col items-center justify-start py-3  bg-general-gray overflow-y-auto'>
             <div className='flex flex-col gap-2'>
                 {static_data.map((items, index) => (
                     <Link
