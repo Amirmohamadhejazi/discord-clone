@@ -1,20 +1,32 @@
+'use client'
 /* eslint-disable @next/next/no-img-element */
 
-import { Button } from '@mantine/core'
+import { HiMiniBars3 } from 'react-icons/hi2'
+import { useDispatch } from 'react-redux'
+import { ActionIcon, Button } from '@mantine/core'
 
 import { Frog_icon, Gift_icon, NitroBadge_icon } from '@molecules/icons'
 
 import { CardNitro } from '@atoms/CardNitro'
+
+import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 
 import { NitroBanner, nitroBg } from '@public/images'
 
 import { staticData } from './resources/constants/dummy-data'
 
 const NitroTemplate = () => {
+    const dispatch = useDispatch()
+
     return (
         <div className='flex flex-col h-full'>
             <div className='w-full bg-general-gray-100  min-h-[48px] shadow-lg p-[8px] whitespace-nowrap flex-wrap  flex items-center justify-between '>
                 <div className=' flex items-center  flex-wrap gap-2 sm:gap-7   relative'>
+                    <div className='md:hidden' onClick={() => dispatch(openMenu())}>
+                        <ActionIcon classNames={{ root: 'w-auto' }}>
+                            <HiMiniBars3 size={22} />
+                        </ActionIcon>
+                    </div>
                     <div className='flex items-center  gap-1 '>
                         <div className='text-sm'>
                             <NitroBadge_icon />

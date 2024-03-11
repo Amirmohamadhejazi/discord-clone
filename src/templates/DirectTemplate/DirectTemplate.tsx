@@ -4,17 +4,21 @@
 import { useState } from 'react'
 import { HiMiniBars3, HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
+import { useDispatch } from 'react-redux'
 import { ActionIcon, Textarea } from '@mantine/core'
 
 import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
 
 import { static_data_directs, static_data_social } from '@core/constants/dummy-data'
+import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { statusHandler } from '@core/utils/common/statusHandler'
 
 import { DirectUser, EmptyDirect } from './resources/components'
 
 const DirectTemplate = ({ userId }: { userId: string }) => {
+    const dispatch = useDispatch()
+
     const dataUser = static_data_social.filter((items) => items.useId === userId)[0]
 
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
@@ -58,7 +62,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
     return (
         <div className='w-full h-full flex flex-col gap-2 p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
-                <div className='md:hidden' onClick={() => console.log('open')}>
+                <div className='md:hidden' onClick={() => dispatch(openMenu())}>
                     <ActionIcon classNames={{ root: 'w-auto' }}>
                         <HiMiniBars3 size={22} />
                     </ActionIcon>

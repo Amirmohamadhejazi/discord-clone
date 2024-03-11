@@ -3,10 +3,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaDiscord } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
+
+import { closeMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 
 import { static_data } from './resources/constants/static-data'
 
 const Sidebar = () => {
+    const dispatch = useDispatch()
     const path = usePathname()
     const sidebarState = path.split('/')[2]
     return (
@@ -23,6 +27,7 @@ const Sidebar = () => {
                                 className={`flex items-center justify-center w-[48px] h-[48px]  overflow-hidden ${
                                     sidebarState === 'me' ? 'bg-general-blue' : '  bg-general-gray-100'
                                 } ${sidebarState === items.id ? ' rounded-2xl  ' : 'rounded-full hover:rounded-2xl'}`}
+                                onClick={() => sidebarState === items.id && dispatch(closeMenu())}
                             >
                                 {items.icon ? (
                                     <img src={items.icon} alt={items.icon} />

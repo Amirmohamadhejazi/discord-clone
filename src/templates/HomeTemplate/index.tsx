@@ -1,5 +1,8 @@
 'use client'
 import React, { useState } from 'react'
+import { HiMiniBars3 } from 'react-icons/hi2'
+import { useDispatch } from 'react-redux'
+import { ActionIcon } from '@mantine/core'
 
 import { FriendsActivity, FriendsList } from '@organisms/HomeOrganisms'
 
@@ -8,8 +11,10 @@ import Help_icon from '@molecules/icons/Help_icon'
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
 import { static_data_menu, static_data_social } from '@core/constants/dummy-data'
+import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 const HomeTemplate = () => {
+    const dispatch = useDispatch()
     const [tab, setTab] = useState<number | null>(1)
 
     const onlineMembers = static_data_social.filter((itemsMember) => itemsMember.status !== 'offline')
@@ -33,6 +38,11 @@ const HomeTemplate = () => {
         <div className='flex flex-col grow h-full'>
             <div className='w-full min-h-[48px] shadow-lg p-[8px] whitespace-nowrap flex-wrap  flex items-center justify-between '>
                 <div className=' flex items-center  flex-wrap gap-2 sm:gap-7   relative'>
+                    <div className='md:hidden' onClick={() => dispatch(openMenu())}>
+                        <ActionIcon classNames={{ root: 'w-auto' }}>
+                            <HiMiniBars3 size={22} />
+                        </ActionIcon>
+                    </div>
                     <div className='flex items-center  gap-3 '>
                         <span className='font-medium text-white '>Friends</span>
                     </div>

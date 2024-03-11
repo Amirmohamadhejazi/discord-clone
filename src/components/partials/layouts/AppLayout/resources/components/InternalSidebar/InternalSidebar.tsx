@@ -8,9 +8,11 @@ import { HiMiniPlus } from 'react-icons/hi2'
 import { IoMdSettings } from 'react-icons/io'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { PiLockKeyFill } from 'react-icons/pi'
+import { useDispatch } from 'react-redux'
 import { static_data_menu_me } from '.'
 
 import { static_data_directs, static_data_me } from '@core/constants/dummy-data'
+import { closeMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
@@ -21,6 +23,7 @@ const InternalSidebar = () => {
     const path = usePathname()
     const [, , routeState] = path.split('/')
     const dataSidebar = static_data.find((items) => items.id === routeState)
+    const dispatch = useDispatch()
 
     return (
         <div
@@ -43,6 +46,7 @@ const InternalSidebar = () => {
                                         : 'hover:bg-general-gray-200 hover:text-general-gray-950'
                                 }   rounded-md flex grow`}
                                 key={itemsMe.id}
+                                onClick={() => path === `/${itemsMe.href}` && dispatch(closeMenu())}
                             >
                                 <div className='flex items-center gap-3 text-sm'>
                                     {itemsMe.icon}
