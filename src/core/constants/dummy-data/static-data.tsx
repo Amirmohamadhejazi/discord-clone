@@ -9,7 +9,13 @@ import {
     avatarSobhan,
     avatarTheCode,
     avatarYounes,
-    bannerTheCode
+    bannerTheCode,
+    Kekw7_emoji,
+    Pedarsag_emoji,
+    PepeThinking_emoji,
+    PES_Melt_emoji,
+    Speak_emoji,
+    Troll_emoji
 } from '@public/images'
 
 export const static_data_menu = [
@@ -19,6 +25,16 @@ export const static_data_menu = [
     // { name: 'Suggestions', id: 4 },
     { name: 'Blocked', id: 4 }
 ]
+export const emoji_data = [
+    { name: 'Kekw7', img: Kekw7_emoji.src },
+    { name: 'Pepe_Thinking', img: PepeThinking_emoji.src },
+    { name: 'Pes_melt', img: PES_Melt_emoji.src },
+    { name: 'speak', img: Speak_emoji.src },
+    { name: 'troll', img: Troll_emoji.src },
+    { name: 'pedarsag', img: Pedarsag_emoji.src }
+]
+
+// , ,
 export const static_data_me = {
     displayName: 'Amirmohamad',
     colors: ['black', 'hsla(257, 100%, 26.3%, 1)'],
@@ -220,9 +236,11 @@ export const static_data_social = [
         ]
     }
 ]
-
+// :Kekw7:
+// :Pepe_Thinking:
 export const static_data_directs = [
     // messagesDirect sort by this date
+
     {
         personId: '214280633692717056',
         lastUpdateData: '',
@@ -573,6 +591,18 @@ export const static_data_directs = [
                 message: "Thanks! I'll give it a listen during my afternoon break. You have great taste! 👌",
                 messageId: '50',
                 date: '2024-03-12T11:45:00'
+            },
+            {
+                sender: 'me',
+                message: ':speak:',
+                messageId: '49',
+                date: '2024-03-12T11:40:00'
+            },
+            {
+                sender: 'audience',
+                message: ':troll:',
+                messageId: '49',
+                date: '2024-03-12T11:40:00'
             }
         ]
     },
@@ -750,6 +780,12 @@ export const static_data_directs = [
                 message: "Sounds perfect. I'll give it a shot. Thanks for the suggestion!",
                 messageId: '25',
                 date: '2024-03-02T19:50:00'
+            },
+            {
+                sender: 'me',
+                message: ':Kekw7:',
+                messageId: '25',
+                date: '2024-03-02T19:50:00'
             }
         ]
     },
@@ -823,6 +859,18 @@ export const static_data_directs = [
                     'Absolutely! Use the golden hour for soft and warm lighting, and experiment with different angles. Patience is key for the perfect shot!',
                 messageId: '30',
                 date: '2024-03-02T14:24:20'
+            },
+            {
+                sender: 'audience',
+                message: 'Ammirrrrr',
+                messageId: '29',
+                date: '2024-03-02T14:23:00'
+            },
+            {
+                sender: 'audience',
+                message: ':pedarsag:',
+                messageId: '29',
+                date: '2024-03-02T14:23:00'
             }
         ]
     },
@@ -836,156 +884,44 @@ export const static_data_directs = [
             { sender: 'me', message: '2018: 30$', messageId: '4', date: '' },
             { sender: 'me', message: '2019: 10$', messageId: '5', date: '' },
             { sender: 'audience', message: 'this is very expensive brooo', messageId: '6', date: '' },
-            { sender: 'audience', message: '😔😔😔😔', messageId: '7', date: '' },
-
+            { sender: 'me', message: 'give my money brother', messageId: '5', date: '' },
+            { sender: 'me', message: ':Pepe_Thinking:', messageId: '5', date: '' },
+            { sender: 'audience', message: 'wait im not a scamer 😔', messageId: '5', date: '' }
+        ]
+    },
+    {
+        personId: '180204915942096896',
+        lastUpdateData: '',
+        messages: [
             {
                 sender: 'audience',
-                message: 'Hey there! Do you have any recommendations for a good store nearby?',
+                message: 'hi where are you Amir? :Kekw7:',
                 messageId: '1',
-                date: '2024-03-02T09:15:00'
+                date: ''
             },
             {
                 sender: 'me',
-                message: 'Sure! There\'s a great store called "Tech Haven" just around the corner.',
+                message: 'hi how are you brother?? :Pepe_Thinking: i need some bug to work out',
                 messageId: '2',
-                date: '2024-03-02T09:17:00'
-            },
-            {
-                sender: 'me',
-                message: 'They have a wide range of tech gadgets and accessories.',
-                messageId: '3',
-                date: '2024-03-02T09:18:00'
+                date: ''
             },
             {
                 sender: 'audience',
-                message: 'Awesome! What kind of products do they have? Any good deals?',
-                messageId: '4',
-                date: '2024-03-02T09:20:00'
-            },
-            {
-                sender: 'me',
-                message: 'They specialize in electronics, from smartphones to laptops.',
-                messageId: '5',
-                date: '2024-03-02T09:22:00'
-            },
-            {
-                sender: 'me',
-                message: 'I saw some laptops on sale, and they offer a 20% discount on accessories with any purchase.',
-                messageId: '6',
-                date: '2024-03-02T09:25:00'
-            },
-            {
-                sender: 'audience',
-                message: "That sounds great! I'll check it out this weekend. Thanks for the info!",
-                messageId: '7',
-                date: '2024-03-02T09:30:00'
-            },
-            {
-                sender: 'audience',
-                message: 'By the way, have you tried their coffee shop next door?',
-                messageId: '8',
-                date: '2024-03-02T09:32:00'
-            },
-            {
-                sender: 'me',
-                message: 'Not yet, but I heard they have amazing coffee. Planning to give it a try soon.',
-                messageId: '9',
-                date: '2024-03-02T09:35:00'
-            },
-            {
-                sender: 'audience',
-                message: "Hi there! I'm looking for a new pair of running shoes. Any recommendations?",
+                message: 'hhh nice :Pepe_Thinking:',
                 messageId: '1',
-                date: '2024-03-02T10:00:00'
-            },
-            {
-                sender: 'me',
-                message: "Absolutely! Check out the 'SpeedRun 3000' series. Great for both comfort and performance.",
-                messageId: '2',
-                date: '2024-03-02T10:05:00'
-            },
-            {
-                sender: 'me',
-                message: 'They come in various colors, and we have a special promotion: Buy one, get one 50% off!',
-                messageId: '3',
-                date: '2024-03-02T10:10:00'
+                date: ''
             },
             {
                 sender: 'audience',
-                message:
-                    'Sounds good! What sizes do you have available, and do you offer any discounts for loyalty members?',
-                messageId: '4',
-                date: '2024-03-02T10:15:00'
-            },
-            {
-                sender: 'me',
-                message:
-                    'We have sizes ranging from 6 to 12, and yes, we offer a 10% discount for loyalty members on their first purchase.',
-                messageId: '5',
-                date: '2024-03-02T10:20:00'
-            },
-            {
-                sender: 'audience',
-                message: "Excellent! I'll take two pairs in size 9. How can I sign up for the loyalty program?",
-                messageId: '6',
-                date: '2024-03-02T10:25:00'
-            },
-            {
-                sender: 'me',
-                message:
-                    "You can sign up for our loyalty program at the checkout. Just provide your email, and you'll start enjoying the benefits immediately!",
-                messageId: '7',
-                date: '2024-03-02T10:30:00'
-            },
-            {
-                sender: 'audience',
-                message: "Perfect! I'll swing by the store later today. Thanks for your help!",
-                messageId: '8',
-                date: '2024-03-02T10:35:00'
-            },
-            {
-                sender: 'me',
-                message: 'Hey, do you have any recommendations for a good book to read?',
+                message: 'i need siegal ',
                 messageId: '1',
-                date: '2024-03-02T11:45:00'
+                date: ''
             },
             {
                 sender: 'audience',
-                message:
-                    "Absolutely! I recently enjoyed 'The Silent Stars' by Jane Doe. It's a captivating science fiction novel.",
-                messageId: '2',
-                date: '2024-03-02T11:50:00'
-            },
-            {
-                sender: 'audience',
-                message: 'The characters are well-developed, and the plot twists kept me on the edge of my seat.',
-                messageId: '3',
-                date: '2024-03-02T11:55:00'
-            },
-            {
-                sender: 'me',
-                message: 'Sounds intriguing! Where can I find it? Is it available in e-book format?',
-                messageId: '4',
-                date: '2024-03-02T12:00:00'
-            },
-            {
-                sender: 'audience',
-                message:
-                    "Yes, it's available in both paperback and e-book formats. You can find it on popular platforms like Amazon and Kindle.",
-                messageId: '5',
-                date: '2024-03-02T12:05:00'
-            },
-            {
-                sender: 'me',
-                message: "Great! I'll check it out. Thanks for the recommendation!",
-                messageId: '6',
-                date: '2024-03-02T12:10:00'
-            },
-            {
-                sender: 'audience',
-                message: "You're welcome! If you need more suggestions, feel free to ask. Happy reading!",
-                messageId: '7',
-                date: '2024-03-02T12:15:00'
+                message: ':Pes_melt:',
+                messageId: '1',
+                date: ''
             }
         ]
     }

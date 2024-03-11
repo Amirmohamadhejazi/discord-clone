@@ -36,6 +36,12 @@ import nitroBoost18MonthsImg from './badge-icons/nitro/18-months.png'
 import nitroBoost24MonthsImg from './badge-icons/nitro/24-months.png'
 import nitroIconImg from './badge-icons/nitro/nitro.png'
 import bannerTheCode from './baner/thecode.png'
+import Kekw7_emoji from './emoji/Kekw7_emoji.webp'
+import Pedarsag_emoji from './emoji/Pedarsag.webp'
+import PepeThinking_emoji from './emoji/PepeThinking_emoji.gif'
+import PES_Melt_emoji from './emoji/PES_Melt.gif'
+import Speak_emoji from './emoji/Speak.gif'
+import Troll_emoji from './emoji/Troll.gif'
 import doNotDisturbStatus from './icon/donotdisturbStatus.png'
 import idleStatus from './icon/idleStatus.png'
 import logo from './icon/logo.png'
@@ -126,5 +132,11 @@ export {
     wumpus7_gif,
     wumpus8_gif,
     wumpus9_gif,
-    wumpus10_gif
+    wumpus10_gif,
+    Kekw7_emoji,
+    PepeThinking_emoji,
+    PES_Melt_emoji,
+    Pedarsag_emoji,
+    Speak_emoji,
+    Troll_emoji
 }

@@ -8,6 +8,7 @@ import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_data_me } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
+import { handlerMessage } from '@core/utils/common/handlerMessage'
 const DirectUser: FC<{
     dataUser: {
         displayName: string
@@ -48,9 +49,9 @@ const DirectUser: FC<{
 
                     if (!prevMessage) {
                         return (
-                            <div className={`flex items-center gap-x-4 ${!nextMessage ? 'mb-2 ' : ''}`} key={index}>
+                            <div className={`flex items-start gap-x-4 ${!nextMessage ? 'mb-2 ' : ''} `} key={index}>
                                 <DProfileMenu dataProfile={itemDirect.sender === 'me' ? static_data_me : dataUser}>
-                                    <div className='w-10 h-10'>
+                                    <div className='w-10 h-10 mt-2'>
                                         <img
                                             src={userOrMe ? static_data_me.avatar.src : dataUser.avatar.src}
                                             className='w-full h-full rounded-full object-cover'
@@ -70,7 +71,7 @@ const DirectUser: FC<{
                                     </DMenu>
 
                                     <DMenu type='messageInChannel'>
-                                        <span className='text-white text-sm'>{itemDirect.message}</span>
+                                        <div>{handlerMessage(itemDirect.message)}</div>
                                     </DMenu>
                                 </div>
                             </div>
@@ -80,7 +81,8 @@ const DirectUser: FC<{
                         return (
                             <DMenu type='messageInChannel' key={index}>
                                 <div className={`flex ml-14 ${nextMessage ? '' : 'mb-2 '}`}>
-                                    <p className='w-full text-white text-sm'>{itemDirect.message}</p>
+                                    <div>{handlerMessage(itemDirect.message)}</div>
+                                    {/* <p className='w-full text-white text-sm'>{itemDirect.message}</p> */}
                                 </div>
                             </DMenu>
                         )
