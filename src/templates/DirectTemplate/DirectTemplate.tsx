@@ -5,13 +5,8 @@ import { useState } from 'react'
 import { HiMiniBars3, HiMiniPlusCircle } from 'react-icons/hi2'
 import { RiEmojiStickerFill } from 'react-icons/ri'
 import { ActionIcon, Textarea } from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
-
-import { InternalSidebar, Sidebar } from '@partials/layouts/AppLayout/resources'
 
 import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
-
-import { DModal } from '@atoms/DModal'
 
 import { static_data_directs, static_data_social } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
@@ -21,7 +16,6 @@ import { DirectUser, EmptyDirect } from './resources/components'
 
 const DirectTemplate = ({ userId }: { userId: string }) => {
     const dataUser = static_data_social.filter((items) => items.useId === userId)[0]
-    const [openedDrawer, { open: openDrawer, close: closeDrawer }] = useDisclosure(false)
 
     const dataDirect = static_data_directs.filter((items) => items.personId === userId)[0]
     const [textMessage, setTextMessage] = useState('')
@@ -64,7 +58,7 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
     return (
         <div className='w-full h-full flex flex-col gap-2 p-1 '>
             <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
-                <div className='md:hidden' onClick={openDrawer}>
+                <div className='md:hidden' onClick={() => console.log('open')}>
                     <ActionIcon classNames={{ root: 'w-auto' }}>
                         <HiMiniBars3 size={22} />
                     </ActionIcon>
@@ -130,22 +124,6 @@ const DirectTemplate = ({ userId }: { userId: string }) => {
                     </div>
                 </div>
             </div>
-            <DModal
-                className='md:hidden'
-                onClose={closeDrawer}
-                opened={openedDrawer}
-                transitionProps={{ duration: 0 }}
-                fullScreen={true}
-            >
-                <div className='flex  h-screen text-general-gray-800'>
-                    {/* Sidebar */}
-                    <Sidebar />
-                    {/* Main Content */}
-                    <div className='flex-auto flex '>
-                        <InternalSidebar fullWidth />
-                    </div>
-                </div>
-            </DModal>
         </div>
     )
 }
