@@ -13,8 +13,6 @@ const handlerMessage = (textMessage: string) => {
         <div className='flex gap-x-1 flex-wrap items-center text-sm text-white'>
             {messageItems.map((item, index) => {
                 const emojiRegex = /:\w+:/g
-                const boldRegex = /\*\*(.*?)\*\*/g
-                console.log(item.match(boldRegex))
 
                 if (item.match(emojiRegex)) {
                     const emoji = item.replace(/:/g, '')
