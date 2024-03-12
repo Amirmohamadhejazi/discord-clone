@@ -9,24 +9,25 @@ const ExternalSidebar = () => {
     const [, rootPosition] = usePathname().split('/channels/')
 
     return (
-        <div className='flex py-2 flex-col items-center w-[65px] h-full bg-general-gray '>
-            <Link
-                href={`/channels/me`}
-                className={`hover:rounded-xl size-11 flex items-center justify-center cursor-pointer relative group ${
-                    rootPosition === 'me' ? 'rounded-xl bg-general-blue ' : 'rounded-full bg-general-gray-100  '
-                }`}
-            >
-                <FaDiscord size={26} className='text-3xl  text-white' />
-                <div
-                    className={` w-1 rounded-e-md bg-white absolute  top-1/2 transform -translate-x-1/2 -translate-y-1/2
+        <div className='flex py-2 flex-col items-center w-[65px] h-full bg-general-gray overflow-y-auto'>
+            <div className='flex'>
+                <Link
+                    href={`/channels/me`}
+                    className={`hover:rounded-xl size-11 flex items-center justify-center cursor-pointer relative group ${
+                        rootPosition === 'me' ? 'rounded-xl bg-general-blue ' : 'rounded-full bg-general-gray-100  '
+                    }`}
+                >
+                    <FaDiscord size={26} className='text-3xl  text-white' />
+                    <div
+                        className={` w-1 rounded-e-md bg-white absolute  top-1/2 transform -translate-x-1/2 -translate-y-1/2
                                 ${
                                     rootPosition === 'me'
                                         ? 'h-3/4 visible -left-2 '
                                         : 'h-2/4 invisible -left-full group-hover:visible group-hover:-left-2'
                                 } duration-200 `}
-                />
-            </Link>
-
+                    />
+                </Link>
+            </div>
             <div className='w-full flex px-5 my-2'>
                 <hr className='w-full border-[1.5px] border-general-border ' />
             </div>

@@ -5,9 +5,10 @@ import { HomeInternalSidebar, ServerInternalSidebar } from './resources'
 const InternalSidebar = () => {
     const path = usePathname()
     const rootHome = ['/store', '/shop', '/channels/me']
-    const isHome = rootHome.includes(path)
+
+    const isHome = rootHome.includes(path) || path.includes('me')
     return (
-        <div className='w-[240px] h-full bg-general-gray-50'>
+        <div className='w-[240px] h-full bg-general-gray-50 overflow-y-auto'>
             {isHome ? <HomeInternalSidebar /> : <ServerInternalSidebar />}
         </div>
     )

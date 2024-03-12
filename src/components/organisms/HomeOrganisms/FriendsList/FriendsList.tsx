@@ -13,7 +13,7 @@ import { type IFriendsListProps } from './resources'
 
 const FriendsList: FC<IFriendsListProps> = ({ friendsData }) => {
     return (
-        <div className='flex flex-col gap-y-1'>
+        <div className='flex flex-col gap-y-1 '>
             {friendsData.map((itemSocial: TCriticalAnyType) => (
                 <div className='flex flex-col gap-y-1' key={itemSocial.useId}>
                     <hr className='border-general-border' />
