@@ -1,5 +1,7 @@
-const page = () => {
-    return <span>page</span>
+import { MeTemplate } from '@templates/MeTemplate'
+
+const Page = () => {
+    return <MeTemplate />
 }
 
-export default page
+export default Page

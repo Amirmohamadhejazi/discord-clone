@@ -35,8 +35,8 @@ const HomeInternalSidebar = () => {
             </div>
 
             {/* directs */}
-            <div className='flex grow overflow-y-auto bg-cyan-100 '>
-                <div className='bg-red-200 h-[1000px]'></div>
+            <div className='flex grow overflow-y-auto  '>
+                <div className='h-[1000px]'></div>
             </div>
             {/* me ac */}
             <div className='flex bg-general-gray-300 group'>

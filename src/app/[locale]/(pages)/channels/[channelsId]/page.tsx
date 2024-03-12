@@ -1,7 +1,7 @@
 import React from 'react'
 
-const page = () => {
-    return <div>page channel ids </div>
+const Page = () => {
+    return <div>Page channel ids </div>
 }
 
-export default page
+export default Page
