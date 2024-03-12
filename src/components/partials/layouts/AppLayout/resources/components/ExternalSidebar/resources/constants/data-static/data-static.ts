@@ -1,10 +1,10 @@
-import { dis3Img } from '@public/images'
+import { amirPrivateServer_Avatar } from '@public/images'
 
 const ExternalSidebarData = [
     {
         label: 'Amir private',
         id: '7604822572733298759',
-        icon: dis3Img.src,
+        icon: amirPrivateServer_Avatar.src,
         channels: [
             {
                 label: 'log-task',

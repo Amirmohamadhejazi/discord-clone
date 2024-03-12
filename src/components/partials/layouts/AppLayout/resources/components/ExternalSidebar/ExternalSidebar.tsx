@@ -9,19 +9,24 @@ const ExternalSidebar = () => {
     const [, rootPosition] = usePathname().split('/channels/')
 
     return (
-        <div className='flex py-2 flex-col items-center w-[65px] h-full bg-general-gray'>
+        <div className='flex py-2 flex-col items-center w-[65px] h-full bg-general-gray '>
             <Link
-                href={`me`}
-                className={`hover:rounded-xl size-11 flex items-center justify-center cursor-pointer relative ${
+                href={`/channels/me`}
+                className={`hover:rounded-xl size-11 flex items-center justify-center cursor-pointer relative group ${
                     rootPosition === 'me' ? 'rounded-xl bg-general-blue ' : 'rounded-full bg-general-gray-100  '
                 }`}
             >
                 <FaDiscord size={26} className='text-3xl  text-white' />
                 <div
-                    className={`h-3/4 w-1 rounded-e-md bg-white absolute  top-1/2 transform -translate-x-1/2 -translate-y-1/2
-                       ${rootPosition === 'me' ? 'visible -left-2' : 'invisible -left-full '} duration-200 `}
+                    className={` w-1 rounded-e-md bg-white absolute  top-1/2 transform -translate-x-1/2 -translate-y-1/2
+                                ${
+                                    rootPosition === 'me'
+                                        ? 'h-3/4 visible -left-2 '
+                                        : 'h-2/4 invisible -left-full group-hover:visible group-hover:-left-2'
+                                } duration-200 `}
                 />
             </Link>
+
             <div className='w-full flex px-5 my-2'>
                 <hr className='w-full border-[1.5px] border-general-border ' />
             </div>
@@ -29,7 +34,11 @@ const ExternalSidebar = () => {
             {ExternalSidebarData.map((itemsExternalSide) => {
                 const active = rootPosition === itemsExternalSide.id
                 return (
-                    <Link className='relative' href={`${itemsExternalSide.id}`} key={itemsExternalSide.id}>
+                    <Link
+                        className='relative group'
+                        href={`/channels/${itemsExternalSide.id}`}
+                        key={itemsExternalSide.id}
+                    >
                         <div
                             className={`size-11 hover:rounded-xl overflow-hidden ${
                                 active ? 'rounded-xl  ' : 'rounded-full'
@@ -42,8 +51,12 @@ const ExternalSidebar = () => {
                             />
                         </div>
                         <div
-                            className={`h-3/4 w-1 rounded-e-md bg-white absolute  top-1/2 transform -translate-x-1/2 -translate-y-1/2
-                                ${active ? 'visible -left-2 ' : 'invisible -left-full'} duration-200 `}
+                            className={` w-1 rounded-e-md bg-white absolute  top-1/2 transform -translate-x-1/2 -translate-y-1/2
+                                ${
+                                    active
+                                        ? 'h-3/4 visible -left-2 '
+                                        : 'h-2/4 invisible -left-full group-hover:visible group-hover:-left-2'
+                                } duration-200 `}
                         />
                     </Link>
                 )

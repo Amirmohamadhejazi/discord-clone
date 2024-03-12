@@ -5,7 +5,7 @@ import { type IIconProps } from './resources/types/types'
 const UserAvatar_icon: FC<IIconProps> = ({ size = '16' }) => {
     return (
         <svg
-            className='linkButtonIcon__2f35b w-6 h-6'
+            className='linkButtonIcon__2f35b '
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'

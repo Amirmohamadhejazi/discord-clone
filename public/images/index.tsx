@@ -1,3 +1,4 @@
+import amirPrivateServer_Avatar from './avatar/amirPrivateServer_Avatar.webp'
 import avatar_me from './avatar/avatar_me.webp'
 import avatar1Img from './avatar/avatar1.webp'
 import avatarBardia from './avatar/avatarBardia.webp'
@@ -138,5 +139,6 @@ export {
     PES_Melt_emoji,
     Pedarsag_emoji,
     Speak_emoji,
-    Troll_emoji
+    Troll_emoji,
+    amirPrivateServer_Avatar
 }
