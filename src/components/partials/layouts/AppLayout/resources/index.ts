@@ -1,3 +1,4 @@
+import { ExternalSidebar } from './components/ExternalSidebar'
 import { InternalSidebar } from './components/InternalSidebar'
-import { Sidebar } from './components/Sidebar'
-export { Sidebar, InternalSidebar }
+
+export { InternalSidebar, ExternalSidebar }

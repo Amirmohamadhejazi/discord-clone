@@ -1,14 +1,5 @@
-import { type Metadata } from 'next'
-
-import HomeTemplate from '@templates/HomeTemplate'
-
-export const metadata: Metadata = {
-    title: 'home',
-    description: 'home'
+const page = () => {
+    return <div>page</div>
 }
 
-const home = () => {
-    return <HomeTemplate />
-}
-
-export default home
+export default page
