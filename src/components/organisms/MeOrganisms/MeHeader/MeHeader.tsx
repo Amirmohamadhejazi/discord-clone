@@ -31,8 +31,12 @@ const MeHeader: FC<IMeHeaderProps> = ({ tabMenu, setTabMenu }) => {
                         </div>
                     ))}
 
-                    <ActionIcon classNames={{ root: 'w-auto' }}>
-                        <div className='bg-green-700 text-white rounded-md px-2 py-1 text-xs    '>
+                    <ActionIcon classNames={{ root: 'w-auto' }} onClick={() => setTabMenu(5)}>
+                        <div
+                            className={`${
+                                tabMenu === 5 ? ' text-green-500' : 'bg-green-700 text-white'
+                            } rounded-md px-2 py-1 text-xs`}
+                        >
                             <span>Add Friend</span>
                         </div>
                     </ActionIcon>

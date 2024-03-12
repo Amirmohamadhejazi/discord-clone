@@ -16,7 +16,7 @@ const WumpusNotify: FC<{ notification?: string | null; type: number | null }> = 
     return (
         <div className='flex flex-col items-center text-center gap-3 select-none'>
             <img src={imageWumpus.image} alt='imageWumpus' />
-            <span className=' font-semibold'>{notification || imageWumpus.text}</span>
+            <span className='text-sm'>{notification || imageWumpus.text}</span>
         </div>
     )
 }

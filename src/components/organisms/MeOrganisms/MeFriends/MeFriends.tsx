@@ -46,7 +46,9 @@ const MeFriends: FC<IMeFriendsProps> = ({ tabMenu }) => {
                             <span className='font-semibold'>{statusTab}</span>
                             <span> -- {dataMembers.length}</span>
                         </div>
-                        <FriendsList friendsData={dataMembers} />
+                        <div className='mt-2'>
+                            <FriendsList friendsData={dataMembers} />
+                        </div>
                     </>
                 ) : (
                     <div className='flex flex-col h-full overflow-auto'>
@@ -54,9 +56,6 @@ const MeFriends: FC<IMeFriendsProps> = ({ tabMenu }) => {
                             <WumpusNotify type={tabMenu} />
                         </div>
                     </div>
-                    // <div className='flex flex-col gap-y-2 grow p-1 justify-center items-center   overflow-auto'>
-                    //     <WumpusNotify type={tabMenu} />
-                    // </div>
                 )}
             </div>
         </div>
