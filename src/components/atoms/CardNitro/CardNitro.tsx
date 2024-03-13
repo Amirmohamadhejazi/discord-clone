@@ -8,7 +8,7 @@ const CardNitro: FC<ICardNitroProps> = ({ itemsCard }) => {
     return (
         <div className='flex flex-col justify-center hover:-translate-y-3 group duration-100 ease-in-out rounded-xl bg-general-gray-300 overflow-hidden'>
             <div className='flex flex-col  pt-5 px-5'>
-                <span className='text-xl font-bold'>{itemsCard.name}</span>
+                <span className='text-xl font-bold truncate'>{itemsCard.name}</span>
                 <span className='text-xs font-light pt-2 truncate '>{itemsCard.title}</span>
             </div>
             <div className='p-5 group-hover:px-0 group-hover:pb-0 duration-100 w-full relative'>
