@@ -1,16 +1,27 @@
 'use client'
 import { type FC } from 'react'
+import { HiMiniBars3 } from 'react-icons/hi2'
+import { useDispatch } from 'react-redux'
 import { ActionIcon } from '@mantine/core'
 
 import { AddDm_icon, Inbox_icon, UserAvatar_icon } from '@molecules/icons'
 import Help_icon from '@molecules/icons/Help_icon'
 
+import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
+
 import { type IMeHeaderProps, static_data } from './resources'
 
 const MeHeader: FC<IMeHeaderProps> = ({ tabMenu, setTabMenu }) => {
+    const dispatch = useDispatch()
+
     return (
         <div className='w-full flex items-center justify-between px-2 min-h-12 flex-wrap shadow-md'>
             <div className='flex items-center flex-wrap gap-x-2'>
+                <div className='md:hidden' onClick={() => dispatch(openMenu())}>
+                    <ActionIcon classNames={{ root: 'w-auto' }}>
+                        <HiMiniBars3 size={22} />
+                    </ActionIcon>
+                </div>
                 <div className='flex items-center gap-x-1'>
                     <UserAvatar_icon size='22' />
                     <span className='text-white font-medium text-sm'>friends</span>
@@ -42,7 +53,7 @@ const MeHeader: FC<IMeHeaderProps> = ({ tabMenu, setTabMenu }) => {
                     </ActionIcon>
                 </div>
             </div>
-            <div className='w-full md:w-auto justify-end flex gap-3 items-center  divide-x-1'>
+            <div className=' justify-end hidden sm:flex gap-3 items-center divide-x-1'>
                 <div className='hover:text-white cursor-pointer duration-300'>
                     <AddDm_icon />
                 </div>

@@ -2,8 +2,10 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
+import { useDispatch } from 'react-redux'
 
 import { static_all_users } from '@core/constants/dummy-data'
+import { closeMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
@@ -11,6 +13,7 @@ import { onlineStatus } from '@public/images'
 import { data_static } from './resources'
 
 const HomeInternalSidebar = () => {
+    const dispatch = useDispatch()
     const path = usePathname()
     const data_profile_me: TCriticalAnyType = static_all_users.find((items) => items.me)
     return (
@@ -28,6 +31,7 @@ const HomeInternalSidebar = () => {
                             path === itemsMenu.href && 'bg-general-gray-500 text-white'
                         }`}
                         key={indexMenu}
+                        onClick={() => path === `${itemsMenu.href}` && dispatch(closeMenu())}
                     >
                         {itemsMenu.icon}
                         <span className='text-sm'>{itemsMenu.name}</span>

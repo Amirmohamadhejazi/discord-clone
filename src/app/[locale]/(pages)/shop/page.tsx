@@ -1,5 +1,7 @@
-const page = () => {
-    return <div>page</div>
+import { ShopTemplate } from '@templates/ShopTemplate'
+
+const Shop = () => {
+    return <ShopTemplate />
 }
 
-export default page
+export default Shop
