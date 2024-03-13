@@ -2,14 +2,13 @@ import { type FC } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { Input } from '@mantine/core'
 
-import { FriendsList } from '@organisms/HomeOrganisms'
-
 import { WumpusNotify } from '@molecules/WumpusNotify'
 
 import { static_all_users } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { type IMeFriendsProps } from './resources'
+import FriendsList from '../FriendsList/FriendsList'
 
 const MeFriends: FC<IMeFriendsProps> = ({ tabMenu }) => {
     const dataMembersHandler = (): TCriticalAnyType => {

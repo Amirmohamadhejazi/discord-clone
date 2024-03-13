@@ -1,5 +1,7 @@
-const page = () => {
-    return <div>page</div>
+import { StoreTemplate } from '@templates/StoreTemplate'
+
+const Store = () => {
+    return <StoreTemplate />
 }
 
-export default page
+export default Store

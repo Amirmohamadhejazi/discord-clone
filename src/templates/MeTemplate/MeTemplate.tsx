@@ -18,7 +18,7 @@ const MeTemplate = () => {
             <div className='grow mx-1 mb-2 overflow-auto flex '>
                 <div className='grow overflow-y-auto'>
                     {tabMenu === 5 ? (
-                        <div className='h-full flex flex-col   pt-4  gap-y-3'>
+                        <div className='h-full flex flex-col pt-4  gap-y-3'>
                             <div className='flex flex-col text-xs gap-2 font-semibold ml-5 mr-4'>
                                 <span className='text-white'>ADD FRIEND</span>
                                 <span>You can add friends with their Discord username.</span>
