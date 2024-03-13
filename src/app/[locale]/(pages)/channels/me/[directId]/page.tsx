@@ -1,5 +1,7 @@
+import { DirectTemplate } from '@templates/DirectTemplate'
+
 const Direct = () => {
-    return <div>Direct ss</div>
+    return <DirectTemplate />
 }
 
 export default Direct

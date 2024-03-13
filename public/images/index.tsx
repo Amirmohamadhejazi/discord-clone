@@ -43,6 +43,7 @@ import PepeThinking_emoji from './emoji/PepeThinking_emoji.gif'
 import PES_Melt_emoji from './emoji/PES_Melt.gif'
 import Speak_emoji from './emoji/Speak.gif'
 import Troll_emoji from './emoji/Troll.gif'
+import family_group from './group/family_group.webp'
 import doNotDisturbStatus from './icon/donotdisturbStatus.png'
 import idleStatus from './icon/idleStatus.png'
 import logo from './icon/logo.png'
@@ -140,5 +141,6 @@ export {
     Pedarsag_emoji,
     Speak_emoji,
     Troll_emoji,
-    amirPrivateServer_Avatar
+    amirPrivateServer_Avatar,
+    family_group
 }

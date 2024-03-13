@@ -1,16 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { HiMiniPlus } from 'react-icons/hi2'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { useDispatch } from 'react-redux'
 
 import { static_all_users } from '@core/constants/dummy-data'
+import { static_data_direct } from '@core/constants/dummy-data/static-data'
 import { closeMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
 
 import { data_static } from './resources'
+import { Directs } from './resources/components/Directs'
 
 const HomeInternalSidebar = () => {
     const dispatch = useDispatch()
@@ -41,7 +44,33 @@ const HomeInternalSidebar = () => {
 
             {/* directs */}
             <div className='flex grow overflow-y-auto  min-h-24'>
-                <div className='h-[1000px]'>{/*  */}</div>
+                <div className='w-full flex flex-col'>
+                    <div className='flex items-center justify-between px-[8px]'>
+                        <span className='text-xs'>Direct Messages</span>
+                        <HiMiniPlus className='text-lg' />
+                    </div>
+
+                    <div className='flex flex-col gap-y-2 grow overflow-auto px-[12px] min-h-24'>
+                        <>
+                            {static_data_direct.length > 0 ? (
+                                <div className='flex flex-col gap-y-1'>
+                                    {static_data_direct.map((itemDirects: TCriticalAnyType) => (
+                                        <Directs dataDirect={itemDirects} key={itemDirects.directId} />
+                                    ))}
+                                </div>
+                            ) : (
+                                [0, 1, 2].map((items, index) => (
+                                    <div className='flex items-center justify-center gap-x-2' key={index}>
+                                        <div className=' bg-general-gray-100 p-4 rounded-full ' />
+                                        <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
+                                            {index + 23 + items}
+                                        </div>
+                                    </div>
+                                ))
+                            )}
+                        </>
+                    </div>
+                </div>
             </div>
             {/* me ac */}
             <div className='flex bg-general-gray-300 group'>
