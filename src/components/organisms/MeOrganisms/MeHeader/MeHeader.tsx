@@ -15,8 +15,8 @@ const MeHeader: FC<IMeHeaderProps> = ({ tabMenu, setTabMenu }) => {
     const dispatch = useDispatch()
 
     return (
-        <div className='w-full flex items-center justify-between px-2 min-h-12 flex-wrap shadow-md'>
-            <div className='flex items-center flex-wrap gap-x-2'>
+        <div className='w-full flex items-center justify-between px-2 min-h-14 flex-wrap shadow-md flex-shrink-0'>
+            <div className='flex items-center flex-wrap gap-x-2 my-2 sm:my-0'>
                 <div className='md:hidden' onClick={() => dispatch(openMenu())}>
                     <ActionIcon classNames={{ root: 'w-auto' }}>
                         <HiMiniBars3 size={22} />
