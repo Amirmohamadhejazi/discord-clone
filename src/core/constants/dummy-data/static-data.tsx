@@ -297,7 +297,8 @@ export const static_data_direct = [
                         link: 'https://open.spotify.com/user/4h86kvn0oq4b2irftxds2c3ob'
                     }
                 ],
-                about: 'Always stay curious and keep learning!'
+                about: 'Always stay curious and keep learning!',
+                ownerGroup: true
             },
             {
                 name: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',

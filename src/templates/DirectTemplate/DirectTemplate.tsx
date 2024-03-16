@@ -2,6 +2,7 @@
 'use client'
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { useDisclosure } from '@mantine/hooks'
 
 import { Header, MessageContainer } from '@organisms/DirectOrganisms'
 
@@ -9,7 +10,9 @@ import { static_all_users, static_data_direct } from '@core/constants/dummy-data
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 const DirectTemplate = () => {
+    const [IsShowMember, { toggle: toggleShowMember }] = useDisclosure(true)
     const [, idDirect] = usePathname().split('/channels/me/')
+
     const DirectData: TCriticalAnyType =
         static_data_direct.find((items) => items.directId === idDirect) ||
         static_all_users.find((items) => items.useId === idDirect)
@@ -25,8 +28,8 @@ const DirectTemplate = () => {
     }, [DirectData.name, DirectData.users])
     return (
         <div className='h-full flex flex-col'>
-            <Header />
-            <MessageContainer />
+            <Header isGroup={DirectData.users ? true : false} toggleShowMember={toggleShowMember} />
+            <MessageContainer isShowMember={IsShowMember} />
         </div>
     )
 }

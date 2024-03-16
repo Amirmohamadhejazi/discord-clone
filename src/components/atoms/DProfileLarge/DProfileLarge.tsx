@@ -101,9 +101,12 @@ const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
                             {!dataProfile.me && (
                                 <>
                                     <ActionIcon classNames={{ root: 'w-auto' }}>
-                                        <div className='bg-success-500 cursor-pointer text-white font-semibold px-3 py-2 rounded-md text-xs whitespace-nowrap'>
+                                        <Link
+                                            href={`/channels/me/${dataProfile.useId}`}
+                                            className='bg-success-500 cursor-pointer text-white font-semibold px-3 py-2 rounded-md text-xs whitespace-nowrap'
+                                        >
                                             <span>Send Message</span>
-                                        </div>
+                                        </Link>
                                     </ActionIcon>
                                     <ActionIcon classNames={{ root: 'w-auto' }}>
                                         <Menu_icon />

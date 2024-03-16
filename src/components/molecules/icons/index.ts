@@ -10,9 +10,12 @@ import Inbox_icon from './Inbox_icon'
 import Logo_icon from './Logo_icon'
 import Menu_icon from './Menu_icon'
 import NitroBadge_icon from './NitroBadge_icon'
+import Owner_icon from './Owner_icon'
 import Shop_icon from './Shop_icon'
 import Sticker_icon from './Sticker_icon'
 import UserAvatar_icon from './UserAvatar_icon'
+import UserProfile_icon from './UserProfile_icon'
+import Users_icon from './Users_icon'
 export {
     AddDm_icon,
     ArrowLink_icon,
@@ -28,5 +31,8 @@ export {
     Shop_icon,
     Sticker_icon,
     UserAvatar_icon,
-    ArrowSendMessage_icon
+    ArrowSendMessage_icon,
+    Users_icon,
+    UserProfile_icon,
+    Owner_icon
 }
