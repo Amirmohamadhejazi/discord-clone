@@ -6,7 +6,7 @@ interface IMenuProps {
     classNames?: TCriticalAnyType
     children: ReactNode
     dataProfile: {
-        displayName: string
+        name: string
         username: string
         avatar: TCriticalAnyType
         banner?: TCriticalAnyType

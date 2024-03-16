@@ -88,7 +88,7 @@ const HomeInternalSidebar = () => {
                         </div>
                     </div>
                     <div className='flex flex-col grow justify-center text-sm pl-2'>
-                        <span className='truncate'>{data_profile_me.displayName}</span>
+                        <span className='truncate'>{data_profile_me.name}</span>
                         <span className='truncate block group-hover:hidden'>online</span>
                         <span className='truncate hidden group-hover:block  '>{data_profile_me.username}</span>
                     </div>

@@ -5,13 +5,15 @@ import { HiMiniBars3 } from 'react-icons/hi2'
 import { useDispatch } from 'react-redux'
 import { ActionIcon } from '@mantine/core'
 
-import { static_data_direct } from '@core/constants/dummy-data/static-data'
+import { static_all_users, static_data_direct } from '@core/constants/dummy-data/static-data'
 import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { statusHandler } from '@core/utils/common/statusHandler'
 const Header = () => {
     const [, idDirect] = usePathname().split('/channels/me/')
-    const dataDirect = static_data_direct.find((items) => items.directId === idDirect)
     const dispatch = useDispatch()
+    const DirectData =
+        static_data_direct.find((items) => items.directId === idDirect) ||
+        static_all_users.find((items) => items.useId === idDirect)
 
     return (
         <div className='min-h-[48px] flex items-center gap-x-2  shadow-lg px-[12px]'>
@@ -21,12 +23,12 @@ const Header = () => {
                 </ActionIcon>
             </div>
             <div className='w-7 h-7 relative'>
-                <img src={dataDirect?.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
-                {dataDirect?.status && (
+                <img src={DirectData?.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
+                {DirectData?.status && (
                     <div className='absolute -right-1 -bottom-0   '>
                         <div className='w-3 h-3  bg-general-gray-100 flex items-center justify-center rounded-full'>
                             <img
-                                src={statusHandler(dataDirect.status)}
+                                src={statusHandler(DirectData.status)}
                                 className='w-full h-full mb-1 object-cover'
                                 alt=''
                             />
@@ -34,7 +36,7 @@ const Header = () => {
                     </div>
                 )}
             </div>
-            <span className='text-white font-semibold'>{dataDirect?.name}</span>
+            <span className='text-white font-semibold'>{DirectData?.name}</span>
         </div>
     )
 }

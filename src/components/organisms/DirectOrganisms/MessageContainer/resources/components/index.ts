@@ -1,3 +1,3 @@
 import { DirectUser } from './DirectUser'
-
-export { DirectUser }
+import EmptyDirect from './EmptyDirect/EmptyDirect'
+export { DirectUser, EmptyDirect }

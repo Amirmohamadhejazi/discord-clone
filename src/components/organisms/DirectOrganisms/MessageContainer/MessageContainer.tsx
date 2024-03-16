@@ -7,15 +7,17 @@ import { Textarea } from '@mantine/core'
 
 import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
 
-import { static_data_direct } from '@core/constants/dummy-data/static-data'
+import { static_all_users, static_data_direct } from '@core/constants/dummy-data/static-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
-import { DirectUser } from './resources/components'
+import { DirectUser, EmptyDirect } from './resources/components'
 
 const MessageContainer = () => {
     const [textMessage, setTextMessage] = useState('')
     const [, idDirect] = usePathname().split('/channels/me/')
-    const dataDirect: TCriticalAnyType = static_data_direct.find((items) => items.directId === idDirect)
+    const DirectData: TCriticalAnyType =
+        static_data_direct.find((items) => items.directId === idDirect) ||
+        static_all_users.find((items) => items.useId === idDirect)
 
     return (
         <div className='grow flex flex-col overflow-y-auto'>
@@ -23,7 +25,8 @@ const MessageContainer = () => {
                 <div className='bg-blue-200 h-[1000px] p-1'></div>
             </div> */}
             <div className='flex flex-col gap-y-2  grow justify-end  overflow-hidden mx-4'>
-                <DirectUser dataDirect={dataDirect} />
+                {DirectData.messages ? <DirectUser dataDirect={DirectData} /> : <EmptyDirect dataUser={DirectData} />}
+                {/*  */}
             </div>
 
             <div className='flex-shrink-0 bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
@@ -42,7 +45,7 @@ const MessageContainer = () => {
                             variant='unstyled'
                             autosize
                             // maxRows={1}
-                            placeholder={`Message to @${dataDirect?.name}`}
+                            placeholder={`Message to @${DirectData?.name}`}
                         />
                     </form>
                     <div className='hidden md:flex sticky top-0 items-center gap-x-3 pt-[2px]'>

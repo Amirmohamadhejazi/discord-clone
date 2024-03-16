@@ -39,7 +39,7 @@ const FriendsList: FC<IFriendsListProps> = ({ friendsData }) => {
                                     </div>
                                     <div className='flex flex-col justify-between'>
                                         <div className='flex gap-x-2'>
-                                            <span className='text-white'>{itemSocial.displayName}</span>
+                                            <span className='text-white'>{itemSocial.name}</span>
                                             <span className='hidden group-hover:block '>{itemSocial.username}</span>
                                         </div>
                                         <span className='text-xs'>{itemSocial.status}</span>

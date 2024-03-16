@@ -2,7 +2,7 @@ import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 interface IFriendsListProps {
     friendsData: {
-        displayName: string
+        name: string
         colors: string[]
         username: string
         created: string

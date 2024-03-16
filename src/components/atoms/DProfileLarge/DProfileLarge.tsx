@@ -20,7 +20,7 @@ import { nitroIconImg } from '@public/images'
 import { type IProfileLargeProps } from './resources'
 
 const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
-    const { colors = [], displayName, username, avatar, banner, created, about, status, social } = dataProfile
+    const { colors = [], name, username, avatar, banner, created, about, status, social } = dataProfile
 
     const platformHandler = (type: string) => {
         switch (type) {
@@ -118,7 +118,7 @@ const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
                     <div className='w-full min-h-32  flex flex-col justify-between bg-black bg-opacity-65 text-white rounded-md p-3'>
                         <div className='flex flex-col gap-2 font-semibold '>
                             <div className='flex flex-col'>
-                                <span className='font-bold'>{displayName}</span>
+                                <span className='font-bold'>{name}</span>
                                 <span className='text-xs'>{username}</span>
                             </div>
                             <hr className='border-general-border' />

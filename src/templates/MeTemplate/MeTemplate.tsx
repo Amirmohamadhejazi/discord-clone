@@ -9,7 +9,6 @@ import { WumpusNotify } from '@molecules/WumpusNotify'
 const MeTemplate = () => {
     const [tabMenu, setTabMenu] = useState(1)
     const [input, setInput] = useState('')
-    console.log(input)
 
     return (
         <div className='h-full flex flex-col bg-general-gray-100 '>

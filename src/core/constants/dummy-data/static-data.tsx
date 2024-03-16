@@ -30,7 +30,7 @@ export const emoji_data = [
 
 export const static_all_users = [
     {
-        displayName: 'Amirmohamad',
+        name: 'Amirmohamad',
         colors: ['black', 'hsla(257, 100%, 26.3%, 1)'],
 
         username: 'amirmohamad',
@@ -60,7 +60,7 @@ export const static_all_users = [
         about: 'i need another life with life soda'
     },
     {
-        displayName: 'TriTium',
+        name: 'TriTium',
         colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
         username: 'thetritium',
         created: 'May 12, 2015',
@@ -86,7 +86,7 @@ export const static_all_users = [
         about: 'Always stay curious and keep learning!'
     },
     {
-        displayName: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
+        name: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
         colors: ['hsla(340, 91.7%, 23.7%, 1)', 'black'],
 
         username: 'younes_hidden',
@@ -111,7 +111,7 @@ export const static_all_users = [
         about: 'Success is a journey, not a destination. Enjoy the process!'
     },
     {
-        displayName: '- Erfan AtRisk',
+        name: '- Erfan AtRisk',
         colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
 
         username: 'atri3k',
@@ -127,7 +127,7 @@ export const static_all_users = [
         about: 'Take risks and embrace challenges; that’s where growth happens.'
     },
     {
-        displayName: '- Bardia',
+        name: '- Bardia',
         colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
 
         username: 'bardiaxv',
@@ -143,7 +143,7 @@ export const static_all_users = [
         about: 'Balance is the key to a happy and successful life.'
     },
     {
-        displayName: 'Mont',
+        name: 'Mont',
         colors: ['black', '#013c5e'],
 
         username: 'freezemont',
@@ -159,7 +159,7 @@ export const static_all_users = [
         about: "Don’t be afraid to fail; it's a stepping stone to success."
     },
     {
-        displayName: '- The.Code',
+        name: '- The.Code',
         username: 'thecode',
         created: 'May 11, 2016',
         avatar: avatarTheCode,
@@ -182,7 +182,7 @@ export const static_all_users = [
         useId: '179939072075235329'
     },
     {
-        displayName: 'NothingToSay',
+        name: 'NothingToSay',
         colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
 
         username: 'nereix',
@@ -198,7 +198,7 @@ export const static_all_users = [
         about: 'Find joy in the simple moments of life.'
     },
     {
-        displayName: 'خــودِ دَنــی',
+        name: 'خــودِ دَنــی',
         colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
 
         username: 'daniyartune',
@@ -214,7 +214,7 @@ export const static_all_users = [
         about: 'Disconnect to reconnect; take time for yourself.'
     },
     {
-        displayName: '!sobhan!',
+        name: '!sobhan!',
         colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
 
         username: 'sobhan002',
@@ -230,19 +230,18 @@ export const static_all_users = [
         ]
     }
 ]
-
 export const static_data_direct = [
     // example group
     {
         directId: '231243513415s23412341',
         avatar: family_group,
         type: 'group',
-        name: 'family',
+        name: 'Family',
         lastUpdateData: '',
 
         users: [
             {
-                displayName: 'Amirmohamad',
+                name: 'Amirmohamad',
                 colors: ['black', 'hsla(257, 100%, 26.3%, 1)'],
                 username: 'amirmohamad',
                 created: 'May 11, 2015',
@@ -275,7 +274,7 @@ export const static_data_direct = [
                 about: 'i need another life with life soda'
             },
             {
-                displayName: 'TriTium',
+                name: 'TriTium',
                 colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
                 username: 'thetritium',
                 created: 'May 12, 2015',
@@ -301,7 +300,7 @@ export const static_data_direct = [
                 about: 'Always stay curious and keep learning!'
             },
             {
-                displayName: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
+                name: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
                 colors: ['hsla(340, 91.7%, 23.7%, 1)', 'black'],
 
                 username: 'younes_hidden',
@@ -375,7 +374,7 @@ export const static_data_direct = [
     },
     // example dms
     {
-        directId: '21313513451b2324312321',
+        directId: '214280633692717056',
         avatar: avatarShayan,
         type: 'dm',
         status: 'online',
@@ -745,7 +744,7 @@ export const static_data_direct = [
         ]
     },
     {
-        directId: '23135a421123341236121',
+        directId: '218498762350395405',
         avatar: avatarYounes,
         type: 'dm',
         status: 'online',

@@ -10,7 +10,7 @@ interface IDirectsProps {
         status?: string
         member?: number
         users?: {
-            displayName: string
+            name: string
             colors: string[]
             username: string
             created: string

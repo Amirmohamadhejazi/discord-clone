@@ -2,7 +2,7 @@ import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 interface IProfileLargeProps {
     dataProfile: {
-        displayName: string
+        name: string
         username: string
         avatar: TCriticalAnyType
         banner?: TCriticalAnyType
