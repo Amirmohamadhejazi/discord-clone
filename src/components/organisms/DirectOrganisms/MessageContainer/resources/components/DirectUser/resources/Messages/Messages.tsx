@@ -50,8 +50,13 @@ const Messages: FC<IMessagesProps> = ({ messages }) => {
                 if (prevMessage) {
                     return (
                         <DMenu type='messageInChannel' key={index}>
-                            <div className={`flex ml-14 ${nextMessage ? '' : 'mb-2 '}`}>
+                            <div className={`flex pl-14 ${nextMessage ? '' : 'mb-2 '} relative group`}>
                                 <div>{handlerMessage(itemDirect.message)}</div>
+                                <div
+                                    className={`absolute hidden group-hover:block left-2 top-1/2 transform  -translate-y-1/2`}
+                                >
+                                    <span className='text-[8px] font-medium'>04/13/2023</span>
+                                </div>
                             </div>
                         </DMenu>
                     )
