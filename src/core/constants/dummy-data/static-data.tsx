@@ -944,20 +944,57 @@ export const static_data_servers = [
         banner: Transylvania_banner.src,
         channelsContent: [
             {
-                category: { name: '「 𝑺𝒆𝒓𝒗𝒆𝒓 」————————', id: 0 },
+                category: { name: '「 𝑺𝒆𝒓𝒗𝒆𝒓 」————————', id: 0, href: `/channels/911668092877283329/` },
                 channels: [
-                    { name: '┎︱𝐇𝐨𝐭𝐞𝐥 𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚', channelTopic: '', type: 'voice', isPrivate: true, id: 0 },
-                    { name: '〢︱𝐌𝐞𝐦𝐛𝐞𝐫𝐬 : 23524', channelTopic: '', type: 'voice', isPrivate: true, id: 0 },
-                    { name: '〢︱𝐃𝐢𝐬𝐜𝐨𝐫𝐝.𝐠𝐠/𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚', channelTopic: '', type: 'voice', isPrivate: true, id: 0 },
-                    { name: "┗︱𝐃𝐫𝐚𝐜𝐮𝐥𝐚'𝐬 𝐂𝐚𝐬𝐭𝐥𝐞", channelTopic: '', type: 'voice', isPrivate: true, id: 0 }
+                    {
+                        name: '┎︱𝐇𝐨𝐭𝐞𝐥 𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚',
+                        channelTopic: '',
+                        type: 'voice',
+                        isPrivate: true,
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    },
+                    {
+                        name: '〢︱𝐌𝐞𝐦𝐛𝐞𝐫𝐬 : 23524',
+                        channelTopic: '',
+                        type: 'voice',
+                        isPrivate: true,
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    },
+                    {
+                        name: '〢︱𝐃𝐢𝐬𝐜𝐨𝐫𝐝.𝐠𝐠/𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚',
+                        channelTopic: '',
+                        type: 'voice',
+                        isPrivate: true,
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    },
+                    {
+                        name: "┗︱𝐃𝐫𝐚𝐜𝐮𝐥𝐚'𝐬 𝐂𝐚𝐬𝐭𝐥𝐞",
+                        channelTopic: '',
+                        type: 'voice',
+                        isPrivate: true,
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    }
                 ]
             },
             {
-                category: { name: '「 𝑶𝒇𝒇𝒊𝒄𝒆 」————————', id: 0 },
-                channels: [{ name: '🚨・𝐓𝐨𝐭𝐚𝐥 𝐎𝐟𝐟𝐢𝐜𝐞.', channelTopic: '', isPrivate: false, type: 'voice', id: 0 }]
+                category: { name: '「 𝑶𝒇𝒇𝒊𝒄𝒆 」————————', id: 0, href: `/channels/911668092877283329/` },
+                channels: [
+                    {
+                        name: '🚨・𝐓𝐨𝐭𝐚𝐥 𝐎𝐟𝐟𝐢𝐜𝐞.',
+                        channelTopic: '',
+                        isPrivate: false,
+                        type: 'voice',
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    }
+                ]
             },
             {
-                category: { name: '「 𝑹𝒐𝒍𝒆 」————————', id: 0 },
+                category: { name: '「 𝑹𝒐𝒍𝒆 」————————', id: 0, href: `/channels/911668092877283329/` },
                 channels: [
                     {
                         name: '🎨・𝘊𝘰𝘭𝘰𝘳',
@@ -970,7 +1007,7 @@ export const static_data_servers = [
                 ]
             },
             {
-                category: { name: '「 𝑻𝒊𝒄𝒌𝒆𝒕」————————', id: 0 },
+                category: { name: '「 𝑻𝒊𝒄𝒌𝒆𝒕」————————', id: 0, href: `/channels/911668092877283329/` },
                 channels: [
                     {
                         name: '🟡・𝘘𝘶𝘢𝘳𝘢𝘯𝘵𝘪𝘯𝘦',
@@ -988,11 +1025,18 @@ export const static_data_servers = [
                         id: 1,
                         href: `/channels/911668092877283329/12315332`
                     },
-                    { name: '🚫︳𝐁𝐚𝐧', channelTopic: '', isPrivate: true, type: 'voice', id: 0 }
+                    {
+                        name: '🚫︳𝐁𝐚𝐧',
+                        channelTopic: '',
+                        isPrivate: true,
+                        type: 'voice',
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    }
                 ]
             },
             {
-                category: { name: '「 𝑻𝒓𝒂𝒏𝒔𝒚𝒍𝒗𝒂𝒏𝒊𝒂 」————————', id: 0 },
+                category: { name: '「 𝑻𝒓𝒂𝒏𝒔𝒚𝒍𝒗𝒂𝒏𝒊𝒂 」————————', id: 0, href: `/channels/911668092877283329/` },
                 channels: [
                     {
                         name: '👻・𝘔𝘦𝘮𝘦',
@@ -1045,7 +1089,7 @@ export const static_data_servers = [
                 ]
             },
             {
-                category: { name: '「 𝑯𝒐𝒕𝒆𝒍 」————————', id: 0 },
+                category: { name: '「 𝑯𝒐𝒕𝒆𝒍 」————————', id: 0, href: `/channels/911668092877283329/` },
                 channels: [
                     {
                         name: '🔔・𝘌𝘷𝘦𝘯𝘵-𝘕𝘦𝘸𝘴',
@@ -1162,7 +1206,7 @@ export const static_data_servers = [
                 ]
             },
             {
-                category: { name: '「 𝑷𝒓𝒊𝒗𝒂𝒕𝒆 」————————', id: 0 },
+                category: { name: '「 𝑷𝒓𝒊𝒗𝒂𝒕𝒆 」————————', id: 0, href: `/channels/911668092877283329/` },
                 channels: [
                     {
                         name: '⚙・𝘚𝘦𝘵𝘵𝘪𝘯𝘨',
@@ -1180,7 +1224,14 @@ export const static_data_servers = [
                         id: 1,
                         href: `/channels/911668092877283329/21540ewr15`
                     },
-                    { name: '➕ 𝐂𝐫𝐞𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', channelTopic: '', isPrivate: false, type: 'voice', id: 0 }
+                    {
+                        name: '➕ 𝐂𝐫𝐞𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥',
+                        channelTopic: '',
+                        isPrivate: false,
+                        type: 'voice',
+                        id: 0,
+                        href: `/channels/911668092877283329/`
+                    }
                 ]
             }
         ]

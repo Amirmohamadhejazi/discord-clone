@@ -3,7 +3,7 @@ interface IChannelItemProps {
     id: number
     type: string
     isPrivate?: boolean
-    href?: string
+    href: string
 }
 
 export type { IChannelItemProps }

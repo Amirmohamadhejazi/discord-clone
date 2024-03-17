@@ -9,7 +9,7 @@ interface ICategoryChannelsProps {
             channelTopic: string
             type: string
             id: number
-            href?: string
+            href: string
             isPrivate?: boolean
         }[]
     }
