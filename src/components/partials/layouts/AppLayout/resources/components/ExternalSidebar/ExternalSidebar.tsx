@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaDiscord } from 'react-icons/fa6'
 
-import { ExternalSidebarData } from './resources'
+import { static_data_servers } from '@core/constants/dummy-data/static-data'
 
 const ExternalSidebar = () => {
     const [, rootPosition] = usePathname().split('/channels/')
@@ -32,7 +32,7 @@ const ExternalSidebar = () => {
                 <hr className='w-full border-[1.5px] border-general-border ' />
             </div>
 
-            {ExternalSidebarData.map((itemsExternalSide) => {
+            {static_data_servers.map((itemsExternalSide) => {
                 const active = rootPosition === itemsExternalSide.id
                 return (
                     <Link

@@ -56,6 +56,8 @@ import ExploreWhatsNew_EarlyAccess from './nitro/ExploreWhatsNew/EarlyAccess.png
 import ExploreWhatsNew_SpecialMemberPricing from './nitro/ExploreWhatsNew/SpecialMemberPricing.png'
 import ExploreWhatsNew_UnlimitedSuperReactions from './nitro/ExploreWhatsNew/UnlimitedSuperReactions.png'
 import NitroBanner from './nitro/nitroBanner.png'
+import Transylvania from './servers/Transylvania.gif'
+import Transylvania_banner from './servers/Transylvania_baner.png'
 import wumpus1Img from './wumpus/wumpus1.png'
 import wumpus2Img from './wumpus/wumpus2.png'
 import wumpus3Img from './wumpus/wumpus3.png'
@@ -142,5 +144,7 @@ export {
     Speak_emoji,
     Troll_emoji,
     amirPrivateServer_Avatar,
-    family_group
+    family_group,
+    Transylvania,
+    Transylvania_banner
 }

@@ -7,6 +7,7 @@ import Gif_icon from './Gif_icon'
 import Gift_icon from './Gift_icon'
 import Id_icon from './Id_icon'
 import Inbox_icon from './Inbox_icon'
+import Invite_icon from './Invite_icon'
 import Logo_icon from './Logo_icon'
 import Menu_icon from './Menu_icon'
 import NitroBadge_icon from './NitroBadge_icon'
@@ -16,6 +17,7 @@ import Sticker_icon from './Sticker_icon'
 import UserAvatar_icon from './UserAvatar_icon'
 import UserProfile_icon from './UserProfile_icon'
 import Users_icon from './Users_icon'
+import Voice_icon from './Voice_icon'
 export {
     AddDm_icon,
     ArrowLink_icon,
@@ -34,5 +36,7 @@ export {
     ArrowSendMessage_icon,
     Users_icon,
     UserProfile_icon,
-    Owner_icon
+    Owner_icon,
+    Invite_icon,
+    Voice_icon
 }
