@@ -25,9 +25,7 @@ const ViewUserProfileInDm: FC<IViewUserProfileInDmProps> = ({ DataProfile }) => 
                 background: `linear-gradient(to bottom, ${colors[0] || 'gray'} 30%, ${colors[1] || 'white'}`
             }}
         >
-            <div
-                className={`flex bg-opacity-40 bg-black flex-col items-center w-full whitespace-nowrap overflow-hidden group`}
-            >
+            <div className={`h-full flex bg-opacity-40 bg-black flex-col items-center w-full overflow-hidden group`}>
                 <div className={`w-full ${banner ? 'h-[110px]' : 'h-16'}  relative bg-black`}>
                     {banner && (
                         <div className='w-full h-full relative'>

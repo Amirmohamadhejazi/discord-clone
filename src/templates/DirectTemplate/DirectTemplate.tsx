@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client'
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { useDisclosure } from '@mantine/hooks'
+import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 
 import { Header, MessageContainer } from '@organisms/DirectOrganisms'
 
@@ -10,8 +11,9 @@ import { static_all_users, static_data_direct } from '@core/constants/dummy-data
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 const DirectTemplate = () => {
-    const [IsShowMember, { toggle: toggleShowMember }] = useDisclosure(true)
+    const [IsShowMember, { toggle: toggleShowMember, close: closeShowMember }] = useDisclosure(true)
     const [, idDirect] = usePathname().split('/channels/me/')
+    const matchesSm = useMediaQuery('(max-width: 576px)')
 
     const DirectData: TCriticalAnyType =
         static_data_direct.find((items) => items.directId === idDirect) ||
@@ -26,6 +28,12 @@ const DirectTemplate = () => {
     useEffect(() => {
         document.title = `Discord | ${!DirectData.users ? '@' : ''}${DirectData.name}`
     }, [DirectData.name, DirectData.users])
+
+    useEffect(() => {
+        if (matchesSm) {
+            closeShowMember()
+        }
+    }, [matchesSm])
     return (
         <div className='h-full flex flex-col'>
             <Header isGroup={DirectData.users ? true : false} toggleShowMember={toggleShowMember} />

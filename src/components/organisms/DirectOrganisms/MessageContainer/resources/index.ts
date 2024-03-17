@@ -1,4 +1,4 @@
-import { DirectUser, EmptyDirect, ViewUserProfileInDm, ViewUsersInGroup } from './components'
+import { DirectUser, EmptyDirect } from './components'
 import { type IMessageContainerProps } from './types/types'
 
-export { DirectUser, EmptyDirect, type IMessageContainerProps, ViewUserProfileInDm, ViewUsersInGroup }
+export { DirectUser, EmptyDirect, type IMessageContainerProps }

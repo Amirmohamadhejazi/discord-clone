@@ -10,13 +10,8 @@ import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molec
 import { static_all_users, static_data_direct } from '@core/constants/dummy-data/static-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
-import {
-    DirectUser,
-    EmptyDirect,
-    type IMessageContainerProps,
-    ViewUserProfileInDm,
-    ViewUsersInGroup
-} from './resources'
+import { DirectUser, EmptyDirect, type IMessageContainerProps } from './resources'
+import { UsersDetail } from './resources/components'
 
 const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember }) => {
     const [textMessage, setTextMessage] = useState('')
@@ -24,7 +19,6 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember }) => {
     const DirectData: TCriticalAnyType =
         static_data_direct.find((items) => items.directId === idDirect) ||
         static_all_users.find((items) => items.useId === idDirect)
-    const profileData: TCriticalAnyType = static_all_users.find((items) => items.useId === idDirect)
     return (
         <div className='grow flex overflow-y-auto  relative '>
             <div className='flex flex-col grow  '>
@@ -50,7 +44,6 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember }) => {
                                 onChange={(e) => setTextMessage(e.target.value)}
                                 variant='unstyled'
                                 autosize
-                                // maxRows={1}
                                 placeholder={`Message to @${DirectData?.name}`}
                             />
                         </form>
@@ -76,17 +69,7 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember }) => {
                     </div>
                 </div>
             </div>
-            <div
-                className={`${
-                    isShowMember ? 'w-[300px] opacity-100' : 'w-0 opacity-0'
-                } duration-100 overflow-x-hidden whitespace-nowrap overflow-y-auto bg-general-gray-50 flex-shrink-0 absolute sm:relative h-full sm:h-auto right-0 sm:right-auto`}
-            >
-                {DirectData.users ? (
-                    <ViewUsersInGroup DirectData={DirectData} />
-                ) : (
-                    <ViewUserProfileInDm DataProfile={profileData} />
-                )}
-            </div>
+            <UsersDetail isShowMember={isShowMember} />
         </div>
     )
 }
