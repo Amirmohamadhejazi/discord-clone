@@ -11,10 +11,9 @@ const ServerInternalSidebar = () => {
     const [, , idServer] = path.split('/')
 
     const dataSidebar = static_data_servers.find((itemServers) => itemServers.id === idServer)
-
     return (
         <div className='h-full flex flex-col '>
-            <div className='w-full flex items-center justify-between sticky bg-general-gray-50 top-0 h-12 p-3 shadow-md text-white'>
+            <div className='w-full flex items-center justify-between sticky bg-general-gray-50 top-0 h-12 p-3 shadow-md text-white z-10'>
                 <span className='text-sm font-semibold'>{dataSidebar?.serverName}</span>
 
                 <RiArrowDownSLine size={21} />
@@ -27,9 +26,9 @@ const ServerInternalSidebar = () => {
                     ) : (
                         items.channels.map((itemsChannels, indexChannels) => (
                             <ChannelItem
+                                active={path === itemsChannels.href}
                                 href={itemsChannels.href}
                                 name={itemsChannels.name}
-                                id={itemsChannels.id}
                                 type={itemsChannels.type}
                                 key={indexChannels}
                                 isPrivate={itemsChannels.isPrivate}

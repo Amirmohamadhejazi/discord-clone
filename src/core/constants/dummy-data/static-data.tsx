@@ -944,57 +944,52 @@ export const static_data_servers = [
         banner: Transylvania_banner.src,
         channelsContent: [
             {
-                category: { name: '「 𝑺𝒆𝒓𝒗𝒆𝒓 」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑺𝒆𝒓𝒗𝒆𝒓 」————————', id: 0 },
                 channels: [
                     {
                         name: '┎︱𝐇𝐨𝐭𝐞𝐥 𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚',
                         channelTopic: '',
                         type: 'voice',
                         isPrivate: true,
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     },
                     {
                         name: '〢︱𝐌𝐞𝐦𝐛𝐞𝐫𝐬 : 23524',
                         channelTopic: '',
                         type: 'voice',
                         isPrivate: true,
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     },
                     {
                         name: '〢︱𝐃𝐢𝐬𝐜𝐨𝐫𝐝.𝐠𝐠/𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚',
                         channelTopic: '',
                         type: 'voice',
                         isPrivate: true,
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     },
                     {
                         name: "┗︱𝐃𝐫𝐚𝐜𝐮𝐥𝐚'𝐬 𝐂𝐚𝐬𝐭𝐥𝐞",
                         channelTopic: '',
                         type: 'voice',
                         isPrivate: true,
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     }
                 ]
             },
             {
-                category: { name: '「 𝑶𝒇𝒇𝒊𝒄𝒆 」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑶𝒇𝒇𝒊𝒄𝒆 」————————', id: 0 },
                 channels: [
                     {
                         name: '🚨・𝐓𝐨𝐭𝐚𝐥 𝐎𝐟𝐟𝐢𝐜𝐞.',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     }
                 ]
             },
             {
-                category: { name: '「 𝑹𝒐𝒍𝒆 」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑹𝒐𝒍𝒆 」————————', id: 0 },
                 channels: [
                     {
                         name: '🎨・𝘊𝘰𝘭𝘰𝘳',
@@ -1007,7 +1002,7 @@ export const static_data_servers = [
                 ]
             },
             {
-                category: { name: '「 𝑻𝒊𝒄𝒌𝒆𝒕」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑻𝒊𝒄𝒌𝒆𝒕」————————', id: 0 },
                 channels: [
                     {
                         name: '🟡・𝘘𝘶𝘢𝘳𝘢𝘯𝘵𝘪𝘯𝘦',
@@ -1030,13 +1025,12 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: true,
                         type: 'voice',
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     }
                 ]
             },
             {
-                category: { name: '「 𝑻𝒓𝒂𝒏𝒔𝒚𝒍𝒗𝒂𝒏𝒊𝒂 」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑻𝒓𝒂𝒏𝒔𝒚𝒍𝒗𝒂𝒏𝒊𝒂 」————————', id: 0 },
                 channels: [
                     {
                         name: '👻・𝘔𝘦𝘮𝘦',
@@ -1089,7 +1083,7 @@ export const static_data_servers = [
                 ]
             },
             {
-                category: { name: '「 𝑯𝒐𝒕𝒆𝒍 」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑯𝒐𝒕𝒆𝒍 」————————', id: 0 },
                 channels: [
                     {
                         name: '🔔・𝘌𝘷𝘦𝘯𝘵-𝘕𝘦𝘸𝘴',
@@ -1136,86 +1130,77 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/2342416780`
+                        id: 1
                     },
                     {
                         name: '╻🏰╹𝐇𝐮𝐧𝐞𝐝𝐨𝐚𝐫𝐚',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/012120110`
+                        id: 1
                     },
                     {
                         name: '╻💀╹𝐖𝐡𝐢𝐭𝐛𝐲',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/212024504`
+                        id: 1
                     },
                     {
                         name: '╻👻╹𝐆𝐫𝐢𝐬𝐰𝐨𝐥𝐝',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/6548790564`
+                        id: 1
                     },
                     {
                         name: '╻🎃╹𝐑𝐢𝐜𝐡𝐦𝐨𝐧𝐝',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/2143124150`
+                        id: 1
                     },
                     {
                         name: '╻🐺╹𝐍𝐢𝐠𝐡𝐭𝐰𝐨𝐥𝐟',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/1241214014`
+                        id: 1
                     },
                     {
                         name: '╻🕸╹𝐕𝐞𝐧𝐨𝐦 𝐕𝐚𝐥𝐞',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/124124808712`
+                        id: 1
                     },
                     {
                         name: '╻🌙╹𝐁𝐥𝐨𝐨𝐝𝐦𝐨𝐨𝐧',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/140456742171`
+                        id: 1
                     },
                     {
                         name: '╻🌑╹𝐌𝐢𝐝𝐧𝐢𝐠𝐡𝐭',
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 1,
-                        href: `/channels/911668092877283329/45674207634`
+                        id: 1
                     }
                 ]
             },
             {
-                category: { name: '「 𝑷𝒓𝒊𝒗𝒂𝒕𝒆 」————————', id: 0, href: `/channels/911668092877283329/` },
+                category: { name: '「 𝑷𝒓𝒊𝒗𝒂𝒕𝒆 」————————', id: 0 },
                 channels: [
-                    {
-                        name: '⚙・𝘚𝘦𝘵𝘵𝘪𝘯𝘨',
-                        channelTopic: '',
-                        isPrivate: false,
-                        type: 'text',
-                        id: 1,
-                        href: `/channels/911668092877283329/6260678129`
-                    },
+                    // {
+                    //     name: '⚙・𝘚𝘦𝘵𝘵𝘪𝘯𝘨',
+                    //     channelTopic: '',
+                    //     isPrivate: false,
+                    //     type: 'text',
+                    //     id: 1,
+                    //     href: `/channels/911668092877283329/6260678129`
+                    // },
                     {
                         name: '🎧・𝘔𝘶𝘴𝘪𝘤-𝘚𝘦𝘢𝘳𝘤𝘩',
                         channelTopic: '',
@@ -1229,8 +1214,7 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        id: 0,
-                        href: `/channels/911668092877283329/`
+                        id: 0
                     }
                 ]
             }

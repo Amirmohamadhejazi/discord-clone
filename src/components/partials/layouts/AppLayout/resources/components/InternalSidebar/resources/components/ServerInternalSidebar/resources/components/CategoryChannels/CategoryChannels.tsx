@@ -1,5 +1,6 @@
 'use client'
 import { type FC } from 'react'
+import { usePathname } from 'next/navigation'
 import { FaPlus } from 'react-icons/fa6'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { useDisclosure } from '@mantine/hooks'
@@ -10,6 +11,7 @@ import { type ICategoryChannelsProps } from './resources'
 import { ChannelItem } from '../ChannelItem'
 
 const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
+    const path = usePathname()
     const [openedCollapse, { toggle: toggleCollapse }] = useDisclosure(true)
 
     return (
@@ -24,11 +26,11 @@ const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
                 <DCollapse opened={openedCollapse}>
                     {dataChannels.channels.map((itemChannels, indexChannel) => (
                         <ChannelItem
+                            active={path === itemChannels.href}
                             href={itemChannels.href}
                             type={itemChannels.type}
                             isPrivate={itemChannels.isPrivate}
                             name={itemChannels.name}
-                            id={itemChannels.id}
                             key={indexChannel}
                         />
                     ))}

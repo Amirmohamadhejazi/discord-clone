@@ -1,9 +1,9 @@
 interface IChannelItemProps {
     name: string
-    id: number
     type: string
     isPrivate?: boolean
-    href: string
+    href?: string
+    active?: boolean
 }
 
 export type { IChannelItemProps }
