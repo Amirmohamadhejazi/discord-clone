@@ -42,11 +42,6 @@ const EmptyDirect: FC<{
     const randomImage = images[Math.floor(Math.random() * images.length)]
     return (
         <div className='flex items-start flex-col gap-y-2 overflow-auto'>
-            <div className='w-24 h-24'>
-                <img src={dataUser.avatar.src} className='w-full h-full rounded-full object-cover' alt='' />
-            </div>
-            <span className='text-3xl font-semibold'>{dataUser.name}</span>
-            <span>{dataUser.username}</span>
             <div className='flex flex-col items-start gap-y-3 mb-3'>
                 {/* when this user do not have a direct */}
                 <span className='text-sm'>This is the beginning of your direct message history with </span>

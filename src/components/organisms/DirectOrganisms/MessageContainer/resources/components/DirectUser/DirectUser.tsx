@@ -4,9 +4,9 @@ import React, { type FC, useEffect, useRef } from 'react'
 
 // import { DProfileMenu } from '@atoms/DProfileMenu'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
+import MessagesConvertor from '@core/utils/common/MessagesConvertor/MessagesConvertor'
 
 import { type IDirectUserProps } from './resources'
-import Messages from './resources/Messages/Messages'
 
 const DirectUser: FC<IDirectUserProps> = ({ dataDirect }) => {
     const { name, username, avatar, messages } = dataDirect
@@ -25,7 +25,7 @@ const DirectUser: FC<IDirectUserProps> = ({ dataDirect }) => {
             </div>
             <span className='text-3xl font-semibold'>{name}</span>
             <span>{username}</span>
-            {messages ? <Messages messages={messages} /> : 'ss'}
+            {messages ? <MessagesConvertor messages={messages} /> : 'ss'}
         </div>
     )
 }

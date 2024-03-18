@@ -1,18 +1,15 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import { type FC, useState } from 'react'
-import { usePathname } from 'next/navigation'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
+import { PiWarningCircle } from 'react-icons/pi'
 import { RiEmojiStickerFill } from 'react-icons/ri'
 import { Textarea } from '@mantine/core'
 
 import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
 
-import { static_data_servers } from '@core/constants/dummy-data/static-data'
-import { type TCriticalAnyType } from '@core/types/common/critical-any'
-import { findFirstTextChannel } from '@core/utils/common/findFirstTextChannel/findFirstTextChannel'
+import MessagesConvertor from '@core/utils/common/MessagesConvertor/MessagesConvertor'
 
-import { DirectUser, EmptyDirect, type IMessageContainerProps } from './resources'
+import { type IMessageContainerProps } from './resources'
 import { UsersDetail } from './resources/components'
 
 const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelData }) => {
@@ -22,13 +19,14 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
         <div className='grow flex overflow-y-auto  relative '>
             <div className='flex flex-col grow  '>
                 <div className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'>
-                    {/* {DirectData.messages ? (
-                        <DirectUser dataDirect={DirectData} />
+                    {channelData.messages ? (
+                        <MessagesConvertor messages={channelData.messages} />
                     ) : (
-                        <EmptyDirect dataUser={DirectData} />
-                    )} */}
-                    {/* {firstTextChannel.id} */}
-                    messages
+                        <div className=' flex items-center gap-x-1 text-xs my-2'>
+                            <PiWarningCircle size={17} />
+                            <span className='font-semibold'>this channel dont have a message! add message</span>
+                        </div>
+                    )}
                 </div>
                 <div className='flex-shrink-0 bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
                     <div className='flex justify-between items-start gap-x-2 min-h-[35px]  max-h-[150px] md:max-h-[240px] overflow-y-auto'>

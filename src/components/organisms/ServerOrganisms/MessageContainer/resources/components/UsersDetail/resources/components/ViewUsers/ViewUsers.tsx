@@ -14,7 +14,6 @@ import { type IViewUsersProps } from './resources'
 
 const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
     const matchesSm = useMediaQuery('(max-width: 576px)')
-    console.log(channelData)
 
     return (
         <div className='flex flex-col w-full h-full overflow-y-auto p-2'>
@@ -24,32 +23,34 @@ const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
                     const userData: TCriticalAnyType = static_all_users.find(
                         (itemAllUser) => itemAllUser.useId === itemsUser
                     )
-                    return (
-                        <DProfileMenu
-                            dataProfile={userData}
-                            key={userData.useId}
-                            position={!matchesSm ? 'left-start' : 'top'}
-                        >
-                            <div className='flex items-center gap-x-2 px-2 py-1 hover:bg-general-gray-200 hover:text-white rounded-md cursor-pointer duration-300'>
-                                <img src={userData.avatar.src} className='w-8 h-8 rounded-full' alt='' />
-                                <span className='text-sm'>{userData.name}</span>
+                    if (userData) {
+                        return (
+                            <DProfileMenu
+                                dataProfile={userData}
+                                key={userData.useId}
+                                position={!matchesSm ? 'left-start' : 'top'}
+                            >
+                                <div className='flex items-center gap-x-2 px-2 py-1 hover:bg-general-gray-200 hover:text-white rounded-md cursor-pointer duration-300'>
+                                    <img src={userData.avatar.src} className='w-8 h-8 rounded-full' alt='' />
+                                    <span className='text-sm'>{userData.name}</span>
 
-                                {userData.ownerServer && (
-                                    <Tooltip
-                                        label={'Server ownerServer'}
-                                        withArrow
-                                        multiline
-                                        offset={5}
-                                        classNames={{ tooltip: 'text-[10px] font-bold ' }}
-                                    >
-                                        <div>
-                                            <Owner_icon size={'14'} />
-                                        </div>
-                                    </Tooltip>
-                                )}
-                            </div>
-                        </DProfileMenu>
-                    )
+                                    {userData.ownerServer && (
+                                        <Tooltip
+                                            label={'Server ownerServer'}
+                                            withArrow
+                                            multiline
+                                            offset={5}
+                                            classNames={{ tooltip: 'text-[10px] font-bold ' }}
+                                        >
+                                            <div>
+                                                <Owner_icon size={'14'} />
+                                            </div>
+                                        </Tooltip>
+                                    )}
+                                </div>
+                            </DProfileMenu>
+                        )
+                    }
                 })}
             </div>
         </div>

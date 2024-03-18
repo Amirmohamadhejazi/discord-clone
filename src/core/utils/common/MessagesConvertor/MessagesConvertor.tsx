@@ -10,7 +10,7 @@ import { handlerMessage } from '@core/utils/common/handlerMessage'
 
 import { type IMessagesProps } from './resources/types/types'
 
-const Messages: FC<IMessagesProps> = ({ messages }) => {
+const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
     return (
         <div className='flex flex-col gap-y-1 my-2 '>
             {messages.map((itemDirect, index) => {
@@ -66,4 +66,4 @@ const Messages: FC<IMessagesProps> = ({ messages }) => {
     )
 }
 
-export default Messages
+export default MessagesConvertor
