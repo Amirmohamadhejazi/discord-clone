@@ -9,7 +9,6 @@ import { type IUsersDetailProps, ViewUsers } from './resources'
 
 const UsersDetail: FC<IUsersDetailProps> = ({ isShowMember, channelData }) => {
     // const [, idDirect] = usePathname().split('/channels/me/')
-    console.log(channelData)
 
     return (
         <div

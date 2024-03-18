@@ -31,14 +31,14 @@ const ChannelItem: FC<IChannelItemProps> = ({ name, type, active = false, href, 
             }
         >
             {type === 'text' ? (
-                <Text_icon size='22' isPrivate={isPrivate} />
+                <Text_icon size='19' className='shrink-0' isPrivate={isPrivate} />
             ) : (
-                type === 'voice' && <Voice_icon size='22' isPrivate={isPrivate} />
+                type === 'voice' && <Voice_icon size='19' className='shrink-0' isPrivate={isPrivate} />
             )}
             <div className='w-full truncate text-sm '>
                 <span className='truncate'>{name} </span>
             </div>
-            <div className={`flex ${active ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} duration-100 gap-1 `}>
+            <div className={` ${active ? 'flex' : 'hidden group-hover:flex'} duration-100 gap-1 `}>
                 <Invite_icon />
                 <IoSettingsSharp />
             </div>

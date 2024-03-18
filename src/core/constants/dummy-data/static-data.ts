@@ -1007,7 +1007,6 @@ export const static_data_servers = [
                         channelTopic: '',
                         type: 'voice',
                         membersConnected: [
-                            '991284573726060615',
                             '214280633692717056',
                             '218498762350395405',
                             '185842812888023040',
