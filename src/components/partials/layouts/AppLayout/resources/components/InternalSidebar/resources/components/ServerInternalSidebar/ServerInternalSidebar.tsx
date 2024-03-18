@@ -2,6 +2,7 @@
 import { usePathname } from 'next/navigation'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { RiArrowDownSLine } from 'react-icons/ri'
+import { ActionIcon } from '@mantine/core'
 
 import { static_all_users, static_data_servers } from '@core/constants/dummy-data/static-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
@@ -32,14 +33,43 @@ const ServerInternalSidebar = () => {
                             <CategoryChannels dataChannels={items} key={index} />
                         ) : (
                             items.channels.map((itemsChannels, indexChannels) => (
-                                <ChannelItem
-                                    active={path === itemsChannels.href}
-                                    href={itemsChannels.href}
-                                    name={itemsChannels.name}
-                                    type={itemsChannels.type}
-                                    key={indexChannels}
-                                    isPrivate={itemsChannels.isPrivate}
-                                />
+                                <div key={indexChannels}>
+                                    <ChannelItem
+                                        active={path === (itemsChannels as TCriticalAnyType).href}
+                                        href={(itemsChannels as TCriticalAnyType).href}
+                                        name={itemsChannels.name}
+                                        type={itemsChannels.type}
+                                        key={indexChannels}
+                                        isPrivate={itemsChannels.isPrivate}
+                                    />
+
+                                    <div className='flex flex-col gap-1'>
+                                        {(itemsChannels as TCriticalAnyType).membersConnected &&
+                                            (itemsChannels as TCriticalAnyType).membersConnected.map(
+                                                (itemsConnect: TCriticalAnyType, index: number) => {
+                                                    const userData = static_all_users.find(
+                                                        (itemUser) => itemUser.useId === itemsConnect
+                                                    )
+                                                    return (
+                                                        <div className='flex pl-6' key={index}>
+                                                            <ActionIcon className='w-full h-auto justify-start hover:bg-general-gray-500 duration-300'>
+                                                                <div className='flex items-center gap-x-2 p-1 w-full'>
+                                                                    <img
+                                                                        src={userData?.avatar.src}
+                                                                        className='w-6 h-6 rounded-full'
+                                                                        alt=''
+                                                                    />
+                                                                    <span className='text-sm truncate'>
+                                                                        {userData?.name}
+                                                                    </span>
+                                                                </div>
+                                                            </ActionIcon>
+                                                        </div>
+                                                    )
+                                                }
+                                            )}
+                                    </div>
+                                </div>
                             ))
                         )
                     )}

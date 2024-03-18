@@ -11,6 +11,7 @@ interface ICategoryChannelsProps {
             id: number
             href?: string
             isPrivate?: boolean
+            membersConnected?: string[]
         }[]
     }
 }
