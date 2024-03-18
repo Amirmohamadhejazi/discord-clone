@@ -18,6 +18,10 @@ import {
     Pedarsag_emoji,
     PepeThinking_emoji,
     PES_Melt_emoji,
+    post_img1,
+    post_img2,
+    post_img3,
+    post_img4,
     Speak_emoji,
     Transylvania,
     Transylvania_banner,
@@ -1280,6 +1284,36 @@ export const static_data_servers = [
                             '179939072075235329',
                             '1095366826797576344',
                             '325301808543170569'
+                        ],
+                        messages: [
+                            {
+                                sender: '214280633692717056',
+                                message: '',
+                                img: post_img2,
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '214280633692717056',
+                                message: '',
+                                img: post_img3,
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '218498762350395405',
+                                message: '',
+                                img: post_img1,
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '991284573726060615',
+                                message: '',
+                                img: post_img4,
+                                messageId: '1',
+                                date: ''
+                            }
                         ],
                         href: `/channels/911668092877283329/4245f3423`
                     },

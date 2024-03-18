@@ -33,10 +33,10 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                 </div>
                             </DProfileMenu>
 
-                            <div className='w-full flex flex-col'>
+                            <div className='w-full flex flex-col '>
                                 <DMenu type='socialInChat'>
                                     <div className='flex items-center gap-x-2'>
-                                        <span className='font-semibold text-white'>{userData?.name}</span>
+                                        <span className=' font-semibold text-white'>{userData?.name}</span>
                                         <span className='text-[10px] font-medium'>04/13/2023</span>
                                     </div>
                                 </DMenu>
@@ -74,10 +74,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     )}
                                     <span>{handlerMessage(itemDirect.message)}</span>
                                 </div>
-                                <div
-                                    className={`absolute hidden group-hover:block left-2 top-0`}
-                                    // className={`absolute hidden group-hover:block left-2 top-1/2 transform  -translate-y-1/2`}
-                                >
+                                <div className={`absolute hidden group-hover:block left-2 top-0`}>
                                     <span className='text-[8px] font-medium'>04/13/2023</span>
                                 </div>
                             </div>

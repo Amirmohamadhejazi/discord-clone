@@ -59,6 +59,10 @@ import ExploreWhatsNew_EarlyAccess from './nitro/ExploreWhatsNew/EarlyAccess.png
 import ExploreWhatsNew_SpecialMemberPricing from './nitro/ExploreWhatsNew/SpecialMemberPricing.png'
 import ExploreWhatsNew_UnlimitedSuperReactions from './nitro/ExploreWhatsNew/UnlimitedSuperReactions.png'
 import NitroBanner from './nitro/nitroBanner.png'
+import post_img1 from './posts/post-1.png'
+import post_img2 from './posts/post-2.png'
+import post_img3 from './posts/post-3.png'
+import post_img4 from './posts/post-4.png'
 import Transylvania from './servers/Transylvania.gif'
 import Transylvania_banner from './servers/Transylvania_baner.png'
 import wumpus1Img from './wumpus/wumpus1.png'
@@ -152,5 +156,9 @@ export {
     Transylvania_banner,
     dark_avatar1,
     dark_avatar2,
-    dark_avatar3
+    dark_avatar3,
+    post_img1,
+    post_img2,
+    post_img3,
+    post_img4
 }

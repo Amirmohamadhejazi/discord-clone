@@ -1,5 +1,5 @@
 'use client'
-import { type FC, useState } from 'react'
+import { type FC, useEffect, useRef, useState } from 'react'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { PiWarningCircle } from 'react-icons/pi'
 import { RiEmojiStickerFill } from 'react-icons/ri'
@@ -7,6 +7,7 @@ import { Textarea } from '@mantine/core'
 
 import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
 
+import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import MessagesConvertor from '@core/utils/common/MessagesConvertor/MessagesConvertor'
 
 import { type IMessageContainerProps } from './resources'
@@ -14,19 +15,31 @@ import { UsersDetail } from './resources/components'
 
 const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelData }) => {
     const [textMessage, setTextMessage] = useState('')
-
+    const scrollContainerRef = useRef(null)
+    useEffect(() => {
+        // Scroll to the end when the component mounts
+        const scrollContainer: TCriticalAnyType = scrollContainerRef.current
+        if (scrollContainer) {
+            scrollContainer.scrollTop = scrollContainer.scrollHeight
+        }
+    })
     return (
         <div className='grow flex overflow-y-auto  relative '>
             <div className='flex flex-col grow  '>
-                <div className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'>
-                    {channelData.messages ? (
-                        <MessagesConvertor messages={channelData.messages} />
-                    ) : (
-                        <div className=' flex items-center gap-x-1 text-xs my-2'>
-                            <PiWarningCircle size={17} />
-                            <span className='font-semibold'>this channel dont have a message! add message</span>
-                        </div>
-                    )}
+                <div className='flex flex-col gap-y-2  grow justify-end  overflow-hidden mx-4'>
+                    <div
+                        className='flex items-start flex-col gap-y-1 overflow-auto duration-700'
+                        ref={scrollContainerRef}
+                    >
+                        {channelData.messages ? (
+                            <MessagesConvertor messages={channelData.messages} />
+                        ) : (
+                            <div className=' flex items-center gap-x-1 text-xs my-2'>
+                                <PiWarningCircle size={17} />
+                                <span className='font-semibold'>this channel dont have a message! add message</span>
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <div className='flex-shrink-0 bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
                     <div className='flex justify-between items-start gap-x-2 min-h-[35px]  max-h-[150px] md:max-h-[240px] overflow-y-auto'>
@@ -43,7 +56,7 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                                 onChange={(e) => setTextMessage(e.target.value)}
                                 variant='unstyled'
                                 autosize
-                                placeholder={`Message to ${channelData.name}`}
+                                placeholder={`Message to #${channelData?.name}`}
                             />
                         </form>
                         <div className='hidden md:flex flex-shrink-0 sticky top-0 items-center gap-x-3 pt-[2px]'>
