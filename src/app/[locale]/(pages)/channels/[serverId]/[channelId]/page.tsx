@@ -1,7 +1,7 @@
-import React from 'react'
+import { ServerTemplate } from '@templates/ServerTemplate'
 
-const Channel = () => {
-    return <div>Channel</div>
+const Page = () => {
+    return <ServerTemplate />
 }
 
-export default Channel
+export default Page

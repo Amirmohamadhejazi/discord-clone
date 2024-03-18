@@ -1,7 +1,7 @@
-import React from 'react'
+import { ServerTemplate } from '@templates/ServerTemplate'
 
 const Page = () => {
-    return <div>Page channel ids </div>
+    return <ServerTemplate />
 }
 
 export default Page

@@ -14,7 +14,6 @@ import { nitroIconImg } from '@public/images'
 import { type IViewUserProfileInDmProps } from './resources'
 
 const ViewUserProfileInDm: FC<IViewUserProfileInDmProps> = ({ DataProfile }) => {
-    console.log(DataProfile)
     const [openedProfileLarge, { open: openProfileLarge, close: closeProfileLarge }] = useDisclosure(false)
     const { colors = [], name, username, avatar, banner, created, about, badges } = DataProfile
 

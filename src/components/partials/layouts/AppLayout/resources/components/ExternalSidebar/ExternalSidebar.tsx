@@ -33,7 +33,8 @@ const ExternalSidebar = () => {
             </div>
 
             {static_data_servers.map((itemsExternalSide) => {
-                const active = rootPosition === itemsExternalSide.id
+                const active = rootPosition.includes(itemsExternalSide.id)
+
                 return (
                     <Link
                         className='relative group'
