@@ -17,7 +17,6 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
     const [opened, setOpened] = useState(false)
     const [openedProfileLarge, { open: openProfileLarge, close: closeProfileLarge }] = useDisclosure(false)
     const { colors = [], name, username, avatar, banner, created, about, status } = dataProfile
-    console.log(dataProfile)
 
     return (
         <div className='font-light cursor-pointer'>
