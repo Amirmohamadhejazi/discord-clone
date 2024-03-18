@@ -1,3 +1,3 @@
-import ViewUsersInGroup from './ViewUsersInGroup/ViewUsersInGroup'
+import ViewUsers from './ViewUsers/ViewUsers'
 
-export { ViewUsersInGroup }
+export { ViewUsers }

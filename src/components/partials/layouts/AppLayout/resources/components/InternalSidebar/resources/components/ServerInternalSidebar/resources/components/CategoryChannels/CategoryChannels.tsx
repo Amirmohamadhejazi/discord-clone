@@ -24,16 +24,18 @@ const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
                     <FaPlus size={12} />
                 </div>
                 <DCollapse opened={openedCollapse}>
-                    {dataChannels.channels.map((itemChannels, indexChannel) => (
-                        <ChannelItem
-                            active={path === itemChannels.href}
-                            href={itemChannels.href}
-                            type={itemChannels.type}
-                            isPrivate={itemChannels.isPrivate}
-                            name={itemChannels.name}
-                            key={indexChannel}
-                        />
-                    ))}
+                    <div className='flex flex-col gap-1'>
+                        {dataChannels.channels.map((itemChannels, indexChannel) => (
+                            <ChannelItem
+                                active={path === itemChannels.href}
+                                href={itemChannels.href}
+                                type={itemChannels.type}
+                                isPrivate={itemChannels.isPrivate}
+                                name={itemChannels.name}
+                                key={indexChannel}
+                            />
+                        ))}
+                    </div>
                 </DCollapse>
             </div>
         </div>

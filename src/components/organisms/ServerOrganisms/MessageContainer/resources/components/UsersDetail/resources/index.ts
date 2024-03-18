@@ -1,4 +1,4 @@
-import { ViewUsersInGroup } from './components'
+import { ViewUsers } from './components'
 import { type IUsersDetailProps } from './types'
 
-export { type IUsersDetailProps, ViewUsersInGroup }
+export { type IUsersDetailProps, ViewUsers }
