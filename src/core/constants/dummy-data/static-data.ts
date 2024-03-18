@@ -1006,16 +1006,7 @@ export const static_data_servers = [
                         name: "┗︱𝐃𝐫𝐚𝐜𝐮𝐥𝐚'𝐬 𝐂𝐚𝐬𝐭𝐥𝐞",
                         channelTopic: '',
                         type: 'voice',
-                        membersConnected: [
-                            '214280633692717056',
-                            '218498762350395405',
-                            '185842812888023040',
-                            '180204915942096896',
-                            '505051488779894794',
-                            '179939072075235329',
-                            '1095366826797576344',
-                            '325301808543170569'
-                        ],
+                        membersConnected: ['214280633692717056', '218498762350395405'],
                         isPrivate: true,
                         id: 0
                     }
@@ -1157,6 +1148,7 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: true,
                         type: 'voice',
+                        membersConnected: ['325301808543170569'],
                         id: 0
                     }
                 ]
@@ -1451,6 +1443,7 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
+                        membersConnected: ['180204915942096896', '505051488779894794'],
                         id: 1
                     },
                     {
@@ -1558,6 +1551,14 @@ export const static_data_servers = [
                         isPrivate: false,
                         type: 'voice',
                         id: 0
+                    },
+                    {
+                        name: '- The.Code Channel',
+                        channelTopic: '',
+                        isPrivate: false,
+                        type: 'voice',
+                        membersConnected: ['185842812888023040', '179939072075235329', '1095366826797576344'],
+                        id: 1
                     }
                 ]
             }

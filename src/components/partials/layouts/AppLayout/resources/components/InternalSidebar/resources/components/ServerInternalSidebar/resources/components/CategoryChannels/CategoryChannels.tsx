@@ -8,8 +8,10 @@ import { ActionIcon } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 import { DCollapse } from '@atoms/DCollapse'
+import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_all_users } from '@core/constants/dummy-data'
+import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { type ICategoryChannelsProps } from './resources'
 import { ChannelItem } from '../ChannelItem'
@@ -42,21 +44,27 @@ const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
                                 <div className='flex flex-col gap-1'>
                                     {itemChannels.membersConnected &&
                                         itemChannels.membersConnected.map((itemsConnect, index) => {
-                                            const userData = static_all_users.find(
+                                            const userData: TCriticalAnyType = static_all_users.find(
                                                 (itemUser) => itemUser.useId === itemsConnect
                                             )
                                             return (
                                                 <div className='flex pl-6' key={index}>
-                                                    <ActionIcon className='w-full h-auto justify-start hover:bg-general-gray-500 duration-300'>
-                                                        <div className='flex items-center gap-x-2 p-1 w-full'>
-                                                            <img
-                                                                src={userData?.avatar.src}
-                                                                className='w-6 h-6 rounded-full'
-                                                                alt=''
-                                                            />
-                                                            <span className='text-sm truncate'>{userData?.name}</span>
-                                                        </div>
-                                                    </ActionIcon>
+                                                    <div className='w-full  '>
+                                                        <DProfileMenu dataProfile={userData}>
+                                                            <ActionIcon className='w-full h-auto justify-start hover:bg-general-gray-500 duration-300'>
+                                                                <div className='flex items-center gap-x-2 p-1 w-full'>
+                                                                    <img
+                                                                        src={userData?.avatar.src}
+                                                                        className='w-6 h-6 rounded-full'
+                                                                        alt=''
+                                                                    />
+                                                                    <span className='text-sm truncate'>
+                                                                        {userData?.name}
+                                                                    </span>
+                                                                </div>
+                                                            </ActionIcon>
+                                                        </DProfileMenu>
+                                                    </div>
                                                 </div>
                                             )
                                         })}
