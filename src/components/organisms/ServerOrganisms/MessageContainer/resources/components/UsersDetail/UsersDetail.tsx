@@ -7,7 +7,7 @@ import { static_data_direct } from '@core/constants/dummy-data/static-data'
 
 import { type IUsersDetailProps, ViewUsersInGroup } from './resources'
 
-const UsersDetail: FC<IUsersDetailProps> = ({ isShowMember }) => {
+const UsersDetail: FC<IUsersDetailProps> = ({ isShowMember, channelData }) => {
     // const [, idDirect] = usePathname().split('/channels/me/')
 
     return (

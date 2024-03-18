@@ -997,7 +997,179 @@ export const static_data_servers = [
                         isPrivate: false,
                         type: 'text',
                         id: 1,
-                        href: `/channels/911668092877283329/1231313`
+                        href: `/channels/911668092877283329/1231313`,
+                        users: [
+                            {
+                                name: 'TriTium',
+                                colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+                                username: 'thetritium',
+                                created: 'May 12, 2015',
+                                avatar: avatarShayan,
+                                useId: '214280633692717056',
+                                status: 'doNotDisturb',
+                                badges: [
+                                    { name: 'moderator-program' },
+                                    { name: 'hypeSquad-events' },
+                                    { name: 'bot-developer' },
+                                    { name: 'early-supporter' },
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'tritium#0001' }
+                                ],
+                                social: [
+                                    {
+                                        name: 'TriTium-SS',
+                                        type: 'spotify',
+                                        link: 'https://open.spotify.com/user/4h86kvn0oq4b2irftxds2c3ob'
+                                    }
+                                ],
+                                about: 'Always stay curious and keep learning!'
+                            },
+                            {
+                                name: '家 𝒀𝒐𝒖𝒏𝒆𝒔 𝑯𝒊𝒅𝒅𝒆𝒏',
+                                colors: ['hsla(340, 91.7%, 23.7%, 1)', 'black'],
+
+                                username: 'younes_hidden',
+                                created: 'May 13, 2015',
+                                avatar: avatarYounes,
+                                useId: '218498762350395405',
+                                badges: [
+                                    { name: 'bot-developer' },
+                                    { name: 'early-supporter' },
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'younes#0001' }
+                                ],
+                                status: 'online',
+                                social: [
+                                    {
+                                        name: 'Younes_XD',
+                                        type: 'spotify',
+                                        link: 'https://open.spotify.com/user/kczxhdbz83hq20mz3qox60ejj'
+                                    }
+                                ],
+                                about: 'Success is a journey, not a destination. Enjoy the process!'
+                            },
+                            {
+                                name: '- Erfan AtRisk',
+                                colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
+                                username: 'atri3k',
+                                created: 'May 11, 2016',
+                                avatar: avatarErfan,
+                                useId: '185842812888023040',
+                                status: 'idle',
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'erfan#0001' }
+                                ],
+                                about: 'Take risks and embrace challenges; that’s where growth happens.'
+                            },
+                            {
+                                name: '- Bardia',
+                                colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
+                                username: 'bardiaxv',
+                                created: 'May 11, 2016',
+                                avatar: avatarBardia,
+                                useId: '180204915942096896',
+                                status: 'doNotDisturb',
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'bardia#0001' }
+                                ],
+                                about: 'Balance is the key to a happy and successful life.'
+                            },
+                            {
+                                name: 'Mont',
+                                colors: ['black', '#013c5e'],
+
+                                username: 'freezemont',
+                                created: 'May 11, 2016',
+                                avatar: avatarMont,
+                                useId: '505051488779894794',
+                                status: 'doNotDisturb',
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'freezemont#0001' }
+                                ],
+                                about: "Don’t be afraid to fail; it's a stepping stone to success."
+                            },
+                            {
+                                name: '- The.Code',
+                                username: 'thecode',
+                                created: 'May 11, 2016',
+                                avatar: avatarTheCode,
+                                banner: bannerTheCode,
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'radin#0001' }
+                                ],
+                                colors: ['hsla(222, 100%, 30%, 1)', 'hsla(286, 70.9%, 41.8%, 1)'],
+                                status: 'doNotDisturb',
+                                about: 'Coding is like  solving puzzles; enjoy the problem-solving process.',
+                                social: [
+                                    {
+                                        name: 'The Code',
+                                        type: 'spotify',
+                                        link: 'https://open.spotify.com/user/kwsb9pnyi0tud8juzpthq39w1'
+                                    }
+                                ],
+                                useId: '179939072075235329'
+                            },
+                            {
+                                name: 'NothingToSay',
+                                colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
+                                username: 'nereix',
+                                created: 'May 11, 2016',
+                                avatar: avatarNereix,
+                                useId: '1095366826797576344',
+                                status: 'doNotDisturb',
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'reza#0001' }
+                                ],
+                                about: 'Find joy in the simple moments of life.'
+                            },
+                            {
+                                name: 'خــودِ دَنــی',
+                                colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
+                                username: 'daniyartune',
+                                created: 'May 11, 2016',
+                                avatar: avatarDany,
+                                useId: '325301808543170569',
+                                status: 'offline',
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 24 },
+                                    { name: 'id', userName: 'dany#0001' }
+                                ],
+                                about: 'Disconnect to reconnect; take time for yourself.'
+                            },
+                            {
+                                name: '!sobhan!',
+                                colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
+                                username: 'sobhan002',
+                                created: 'May 11, 2016',
+                                avatar: avatarSobhan,
+                                useId: '510109656098537475',
+                                status: 'online',
+                                about: 'Surround yourself with positive energy and like-minded people.',
+                                badges: [
+                                    { name: 'nitro', type: 'default', timeNitro: '21 july 2021' },
+                                    { name: 'nitro', type: 'boost', timeBoost: '21 july 2021', badgeLevel: 9 },
+                                    { name: 'id', userName: 'sobhan#0001' }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },

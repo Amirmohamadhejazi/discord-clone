@@ -17,18 +17,18 @@ import { UsersDetail } from './resources/components'
 
 const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelData }) => {
     const [textMessage, setTextMessage] = useState('')
-    console.log(channelData)
 
     return (
         <div className='grow flex overflow-y-auto  relative '>
             <div className='flex flex-col grow  '>
-                <div className='flex flex-col gap-y-2  grow justify-end  overflow-hidden mx-4'>
+                <div className='flex flex-col gap-y-2 grow justify-end  overflow-hidden mx-4'>
                     {/* {DirectData.messages ? (
                         <DirectUser dataDirect={DirectData} />
                     ) : (
                         <EmptyDirect dataUser={DirectData} />
                     )} */}
                     {/* {firstTextChannel.id} */}
+                    messages
                 </div>
                 <div className='flex-shrink-0 bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
                     <div className='flex justify-between items-start gap-x-2 min-h-[35px]  max-h-[150px] md:max-h-[240px] overflow-y-auto'>
@@ -70,7 +70,7 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                     </div>
                 </div>
             </div>
-            <UsersDetail isShowMember={isShowMember} />
+            <UsersDetail channelData={channelData} isShowMember={isShowMember} />
         </div>
     )
 }
