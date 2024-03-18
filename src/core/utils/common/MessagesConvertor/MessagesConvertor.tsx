@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { type FC } from 'react'
 
@@ -39,21 +40,43 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                         <span className='text-[10px] font-medium'>04/13/2023</span>
                                     </div>
                                 </DMenu>
-
+                                {/* when single message */}
                                 <DMenu type='messageInChannel'>
-                                    <div>{handlerMessage(itemDirect.message)}</div>
+                                    <div className='flex flex-col gap-1 '>
+                                        {itemDirect.img && (
+                                            <div className=' '>
+                                                <img
+                                                    src={itemDirect.img.src}
+                                                    className='rounded-md object-cover max-w-[300px]'
+                                                />
+                                            </div>
+                                        )}
+                                        <span>{handlerMessage(itemDirect.message)}</span>
+                                    </div>
                                 </DMenu>
                             </div>
                         </div>
                     )
                 }
                 if (prevMessage) {
+                    /* when another message */
                     return (
                         <DMenu type='messageInChannel' key={index}>
                             <div className={`flex pl-14 ${nextMessage ? '' : 'mb-2 '} relative group`}>
-                                <div>{handlerMessage(itemDirect.message)}</div>
+                                <div className='flex flex-col gap-1 '>
+                                    {itemDirect.img && (
+                                        <div className=' '>
+                                            <img
+                                                src={itemDirect.img.src}
+                                                className='rounded-md object-cover max-w-[300px]'
+                                            />
+                                        </div>
+                                    )}
+                                    <span>{handlerMessage(itemDirect.message)}</span>
+                                </div>
                                 <div
-                                    className={`absolute hidden group-hover:block left-2 top-1/2 transform  -translate-y-1/2`}
+                                    className={`absolute hidden group-hover:block left-2 top-0`}
+                                    // className={`absolute hidden group-hover:block left-2 top-1/2 transform  -translate-y-1/2`}
                                 >
                                     <span className='text-[8px] font-medium'>04/13/2023</span>
                                 </div>

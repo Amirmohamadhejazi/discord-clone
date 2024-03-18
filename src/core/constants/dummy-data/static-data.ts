@@ -10,6 +10,9 @@ import {
     avatarTheCode,
     avatarYounes,
     bannerTheCode,
+    dark_avatar1,
+    dark_avatar2,
+    dark_avatar3,
     family_group,
     Kekw7_emoji,
     Pedarsag_emoji,
@@ -370,6 +373,33 @@ export const static_data_direct = [
             {
                 sender: '214280633692717056',
                 message: `:Pepe_Thinking:`,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: '991284573726060615',
+                message: `give me some dark profile avatar!`,
+                messageId: '3',
+                date: ''
+            },
+            {
+                sender: '214280633692717056',
+                message: ``,
+                img: dark_avatar1,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: '214280633692717056',
+                message: ``,
+                img: dark_avatar2,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: '214280633692717056',
+                message: `this is nice`,
+                img: dark_avatar3,
                 messageId: '4',
                 date: ''
             }
@@ -1164,6 +1194,12 @@ export const static_data_servers = [
                             },
                             {
                                 sender: '991284573726060615',
+                                message: ':Kekw7:',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '1095366826797576344',
                                 message: ':Kekw7:',
                                 messageId: '1',
                                 date: ''

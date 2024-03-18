@@ -10,6 +10,9 @@ import avatarShayan from './avatar/avatarShayan.webp'
 import avatarSobhan from './avatar/avatarSobhan.webp'
 import avatarTheCode from './avatar/avatarTheCode.webp'
 import avatarYounes from './avatar/avatarYounes.webp'
+import dark_avatar1 from './avatar/dark1.jpg'
+import dark_avatar2 from './avatar/dark2.jpg'
+import dark_avatar3 from './avatar/dark3.jpg'
 import dis1Img from './avatar/dis1.webp'
 import dis2Img from './avatar/dis2.png'
 import dis3Img from './avatar/dis3.webp'
@@ -146,5 +149,8 @@ export {
     amirPrivateServer_Avatar,
     family_group,
     Transylvania,
-    Transylvania_banner
+    Transylvania_banner,
+    dark_avatar1,
+    dark_avatar2,
+    dark_avatar3
 }
