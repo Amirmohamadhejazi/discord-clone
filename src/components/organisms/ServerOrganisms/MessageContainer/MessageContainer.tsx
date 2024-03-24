@@ -16,6 +16,7 @@ import { UsersDetail } from './resources/components'
 const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelData }) => {
     const [textMessage, setTextMessage] = useState('')
     const scrollContainerRef = useRef(null)
+
     useEffect(() => {
         // Scroll to the end when the component mounts
         const scrollContainer: TCriticalAnyType = scrollContainerRef.current
@@ -50,7 +51,9 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                             <Textarea
                                 classNames={{
                                     root: 'w-full ',
-                                    input: 'bg-transparent w-full focus:outline-none text-white resize-none placeholder:text-sm placeholder:truncate'
+                                    input: `bg-transparent w-full focus:outline-none text-white resize-none placeholder:text-sm placeholder:truncate ${
+                                        textMessage.match(/^[\u0600-\u06FF]/) ? 'text-right' : ''
+                                    }`
                                 }}
                                 value={textMessage}
                                 onChange={(e) => setTextMessage(e.target.value)}

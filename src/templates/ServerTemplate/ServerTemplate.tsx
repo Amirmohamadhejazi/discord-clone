@@ -20,12 +20,14 @@ const ServerTemplate = () => {
     const channelData = !idChannel
         ? findFirstTextChannel(dataServer?.channelsContent)
         : findChannelByHref(dataServer?.channelsContent, idChannel)
-
     useEffect(() => {
         if (matchesSm) {
             closeShowMember()
         }
     }, [matchesSm])
+    useEffect(() => {
+        document.title = `Discord | ${dataServer?.serverName} ${channelData.name ? `| ${channelData.name}` : ''}`
+    }, [dataServer?.serverName])
     return (
         <div className='h-full flex flex-col'>
             <Header channelData={channelData} toggleShowMember={toggleShowMember} />

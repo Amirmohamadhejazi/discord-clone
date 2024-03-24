@@ -4,6 +4,7 @@ import { type FC } from 'react'
 
 import { DMenu } from '@atoms/DMenu'
 import { DProfileMenu } from '@atoms/DProfileMenu'
+import { ImgMessage } from '@atoms/ImgMessage'
 
 import { static_all_users } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
@@ -43,14 +44,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                 {/* when single message */}
                                 <DMenu type='messageInChannel'>
                                     <div className='flex flex-col gap-1 '>
-                                        {itemDirect.img && (
-                                            <div className=' '>
-                                                <img
-                                                    src={itemDirect.img.src}
-                                                    className='rounded-md object-cover max-w-[300px]'
-                                                />
-                                            </div>
-                                        )}
+                                        {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
                                         <span>{handlerMessage(itemDirect.message)}</span>
                                     </div>
                                 </DMenu>
@@ -64,14 +58,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                         <DMenu type='messageInChannel' key={index}>
                             <div className={`flex pl-14 ${nextMessage ? '' : 'mb-2 '} relative group`}>
                                 <div className='flex flex-col gap-1 '>
-                                    {itemDirect.img && (
-                                        <div className=' '>
-                                            <img
-                                                src={itemDirect.img.src}
-                                                className='rounded-md object-cover max-w-[300px]'
-                                            />
-                                        </div>
-                                    )}
+                                    {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
                                     <span>{handlerMessage(itemDirect.message)}</span>
                                 </div>
                                 <div className={`absolute hidden group-hover:block left-2 top-0`}>
