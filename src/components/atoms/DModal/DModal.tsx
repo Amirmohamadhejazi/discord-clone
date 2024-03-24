@@ -5,7 +5,7 @@ const DModal: FC<ModalProps> = ({ children, classNames, size = 'lg', opened, ...
     return (
         <>
             <Modal
-                classNames={{ ...classNames, root: 'w-full', body: 'p-0' }}
+                classNames={{ ...classNames, root: 'w-full', body: 'p-0', content: 'bg-transparent' }}
                 size={size}
                 opened={opened}
                 // onClose={close}
