@@ -4,6 +4,7 @@ import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { ActionIcon } from '@mantine/core'
 
+// import { useMediaQuery } from '@mantine/hooks'
 import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_all_users, static_data_servers } from '@core/constants/dummy-data/static-data'
@@ -15,6 +16,7 @@ import { CategoryChannels, ChannelItem } from './resources/components'
 
 const ServerInternalSidebar = () => {
     const path = usePathname()
+    // const matchesSm = useMediaQuery('(max-width: 576px)')
     const data_profile_me: TCriticalAnyType = static_all_users.find((items) => items.me)
 
     const [, , idServer] = path.split('/')
@@ -55,7 +57,10 @@ const ServerInternalSidebar = () => {
                                                     return (
                                                         <div className='flex pl-6' key={index}>
                                                             <div className='w-full  '>
-                                                                <DProfileMenu dataProfile={userData}>
+                                                                <DProfileMenu
+                                                                    // position={!matchesSm ? 'left-start' : ''}
+                                                                    dataProfile={userData}
+                                                                >
                                                                     <ActionIcon className='w-full h-auto justify-start hover:bg-general-gray-500 duration-300'>
                                                                         <div className='flex items-center gap-x-2 p-1 w-full'>
                                                                             <img

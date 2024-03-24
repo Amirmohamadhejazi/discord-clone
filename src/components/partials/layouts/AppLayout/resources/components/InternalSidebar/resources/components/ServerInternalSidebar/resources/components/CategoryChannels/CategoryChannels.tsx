@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { FaPlus } from 'react-icons/fa6'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { ActionIcon } from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
+import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 
 import { DCollapse } from '@atoms/DCollapse'
 import { DProfileMenu } from '@atoms/DProfileMenu'
@@ -19,6 +19,7 @@ import { ChannelItem } from '../ChannelItem'
 const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
     const path = usePathname()
     const [openedCollapse, { toggle: toggleCollapse }] = useDisclosure(true)
+    const matchesSm = useMediaQuery('(max-width: 576px)')
 
     return (
         <div className='flex flex-col gap-1'>
@@ -50,7 +51,10 @@ const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
                                             return (
                                                 <div className='flex pl-6' key={index}>
                                                     <div className='w-full  '>
-                                                        <DProfileMenu dataProfile={userData}>
+                                                        <DProfileMenu
+                                                            position={!matchesSm ? 'left-start' : 'top-start'}
+                                                            dataProfile={userData}
+                                                        >
                                                             <ActionIcon className='w-full h-auto justify-start hover:bg-general-gray-500 duration-300'>
                                                                 <div className='flex items-center gap-x-2 p-1 w-full'>
                                                                     <img
