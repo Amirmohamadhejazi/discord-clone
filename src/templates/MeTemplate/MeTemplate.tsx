@@ -11,7 +11,7 @@ const MeTemplate = () => {
     const [input, setInput] = useState('')
 
     return (
-        <div className='h-full flex flex-col bg-general-gray-100 '>
+        <div className='h-full flex flex-col bg-general-gray-100  select-none'>
             <MeHeader setTabMenu={setTabMenu} tabMenu={tabMenu} />
 
             <div className='grow mx-1 mb-2 overflow-auto flex '>
@@ -53,7 +53,7 @@ const MeTemplate = () => {
                         <MeFriends tabMenu={tabMenu} />
                     )}
                 </div>
-                <div className='w-80 hidden xl:flex   flex-col'>
+                <div className='w-80 hidden xl:flex  flex-col'>
                     <div className='grow overflow-y-auto'>
                         <MeActivities />
                     </div>

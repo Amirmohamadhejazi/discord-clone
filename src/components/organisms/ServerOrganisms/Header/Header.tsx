@@ -15,7 +15,7 @@ const Header: FC<IHeaderProps> = ({ toggleShowMember, channelData }) => {
     const dispatch = useDispatch()
 
     return (
-        <div className='min-h-[48px] flex items-center justify-between shadow-lg px-[12px]'>
+        <div className='min-h-[48px] flex items-center justify-between shadow-lg px-[12px]  select-none'>
             <div className='flex items-center gap-2'>
                 <div className='md:hidden' onClick={() => dispatch(openMenu())}>
                     <ActionIcon classNames={{ root: 'w-auto' }}>

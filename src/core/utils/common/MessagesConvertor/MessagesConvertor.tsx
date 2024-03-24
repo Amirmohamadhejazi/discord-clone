@@ -25,7 +25,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                     return (
                         <div className={`flex items-start gap-x-4 ${!nextMessage ? 'mb-2 ' : ''} `} key={index}>
                             <DProfileMenu dataProfile={userData}>
-                                <div className='w-10 h-10 mt-2'>
+                                <div className='w-10 h-10 mt-2 '>
                                     <img
                                         src={userData?.avatar.src}
                                         className='w-full h-full rounded-full object-cover'
@@ -38,7 +38,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                 <DMenu type='socialInChat'>
                                     <div className='flex items-center gap-x-2'>
                                         <span className=' font-semibold text-white'>{userData?.name}</span>
-                                        <span className='text-[10px] font-medium'>04/13/2023</span>
+                                        <span className='text-[10px] font-medium select-none'>04/13/2023</span>
                                     </div>
                                 </DMenu>
                                 {/* when single message */}
@@ -61,7 +61,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
                                     <span>{handlerMessage(itemDirect.message)}</span>
                                 </div>
-                                <div className={`absolute hidden group-hover:block left-2 top-0`}>
+                                <div className={`absolute hidden group-hover:block left-2 top-0 select-none`}>
                                     <span className='text-[8px] font-medium'>04/13/2023</span>
                                 </div>
                             </div>

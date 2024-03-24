@@ -21,12 +21,12 @@ const HomeInternalSidebar = () => {
     const data_profile_me: TCriticalAnyType = static_all_users.find((items) => items.me)
     return (
         <div className='h-full flex flex-col'>
-            <div className='w-full flex items-center justify-center h-12 p-3 shadow-md'>
+            <div className='w-full flex items-center justify-center h-12 p-3 shadow-md  select-none'>
                 <div className='bg-general-gray w-full  flex items-center rounded-md pl-1 cursor-pointer h-7'>
                     <span className=' text-general-gray-800 text-xs'>Find or start a conversation</span>
                 </div>
             </div>
-            <div className='flex flex-col p-3'>
+            <div className='flex flex-col p-3  select-none'>
                 {data_static.map((itemsMenu, indexMenu) => (
                     <Link
                         href={itemsMenu.href}
@@ -43,7 +43,7 @@ const HomeInternalSidebar = () => {
             </div>
 
             {/* directs */}
-            <div className='flex grow overflow-y-auto  min-h-24'>
+            <div className='flex grow overflow-y-auto  min-h-24  select-none'>
                 <div className='w-full flex flex-col'>
                     <div className='flex items-center justify-between px-[8px]'>
                         <span className='text-xs'>Direct Messages</span>
@@ -73,7 +73,7 @@ const HomeInternalSidebar = () => {
                 </div>
             </div>
             {/* me ac */}
-            <div className='flex bg-general-gray-300 group'>
+            <div className='flex bg-general-gray-300 group '>
                 <div className='w-full flex items-center  px-2 h-14'>
                     <div className='w-9 h-9 relative'>
                         <img

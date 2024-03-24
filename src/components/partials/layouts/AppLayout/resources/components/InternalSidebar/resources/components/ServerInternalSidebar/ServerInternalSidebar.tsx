@@ -24,7 +24,7 @@ const ServerInternalSidebar = () => {
     const dataSidebar = static_data_servers.find((itemServers) => itemServers.id === idServer)
     return (
         <div className='h-full flex flex-col '>
-            <div className='w-full flex items-center justify-between sticky bg-general-gray-50 top-0 h-12 p-3 shadow-md text-white z-10'>
+            <div className='w-full flex items-center justify-between sticky  select-none bg-general-gray-50 top-0 h-12 p-3 shadow-md text-white z-10'>
                 <span className='text-sm font-semibold'>{dataSidebar?.serverName}</span>
 
                 <RiArrowDownSLine size={21} />
