@@ -52,8 +52,11 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                                 classNames={{
                                     root: 'w-full ',
                                     input: `bg-transparent w-full focus:outline-none text-white resize-none placeholder:text-sm placeholder:truncate ${
-                                        textMessage.match(/^[\u0600-\u06FF]/) ? 'text-right' : ''
+                                        textMessage.match(/^[\u0600-\u06FF]/) ? 'text-right ' : ''
                                     }`
+                                }}
+                                styles={{
+                                    input: { direction: textMessage.match(/^[\u0600-\u06FF]/) ? 'rtl' : 'unset' }
                                 }}
                                 value={textMessage}
                                 onChange={(e) => setTextMessage(e.target.value)}

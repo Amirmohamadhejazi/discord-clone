@@ -59,7 +59,7 @@ const DProfileLarge: FC<IProfileLargeProps> = ({ dataProfile }) => {
                             </div>
                         </div>
                     )}
-                    <div className='w-full absolute -bottom-11 px-3 flex justify-between items-end'>
+                    <div className='w-full absolute -bottom-11 px-3 flex justify-between items-end '>
                         <div className='flex items-end'>
                             <div className='w-28 h-2w-28 p-[3px] bg-black bg-opacity-35 rounded-full'>
                                 <div className='relative rounded-full overflow-hidden'>

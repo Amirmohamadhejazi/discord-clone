@@ -1,7 +1,7 @@
 /* Html & body & * & etc . . . */
-img{
-    @apply select-none
+img {
+    @apply select-none;
 }
-input{
-    @apply placeholder:select-none
+input {
+    @apply placeholder:select-none;
 }
