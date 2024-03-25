@@ -76,14 +76,6 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                                     before:top-0 before:w-full before:h-full"
                                 >
                                     <img src={avatar.src} alt='avatar' className='w-full h-full object-cover ' />
-
-                                    {/* <div className='w-5 h-5  absolute right-1  -bottom-0 rounded-full'>
-                                        <img
-                                            src={statusHandler(status)}
-                                            className='w-full h-full  object-cover  '
-                                            alt=''
-                                        />
-                                    </div> */}
                                 </div>
                             </div>
                         </div>

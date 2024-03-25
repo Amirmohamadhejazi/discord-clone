@@ -10,7 +10,7 @@ import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import { DCollapse } from '@atoms/DCollapse'
 import { DProfileMenu } from '@atoms/DProfileMenu'
 
-import { static_all_users } from '@core/constants/dummy-data'
+import { static_data_users_servers } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { type ICategoryChannelsProps } from './resources'
@@ -45,9 +45,10 @@ const CategoryChannels: FC<ICategoryChannelsProps> = ({ dataChannels }) => {
                                 <div className='flex flex-col gap-1'>
                                     {itemChannels.membersConnected &&
                                         itemChannels.membersConnected.map((itemsConnect, index) => {
-                                            const userData: TCriticalAnyType = static_all_users.find(
+                                            const userData: TCriticalAnyType = static_data_users_servers.find(
                                                 (itemUser) => itemUser.useId === itemsConnect
                                             )
+
                                             return (
                                                 <div className='flex pl-6' key={index}>
                                                     <div className='w-full  '>

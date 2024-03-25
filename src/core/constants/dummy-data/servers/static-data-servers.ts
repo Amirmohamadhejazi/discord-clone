@@ -3,6 +3,7 @@ import {
     avatarBardia,
     avatarDany,
     avatarErfan,
+    avatarJockieMusic,
     avatarMont,
     avatarNereix,
     avatarShayan,
@@ -24,7 +25,8 @@ export const static_data_roles_server = [
     { name: 'Hidden Family', color: '#969292', roleId: '1215998618419462266' },
     { name: 'Draven Family', color: '#969292', roleId: '1215998618503352360' },
     { name: 'Zenyx Family', color: '#969292', roleId: '1216057420804260040' },
-    { name: 'Ares Family', color: '#969292', roleId: '1216057418841194616' }
+    { name: 'Ares Family', color: '#969292', roleId: '1216057418841194616' },
+    { name: '〢𝐌𝐀𝐑𝐓𝐘  ————————', color: '#0fff00', roleId: '1217199704769822803' }
 ]
 
 export const static_data_users_servers = [
@@ -221,6 +223,19 @@ export const static_data_users_servers = [
         ],
         about: 'Disconnect to reconnect; take time for yourself.',
         roles: ['1215998618503352360']
+    },
+    {
+        name: 'Jockie Music',
+        colors: ['black', 'hsla(30, 1.9%, 59.2%, 1)'],
+
+        username: 'JockieMusic',
+        created: 'feb 10, 2018',
+        avatar: avatarJockieMusic,
+        useId: '411916947773587456',
+        status: 'online',
+        badges: [{ name: 'id', userName: 'JockieMusic#8585' }],
+        about: 'The most feature -rich Discord music (multi - )bot with support for sources such as Spotify , Apple Music , Deezer , Soundcloud and more . This is the first of the four available free bots!',
+        roles: ['1217199704769822803']
     }
 ]
 
@@ -326,10 +341,7 @@ export const static_data_servers = [
                         isPrivate: true,
                         type: 'text',
                         id: 1,
-                        roles: [
-                            { name: 'Dracula', color: '#969292', roleId: '942037639765311509' },
-                            { name: 'Griffin', color: '#969292', roleId: '952907129034014740' }
-                        ],
+                        roles: ['942037639765311509', '952907129034014740', '1217199704769822803'],
                         messages: [
                             {
                                 sender: '325301808543170569',
@@ -366,10 +378,7 @@ export const static_data_servers = [
                             }
                         ],
                         id: 1,
-                        roles: [
-                            { name: 'Dracula', color: '#969292', roleId: '942037639765311509' },
-                            { name: 'Griffin', color: '#969292', roleId: '952907129034014740' }
-                        ],
+                        roles: ['942037639765311509', '952907129034014740', '1217199704769822803'],
                         href: `/channels/911668092877283329/12315332`
                     },
                     {
@@ -624,6 +633,39 @@ export const static_data_servers = [
                 ]
             },
             {
+                category: { name: '「 「𝐃𝐫𝐚𝐯𝐞𝐧 𝐀𝐫𝐞𝐚」————————', id: 0 },
+                channels: [
+                    {
+                        name: '💬・𝘓𝘰𝘶𝘯𝘨𝘦',
+                        channelTopic: '',
+                        isPrivate: true,
+                        type: 'text',
+                        id: 1,
+                        roles: ['1215998618503352360'],
+
+                        href: `/channels/911668092877283329/1219358947048161452`
+                    },
+                    {
+                        name: '🎵・𝘔𝘶𝘴𝘪𝘤-𝘚𝘦𝘢𝘳𝘤𝘩',
+                        channelTopic: '',
+                        isPrivate: true,
+                        type: 'text',
+
+                        id: 1,
+                        roles: ['1215998618503352360'],
+                        href: `/channels/911668092877283329/1219358988387483779`
+                    },
+                    {
+                        name: "🔊︳𝐃𝐞𝐯𝐢𝐥'𝐬 𝐃𝐮𝐧𝐠𝐞𝐨𝐧",
+                        channelTopic: '',
+                        isPrivate: true,
+                        type: 'voice',
+                        membersConnected: ['991284573726060615', '411916947773587456'],
+                        id: 0
+                    }
+                ]
+            },
+            {
                 category: { name: '「 𝑷𝒓𝒊𝒗𝒂𝒕𝒆 」————————', id: 0 },
                 channels: [
                     {
@@ -658,65 +700,6 @@ export const static_data_servers = [
                         type: 'voice',
                         membersConnected: ['185842812888023040', '179939072075235329', '1095366826797576344'],
                         id: 1
-                    }
-                ]
-            },
-            {
-                category: { name: '「 「𝐃𝐫𝐚𝐯𝐞𝐧 𝐀𝐫𝐞𝐚」————————', id: 0 },
-                channels: [
-                    {
-                        name: '💬・𝘓𝘰𝘶𝘯𝘨𝘦',
-                        channelTopic: '',
-                        isPrivate: true,
-                        type: 'text',
-                        id: 1,
-                        roles: [{ name: 'Draven Family', color: '#969292', roleId: '1215998618503352360' }],
-                        messages: [
-                            {
-                                sender: '325301808543170569',
-                                message: 'brother i just kidding .. pls ',
-                                messageId: '1',
-                                date: ''
-                            },
-                            {
-                                sender: '325301808543170569',
-                                message: ':pedarsag: ',
-                                messageId: '1',
-                                date: ''
-                            }
-                        ],
-                        href: `/channels/911668092877283329/1219358947048161452`
-                    },
-                    {
-                        name: '🎵・𝘔𝘶𝘴𝘪𝘤-𝘚𝘦𝘢𝘳𝘤𝘩',
-                        channelTopic: '',
-                        isPrivate: true,
-                        type: 'text',
-                        messages: [
-                            {
-                                sender: '218498762350395405',
-                                message: 'dany was banned, example: speak from hot place!',
-                                messageId: '1',
-                                date: ''
-                            },
-                            {
-                                sender: '218498762350395405',
-                                message: '@daniyartune was banned, example: speak from hot place!',
-                                messageId: '1',
-                                date: ''
-                            }
-                        ],
-                        id: 1,
-                        roles: [{ name: 'Draven Family', color: '#969292', roleId: '1215998618503352360' }],
-                        href: `/channels/911668092877283329/1219358988387483779`
-                    },
-                    {
-                        name: "🔊︳𝐃𝐞𝐯𝐢𝐥'𝐬 𝐃𝐮𝐧𝐠𝐞𝐨𝐧",
-                        channelTopic: '',
-                        isPrivate: true,
-                        type: 'voice',
-                        membersConnected: ['325301808543170569'],
-                        id: 0
                     }
                 ]
             }

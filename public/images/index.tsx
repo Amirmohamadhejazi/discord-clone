@@ -40,6 +40,7 @@ import nitroBoost18MonthsImg from './badge-icons/nitro/18-months.png'
 import nitroBoost24MonthsImg from './badge-icons/nitro/24-months.png'
 import nitroIconImg from './badge-icons/nitro/nitro.png'
 import bannerTheCode from './baner/thecode.png'
+import avatarJockieMusic from './bot/JockieMusic.webp'
 import Kekw7_emoji from './emoji/Kekw7_emoji.webp'
 import Pedarsag_emoji from './emoji/Pedarsag.webp'
 import PepeThinking_emoji from './emoji/PepeThinking_emoji.gif'
@@ -160,5 +161,6 @@ export {
     post_img1,
     post_img2,
     post_img3,
-    post_img4
+    post_img4,
+    avatarJockieMusic
 }

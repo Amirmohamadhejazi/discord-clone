@@ -57,10 +57,7 @@ const ServerInternalSidebar = () => {
                                                     return (
                                                         <div className='flex pl-6' key={index}>
                                                             <div className='w-full  '>
-                                                                <DProfileMenu
-                                                                    // position={!matchesSm ? 'left-start' : ''}
-                                                                    dataProfile={userData}
-                                                                >
+                                                                <DProfileMenu dataProfile={userData}>
                                                                     <ActionIcon className='w-full h-auto justify-start hover:bg-general-gray-500 duration-300'>
                                                                         <div className='flex items-center gap-x-2 p-1 w-full'>
                                                                             <img
