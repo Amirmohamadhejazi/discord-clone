@@ -6,7 +6,7 @@ import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 
 import { Header, MessageContainer } from '@organisms/ServerOrganisms'
 
-import { static_data_servers } from '@core/constants/dummy-data/static-data'
+import { static_data_servers } from '@core/constants/dummy-data'
 import { findChannelByHref } from '@core/utils/common/findChannelByHref'
 import { findFirstTextChannel } from '@core/utils/common/findFirstTextChannel'
 
@@ -28,6 +28,7 @@ const ServerTemplate = () => {
     useEffect(() => {
         document.title = `Discord | ${dataServer?.serverName} ${channelData.name ? `| ${channelData.name}` : ''}`
     }, [dataServer?.serverName])
+
     return (
         <div className='h-full flex flex-col'>
             <Header channelData={channelData} toggleShowMember={toggleShowMember} />

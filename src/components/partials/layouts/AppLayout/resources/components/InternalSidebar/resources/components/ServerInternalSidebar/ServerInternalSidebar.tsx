@@ -7,7 +7,7 @@ import { ActionIcon } from '@mantine/core'
 // import { useMediaQuery } from '@mantine/hooks'
 import { DProfileMenu } from '@atoms/DProfileMenu'
 
-import { static_all_users, static_data_servers } from '@core/constants/dummy-data/static-data'
+import { static_data_servers, static_data_users_servers } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
@@ -17,7 +17,7 @@ import { CategoryChannels, ChannelItem } from './resources/components'
 const ServerInternalSidebar = () => {
     const path = usePathname()
     // const matchesSm = useMediaQuery('(max-width: 576px)')
-    const data_profile_me: TCriticalAnyType = static_all_users.find((items) => items.me)
+    const data_profile_me: TCriticalAnyType = static_data_users_servers.find((items) => items.me)
 
     const [, , idServer] = path.split('/')
 
@@ -51,7 +51,7 @@ const ServerInternalSidebar = () => {
                                         {(itemsChannels as TCriticalAnyType).membersConnected &&
                                             (itemsChannels as TCriticalAnyType).membersConnected.map(
                                                 (itemsConnect: TCriticalAnyType, index: number) => {
-                                                    const userData: TCriticalAnyType = static_all_users.find(
+                                                    const userData: TCriticalAnyType = static_data_users_servers.find(
                                                         (itemUser) => itemUser.useId === itemsConnect
                                                     )
                                                     return (
