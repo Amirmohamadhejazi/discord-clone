@@ -17,7 +17,7 @@ import { type IViewUsersProps } from './resources'
 const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
     const matchesSm = useMediaQuery('(max-width: 576px)')
 
-    const rolesToFilter = new Set(channelData.roles)
+    const rolesToFilter = new Set(channelData?.roles.map((items) => items.roleId))
 
     // Filter users based on roles
     const dataUsersWithPerm =

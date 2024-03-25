@@ -5,7 +5,7 @@ interface IViewUsersProps {
         isPrivate: boolean
         type: string
         id: number
-        roles: string[]
+        roles: { name: string; color: string; roleId: string }[]
         href: string
     }
 }

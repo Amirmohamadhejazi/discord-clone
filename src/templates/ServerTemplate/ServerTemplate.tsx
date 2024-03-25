@@ -26,7 +26,7 @@ const ServerTemplate = () => {
         }
     }, [matchesSm])
     useEffect(() => {
-        document.title = `Discord | ${dataServer?.serverName} ${channelData.name ? `| ${channelData.name}` : ''}`
+        document.title = `Discord | ${dataServer?.serverName} ${channelData?.name ? `| ${channelData?.name}` : ''}`
     }, [dataServer?.serverName])
 
     return (

@@ -326,7 +326,10 @@ export const static_data_servers = [
                         isPrivate: true,
                         type: 'text',
                         id: 1,
-                        roles: ['942037639765311509', '952907129034014740'],
+                        roles: [
+                            { name: 'Dracula', color: '#969292', roleId: '942037639765311509' },
+                            { name: 'Griffin', color: '#969292', roleId: '952907129034014740' }
+                        ],
                         messages: [
                             {
                                 sender: '325301808543170569',
@@ -363,7 +366,10 @@ export const static_data_servers = [
                             }
                         ],
                         id: 1,
-                        roles: ['942037639765311509', '952907129034014740'],
+                        roles: [
+                            { name: 'Dracula', color: '#969292', roleId: '942037639765311509' },
+                            { name: 'Griffin', color: '#969292', roleId: '952907129034014740' }
+                        ],
                         href: `/channels/911668092877283329/12315332`
                     },
                     {
@@ -664,7 +670,7 @@ export const static_data_servers = [
                         isPrivate: true,
                         type: 'text',
                         id: 1,
-                        roles: ['1215998618503352360'],
+                        roles: [{ name: 'Draven Family', color: '#969292', roleId: '1215998618503352360' }],
                         messages: [
                             {
                                 sender: '325301808543170569',
@@ -701,7 +707,7 @@ export const static_data_servers = [
                             }
                         ],
                         id: 1,
-                        roles: ['1215998618503352360'],
+                        roles: [{ name: 'Draven Family', color: '#969292', roleId: '1215998618503352360' }],
                         href: `/channels/911668092877283329/1219358988387483779`
                     },
                     {

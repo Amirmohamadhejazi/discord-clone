@@ -23,12 +23,12 @@ const Header: FC<IHeaderProps> = ({ toggleShowMember, channelData }) => {
                     </ActionIcon>
                 </div>
                 <div className='flex items-center gap-1'>
-                    {channelData.type === 'text' ? (
+                    {channelData?.type === 'text' ? (
                         <Text_icon size='22' isPrivate={channelData.isPrivate} />
                     ) : (
-                        channelData.type === 'voice' && <Voice_icon size='22' isPrivate={channelData.isPrivate} />
+                        channelData?.type === 'voice' && <Voice_icon size='22' isPrivate={channelData.isPrivate} />
                     )}
-                    <span className='text-white font-semibold'>{channelData.name}</span>
+                    <span className='text-white font-semibold'>{channelData?.name}</span>
                 </div>
             </div>
             <div className='cursor-pointer' onClick={toggleShowMember}>

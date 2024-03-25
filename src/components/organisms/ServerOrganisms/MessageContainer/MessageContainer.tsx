@@ -32,7 +32,7 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                         className='flex items-start flex-col gap-y-1 overflow-auto duration-700'
                         ref={scrollContainerRef}
                     >
-                        {channelData.messages ? (
+                        {channelData?.messages ? (
                             <MessagesConvertor messages={channelData.messages} />
                         ) : (
                             <div className=' flex items-center gap-x-1 text-xs my-2'>
