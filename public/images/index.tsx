@@ -65,6 +65,7 @@ import post_img2 from './posts/post-2.png'
 import post_img3 from './posts/post-3.png'
 import post_img4 from './posts/post-4.png'
 import Transylvania from './servers/Transylvania.gif'
+import TransylvaniaImg from './servers/Transylvania.png'
 import Transylvania_banner from './servers/Transylvania_baner.png'
 import wumpus1Img from './wumpus/wumpus1.png'
 import wumpus2Img from './wumpus/wumpus2.png'
@@ -154,6 +155,7 @@ export {
     amirPrivateServer_Avatar,
     family_group,
     Transylvania,
+    TransylvaniaImg,
     Transylvania_banner,
     dark_avatar1,
     dark_avatar2,

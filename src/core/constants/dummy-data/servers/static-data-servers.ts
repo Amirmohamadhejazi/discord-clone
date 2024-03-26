@@ -15,7 +15,8 @@ import {
     post_img3,
     post_img4,
     Transylvania,
-    Transylvania_banner
+    Transylvania_banner,
+    TransylvaniaImg
 } from '@public/images'
 
 export const static_data_roles_server = [
@@ -244,7 +245,8 @@ export const static_data_servers = [
     {
         serverName: '𝐓𝐫𝐚𝐧𝐬𝐲𝐥𝐯𝐚𝐧𝐢𝐚',
         id: '911668092877283329',
-        icon: Transylvania.src,
+        icon_gif: Transylvania.src,
+        icon_image: TransylvaniaImg.src,
         banner: Transylvania_banner.src,
         channelsContent: [
             {

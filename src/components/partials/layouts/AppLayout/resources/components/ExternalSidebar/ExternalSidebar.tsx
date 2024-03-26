@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaDiscord } from 'react-icons/fa6'
 
+import DImageHover from '@molecules/DImageHover/DImageHover'
+
 import { static_data_servers } from '@core/constants/dummy-data'
 
 const ExternalSidebar = () => {
@@ -44,12 +46,11 @@ const ExternalSidebar = () => {
                         <div
                             className={`size-11 hover:rounded-xl overflow-hidden ${
                                 active ? 'rounded-xl  ' : 'rounded-full'
-                            } relative`}
+                            } relative group`}
                         >
-                            <img
-                                src={itemsExternalSide.icon}
-                                className='size-full object-cover'
-                                alt='external sidebar image'
+                            <DImageHover
+                                activeAnimation={active}
+                                dataImage={{ png: itemsExternalSide.icon_image, gif: itemsExternalSide.icon_gif }}
                             />
                         </div>
                         <div
