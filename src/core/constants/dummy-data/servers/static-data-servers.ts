@@ -26,7 +26,8 @@ export const static_data_roles_server = [
     { name: 'Draven Family', color: '#969292', roleId: '1215998618503352360' },
     { name: 'Zenyx Family', color: '#969292', roleId: '1216057420804260040' },
     { name: 'Ares Family', color: '#969292', roleId: '1216057418841194616' },
-    { name: '〢𝐌𝐀𝐑𝐓𝐘  ————————', color: '#0fff00', roleId: '1217199704769822803' }
+    { name: '〢𝐌𝐀𝐑𝐓𝐘  ————————', color: '#0fff00', roleId: '1217199704769822803' },
+    { name: 'Ban', color: '#da0606', roleId: '1217565199989604504' }
 ]
 
 export const static_data_users_servers = [
@@ -222,7 +223,7 @@ export const static_data_users_servers = [
             { name: 'id', userName: 'dany#0001' }
         ],
         about: 'Disconnect to reconnect; take time for yourself.',
-        roles: ['1215998618503352360']
+        roles: ['1217565199989604504']
     },
     {
         name: 'Jockie Music',
@@ -341,7 +342,7 @@ export const static_data_servers = [
                         isPrivate: true,
                         type: 'text',
                         id: 1,
-                        roles: ['942037639765311509', '952907129034014740', '1217199704769822803'],
+                        roles: ['942037639765311509', '952907129034014740', '1217565199989604504'],
                         messages: [
                             {
                                 sender: '325301808543170569',
@@ -378,7 +379,7 @@ export const static_data_servers = [
                             }
                         ],
                         id: 1,
-                        roles: ['942037639765311509', '952907129034014740', '1217199704769822803'],
+                        roles: ['942037639765311509', '952907129034014740', '1217565199989604504'],
                         href: `/channels/911668092877283329/12315332`
                     },
                     {
@@ -571,7 +572,6 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: false,
                         type: 'voice',
-                        membersConnected: ['180204915942096896', '505051488779894794'],
                         id: 1
                     },
                     {
@@ -660,7 +660,12 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: true,
                         type: 'voice',
-                        membersConnected: ['991284573726060615', '411916947773587456'],
+                        membersConnected: [
+                            '991284573726060615',
+                            '180204915942096896',
+                            '505051488779894794',
+                            '411916947773587456'
+                        ],
                         id: 0
                     }
                 ]

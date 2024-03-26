@@ -22,7 +22,7 @@ const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
     // Filter users based on roles
     const dataUsersWithPerm =
         channelData.roles.length === 0
-            ? static_data_users_servers
+            ? static_data_users_servers.filter((user) => !user.roles.includes('1217565199989604504'))
             : static_data_users_servers.filter((user) => {
                   return user.roles.some((role: TCriticalAnyType) => rolesToFilter.has(role))
               })

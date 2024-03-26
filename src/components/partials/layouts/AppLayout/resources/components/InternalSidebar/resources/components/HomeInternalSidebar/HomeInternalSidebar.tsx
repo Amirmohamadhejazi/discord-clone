@@ -64,7 +64,7 @@ const HomeInternalSidebar = () => {
                                     <div className='flex items-center justify-center gap-x-2' key={index}>
                                         <div className=' bg-general-gray-100 p-4 rounded-full ' />
                                         <div className='flex-1 h-2/3  bg-general-gray-100  rounded-md'>
-                                            {index + 23 + items}
+                                            direct {items + 1}
                                         </div>
                                     </div>
                                 ))

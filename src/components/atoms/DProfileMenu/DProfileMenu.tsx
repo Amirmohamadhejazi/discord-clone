@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
-import { type FC, useState } from 'react'
+import { type FC, useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, Overlay, TextInput, Tooltip } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 import { DModal } from '@atoms/DModal'
 import { DProfileLarge } from '@atoms/DProfileLarge'
 
+import { static_data_roles_server } from '@core/constants/dummy-data'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { badgeHandler } from '@core/utils/common/badgeHandler/badgeHandler'
 
@@ -109,7 +111,7 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                                     </div>
                                 )}
                             </div>
-                            <div className='w-full min-h-32  flex flex-col justify-between bg-black bg-opacity-65 text-white rounded-md p-3'>
+                            <div className='w-full min-h-40  flex flex-col justify-between bg-black bg-opacity-65 text-white rounded-md p-3'>
                                 <div className='flex flex-col gap-2 font-semibold '>
                                     <div className='flex flex-col'>
                                         <span className='font-bold'>{name}</span>
@@ -127,6 +129,30 @@ const DProfileMenu: FC<IMenuProps> = ({ classNames, children, dataProfile, posit
                                             <span className='font-medium '>MEMBER SINCE</span>
                                             <span className='text-[10px]'>{created}</span>
                                         </div>
+                                        {dataProfile.roles && (
+                                            <div className='flex gap-1 flex-col'>
+                                                <span className=' text-xs'>Roles</span>
+                                                <div className='flex items-center flex-wrap text-[10px] gap-2'>
+                                                    {dataProfile.roles.map((items) => {
+                                                        const rolesMember = static_data_roles_server.find(
+                                                            (itemRole) => itemRole.roleId === items
+                                                        )
+                                                        return (
+                                                            <div
+                                                                className='flex items-center gap-1 border border-general-border py-0.5 px-1 rounded-md'
+                                                                key={items}
+                                                            >
+                                                                <div
+                                                                    className={`size-3 rounded-full cursor-pointer relative overflow-hidden before:hidden hover:before:flex before:items-center before:justify-center before:w-full before:h-full  before:content-['x'] before:text-black before:text-xs before:font-light `}
+                                                                    style={{ backgroundColor: rolesMember?.color }}
+                                                                />
+                                                                <span>{rolesMember?.name}</span>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
                                         <TextInput
                                             classNames={{
                                                 input: 'bg-transparent text-white border-transparent px-1 focus:bg-black focus:placeholder-black text-xs placeholder-opacity-0 duration-300',

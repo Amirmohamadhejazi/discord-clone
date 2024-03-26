@@ -16,6 +16,7 @@ interface IMenuProps {
         useId: string
         colors?: string[]
         status: string
+        roles?: string[]
     }
     position?:
         | 'bottom-start'
