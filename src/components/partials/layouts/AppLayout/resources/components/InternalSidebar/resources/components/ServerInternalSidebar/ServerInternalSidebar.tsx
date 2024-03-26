@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { usePathname } from 'next/navigation'
+import { IoWifiOutline } from 'react-icons/io5'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { ActionIcon } from '@mantine/core'
 
-// import { useMediaQuery } from '@mantine/hooks'
+import { Call_icon, NoiseSuppression_icon } from '@molecules/icons'
+
 import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_data_servers, static_data_users_servers } from '@core/constants/dummy-data'
@@ -22,6 +24,12 @@ const ServerInternalSidebar = () => {
     const [, , idServer] = path.split('/')
 
     const dataSidebar = static_data_servers.find((itemServers) => itemServers.id === idServer)
+    const voiceConnected = dataSidebar?.channelsContent
+        .map((items: TCriticalAnyType) => items.channels)
+        .flat(Infinity)
+        .filter((itemsAll) => itemsAll.membersConnected)
+        .find((itemConnected) => itemConnected.membersConnected.includes(data_profile_me.useId))
+
     return (
         <div className='h-full flex flex-col '>
             <div className='w-full flex items-center justify-between sticky  select-none bg-general-gray-50 top-0 h-12 p-3 shadow-md text-white z-10'>
@@ -72,7 +80,6 @@ const ServerInternalSidebar = () => {
                                                                     </ActionIcon>
                                                                 </DProfileMenu>
                                                             </div>
-                                                            {/*  */}
                                                         </div>
                                                     )
                                                 }
@@ -85,29 +92,52 @@ const ServerInternalSidebar = () => {
                 </div>
             </div>
             {/* me ac */}
-            <div className='flex bg-general-gray-300 group'>
-                <div className='w-full flex items-center  px-2 h-14'>
-                    <div className='w-9 h-9 relative'>
-                        <img
-                            src={data_profile_me.avatar.src}
-                            className='w-full h-full rounded-full object-cover'
-                            alt='avatar'
-                        />
-                        <div className='absolute -right-1 -bottom-0   '>
-                            <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
-                                <img src={onlineStatus.src} className='w-full h-full mb-1 object-cover' alt='' />
+            <div className=' flex flex-col gap-y-1 py-2 bg-general-gray-300'>
+                {voiceConnected && (
+                    <>
+                        <div className='flex items-center justify-between   px-2'>
+                            <div className='grow  flex flex-col truncate'>
+                                <div className='flex items-center gap-x-1'>
+                                    <IoWifiOutline className='text-green-600 rotate-45' size={23} />
+                                    <span className='text-xs font-bold text-green-600'>Voice Connected</span>
+                                </div>
+                                <span className=' overflow-hidden truncate text-xs'>
+                                    {voiceConnected.name} / {dataSidebar?.serverName}
+                                </span>
+                            </div>
+                            <div className='flex items-center gap-x-2'>
+                                <NoiseSuppression_icon size='18' />
+                                <Call_icon size={'22'} />
                             </div>
                         </div>
-                    </div>
-                    <div className='flex flex-col grow justify-center text-sm pl-2'>
-                        <span className='truncate'>{data_profile_me.name}</span>
-                        <span className='truncate block group-hover:hidden'>online</span>
-                        <span className='truncate hidden group-hover:block  '>{data_profile_me.username}</span>
-                    </div>
-                    <div className='flex items-center justify-center gap-1 text-xl gap-x-2 *:cursor-pointer  '>
-                        <IoMic className='hover:text-white duration-300 ' />
-                        <IoHeadset className='hover:text-white duration-300 ' />
-                        <IoSettingsSharp className='hover:text-white duration-300 ' />
+                        <hr className='border-general-border' />
+                    </>
+                )}
+
+                <div className='flex group'>
+                    <div className='w-full flex items-center  px-2 '>
+                        <div className='w-8 h-8 relative'>
+                            <img
+                                src={data_profile_me.avatar.src}
+                                className='w-full h-full rounded-full object-cover'
+                                alt='avatar'
+                            />
+                            <div className='absolute -right-1 -bottom-0   '>
+                                <div className='w-4 h-4  bg-general-gray-100 flex items-center justify-center rounded-full'>
+                                    <img src={onlineStatus.src} className='w-full h-full mb-1 object-cover' alt='' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex flex-col grow justify-center text-xs   pl-2'>
+                            <span className='truncate font-semibold'>{data_profile_me.name}</span>
+                            <span className='truncate block group-hover:hidden'>online</span>
+                            <span className='truncate hidden group-hover:block  '>{data_profile_me.username}</span>
+                        </div>
+                        <div className='flex items-center justify-center gap-1 text-xl gap-x-2 *:cursor-pointer  '>
+                            <IoMic className='hover:text-white duration-300 ' />
+                            <IoHeadset className='hover:text-white duration-300 ' />
+                            <IoSettingsSharp className='hover:text-white duration-300 ' />
+                        </div>
                     </div>
                 </div>
             </div>

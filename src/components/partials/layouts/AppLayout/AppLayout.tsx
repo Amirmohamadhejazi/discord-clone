@@ -18,11 +18,11 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
         dispatch(closeMenu())
     }, [path])
     return (
-        <div className='flex  h-screen text-general-gray-800'>
+        <div className='  flex  h-screen text-general-gray-800'>
             <div className={`${openedMenu ? 'block' : 'md:block hidden'}`}>
                 <ExternalSidebar />
             </div>
-            <div className={`w-full md:w-[230px] h-full  ${openedMenu ? 'block' : 'hidden md:block'}`}>
+            <div className={`w-full md:w-[230px] h-full  ${openedMenu ? '' : 'hidden md:block'}`}>
                 <InternalSidebar />
             </div>
             {/* <div className='grow h-full bg-general-gray-100'>{children}</div> */}

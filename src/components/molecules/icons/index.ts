@@ -1,6 +1,7 @@
 import AddDm_icon from './AddDm_icon'
 import ArrowLink_icon from './ArrowLink_icon'
 import ArrowSendMessage_icon from './ArrowSendMessage_icon'
+import Call_icon from './Call_icon'
 import Dm_icon from './Dm_icon'
 import Frog_icon from './Frog_icon'
 import Gif_icon from './Gif_icon'
@@ -11,6 +12,7 @@ import Invite_icon from './Invite_icon'
 import Logo_icon from './Logo_icon'
 import Menu_icon from './Menu_icon'
 import NitroBadge_icon from './NitroBadge_icon'
+import NoiseSuppression_icon from './NoiseSuppression_icon'
 import Owner_icon from './Owner_icon'
 import Shop_icon from './Shop_icon'
 import Sticker_icon from './Sticker_icon'
@@ -38,5 +40,7 @@ export {
     UserProfile_icon,
     Owner_icon,
     Invite_icon,
-    Voice_icon
+    Voice_icon,
+    Call_icon,
+    NoiseSuppression_icon
 }

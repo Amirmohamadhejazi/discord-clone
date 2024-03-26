@@ -19,6 +19,7 @@ const HomeInternalSidebar = () => {
     const dispatch = useDispatch()
     const path = usePathname()
     const data_profile_me: TCriticalAnyType = static_all_users.find((items) => items.me)
+
     return (
         <div className='h-full flex flex-col'>
             <div className='w-full flex items-center justify-center h-12 p-3 shadow-md  select-none'>
