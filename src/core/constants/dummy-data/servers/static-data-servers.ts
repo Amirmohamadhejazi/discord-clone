@@ -643,7 +643,7 @@ export const static_data_servers = [
                         isPrivate: true,
                         type: 'text',
                         id: 1,
-                        roles: ['1215998618503352360'],
+                        roles: ['1215998618503352360', '1217199704769822803'],
                         messages: [
                             {
                                 sender: '991284573726060615',
@@ -719,7 +719,7 @@ export const static_data_servers = [
                             }
                         ],
                         id: 1,
-                        roles: ['1215998618503352360'],
+                        roles: ['1215998618503352360', '1217199704769822803'],
                         href: `/channels/911668092877283329/1219358988387483779`
                     },
                     {
