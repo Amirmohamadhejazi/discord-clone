@@ -34,6 +34,8 @@ const DirectTemplate = () => {
             closeShowMember()
         }
     }, [matchesSm])
+    // Regular expression pattern to match ":dynamicText:"
+
     return (
         <div className='h-full flex flex-col'>
             <Header isGroup={DirectData.users ? true : false} toggleShowMember={toggleShowMember} />

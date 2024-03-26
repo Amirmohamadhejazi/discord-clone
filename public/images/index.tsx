@@ -43,10 +43,14 @@ import bannerTheCode from './baner/thecode.png'
 import avatarJockieMusic from './bot/JockieMusic.webp'
 import Kekw7_emoji from './emoji/Kekw7_emoji.webp'
 import Pedarsag_emoji from './emoji/Pedarsag.webp'
+import Peepo_Dance_emoji from './emoji/Peepo_Dance.gif'
+import Peepo_SipSpin_emoji from './emoji/Peepo_SipSpin.gif'
+import Peepo_SuperPeepo_emoji from './emoji/Peepo_SuperPeepo.gif'
 import PepeThinking_emoji from './emoji/PepeThinking_emoji.gif'
 import PES_Melt_emoji from './emoji/PES_Melt.gif'
 import Speak_emoji from './emoji/Speak.gif'
 import Troll_emoji from './emoji/Troll.gif'
+import Yazdan_mom_emoji from './emoji/Yazdan_mom.gif'
 import family_group from './group/family_group.webp'
 import doNotDisturbStatus from './icon/donotdisturbStatus.png'
 import idleStatus from './icon/idleStatus.png'
@@ -164,5 +168,9 @@ export {
     post_img2,
     post_img3,
     post_img4,
-    avatarJockieMusic
+    avatarJockieMusic,
+    Peepo_Dance_emoji,
+    Peepo_SipSpin_emoji,
+    Peepo_SuperPeepo_emoji,
+    Yazdan_mom_emoji
 }

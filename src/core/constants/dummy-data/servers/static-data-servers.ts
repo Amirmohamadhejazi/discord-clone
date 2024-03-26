@@ -644,7 +644,14 @@ export const static_data_servers = [
                         type: 'text',
                         id: 1,
                         roles: ['1215998618503352360'],
-
+                        messages: [
+                            {
+                                sender: '991284573726060615',
+                                message: ':Peepo_SuperPeepo:',
+                                messageId: '1',
+                                date: ''
+                            }
+                        ],
                         href: `/channels/911668092877283329/1219358947048161452`
                     },
                     {
@@ -652,7 +659,65 @@ export const static_data_servers = [
                         channelTopic: '',
                         isPrivate: true,
                         type: 'text',
+                        messages: [
+                            {
+                                sender: '179939072075235329',
+                                message: '3p https://youtu.be/Z7pKl8aSq5M?si=O8y8oekzcKE2bwrp ',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '179939072075235329',
+                                message: "Guys, install Discord, it's better than this",
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '991284573726060615',
+                                message: ':troll:',
+                                messageId: '1',
+                                date: ''
+                            },
 
+                            {
+                                sender: '179939072075235329',
+                                message: ':Peepo_SipSpin:',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '214280633692717056',
+                                message: 'Radin became a clown',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '214280633692717056',
+                                message: ':Kekw7:',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '991284573726060615',
+                                message: 'where is yazdan mm',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '179939072075235329',
+                                message: 'she is dancing',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '179939072075235329',
+                                message: ':Peepo_Dance::Yazdan_mom_dancing:',
+                                messageId: '1',
+                                date: ''
+                            }
+                        ],
                         id: 1,
                         roles: ['1215998618503352360'],
                         href: `/channels/911668092877283329/1219358988387483779`

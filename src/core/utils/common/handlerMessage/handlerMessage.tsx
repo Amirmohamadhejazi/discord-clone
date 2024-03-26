@@ -5,7 +5,6 @@ import { emoji_data } from '@core/constants/dummy-data'
 
 const handlerMessage = (textMessage: string) => {
     const messageItems = textMessage.split(/(:\w+:)/)
-    const messageLength = textMessage.split(' ').length
 
     let tooltipIndex = 0
 
@@ -19,6 +18,7 @@ const handlerMessage = (textMessage: string) => {
                     const EmojiData = emoji_data.find((item) => item.name === emoji)
 
                     if (EmojiData) {
+                        const regex = /^:.+?:$/
                         return (
                             <Tooltip
                                 label={emoji}
@@ -31,7 +31,7 @@ const handlerMessage = (textMessage: string) => {
                             >
                                 <img
                                     src={EmojiData?.img}
-                                    className={`${messageLength === 1 ? 'size-10' : 'size-7'} rounded-sm`}
+                                    className={`${regex.test(textMessage) ? 'size-10' : 'size-7'} rounded-sm`}
                                     alt={EmojiData?.name}
                                 />
                             </Tooltip>
