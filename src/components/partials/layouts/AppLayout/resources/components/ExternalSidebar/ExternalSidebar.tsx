@@ -35,7 +35,7 @@ const ExternalSidebar = () => {
             </div>
 
             {static_data_servers.map((itemsExternalSide) => {
-                const active = rootPosition.includes(itemsExternalSide.id)
+                const active = rootPosition ? rootPosition.includes(itemsExternalSide.id) : false
 
                 return (
                     <Link
