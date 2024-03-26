@@ -6,7 +6,7 @@ import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { useDispatch } from 'react-redux'
 
 import { static_all_users } from '@core/constants/dummy-data'
-import { static_data_direct } from '@core/constants/dummy-data/static-data'
+import { static_data_direct } from '@core/constants/dummy-data/direct/static-data-direct'
 import { closeMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 

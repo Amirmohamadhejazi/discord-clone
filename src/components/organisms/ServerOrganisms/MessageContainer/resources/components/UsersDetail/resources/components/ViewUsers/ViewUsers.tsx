@@ -47,7 +47,7 @@ const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
                                     key={itemUser.useId}
                                 >
                                     <div className='flex items-center gap-x-2 px-2 py-1 hover:bg-general-gray-200 hover:text-white rounded-md cursor-pointer duration-300'>
-                                        <div className='w-8 h-8 relative'>
+                                        <div className='w-8 h-8 relative shrink-0'>
                                             <img
                                                 src={itemUser.avatar.src}
                                                 className='w-full h-full rounded-full object-cover'
@@ -63,8 +63,8 @@ const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='flex items-center'>
-                                            <span className='text-sm'>{itemUser.name}</span>
+                                        <div className='truncate flex items-center gap-x-1'>
+                                            <span className='text-sm truncate'>{itemUser.name}</span>
 
                                             {itemUser.ownerServer && (
                                                 <Tooltip

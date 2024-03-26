@@ -8,7 +8,7 @@ import { ActionIcon } from '@mantine/core'
 
 import { UserProfile_icon, Users_icon } from '@molecules/icons'
 
-import { static_all_users, static_data_direct } from '@core/constants/dummy-data/static-data'
+import { static_all_users, static_data_direct } from '@core/constants/dummy-data/direct/static-data-direct'
 import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
 import { statusHandler } from '@core/utils/common/statusHandler'
 

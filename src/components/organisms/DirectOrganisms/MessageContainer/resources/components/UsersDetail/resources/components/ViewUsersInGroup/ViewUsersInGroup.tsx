@@ -24,7 +24,7 @@ const ViewUsersInGroup: FC<IViewUsersInGroupProps> = ({ DirectData }) => {
                     >
                         <div className='flex items-center gap-x-2 px-2 py-1 hover:bg-general-gray-200 hover:text-white rounded-md cursor-pointer duration-300'>
                             <img src={itemUser.avatar.src} className='w-8 h-8 rounded-full' alt='' />
-                            <span className='text-sm'>{itemUser.name}</span>
+                            <span className='text-sm truncate'>{itemUser.name}</span>
 
                             {itemUser.ownerGroup && (
                                 <Tooltip

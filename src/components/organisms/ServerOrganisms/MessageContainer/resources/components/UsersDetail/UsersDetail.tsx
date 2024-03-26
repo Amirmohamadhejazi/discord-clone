@@ -9,7 +9,7 @@ const UsersDetail: FC<IUsersDetailProps> = ({ isShowMember, channelData }) => {
     return (
         <div
             className={`${
-                isShowMember ? 'w-full sm:w-[300px] opacity-100' : 'w-0 opacity-0'
+                isShowMember ? 'w-full sm:w-[240px] opacity-100' : 'w-0 opacity-0'
             } duration-100 overflow-x-hidden overflow-y-auto bg-general-gray-50 flex-shrink-0 absolute sm:relative h-full sm:h-auto right-0 sm:right-auto select-none`}
         >
             {/* users */}

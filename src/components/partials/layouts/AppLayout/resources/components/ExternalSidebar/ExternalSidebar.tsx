@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaDiscord } from 'react-icons/fa6'
 
-import { static_data_servers } from '@core/constants/dummy-data/static-data'
+import { static_data_servers } from '@core/constants/dummy-data'
 
 const ExternalSidebar = () => {
     const [, rootPosition] = usePathname().split('/channels/')

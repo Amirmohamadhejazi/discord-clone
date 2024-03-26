@@ -7,7 +7,7 @@ import { Textarea } from '@mantine/core'
 
 import { ArrowSendMessage_icon, Gif_icon, Gift_icon, Sticker_icon } from '@molecules/icons'
 
-import { static_all_users, static_data_direct } from '@core/constants/dummy-data/static-data'
+import { static_all_users, static_data_direct } from '@core/constants/dummy-data/direct/static-data-direct'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { DirectUser, EmptyDirect, type IMessageContainerProps } from './resources'

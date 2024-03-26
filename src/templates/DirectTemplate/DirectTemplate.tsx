@@ -7,7 +7,7 @@ import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 
 import { Header, MessageContainer } from '@organisms/DirectOrganisms'
 
-import { static_all_users, static_data_direct } from '@core/constants/dummy-data/static-data'
+import { static_all_users, static_data_direct } from '@core/constants/dummy-data/direct/static-data-direct'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 const DirectTemplate = () => {
