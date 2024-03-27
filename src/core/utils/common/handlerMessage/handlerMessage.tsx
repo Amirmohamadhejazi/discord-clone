@@ -9,10 +9,10 @@ import { emoji_data } from '@core/constants/dummy-data'
 const handlerMessage = (textMessage: string) => {
     const messageItems = textMessage.split(/(:\w+:)/)
 
-    let tooltipIndex = 0
+    // const tooltipIndex = 0
 
     return (
-        <div className='flex gap-x-1 flex-wrap items-center text-sm text-white'>
+        <div className='flex gap-x-1 flex-wrap items-center   text-sm text-white'>
             {messageItems.map((item, index) => {
                 const emojiRegex = /:\w+:/g
 
@@ -30,7 +30,7 @@ const handlerMessage = (textMessage: string) => {
                                 offset={2}
                                 classNames={{ tooltip: 'text-[9px] font-bold max-w-36 ' }}
                                 className='bg-general-gray-50'
-                                key={tooltipIndex++}
+                                key={index}
                             >
                                 <img
                                     src={EmojiData?.img}
@@ -51,21 +51,26 @@ const handlerMessage = (textMessage: string) => {
                     const messageItems = item.split(' ')
                     const filterLinks = item.split(' ').filter((itemLink) => itemLink.includes('http'))
                     return (
-                        <div className='flex flex-col gap-2' key={index}>
+                        <div className='flex flex-col gap-2 ' key={index}>
                             <div className='flex gap-x-1 items-center flex-wrap'>
                                 {messageItems.map((itemMessage, indexMessage) => {
                                     const isLink = itemMessage.includes('http')
                                     return isLink ? (
+                                        // -webkit-box-orient: vertical;
+                                        // overflow: hidden;
+                                        // display: -webkit-box;
+                                        // -webkit-line-clamp: 2;
+
                                         <Link
                                             href={itemMessage}
                                             key={indexMessage}
                                             target='_blank'
-                                            className='text-blue-400 hover:underline'
+                                            className='text-blue-400 hover:underline break-all'
                                         >
                                             {itemMessage}
                                         </Link>
                                     ) : (
-                                        <span className='flex items-center gap-x-1' key={indexMessage}>
+                                        <span className='flex items-center gap-x-1 break-all' key={indexMessage}>
                                             {itemMessage}
                                         </span>
                                     )
@@ -79,7 +84,7 @@ const handlerMessage = (textMessage: string) => {
                     )
                 }
 
-                return null // Ignore empty items
+                return null
             })}
         </div>
     )

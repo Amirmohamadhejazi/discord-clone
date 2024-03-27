@@ -52,7 +52,8 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                 <DMenu type='messageInChannel'>
                                     <div className='flex flex-col gap-1 '>
                                         {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
-                                        <span>{handlerMessage(itemDirect.message)}</span>
+
+                                        {handlerMessage(itemDirect.message)}
                                     </div>
                                 </DMenu>
                             </div>
@@ -66,7 +67,8 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                             <div className={`flex pl-14 ${nextMessage ? '' : 'mb-2 '} relative group`}>
                                 <div className='flex flex-col gap-1 '>
                                     {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
-                                    <span>{handlerMessage(itemDirect.message)}</span>
+
+                                    {handlerMessage(itemDirect.message)}
                                 </div>
                                 <div className={`absolute hidden group-hover:block left-2 top-0 select-none`}>
                                     <span className='text-[8px] font-medium'>04/13/2023</span>
