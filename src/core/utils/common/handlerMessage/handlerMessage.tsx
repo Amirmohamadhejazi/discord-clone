@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import { Tooltip } from '@mantine/core'
 
 import { LinkPreview } from '@molecules/LinkPreview'
@@ -47,10 +48,29 @@ const handlerMessage = (textMessage: string) => {
                         )
                     }
                 } else if (item.trim() !== '') {
+                    const messageItems = item.split(' ')
                     const filterLinks = item.split(' ').filter((itemLink) => itemLink.includes('http'))
                     return (
                         <div className='flex flex-col gap-2' key={index}>
-                            <span className='flex items-center gap-x-1'>{item}</span>
+                            <div className='flex gap-x-1 items-center flex-wrap'>
+                                {messageItems.map((itemMessage, indexMessage) => {
+                                    const isLink = itemMessage.includes('http')
+                                    return isLink ? (
+                                        <Link
+                                            href={itemMessage}
+                                            key={indexMessage}
+                                            target='_blank'
+                                            className='text-blue-400 hover:underline'
+                                        >
+                                            {itemMessage}
+                                        </Link>
+                                    ) : (
+                                        <span className='flex items-center gap-x-1' key={indexMessage}>
+                                            {itemMessage}
+                                        </span>
+                                    )
+                                })}
+                            </div>
                             {filterLinks.length > 0 &&
                                 filterLinks.map((itemsLink, indexLink) => (
                                     <LinkPreview url={itemsLink} key={indexLink} />

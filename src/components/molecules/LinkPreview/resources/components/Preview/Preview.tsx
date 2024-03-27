@@ -18,6 +18,7 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
                 return 'border-blue-600'
         }
     }
+
     return (
         <div className={`max-w-60 flex flex-col gap-y-1 border-l-[3.5px] rounded-md  p-2 truncate ${colorCard()}`}>
             <div className='flex items-center gap-x-1'>
@@ -46,7 +47,6 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
                 </div>
             )}
             <ImgMessage img={dataPreviewPost.image.url} />
-            {/* <img src={dataPreviewPost.image.url} className='rounded-md' alt='' /> */}
             {dataPreviewPost.date && <span className='text-[10px] font-light truncate'>{dataPreviewPost.date}</span>}
         </div>
     )

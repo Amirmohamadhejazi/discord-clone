@@ -388,12 +388,6 @@ export const static_data_direct = [
             },
             {
                 sender: '214280633692717056',
-                message: `this music is nice`,
-                messageId: '4',
-                date: ''
-            },
-            {
-                sender: '214280633692717056',
                 message: ` https://open.spotify.com/track/1K9aIMBduQ5WM3jINo3IvY?si=64439f282fdc4263`,
                 messageId: '4',
                 date: ''
@@ -401,6 +395,26 @@ export const static_data_direct = [
             {
                 sender: '218498762350395405',
                 message: `:Peepo_Dance:`,
+                messageId: '4',
+                date: ''
+            },
+
+            {
+                sender: '214280633692717056',
+                message: `https://par30dl.net/دانلود-بازی-assassins-creed-برای-pc/`,
+                messageId: '4',
+                date: ''
+            },
+
+            {
+                sender: '214280633692717056',
+                message: `:troll:`,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: '991284573726060615',
+                message: `:Pes_melt:`,
                 messageId: '4',
                 date: ''
             }
