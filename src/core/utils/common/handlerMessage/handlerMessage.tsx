@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Tooltip } from '@mantine/core'
 
+import { LinkPreview } from '@molecules/LinkPreview'
+
 import { emoji_data } from '@core/constants/dummy-data'
 
 const handlerMessage = (textMessage: string) => {
@@ -45,10 +47,15 @@ const handlerMessage = (textMessage: string) => {
                         )
                     }
                 } else if (item.trim() !== '') {
+                    const filterLinks = item.split(' ').filter((itemLink) => itemLink.includes('http'))
                     return (
-                        <span className='flex items-center gap-x-1' key={index}>
-                            {item}
-                        </span>
+                        <div className='flex flex-col gap-2' key={index}>
+                            <span className='flex items-center gap-x-1'>{item}</span>
+                            {filterLinks.length > 0 &&
+                                filterLinks.map((itemsLink, indexLink) => (
+                                    <LinkPreview url={itemsLink} key={indexLink} />
+                                ))}
+                        </div>
                     )
                 }
 

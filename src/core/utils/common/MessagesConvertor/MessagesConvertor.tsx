@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+
 import { type FC } from 'react'
 import { usePathname } from 'next/navigation'
 
@@ -19,9 +20,9 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
     return (
         <div className='flex flex-col gap-y-1 my-2 '>
             {messages.map((itemDirect, index) => {
-                const regex = /^\/channels\/me\/[\w\d]+$/
+                const regexHome = /^\/channels\/me\/[\w\d]+$/
                 const userData: TCriticalAnyType = (
-                    regex.test(path) ? static_all_users : static_data_users_servers
+                    regexHome.test(path) ? static_all_users : static_data_users_servers
                 ).find((items) => items.useId === itemDirect.sender)
 
                 const prevMessage = index > 0 ? messages[index - 1].sender === messages[index].sender : false

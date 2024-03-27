@@ -28,17 +28,25 @@ const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
               })
 
     return (
-        <div className='flex flex-col w-full h-full overflow-y-auto p-2 gap-y-1'>
+        <div className='flex flex-col w-full h-full overflow-y-auto p-2 gap-y-2'>
             {static_data_roles_server.map((itemsRole) => {
                 const idRole = itemsRole.roleId
                 const dataMember = dataUsersWithPerm.filter((itemsRoleMember) => itemsRoleMember.roles[0] === idRole)
 
                 return (
                     <div className={`flex flex-col ${dataMember.length === 0 ? 'hidden' : ''}`} key={itemsRole.roleId}>
-                        <span className={`text-xs font-semibold mb-1 `} style={{ color: itemsRole.color }}>
-                            {itemsRole.name}
-                        </span>
-
+                        {/* <span className={`text-xs font-semibold mb-1 `} style={{ color: itemsRole.color }}>
+                            {itemsRole.name} - {dataMember.length}
+                        </span> */}
+                        <div className='flex items-center gap-x-1  mb-1 '>
+                            <div
+                                className={`size-2 rounded-full relative overflow-hidden shrink-0`}
+                                style={{ backgroundColor: itemsRole.color }}
+                            />
+                            <span className={`text-xs font-semibold truncate`}>
+                                {itemsRole.name} - {dataMember.length}
+                            </span>
+                        </div>
                         {dataMember.map((itemUser) => {
                             return (
                                 <DProfileMenu

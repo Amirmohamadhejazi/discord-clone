@@ -11,6 +11,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "@dhaiwat10/react-link-preview": "^1.15.0",
         "@mantine/core": "^7.4.1",
         "@mantine/hooks": "^7.4.1",
         "@mantine/modals": "^7.4.1",

@@ -32,6 +32,7 @@ const ServerTemplate = () => {
     return (
         <div className='h-full flex flex-col'>
             <Header channelData={channelData} toggleShowMember={toggleShowMember} />
+
             <MessageContainer channelData={channelData} isShowMember={IsShowMember} />
         </div>
     )

@@ -385,6 +385,24 @@ export const static_data_direct = [
                 img: dark_avatar3,
                 messageId: '4',
                 date: ''
+            },
+            {
+                sender: '214280633692717056',
+                message: `this music is nice`,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: '214280633692717056',
+                message: ` https://open.spotify.com/track/1K9aIMBduQ5WM3jINo3IvY?si=64439f282fdc4263`,
+                messageId: '4',
+                date: ''
+            },
+            {
+                sender: '218498762350395405',
+                message: `:Peepo_Dance:`,
+                messageId: '4',
+                date: ''
             }
         ]
     },

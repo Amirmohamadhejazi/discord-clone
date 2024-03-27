@@ -667,6 +667,12 @@ export const static_data_servers = [
                                 date: ''
                             },
                             {
+                                sender: '411916947773587456',
+                                message: 'Amin Tijay - TEH RUN (Official Audio) ',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
                                 sender: '179939072075235329',
                                 message: "Guys, install Discord, it's better than this",
                                 messageId: '1',
@@ -714,6 +720,61 @@ export const static_data_servers = [
                             {
                                 sender: '179939072075235329',
                                 message: ':Peepo_Dance::Yazdan_mom_dancing:',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '991284573726060615',
+                                message: '+p https://www.youtube.com/watch?v=-pX6gTaSUcQ',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '411916947773587456',
+                                message: 'PutaK x Khalse - HABIBI AZIZAM (Official Music video) ',
+                                messageId: '1',
+                                date: ''
+                            },
+                            {
+                                sender: '505051488779894794',
+                                message:
+                                    '3p https://open.spotify.com/album/1RAPneGUjUO11XiVPTSYz0?si=-P2KBAenRiGxZryylEj2QQ',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '411916947773587456',
+                                message: 'Hala Ke Man Inam ',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '214280633692717056',
+                                message: '3p https://soundcloud.com/arshiaparvane/bache-aseman-prod-da-baby-type',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '411916947773587456',
+                                message: 'Bache Aseman (Da Baby Type Beat - Big Bag) ',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '505051488779894794',
+                                message: '3p https://www.deezer.com/us/track/1999525067',
+                                messageId: '1',
+                                date: ''
+                            },
+
+                            {
+                                sender: '411916947773587456',
+                                message: 'Rich Flex by Drake ',
                                 messageId: '1',
                                 date: ''
                             }
