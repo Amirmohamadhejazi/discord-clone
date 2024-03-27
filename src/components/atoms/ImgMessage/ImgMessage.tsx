@@ -21,7 +21,11 @@ const ImgMessage: FC<IImgMessageProps> = ({ img }) => {
                 onClick={openModalPicture}
             />
             <DModal opened={openedModalPicture} size='' onClose={closeModalPicture}>
-                <img src={img} className='rounded-md max-w-[800px]' alt='image message' />
+                <img
+                    src={img}
+                    className='rounded-md object-cover md:object-none w-full max-w-[800px]'
+                    alt='image message'
+                />
             </DModal>
         </div>
     )
