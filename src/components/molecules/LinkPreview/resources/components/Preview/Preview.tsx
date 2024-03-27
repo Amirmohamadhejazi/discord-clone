@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { type FC } from 'react'
+import Link from 'next/link'
 
 import { ImgMessage } from '@atoms/ImgMessage'
 
@@ -23,10 +24,13 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
         <div className={`max-w-60 flex flex-col gap-y-1 border-l-[3.5px] rounded-md  p-2 truncate ${colorCard()}`}>
             <div className='flex items-center gap-x-1'>
                 <img src={dataPreviewPost.logo.url} className='rounded-md w-5' alt='' />
-                <div className='flex items-center gap-x-1 text-[11px]'>
-                    <span className='font-bold'>Publisher:</span>
+                <Link
+                    href={dataPreviewPost.url}
+                    className='flex items-center text-[11px] text-blue-400 hover:underline'
+                    target='_blank'
+                >
                     <span className='text-xs font-bold truncate'>{dataPreviewPost.publisher}</span>
-                </div>
+                </Link>
             </div>
             {dataPreviewPost.author && (
                 <div className='flex items-center gap-x-1 text-[11px]'>
