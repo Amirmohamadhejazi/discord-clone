@@ -29,15 +29,18 @@ const MeFriends: FC<IMeFriendsProps> = ({ tabMenu }) => {
     const statusTab = tabMenu === 1 ? 'ONLINE' : tabMenu === 2 ? 'ALL FRIENDS' : tabMenu === 3 ? 'PENDING' : 'BLOCKED'
     return (
         <div className='h-full flex flex-col ml-5 mr-4 '>
-            <div className='mt-4'>
-                <Input
-                    classNames={{
-                        input: 'w-full h-30 px-2 text-sm placeholder:text-general-gray-800 text-white font-semibold border-0 bg-general-gray focus:outline-0 rounded-md'
-                    }}
-                    placeholder='Search'
-                    rightSection={<BiSearch size={18} />}
-                />
-            </div>
+            {dataMembers?.length > 0 && (
+                <div className='mt-4'>
+                    <Input
+                        classNames={{
+                            input: 'w-full h-30 px-2 text-sm placeholder:text-general-gray-800 text-white font-semibold border-0 bg-general-gray focus:outline-0 rounded-md'
+                        }}
+                        placeholder='Search'
+                        rightSection={<BiSearch size={18} />}
+                    />
+                </div>
+            )}
+
             <div className='mt-4 mb-2 grow overflow-auto text-xs'>
                 {dataMembers?.length > 0 ? (
                     <>
