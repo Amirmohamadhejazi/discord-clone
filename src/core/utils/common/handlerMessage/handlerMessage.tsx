@@ -65,7 +65,8 @@ const handlerMessage = (textMessage: string) => {
                                             href={itemMessage}
                                             key={indexMessage}
                                             target='_blank'
-                                            className='text-blue-400 hover:underline break-all'
+                                            className='text-blue-400 hover:underline break-all block leading-tight'
+                                            // className='text-blue-400 hover:underline break-all block truncate leading-tight'
                                         >
                                             {itemMessage}
                                         </Link>
