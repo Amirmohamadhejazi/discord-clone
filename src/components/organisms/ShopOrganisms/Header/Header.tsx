@@ -12,7 +12,7 @@ import { openMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSli
 const Header = () => {
     const dispatch = useDispatch()
     return (
-        <div className='w-full bg-general-gray-100  min-h-[48px] shadow-lg p-[8px] whitespace-nowrap flex-wrap  flex items-center justify-between '>
+        <div className='w-full sticky top-0 z-[1] bg-general-gray-100  min-h-[48px] shadow-lg p-[8px] whitespace-nowrap flex-wrap  flex items-center justify-between '>
             <div className=' flex items-center  flex-wrap gap-2 sm:gap-7   relative'>
                 <div className='md:hidden' onClick={() => dispatch(openMenu())}>
                     <ActionIcon classNames={{ root: 'w-auto' }}>

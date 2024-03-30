@@ -71,6 +71,21 @@ import post_img4 from './posts/post-4.png'
 import Transylvania from './servers/Transylvania.gif'
 import TransylvaniaImg from './servers/Transylvania.png'
 import Transylvania_banner from './servers/Transylvania_baner.png'
+import anime from './shop/anime/anime.jpg'
+import logo_anime from './shop/anime/logo_anime.png'
+import cyberPunk from './shop/cyberPunk/cyberPunk.jpg'
+import logo_cyberPunk from './shop/cyberPunk/logo_cyberPunk.png'
+import disxcore from './shop/disxcore/disxcore.jpg'
+import logo_disxcore from './shop/disxcore/logo_disxcore.png'
+import element from './shop/element/element.jpg'
+import logo_element from './shop/element/logo_element.png'
+import fantasy from './shop/fantasy/fantasy.jpg'
+import logo_fantasy from './shop/fantasy/logo_fantasy.png'
+import springTons from './shop/springTons/springTons.jpg'
+import springTons_logo from './shop/springTons/springTons_logo.png'
+import left_valorant from './shop/valorant/left_valorant.png'
+import logo_valorant from './shop/valorant/logo_valorant.png'
+import right_valorant from './shop/valorant/right_valorant.png'
 import wumpus1Img from './wumpus/wumpus1.png'
 import wumpus2Img from './wumpus/wumpus2.png'
 import wumpus3Img from './wumpus/wumpus3.png'
@@ -172,5 +187,20 @@ export {
     Peepo_Dance_emoji,
     Peepo_SipSpin_emoji,
     Peepo_SuperPeepo_emoji,
-    Yazdan_mom_emoji
+    Yazdan_mom_emoji,
+    left_valorant,
+    logo_valorant,
+    right_valorant,
+    springTons,
+    springTons_logo,
+    anime,
+    logo_anime,
+    logo_element,
+    element,
+    cyberPunk,
+    logo_cyberPunk,
+    fantasy,
+    logo_fantasy,
+    disxcore,
+    logo_disxcore
 }
