@@ -56,9 +56,9 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
                     <span className='truncate text-xs'>{dataPreviewPost.description}</span>
                 </div>
             )}
-            <div className=' relative'>
+            <div className='relative'>
                 <ImgMessage img={dataPreviewPost.image.url} />
-                <div className='w-full h-full absolute top-0 flex items-center justify-center  bg-black bg-opacity-20 '>
+                <div className='w-full h-full absolute top-0 flex items-center justify-center  bg-black bg-opacity-5 '>
                     <div className='p-2 rounded-full flex items-center justify-center bg-black bg-opacity-50 shadow-2xl shadow-white'>
                         <div className='flex items-center gap-x-2'>
                             <PlayMusic_icon className='text-general-gray-800 hover:text-white duration-300' />
