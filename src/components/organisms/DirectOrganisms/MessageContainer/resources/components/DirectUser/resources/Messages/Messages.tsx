@@ -12,7 +12,7 @@ import { type IMessagesProps } from './resources/types/types'
 
 const Messages: FC<IMessagesProps> = ({ messages }) => {
     return (
-        <div className='flex flex-col gap-y-1 my-2 '>
+        <div className='w-full flex flex-col gap-y-1 my-2 '>
             {messages.map((itemDirect, index) => {
                 const userData: TCriticalAnyType = static_all_users.find((items) => items.useId === itemDirect.sender)
 

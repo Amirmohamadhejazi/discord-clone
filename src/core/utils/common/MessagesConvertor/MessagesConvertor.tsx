@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-
+'use client'
 import { type FC } from 'react'
 import { usePathname } from 'next/navigation'
 
@@ -17,8 +17,9 @@ import { type IMessagesProps } from './resources/types/types'
 
 const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
     const path = usePathname()
+
     return (
-        <div className='flex flex-col gap-y-1 my-2 '>
+        <div className='w-full flex flex-col gap-y-1 my-2 '>
             {messages.map((itemDirect, index) => {
                 const regexHome = /^\/channels\/me\/[\w\d]+$/
                 const userData: TCriticalAnyType = (
@@ -30,7 +31,13 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
 
                 if (!prevMessage) {
                     return (
-                        <div className={`flex items-start gap-x-4 ${!nextMessage ? 'mb-2 ' : ''} `} key={index}>
+                        <div
+                            className={`flex items-start gap-x-4 ${
+                                !nextMessage ? 'mb-2 ' : ''
+                            } relative group bg-black bg-opacity-0 hover:bg-opacity-5 `}
+                            key={index}
+                        >
+                            <div className='bg-red-200 p-1 absolute top-0 right-0 hidden group-hover:flex '></div>{' '}
                             <DProfileMenu dataProfile={userData}>
                                 <div className='w-10 h-10 mt-2 '>
                                     <img
@@ -40,7 +47,6 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     />
                                 </div>
                             </DProfileMenu>
-
                             <div className='w-full flex flex-col '>
                                 <DMenu type='socialInChat'>
                                     <div className='flex items-center gap-x-2'>
@@ -64,7 +70,12 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                     /* when another message */
                     return (
                         <DMenu type='messageInChannel' key={index}>
-                            <div className={`flex pl-14 ${nextMessage ? '' : 'mb-2 '} relative group`}>
+                            <div
+                                className={`flex pl-14 ${
+                                    nextMessage ? '' : 'mb-2 '
+                                } relative group bg-black bg-opacity-0 hover:bg-opacity-5`}
+                            >
+                                <div className='bg-red-200 p-1 absolute top-0 right-0 hidden group-hover:flex '></div>
                                 <div className='flex flex-col gap-1 '>
                                     {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
 
