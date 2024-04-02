@@ -13,7 +13,9 @@ import Logo_icon from './Logo_icon'
 import Menu_icon from './Menu_icon'
 import NitroBadge_icon from './NitroBadge_icon'
 import NoiseSuppression_icon from './NoiseSuppression_icon'
+import OpenLink_icon from './OpenLink_icon'
 import Owner_icon from './Owner_icon'
+import PlayMusic_icon from './PlayMusic_icon'
 import Shop_icon from './Shop_icon'
 import Sticker_icon from './Sticker_icon'
 import UserAvatar_icon from './UserAvatar_icon'
@@ -42,5 +44,7 @@ export {
     Invite_icon,
     Voice_icon,
     Call_icon,
-    NoiseSuppression_icon
+    NoiseSuppression_icon,
+    OpenLink_icon,
+    PlayMusic_icon
 }

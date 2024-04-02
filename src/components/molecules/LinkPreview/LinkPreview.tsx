@@ -12,7 +12,6 @@ import { type ILinkPreviewProps } from './resources/types'
 const LinkPreview: FC<ILinkPreviewProps> = ({ url }) => {
     const [previewData, setPreviewData] = useState<TCriticalAnyType>(null)
     const [loading, setLoading] = useState(false)
-    const [error, setError] = useState('')
 
     useEffect(() => {
         const fetchData = async () => {
@@ -21,7 +20,6 @@ const LinkPreview: FC<ILinkPreviewProps> = ({ url }) => {
                 const response = await axios.get(`https://api.microlink.io/?url=${url}`)
                 setPreviewData(response.data)
             } catch (error) {
-                setError('Error fetching preview data. Please try again.')
                 console.error('Error fetching preview data:', error)
             } finally {
                 setLoading(false)
