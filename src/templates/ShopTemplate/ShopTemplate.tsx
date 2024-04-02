@@ -1,31 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 import { Header } from '@organisms/ShopOrganisms'
 
-import {
-    anime,
-    cyberPunk,
-    disxcore,
-    element,
-    fantasy,
-    left_valorant,
-    logo_anime,
-    logo_cyberPunk,
-    logo_disxcore,
-    logo_element,
-    logo_fantasy,
-    logo_valorant,
-    right_valorant,
-    springTons,
-    springTons_logo
-} from '@public/images'
+// import {
+//     anime,
+//     cyberPunk,
+//     disxcore,
+//     element,
+//     fantasy,
+//     left_valorant,
+//     logo_anime,
+//     logo_cyberPunk,
+//     logo_disxcore,
+//     logo_element,
+//     logo_fantasy,
+//     logo_valorant,
+//     right_valorant,
+//     springTons,
+//     springTons_logo
+// } from '@public/images'
 const ShopTemplate = () => {
     return (
         <div className='h-full flex flex-col overflow-y-auto'>
             <Header />
             <div className='grow p-1 flex flex-col m-20 gap-12  '>
-                <>
+                {/* <>
                     <div className='bg-[#ff4454] w-full h-[220px] rounded-2xl relative'>
-                        <div className='w-full h-full   absolute flex items-end '>
+                        <div className='w-full h-full absolute flex items-end '>
                             <img src={left_valorant.src} className='object-cover rounded-2xl' alt='' />
                         </div>
                         <div className='w-full h-full   absolute flex items-center justify-center  '>
@@ -95,7 +95,7 @@ const ShopTemplate = () => {
                             <img src={logo_disxcore.src} className=' rounded-2xl' alt='' />
                         </div>
                     </div>
-                </>
+                </> */}
             </div>
         </div>
     )

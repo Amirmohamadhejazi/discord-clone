@@ -21,7 +21,9 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
     }
 
     return (
-        <div className={`max-w-60 flex flex-col gap-y-1 border-l-[3.5px] rounded-md  p-2 truncate ${colorCard()}`}>
+        <div
+            className={`max-w-72 flex flex-col gap-y-1 border-l-[3.5px] rounded-md  p-2 truncate bg-general-gray-50 ${colorCard()}`}
+        >
             <div className='flex items-center gap-x-1'>
                 <img src={dataPreviewPost.logo.url} className='rounded-md w-5' alt='' />
                 <Link
