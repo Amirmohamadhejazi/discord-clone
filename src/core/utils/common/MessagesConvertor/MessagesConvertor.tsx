@@ -37,7 +37,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                             } relative group bg-black bg-opacity-0 hover:bg-opacity-5 `}
                             key={index}
                         >
-                            <div className='bg-red-200 p-1 absolute top-0 right-0 hidden group-hover:flex '></div>{' '}
+                            <div className='bg-transparent p-1 absolute top-0 right-0 hidden group-hover:flex '></div>
                             <DProfileMenu dataProfile={userData}>
                                 <div className='w-10 h-10 mt-2 '>
                                     <img
@@ -75,7 +75,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     nextMessage ? '' : 'mb-2 '
                                 } relative group bg-black bg-opacity-0 hover:bg-opacity-5`}
                             >
-                                <div className='bg-red-200 p-1 absolute top-0 right-0 hidden group-hover:flex '></div>
+                                <div className='bg-transparent p-1 absolute top-0 right-0 hidden group-hover:flex '></div>
                                 <div className='flex flex-col gap-1 '>
                                     {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
 
