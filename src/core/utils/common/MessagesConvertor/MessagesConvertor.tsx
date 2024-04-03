@@ -1,8 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { type FC } from 'react'
+import { type FC, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { MdDelete } from 'react-icons/md'
+import { RiArrowGoBackFill } from 'react-icons/ri'
+
+import { AddReaction_icon, Edit_icon, Id_icon } from '@molecules/icons'
 
 import { DMenu } from '@atoms/DMenu'
 import { DProfileMenu } from '@atoms/DProfileMenu'
@@ -17,6 +21,29 @@ import { type IMessagesProps } from './resources/types/types'
 
 const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
     const path = usePathname()
+    const [shiftPressed, setShiftPressed] = useState(false)
+
+    useEffect(() => {
+        const handleKeyDown = (event: TCriticalAnyType) => {
+            if (event.key === 'Shift') {
+                setShiftPressed(true)
+            }
+        }
+
+        const handleKeyUp = (event: TCriticalAnyType) => {
+            if (event.key === 'Shift') {
+                setShiftPressed(false)
+            }
+        }
+
+        window.addEventListener('keydown', handleKeyDown)
+        window.addEventListener('keyup', handleKeyUp)
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown)
+            window.removeEventListener('keyup', handleKeyUp)
+        }
+    }, [])
 
     return (
         <div className='w-full flex flex-col gap-y-1 my-2 '>
@@ -37,7 +64,22 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                             } relative group bg-black bg-opacity-0 hover:bg-opacity-5 `}
                             key={index}
                         >
-                            <div className='bg-transparent p-1 absolute top-0 right-0 hidden group-hover:flex '></div>
+                            <div className='bg-black rounded-md p-1 absolute -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5 '>
+                                {shiftPressed && <Id_icon className='cursor-pointer hover:text-white' />}
+                                <Edit_icon className='cursor-pointer hover:text-white' />
+                                <AddReaction_icon className='cursor-pointer hover:text-white' />
+
+                                {shiftPressed && (
+                                    <>
+                                        <RiArrowGoBackFill size={16} className='cursor-pointer hover:text-white' />
+                                        <MdDelete
+                                            className='cursor-pointer text-red-600'
+                                            size={20}
+                                            onClick={() => console.log(index)}
+                                        />
+                                    </>
+                                )}
+                            </div>
                             <DProfileMenu dataProfile={userData}>
                                 <div className='w-10 h-10 mt-2 '>
                                     <img
@@ -75,7 +117,22 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     nextMessage ? '' : 'mb-2 '
                                 } relative group bg-black bg-opacity-0 hover:bg-opacity-5`}
                             >
-                                <div className='bg-transparent p-1 absolute top-0 right-0 hidden group-hover:flex '></div>
+                                <div className='bg-black rounded-md p-1 absolute -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5'>
+                                    {shiftPressed && <Id_icon className='cursor-pointer hover:text-white' />}
+                                    <Edit_icon className='cursor-pointer hover:text-white' />
+                                    <AddReaction_icon className='cursor-pointer hover:text-white' />
+
+                                    {shiftPressed && (
+                                        <>
+                                            <RiArrowGoBackFill size={16} className='cursor-pointer hover:text-white' />
+                                            <MdDelete
+                                                className='cursor-pointer text-red-600'
+                                                size={20}
+                                                onClick={() => console.log(index)}
+                                            />
+                                        </>
+                                    )}
+                                </div>
                                 <div className='flex flex-col gap-1 '>
                                     {itemDirect.img && <ImgMessage img={itemDirect.img.src} />}
 

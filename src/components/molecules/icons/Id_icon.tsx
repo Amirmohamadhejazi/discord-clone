@@ -2,10 +2,10 @@ import React, { type FC } from 'react'
 
 import { type IIconProps } from './resources/types/types'
 
-const Id_icon: FC<IIconProps> = ({ size = '18' }) => {
+const Id_icon: FC<IIconProps> = ({ size = '18', className }) => {
     return (
         <svg
-            className='icon_f09dde'
+            className={`icon_f09dde ${className}`}
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'

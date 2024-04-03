@@ -9,8 +9,6 @@ import { ImgMessage } from '@atoms/ImgMessage'
 import { type IPreviewProps } from './resources'
 
 const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
-    console.log(dataPreviewPost)
-
     const colorCard = () => {
         switch (dataPreviewPost.publisher) {
             case 'YouTube':
@@ -26,7 +24,7 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
 
     return (
         <div
-            className={`max-w-72 flex flex-col gap-y-1 border-l-[3.5px] rounded-md  p-2 truncate bg-general-gray-50 ${colorCard()}`}
+            className={`sm:max-w-72 w-full flex flex-col gap-y-1 border-l-[3.5px] rounded-md  p-2  bg-general-gray-50 ${colorCard()}`}
         >
             <div className='flex items-center gap-x-1'>
                 <img src={dataPreviewPost.logo.url} className='rounded-md w-5' alt='' />
@@ -35,29 +33,29 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
                     className='flex items-center text-[11px] text-blue-400 hover:underline'
                     target='_blank'
                 >
-                    <span className='text-xs font-bold truncate'>{dataPreviewPost.publisher}</span>
+                    <span className='text-xs font-bold '>{dataPreviewPost.publisher}</span>
                 </Link>
             </div>
             {dataPreviewPost.author && (
-                <div className='flex items-center gap-x-1 text-[11px]'>
+                <div className='flex items-start flex-wrap gap-x-1 text-[11px]'>
                     <span className='font-bold'>Author:</span>
-                    <span className='truncate text-xs'>{dataPreviewPost.author}</span>
+                    <span className=' text-xs'>{dataPreviewPost.author}</span>
                 </div>
             )}
             {dataPreviewPost.title && (
-                <div className='flex items-center gap-x-1 text-[11px]'>
+                <div className='flex items-start flex-wrap gap-x-1 text-[11px]'>
                     <span className='font-bold'>Title:</span>
-                    <span className='truncate text-xs'>{dataPreviewPost.title}</span>
+                    <span className=' text-xs'>{dataPreviewPost.title}</span>
                 </div>
             )}
             {dataPreviewPost.description && (
-                <div className='flex items-center gap-x-1 text-[11px]'>
+                <div className='flex items-start flex-wrap gap-x-1 text-[11px]'>
                     <span className='font-bold'>Description:</span>
-                    <span className='truncate text-xs'>{dataPreviewPost.description}</span>
+                    <span className=' text-xs '>{dataPreviewPost.description}</span>
                 </div>
             )}
             <div className='relative'>
-                <ImgMessage img={dataPreviewPost.image.url} />
+                <ImgMessage img={dataPreviewPost?.image?.url} />
                 <div className='w-full h-full absolute top-0 flex items-center justify-center  bg-black bg-opacity-5 '>
                     <div className='p-2 rounded-full flex items-center justify-center bg-black bg-opacity-50 shadow-2xl shadow-white'>
                         <div className='flex items-center gap-x-2'>
@@ -67,7 +65,7 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
                     </div>
                 </div>
             </div>
-            {dataPreviewPost.date && <span className='text-[10px] font-light truncate'>{dataPreviewPost.date}</span>}
+            {dataPreviewPost.date && <span className='text-[10px] font-light '>{dataPreviewPost.date}</span>}
         </div>
     )
 }

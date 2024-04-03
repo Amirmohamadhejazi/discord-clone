@@ -1,8 +1,10 @@
 import AddDm_icon from './AddDm_icon'
+import AddReaction_icon from './AddReaction_icon'
 import ArrowLink_icon from './ArrowLink_icon'
 import ArrowSendMessage_icon from './ArrowSendMessage_icon'
 import Call_icon from './Call_icon'
 import Dm_icon from './Dm_icon'
+import Edit_icon from './Edit_icon'
 import Frog_icon from './Frog_icon'
 import Gif_icon from './Gif_icon'
 import Gift_icon from './Gift_icon'
@@ -46,5 +48,7 @@ export {
     Call_icon,
     NoiseSuppression_icon,
     OpenLink_icon,
-    PlayMusic_icon
+    PlayMusic_icon,
+    Edit_icon,
+    AddReaction_icon
 }
