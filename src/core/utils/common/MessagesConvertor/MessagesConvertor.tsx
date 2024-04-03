@@ -44,6 +44,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
             window.removeEventListener('keyup', handleKeyUp)
         }
     }, [])
+    console.log(messages)
 
     return (
         <div className='w-full flex flex-col gap-y-1 my-2 '>

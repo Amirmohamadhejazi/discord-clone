@@ -20,6 +20,7 @@ import Owner_icon from './Owner_icon'
 import PlayMusic_icon from './PlayMusic_icon'
 import Shop_icon from './Shop_icon'
 import Sticker_icon from './Sticker_icon'
+import TextBadge_icon from './TextBadge_icon'
 import UserAvatar_icon from './UserAvatar_icon'
 import UserProfile_icon from './UserProfile_icon'
 import Users_icon from './Users_icon'
@@ -50,5 +51,6 @@ export {
     OpenLink_icon,
     PlayMusic_icon,
     Edit_icon,
-    AddReaction_icon
+    AddReaction_icon,
+    TextBadge_icon
 }

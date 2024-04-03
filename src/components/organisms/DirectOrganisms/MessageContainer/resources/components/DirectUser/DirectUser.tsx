@@ -18,6 +18,7 @@ const DirectUser: FC<IDirectUserProps> = ({ dataDirect }) => {
             scrollContainer.scrollTop = scrollContainer.scrollHeight
         }
     })
+
     return (
         <div className='flex items-start flex-col gap-y-1 overflow-auto duration-700' ref={scrollContainerRef}>
             <div className='w-24 h-24 mt-5'>

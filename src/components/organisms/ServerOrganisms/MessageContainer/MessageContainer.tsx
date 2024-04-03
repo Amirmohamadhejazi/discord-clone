@@ -1,5 +1,6 @@
 'use client'
 import { type FC, useEffect, useRef, useState } from 'react'
+import { HiHashtag } from 'react-icons/hi'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
 import { PiWarningCircle } from 'react-icons/pi'
 import { RiEmojiStickerFill } from 'react-icons/ri'
@@ -24,6 +25,8 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
             scrollContainer.scrollTop = scrollContainer.scrollHeight
         }
     })
+    console.log(channelData)
+
     return (
         <div className='grow flex overflow-y-auto  relative '>
             <div className='flex flex-col grow  '>
@@ -32,6 +35,15 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                         className='flex items-start flex-col gap-y-1 overflow-auto duration-700'
                         ref={scrollContainerRef}
                     >
+                        <div className='w-full flex flex-col gap-1 mt-5'>
+                            <div className='flex items-center justify-center bg-[#41434a] size-16 rounded-full'>
+                                <HiHashtag size={45} className='text-white' />
+                                {/* <span className='text-5xl text-white font-bold'>#</span> */}
+                            </div>
+                            <h1 className='text-xl font-bold text-white'> Welcome to #{channelData.name}!</h1>
+                            <h3 className='text-sm'>This is the start of the #{channelData.name} channel.</h3>
+                            <hr className='w-full border-general-border mt-2' />
+                        </div>
                         {channelData?.messages ? (
                             <MessagesConvertor messages={channelData.messages} />
                         ) : (
