@@ -65,7 +65,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                             } relative group bg-black bg-opacity-0 hover:bg-opacity-5 `}
                             key={index}
                         >
-                            <div className='bg-black rounded-md p-1 absolute -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5 '>
+                            <div className='bg-black rounded-md p-1 absolute -top-4 right-4 hidden select-none group-hover:sm:flex items-center justify-center gap-x-1.5 '>
                                 {shiftPressed && <Id_icon className='cursor-pointer hover:text-white' />}
                                 <Edit_icon className='cursor-pointer hover:text-white' />
                                 <AddReaction_icon className='cursor-pointer hover:text-white' />
@@ -74,7 +74,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     <>
                                         <RiArrowGoBackFill size={16} className='cursor-pointer hover:text-white' />
                                         <MdDelete
-                                            className='cursor-pointer text-red-600'
+                                            className='cursor-pointer text-red-600 '
                                             size={20}
                                             onClick={() => console.log(index)}
                                         />
@@ -118,7 +118,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                                     nextMessage ? '' : 'mb-2 '
                                 } relative group bg-black bg-opacity-0 hover:bg-opacity-5`}
                             >
-                                <div className='bg-black rounded-md p-1 absolute -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5'>
+                                <div className='bg-black rounded-md p-1 absolute select-none -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5'>
                                     {shiftPressed && <Id_icon className='cursor-pointer hover:text-white' />}
                                     <Edit_icon className='cursor-pointer hover:text-white' />
                                     <AddReaction_icon className='cursor-pointer hover:text-white' />

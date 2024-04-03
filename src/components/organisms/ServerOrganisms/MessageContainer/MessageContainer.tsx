@@ -25,7 +25,6 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
             scrollContainer.scrollTop = scrollContainer.scrollHeight
         }
     })
-    console.log(channelData)
 
     return (
         <div className='grow flex overflow-y-auto  relative '>
