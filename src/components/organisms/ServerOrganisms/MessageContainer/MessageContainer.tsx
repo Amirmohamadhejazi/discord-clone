@@ -2,7 +2,6 @@
 import { type FC, useEffect, useRef, useState } from 'react'
 import { HiHashtag } from 'react-icons/hi'
 import { HiMiniPlusCircle } from 'react-icons/hi2'
-import { PiWarningCircle } from 'react-icons/pi'
 import { RiEmojiStickerFill } from 'react-icons/ri'
 import { Textarea } from '@mantine/core'
 
@@ -37,20 +36,12 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                         <div className='w-full flex flex-col gap-1 mt-5'>
                             <div className='flex items-center justify-center bg-[#41434a] size-16 rounded-full'>
                                 <HiHashtag size={45} className='text-white' />
-                                {/* <span className='text-5xl text-white font-bold'>#</span> */}
                             </div>
                             <h1 className='text-xl font-bold text-white'> Welcome to #{channelData.name}!</h1>
-                            <h3 className='text-sm'>This is the start of the #{channelData.name} channel.</h3>
-                            <hr className='w-full border-general-border mt-2' />
+                            <h3 className='text-sm mb-2'>This is the start of the #{channelData.name} channel.</h3>
+                            {channelData?.messages && <hr className='w-full border-general-border ' />}
                         </div>
-                        {channelData?.messages ? (
-                            <MessagesConvertor messages={channelData.messages} />
-                        ) : (
-                            <div className=' flex items-center gap-x-1 text-xs my-2'>
-                                <PiWarningCircle size={17} />
-                                <span className='font-semibold'>this channel dont have a message! add message</span>
-                            </div>
-                        )}
+                        {channelData?.messages && <MessagesConvertor messages={channelData.messages} />}
                     </div>
                 </div>
                 <div className='flex-shrink-0 bg-[#383a40] p-2 mx-4 mb-4 rounded-md'>
