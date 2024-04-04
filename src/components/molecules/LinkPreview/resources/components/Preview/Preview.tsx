@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { type FC } from 'react'
 import Link from 'next/link'
+import { format } from 'date-fns'
 
 import { OpenLink_icon, PlayMusic_icon } from '@molecules/icons'
 
@@ -65,7 +66,9 @@ const Preview: FC<IPreviewProps> = ({ dataPreviewPost }) => {
                     </div>
                 </div>
             </div>
-            {dataPreviewPost.date && <span className='text-[10px] font-light '>{dataPreviewPost.date}</span>}
+            {dataPreviewPost.date && (
+                <span className='text-[10px] font-light '>{format(dataPreviewPost.date, 'yyyy-MM-dd')}</span>
+            )}
         </div>
     )
 }
