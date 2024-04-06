@@ -25,4 +25,5 @@ yarn dev
 pnpm dev
 ```
 <h2>Support</h2>
-By following and giving stars to the repository, you support and make us happy
+
+> By following and giving stars to the repository, you support and make us happy
