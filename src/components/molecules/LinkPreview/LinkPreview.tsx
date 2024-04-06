@@ -28,7 +28,6 @@ const LinkPreview: FC<ILinkPreviewProps> = ({ url }) => {
 
         fetchData()
     }, [])
-
     return !loading && previewData?.data?.publisher && <Preview dataPreviewPost={previewData.data} />
 }
 
