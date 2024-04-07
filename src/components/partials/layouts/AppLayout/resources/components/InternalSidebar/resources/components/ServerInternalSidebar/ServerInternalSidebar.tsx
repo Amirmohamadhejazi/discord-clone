@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { IoWifiOutline } from 'react-icons/io5'
+import { IoCloseSharp, IoWifiOutline } from 'react-icons/io5'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { ActionIcon } from '@mantine/core'
+import { useClickOutside } from '@mantine/hooks'
 
 import { Call_icon, NoiseSuppression_icon } from '@molecules/icons'
 
@@ -15,9 +17,13 @@ import { type TCriticalAnyType } from '@core/types/common/critical-any'
 import { onlineStatus } from '@public/images'
 
 import { CategoryChannels, ChannelItem } from './resources/components'
+import { serverMenuData } from './resources/constants/data'
 
 const ServerInternalSidebar = () => {
     const path = usePathname()
+    const [menuServer, setMenuServer] = useState(false)
+    const refMenu = useClickOutside(() => setMenuServer(false))
+
     // const matchesSm = useMediaQuery('(max-width: 576px)')
     const data_profile_me: TCriticalAnyType = static_data_users_servers.find((items) => items.me)
 
@@ -31,14 +37,43 @@ const ServerInternalSidebar = () => {
         .find((itemConnected) => itemConnected.membersConnected.includes(data_profile_me.useId))
 
     return (
-        <div className='h-full flex flex-col '>
-            <div className='w-full flex items-center justify-between sticky  select-none bg-general-gray-50 top-0 h-12 p-3 shadow-md text-white z-10'>
-                <span className='text-sm font-semibold'>{dataSidebar?.serverName}</span>
+        <div className='h-full flex flex-col  '>
+            <div className='flex flex-col relative select-none ' ref={refMenu}>
+                <div
+                    className='w-full flex items-center justify-between  bg-general-gray-50 h-12 p-3 shadow-md text-white z-10 cursor-pointer'
+                    onClick={() => setMenuServer((prev) => !prev)}
+                >
+                    <span className='text-sm font-semibold'>{dataSidebar?.serverName}</span>
 
-                <RiArrowDownSLine size={21} />
+                    {menuServer ? <IoCloseSharp size={19} /> : <RiArrowDownSLine size={21} />}
+                </div>
+                <div
+                    className={`absolute left-1/2 transform -translate-x-1/2 p-2 w-full z-[2] duration-150 ${
+                        menuServer ? 'top-12 visible opacity-100' : '-top-full invisible opacity-0'
+                    }`}
+                >
+                    <div className='flex flex-col gap-y-1 bg-[#111214] rounded-md p-2'>
+                        {serverMenuData.map((items) => {
+                            return (
+                                <>
+                                    <ActionIcon
+                                        className={`w-auto flex items-center justify-between px-1 py-1.5 rounded-sm hover:text-white hover:bg-general-blue cursor-pointer`}
+                                        style={{
+                                            color: items.color ? items.color : ''
+                                        }}
+                                    >
+                                        <span className='text-xs'>{items.name}</span>
+                                        {items.icon}
+                                    </ActionIcon>
+                                    {items.hr && <hr className='border-general-border' />}
+                                </>
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
-            <div className='grow  overflow-y-auto'>
-                {dataSidebar?.banner && <img src={dataSidebar?.banner} alt='banner' />}
+            <div className='grow  overflow-y-auto bg-general-gray-50'>
+                {dataSidebar?.banner && <img src={dataSidebar?.banner} className='w-full object-cover' alt='banner' />}
                 <div className='flex flex-col gap-2 p-3'>
                     {dataSidebar?.channelsContent.map((items, index) =>
                         items.category ? (

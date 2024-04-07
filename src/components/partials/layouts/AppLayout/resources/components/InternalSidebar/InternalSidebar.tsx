@@ -8,9 +8,7 @@ const InternalSidebar = () => {
 
     const isHome = rootHome.includes(path) || path.includes('me')
     return (
-        <div className=' h-full bg-general-gray-50 overflow-y-auto'>
-            {isHome ? <HomeInternalSidebar /> : <ServerInternalSidebar />}
-        </div>
+        <div className=' h-full  overflow-y-auto'>{isHome ? <HomeInternalSidebar /> : <ServerInternalSidebar />}</div>
     )
 }
 
