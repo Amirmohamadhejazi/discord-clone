@@ -46,7 +46,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
     }, [])
 
     return (
-        <div className='w-full flex flex-col gap-y-1 my-2 '>
+        <div className='w-full flex flex-col gap-y-0.5 my-2 '>
             {messages.map((itemDirect, index) => {
                 const regexHome = /^\/channels\/me\/[\w\d]+$/
                 const userData: TCriticalAnyType = (
@@ -59,9 +59,9 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                 if (!prevMessage) {
                     return (
                         <div
-                            className={`flex items-start gap-x-4 ${
+                            className={`flex items-start gap-x-4  ${
                                 !nextMessage ? 'mb-2 ' : ''
-                            } relative group bg-black bg-opacity-0 hover:bg-opacity-5 `}
+                            } relative group bg-black bg-opacity-0 hover:bg-opacity-5 py-1 `}
                             key={index}
                         >
                             <div className='bg-black rounded-md p-1 absolute -top-4 right-4 hidden select-none group-hover:sm:flex items-center justify-center gap-x-1.5 '>
@@ -115,7 +115,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                             <div
                                 className={`flex pl-14 ${
                                     nextMessage ? '' : 'mb-2 '
-                                } relative group bg-black bg-opacity-0 hover:bg-opacity-5`}
+                                } relative group bg-black bg-opacity-0 hover:bg-opacity-5 py-1`}
                             >
                                 <div className='bg-black rounded-md p-1 absolute select-none -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5'>
                                     {shiftPressed && <Id_icon className='cursor-pointer hover:text-white' />}

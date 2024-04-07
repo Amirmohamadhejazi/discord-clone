@@ -650,6 +650,12 @@ export const static_data_servers = [
                                 message: ':Peepo_SuperPeepo:',
                                 messageId: '1',
                                 date: ''
+                            },
+                            {
+                                sender: '991284573726060615',
+                                message: 'this game is very nice https://www.youtube.com/watch?v=bPlbu7z57JI',
+                                messageId: '1',
+                                date: ''
                             }
                         ],
                         href: `/channels/911668092877283329/1219358947048161452`
