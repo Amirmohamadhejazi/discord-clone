@@ -46,7 +46,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
     }, [])
 
     return (
-        <div className='w-full flex flex-col gap-y-0.5 my-2 '>
+        <div className='w-full flex flex-col gap-y-0.5 my-2 select-none '>
             {messages.map((itemDirect, index) => {
                 const regexHome = /^\/channels\/me\/[\w\d]+$/
                 const userData: TCriticalAnyType = (
