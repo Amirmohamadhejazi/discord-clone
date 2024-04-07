@@ -1,4 +1,4 @@
 import { ExternalSidebar } from './components/ExternalSidebar'
 import { InternalSidebar } from './components/InternalSidebar'
-
-export { InternalSidebar, ExternalSidebar }
+import Setting from './components/Setting/Setting'
+export { InternalSidebar, ExternalSidebar, Setting }

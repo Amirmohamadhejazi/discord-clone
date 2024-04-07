@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 import MobileMenuReducer from '../Reducer/MobileMenu/MobileMenuSlice'
+import SettingUserPageReducer from '../Reducer/SettingUserPage/SettingUserPageSlice'
 export const store = configureStore({
     reducer: {
-        MobileMenu: MobileMenuReducer
+        MobileMenu: MobileMenuReducer,
+        SettingUserPage: SettingUserPageReducer
     }
 })
 

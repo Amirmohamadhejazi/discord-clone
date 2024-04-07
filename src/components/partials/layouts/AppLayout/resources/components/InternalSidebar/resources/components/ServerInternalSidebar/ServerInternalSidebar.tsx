@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { IoCloseSharp, IoWifiOutline } from 'react-icons/io5'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { RiArrowDownSLine } from 'react-icons/ri'
+import { useDispatch } from 'react-redux'
 import { ActionIcon } from '@mantine/core'
 import { useClickOutside } from '@mantine/hooks'
 
@@ -12,6 +13,7 @@ import { Call_icon, NoiseSuppression_icon } from '@molecules/icons'
 import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_data_servers, static_data_users_servers } from '@core/constants/dummy-data'
+import { openSettingPage } from '@core/services/stores/Reducer/SettingUserPage/SettingUserPageSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
@@ -21,6 +23,7 @@ import { serverMenuData } from './resources/constants/data'
 
 const ServerInternalSidebar = () => {
     const path = usePathname()
+    const dispatch = useDispatch()
     const [menuServer, setMenuServer] = useState(false)
     const refMenu = useClickOutside(() => setMenuServer(false))
 
@@ -35,7 +38,6 @@ const ServerInternalSidebar = () => {
         .flat(Infinity)
         .filter((itemsAll) => itemsAll.membersConnected)
         .find((itemConnected) => itemConnected.membersConnected.includes(data_profile_me.useId))
-
     return (
         <div className='h-full flex flex-col  '>
             <div className='flex flex-col relative select-none ' ref={refMenu}>
@@ -171,7 +173,10 @@ const ServerInternalSidebar = () => {
                         <div className='flex items-center justify-center gap-1 text-xl gap-x-2 *:cursor-pointer  '>
                             <IoMic className='hover:text-white duration-300 ' />
                             <IoHeadset className='hover:text-white duration-300 ' />
-                            <IoSettingsSharp className='hover:text-white duration-300 ' />
+                            <IoSettingsSharp
+                                className='hover:text-white duration-300 '
+                                onClick={() => dispatch(openSettingPage())}
+                            />
                         </div>
                     </div>
                 </div>

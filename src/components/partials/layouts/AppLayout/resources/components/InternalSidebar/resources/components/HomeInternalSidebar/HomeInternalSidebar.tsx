@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { static_all_users } from '@core/constants/dummy-data'
 import { static_data_direct } from '@core/constants/dummy-data/direct/static-data-direct'
 import { closeMenu } from '@core/services/stores/Reducer/MobileMenu/MobileMenuSlice'
+import { openSettingPage } from '@core/services/stores/Reducer/SettingUserPage/SettingUserPageSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
 import { onlineStatus } from '@public/images'
@@ -97,7 +98,10 @@ const HomeInternalSidebar = () => {
                         <div className='flex items-center justify-center gap-1 text-xl gap-x-2 *:cursor-pointer  '>
                             <IoMic className='hover:text-white duration-300 ' />
                             <IoHeadset className='hover:text-white duration-300 ' />
-                            <IoSettingsSharp className='hover:text-white duration-300 ' />
+                            <IoSettingsSharp
+                                className='hover:text-white duration-300 '
+                                onClick={() => dispatch(openSettingPage())}
+                            />
                         </div>
                     </div>
                 </div>
