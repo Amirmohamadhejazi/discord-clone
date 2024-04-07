@@ -76,7 +76,7 @@ const ViewUsers: FC<IViewUsersProps> = ({ channelData }) => {
 
                                             {itemUser.ownerServer && (
                                                 <Tooltip
-                                                    label={'Server ownerServer'}
+                                                    label={'Server Owner '}
                                                     withArrow
                                                     multiline
                                                     offset={5}

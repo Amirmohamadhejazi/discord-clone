@@ -33,4 +33,5 @@ pnpm dev
 > By following and giving stars to the repository, you support and make us happy
 
 ## License
+
 Copyright © 2024 contributing authors (AmirmohamadHejaziRad). Licensed under the MIT.
