@@ -115,7 +115,7 @@ const MessagesConvertor: FC<IMessagesProps> = ({ messages }) => {
                             <div
                                 className={`flex pl-14 ${
                                     nextMessage ? '' : 'mb-2 '
-                                } relative group bg-black bg-opacity-0 hover:bg-opacity-5 py-1`}
+                                } relative group bg-black bg-opacity-0 hover:bg-opacity-5 py-0.5`}
                             >
                                 <div className='bg-black rounded-md p-1 absolute select-none -top-4 right-4 hidden group-hover:sm:flex items-center justify-center gap-x-1.5'>
                                     {shiftPressed && <Id_icon className='cursor-pointer hover:text-white' />}
