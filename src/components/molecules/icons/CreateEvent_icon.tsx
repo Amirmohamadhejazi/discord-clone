@@ -20,9 +20,9 @@ const CreateEvent_icon: FC<IIconProps> = ({ size = '24', className }) => {
                 className=''
             ></path>
             <path
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M22 13.67c0 .12-.33.17-.39.06A2.87 2.87 0 0 0 19 12a3 3 0 0 0-3 3v.5a.5.5 0 0 1-.5.5H15a3 3 0 0 0-3 3c0 1.2.7 2.1 1.73 2.61.11.06.06.39-.06.39H5a3 3 0 0 1-3-3v-9a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v3.67ZM5.5 12a.5.5 0 0 0-.5.5v3c0 .28.22.5.5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3Z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
                 fill='currentColor'
                 className=''
             ></path>

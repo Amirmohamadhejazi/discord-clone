@@ -21,9 +21,9 @@ const AppDirectory_icon: FC<IIconProps> = ({ size = '16', className }) => {
             ></path>
             <path
                 fill='currentColor'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M12 21c5.52 0 10-1.86 10-6 0-5.59-2.8-10.07-4.26-11.67a1 1 0 1 0-1.48 1.34 14.8 14.8 0 0 1 2.35 3.86A10.23 10.23 0 0 0 12 6C9.47 6 7.15 7.02 5.4 8.53a14.8 14.8 0 0 1 2.34-3.86 1 1 0 0 0-1.48-1.34A18.65 18.65 0 0 0 2 15c0 4.14 4.48 6 10 6Zm0-12c3.87 0 7 2 7 4.2S15.87 17 12 17s-7-1.6-7-3.8C5 11 8.13 9 12 9Z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
                 className=''
             ></path>
         </svg>

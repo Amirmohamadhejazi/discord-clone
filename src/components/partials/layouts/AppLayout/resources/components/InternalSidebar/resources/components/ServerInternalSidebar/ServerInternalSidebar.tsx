@@ -55,9 +55,9 @@ const ServerInternalSidebar = () => {
                     }`}
                 >
                     <div className='flex flex-col gap-y-1 bg-[#111214] rounded-md p-2'>
-                        {serverMenuData.map((items) => {
+                        {serverMenuData.map((items, index) => {
                             return (
-                                <>
+                                <div className='w-full flex flex-col' key={index}>
                                     <ActionIcon
                                         className={`w-auto flex items-center justify-between px-1 py-1.5 rounded-sm hover:text-white hover:bg-general-blue cursor-pointer`}
                                         style={{
@@ -68,7 +68,7 @@ const ServerInternalSidebar = () => {
                                         {items.icon}
                                     </ActionIcon>
                                     {items.hr && <hr className='border-general-border' />}
-                                </>
+                                </div>
                             )
                         })}
                     </div>
