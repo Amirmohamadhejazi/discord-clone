@@ -808,7 +808,7 @@ export const static_data_servers = [
 
                             {
                                 sender: '411916947773587456',
-                                message: 'travis-scott-fe-n ',
+                                message: 'travis-scott-fe-n',
                                 messageId: '1',
                                 date: ''
                             }

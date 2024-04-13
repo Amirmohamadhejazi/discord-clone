@@ -12,7 +12,7 @@ const handlerMessage = (textMessage: string) => {
     // const tooltipIndex = 0
 
     return (
-        <div className='flex gap-x-1 flex-wrap items-center   text-sm text-white'>
+        <div className='flex gap-x-1 flex-wrap items-center  break-all  text-sm text-white'>
             {messageItems.map((item, index) => {
                 const emojiRegex = /:\w+:/g
 
@@ -41,11 +41,10 @@ const handlerMessage = (textMessage: string) => {
                         )
                     } else {
                         // Emoji not found, replace with the original text
-                        return (
-                            <span className='flex items-center gap-x-1' key={index}>
-                                {item}
-                            </span>
-                        )
+                        return item + '  '
+                        // <span className='flex items-center gap-x-1' key={index}>
+                        //     {item}
+                        // </span>
                     }
                 } else if (item.trim() !== '') {
                     const messageItems = item.split(' ')
@@ -71,9 +70,10 @@ const handlerMessage = (textMessage: string) => {
                                             {itemMessage}
                                         </Link>
                                     ) : (
-                                        <span className='flex items-center gap-x-1 break-all' key={indexMessage}>
-                                            {itemMessage}
-                                        </span>
+                                        itemMessage + '  '
+                                        // <span className='flex items-center gap-x-1 break-all' key={indexMessage}>
+                                        //     {}
+                                        // </span>
                                     )
                                 })}
                             </div>
