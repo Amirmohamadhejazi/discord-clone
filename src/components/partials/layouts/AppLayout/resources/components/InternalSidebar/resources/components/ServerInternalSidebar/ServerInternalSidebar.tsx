@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { IoCloseSharp, IoWifiOutline } from 'react-icons/io5'
+import { IoWifiOutline } from 'react-icons/io5'
 import { IoHeadset, IoMic, IoSettingsSharp } from 'react-icons/io5'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { useDispatch } from 'react-redux'
@@ -42,12 +42,17 @@ const ServerInternalSidebar = () => {
         <div className='h-full flex flex-col  '>
             <div className='flex flex-col relative select-none ' ref={refMenu}>
                 <div
-                    className='w-full flex items-center justify-between  bg-general-gray-50 h-12 p-3 shadow-md text-white z-10 cursor-pointer'
+                    className='w-full flex items-center justify-between  bg-general-gray-50 h-12 p-3 shadow-md text-white z-10 cursor-pointer relative'
                     onClick={() => setMenuServer((prev) => !prev)}
                 >
                     <span className='text-sm font-semibold'>{dataSidebar?.serverName}</span>
-
-                    {menuServer ? <IoCloseSharp size={19} /> : <RiArrowDownSLine size={21} />}
+                    <RiArrowDownSLine
+                        className={`absolute duration-300 ${
+                            menuServer ? 'top-2.5 opacity-100' : 'top-1 opacity-0'
+                        }  right-3`}
+                        size={21}
+                    />
+                    <RiArrowDownSLine className={`duration-300 ${menuServer ? 'rotate-180' : ''}`} size={21} />
                 </div>
                 <div
                     className={`absolute left-1/2 transform -translate-x-1/2 p-2 w-full z-[2] duration-150 ${

@@ -34,8 +34,8 @@ const MessageContainer: FC<IMessageContainerProps> = ({ isShowMember, channelDat
                             <div className='flex items-center justify-center bg-[#41434a] size-16 rounded-full'>
                                 <HiHashtag size={45} className='text-white' />
                             </div>
-                            <h1 className='text-xl font-bold text-white'> Welcome to #{channelData.name}!</h1>
-                            <h3 className='text-sm mb-2'>This is the start of the #{channelData.name} channel.</h3>
+                            <h1 className='text-xl font-bold text-white'> Welcome to # {channelData.name}!</h1>
+                            <h3 className='text-sm mb-2'>This is the start of the # {channelData.name} channel.</h3>
                             {channelData?.messages && <hr className='w-full border-general-border ' />}
                         </div>
                         {channelData?.messages && <MessagesConvertor messages={channelData.messages} />}

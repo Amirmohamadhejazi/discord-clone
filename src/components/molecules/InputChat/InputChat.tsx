@@ -44,7 +44,7 @@ const InputChat: FC<IInputChatProps> = ({ textMessage, setTextMessage, placehold
                         value={textMessage}
                         onChange={(e: TCriticalAnyType) => setTextMessage(e.target.value)}
                         onKeyDown={handleKeyPress}
-                        placeholder={`Message to #${placeholder}`}
+                        placeholder={`Message to # ${placeholder}`}
                         autosize
                     />
                 </form>
