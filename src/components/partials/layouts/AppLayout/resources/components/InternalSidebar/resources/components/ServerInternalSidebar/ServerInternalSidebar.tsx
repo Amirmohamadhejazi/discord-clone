@@ -55,7 +55,7 @@ const ServerInternalSidebar = () => {
                     <RiArrowDownSLine className={`duration-300 ${menuServer ? 'rotate-180' : ''}`} size={21} />
                 </div>
                 <div
-                    className={`absolute left-1/2 transform -translate-x-1/2 p-2 w-full z-[2] duration-150 ${
+                    className={`w-full max-w-72 absolute left-0 transform  p-2 z-[2] duration-150 ${
                         menuServer ? 'top-12 visible opacity-100' : '-top-full invisible opacity-0'
                     }`}
                 >
