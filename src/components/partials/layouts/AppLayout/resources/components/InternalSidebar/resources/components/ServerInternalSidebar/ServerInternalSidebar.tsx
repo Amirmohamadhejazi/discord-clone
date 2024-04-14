@@ -13,6 +13,7 @@ import { Call_icon, NoiseSuppression_icon } from '@molecules/icons'
 import { DProfileMenu } from '@atoms/DProfileMenu'
 
 import { static_data_servers, static_data_users_servers } from '@core/constants/dummy-data'
+import { data_profile_me } from '@core/constants/dummy-data/servers/static-data-servers'
 import { openSettingPage } from '@core/services/stores/Reducer/SettingUserPage/SettingUserPageSlice'
 import { type TCriticalAnyType } from '@core/types/common/critical-any'
 
@@ -28,7 +29,6 @@ const ServerInternalSidebar = () => {
     const refMenu = useClickOutside(() => setMenuServer(false))
 
     // const matchesSm = useMediaQuery('(max-width: 576px)')
-    const data_profile_me: TCriticalAnyType = static_data_users_servers.find((items) => items.me)
 
     const [, , idServer] = path.split('/')
 

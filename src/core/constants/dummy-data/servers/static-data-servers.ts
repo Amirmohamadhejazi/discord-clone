@@ -1,3 +1,5 @@
+import { type TCriticalAnyType } from '@core/types/common/critical-any'
+
 import {
     avatar_me,
     avatarBardia,
@@ -873,3 +875,5 @@ export const static_data_servers = [
         ]
     }
 ]
+
+export const data_profile_me: TCriticalAnyType = static_data_users_servers.find((items) => items.me)
