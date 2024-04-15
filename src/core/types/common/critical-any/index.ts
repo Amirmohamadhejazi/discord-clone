@@ -1,3 +1,3 @@
 import type TCriticalAnyType from './critical-any.types'
-
-export type { TCriticalAnyType }
+import { type TDataSettingSideBar } from './dataSettingSideBar'
+export type { TCriticalAnyType, TDataSettingSideBar }

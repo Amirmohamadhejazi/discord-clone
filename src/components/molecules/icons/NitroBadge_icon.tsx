@@ -2,10 +2,10 @@ import React, { type FC } from 'react'
 
 import { type IIconProps } from './resources/types/types'
 
-const NitroBadge_icon: FC<IIconProps> = ({ size = '20' }) => {
+const NitroBadge_icon: FC<IIconProps> = ({ size = '20', className }) => {
     return (
         <svg
-            className='linkButtonIcon__2f35b'
+            className={className}
             aria-hidden='true'
             role='img'
             xmlns='http://www.w3.org/2000/svg'
