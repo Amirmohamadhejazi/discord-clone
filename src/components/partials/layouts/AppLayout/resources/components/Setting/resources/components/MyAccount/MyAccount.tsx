@@ -16,7 +16,7 @@ const MyAccount = () => {
         { title: 'PhoneNumber', value: '09901508624', spoiler: true }
     ]
     return (
-        <>
+        <div className='flex flex-col gap-y-4'>
             <span className=' text-lg text-white font-semibold'>My Account</span>
             <div className=' bg-general-gray rounded-md overflow-hidden relative'>
                 <div className='bg-black pt-20' />
@@ -164,7 +164,7 @@ const MyAccount = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
