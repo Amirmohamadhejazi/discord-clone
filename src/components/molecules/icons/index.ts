@@ -21,6 +21,7 @@ import NoiseSuppression_icon from './NoiseSuppression_icon'
 import Notification_icon from './Notification_icon'
 import OpenLink_icon from './OpenLink_icon'
 import Owner_icon from './Owner_icon'
+import Phone_icon from './Phone_icon'
 import PlayMusic_icon from './PlayMusic_icon'
 import Privacy_icon from './Privacy_icon'
 import ServerInsight_icon from './ServerInsight_icon'
@@ -32,6 +33,7 @@ import UserAvatar_icon from './UserAvatar_icon'
 import UserProfile_icon from './UserProfile_icon'
 import Users_icon from './Users_icon'
 import Voice_icon from './Voice_icon'
+import Windows_icon from './Windows_icon'
 export {
     AddDm_icon,
     ArrowLink_icon,
@@ -66,5 +68,7 @@ export {
     AppDirectory_icon,
     Notification_icon,
     Privacy_icon,
-    Leave_icon
+    Leave_icon,
+    Windows_icon,
+    Phone_icon
 }
