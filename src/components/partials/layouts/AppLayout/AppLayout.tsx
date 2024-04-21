@@ -26,7 +26,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
             <div className={`${openedMenu ? 'block' : 'md:block hidden'}`}>
                 <ExternalSidebar />
             </div>
-            <div className={`w-full md:w-[230px] h-full  ${openedMenu ? '' : 'hidden md:block'} shrink-0`}>
+            <div className={`w-full md:w-[230px] h-full  ${openedMenu ? '' : 'hidden md:block'}  `}>
                 <InternalSidebar />
             </div>
             {/* <div className='grow h-full bg-general-gray-100'>{children}</div> */}
