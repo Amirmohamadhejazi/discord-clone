@@ -2,7 +2,7 @@ import { Leave_icon, NitroBadge_icon } from '@molecules/icons'
 
 import { type TDataSettingSideBar } from '@core/types/common/critical-any'
 
-import { Clips, Devices, FriendRequest, MyAccount } from '../components'
+import { Clips, Devices, FriendRequest, MyAccount, Subscriptions } from '../components'
 
 export const dataSideBar: TDataSettingSideBar = [
     {
@@ -60,7 +60,7 @@ export const dataSideBar: TDataSettingSideBar = [
             },
             {
                 name: 'Subscriptions',
-                component: '<testComponent/>'
+                component: <Subscriptions />
             },
             {
                 name: 'Gift Inventory',

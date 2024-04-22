@@ -43,7 +43,11 @@ const Setting = () => {
                             className={`md:w-[200px] h-full   flex-col gap-2 pr-3  md:py-14 bg-general-gray-50 shrink-0 flex`}
                         >
                             <div className='flex md:hidden justify-end w-full z-10 bg-general-gray-50 text-white sticky top-0 '>
-                                <CloseIcon size='23' className='my-2 mx-1' onClick={() => setSideBarMobile(false)} />
+                                <CloseIcon
+                                    size='23'
+                                    className='my-2 mx-1 cursor-pointer'
+                                    onClick={() => setSideBarMobile(false)}
+                                />
                             </div>
                             {(dataSideBar as TDataSettingSideBar).map((item, index) => (
                                 <div className='flex flex-col gap-2' key={index}>
@@ -77,7 +81,7 @@ const Setting = () => {
                         </div>
                     </div>
                     <div className='w-full md:w-2/3 flex justify-center md:justify-start bg-general-gray-100 h-full overflow-auto'>
-                        <div className='w-full md:max-w-[600px] h-full bg-general-gray-100 text-white  px-8 py-5 md:py-14  '>
+                        <div className='w-full md:max-w-[600px] h-full bg-general-gray-100 text-white  px-10 py-5 md:py-14  '>
                             <div className='flex items-center justify-between relative'>
                                 <ActionIcon
                                     classNames={{ root: 'w-auto  md:hidden' }}
@@ -86,22 +90,16 @@ const Setting = () => {
                                     <HiMiniBars3 size={28} />
                                 </ActionIcon>
                                 <div
-                                    className='md:absolute md:top-15 md:-right-5 cursor-pointer hover:scale-105 duration-200'
+                                    className='flex flex-col items-center gap-y-1 md:absolute md:top-0 md:-right-[7%] cursor-pointer '
                                     onClick={() => dispatch(closeSettingPage())}
                                 >
                                     <SlClose size={33} />
+                                    <span className='text-sm font-semibold'>Esc</span>
                                 </div>
                             </div>
                             {componentSetting?.component && componentSetting.component}
                         </div>
                     </div>
-                    {/* <div
-                            className={`bg-general-gray-100 absolute size-full z-50 ${
-                                sideBarMobile ? 'opacity-100 top-0' : '-top-full opacity-0'
-                            } duration-300`}
-                        >
-                            2
-                        </div> */}
                 </div>
             </div>
         </div>
