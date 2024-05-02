@@ -16,8 +16,10 @@ import Invite_icon from './Invite_icon'
 import Leave_icon from './Leave_icon'
 import Logo_icon from './Logo_icon'
 import Menu_icon from './Menu_icon'
+import Nitro_Badge_12 from './Nitro_Badge_12'
 import NitroBadge_icon from './NitroBadge_icon'
 import NoiseSuppression_icon from './NoiseSuppression_icon'
+import NoItems_icon from './NoItems_icon'
 import Notification_icon from './Notification_icon'
 import OpenLink_icon from './OpenLink_icon'
 import Owner_icon from './Owner_icon'
@@ -70,5 +72,7 @@ export {
     Privacy_icon,
     Leave_icon,
     Windows_icon,
-    Phone_icon
+    Phone_icon,
+    Nitro_Badge_12,
+    NoItems_icon
 }

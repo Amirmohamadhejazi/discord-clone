@@ -13,28 +13,23 @@ export const dataSideBar: TDataSettingSideBar = [
                 component: <MyAccount />
             },
             {
-                name: 'Profiles',
-                component: '<testComponent/>'
+                name: 'Profiles'
             },
             {
-                name: 'Privacy & Safety',
-                component: '<testComponent/>'
+                name: 'Privacy & Safety'
             },
             {
-                name: 'Family Center',
-                component: '<testComponent/>'
+                name: 'Family Center'
             },
             {
-                name: 'Authorized Apps',
-                component: '<testComponent/>'
+                name: 'Authorized Apps'
             },
             {
                 name: 'Devices',
                 component: <Devices />
             },
             {
-                name: 'Connections',
-                component: '<testComponent/>'
+                name: 'Connections'
             },
             {
                 name: 'Clips',
@@ -51,24 +46,20 @@ export const dataSideBar: TDataSettingSideBar = [
         sub: [
             {
                 name: 'Nitro',
-                component: '<testComponent/>',
                 icon: <NitroBadge_icon className='text-[#af559c]' size='18' />
             },
             {
-                name: 'Server Boost',
-                component: '<testComponent/>'
+                name: 'Server Boost'
             },
             {
                 name: 'Subscriptions',
                 component: <Subscriptions />
             },
             {
-                name: 'Gift Inventory',
-                component: '<testComponent/>'
+                name: 'Gift Inventory'
             },
             {
-                name: 'Billing',
-                component: '<testComponent/>'
+                name: 'Billing'
             }
         ]
     },
@@ -76,40 +67,31 @@ export const dataSideBar: TDataSettingSideBar = [
         title: 'App Settings',
         sub: [
             {
-                name: 'Appearance',
-                component: '<testComponent/>'
+                name: 'Appearance'
             },
             {
-                name: 'Accessibility',
-                component: '<testComponent/>'
+                name: 'Accessibility'
             },
             {
-                name: 'Voice & Video',
-                component: '<testComponent/>'
+                name: 'Voice & Video'
             },
             {
-                name: 'Chat',
-                component: '<testComponent/>'
+                name: 'Chat'
             },
             {
-                name: 'Notifications',
-                component: '<testComponent/>'
+                name: 'Notifications'
             },
             {
-                name: 'Keybinds',
-                component: '<testComponent/>'
+                name: 'Keybinds'
             },
             {
-                name: 'Language',
-                component: '<testComponent/>'
+                name: 'Language'
             },
             {
-                name: 'Streamer Mode',
-                component: '<testComponent/>'
+                name: 'Streamer Mode'
             },
             {
-                name: 'Advanced',
-                component: '<testComponent/>'
+                name: 'Advanced'
             }
         ]
     },
@@ -117,24 +99,20 @@ export const dataSideBar: TDataSettingSideBar = [
         title: 'Activity Settings',
         sub: [
             {
-                name: 'Activity Privacy',
-                component: '<testComponent/>'
+                name: 'Activity Privacy'
             }
         ]
     },
     {
         sub: [
             {
-                name: "What's New",
-                component: '<testComponent/>'
+                name: "What's New"
             },
             {
-                name: 'Merch',
-                component: '<testComponent/>'
+                name: 'Merch'
             },
             {
-                name: 'HypeSquad',
-                component: '<testComponent/>'
+                name: 'HypeSquad'
             }
         ]
     },
@@ -142,7 +120,6 @@ export const dataSideBar: TDataSettingSideBar = [
         sub: [
             {
                 name: 'Log Out',
-                component: '<testComponent/>',
                 icon: <Leave_icon />
             }
         ]

@@ -1,10 +1,12 @@
+import { type ReactNode } from 'react'
+
 import type TCriticalAnyType from './critical-any.types'
 
 type TDataSettingSideBar = {
     title?: string
     sub: {
         name: string
-        component: TCriticalAnyType
+        component?: ReactNode
         icon?: TCriticalAnyType
     }[]
 }[]

@@ -59,15 +59,19 @@ const Setting = () => {
                                     {item.sub.map((itemSub, indexSub) => {
                                         return (
                                             <ActionIcon
-                                                onClick={() => setSideBar(itemSub.name)}
+                                                onClick={() => itemSub?.component && setSideBar(itemSub.name)}
                                                 classNames={{
                                                     root: `text-left block text-sm duration-200 overflow-hidden flex items-center justify-between px-2 outline-transparent ${
                                                         sideBar === itemSub.name
                                                             ? 'bg-general-gray-200 text-white'
-                                                            : 'hover:bg-general-gray-200 text-general-gray-800 hover:text-white transparent'
-                                                    }`
+                                                            : itemSub?.component
+                                                              ? 'hover:bg-general-gray-200 text-general-gray-800 hover:text-white transparent'
+                                                              : 'opacity-40'
+                                                    }
+                                                    `
                                                 }}
                                                 className='w-full text-left '
+                                                disabled={!itemSub?.component}
                                                 key={indexSub}
                                             >
                                                 <span>{itemSub.name}</span>
@@ -81,7 +85,7 @@ const Setting = () => {
                         </div>
                     </div>
                     <div className='w-full md:w-2/3 flex justify-center md:justify-start bg-general-gray-100 h-full overflow-auto'>
-                        <div className='w-full md:max-w-[600px] h-full bg-general-gray-100 text-white  px-10 py-5 md:py-14  '>
+                        <div className='w-full md:max-w-[600px] h-full bg-general-gray-100 text-white px-3 md:px-10 py-5 md:py-14  '>
                             <div className='flex items-center justify-between relative'>
                                 <ActionIcon
                                     classNames={{ root: 'w-auto  md:hidden' }}
