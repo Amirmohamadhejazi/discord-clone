@@ -5,7 +5,7 @@ export interface SettingUserPageState {
 }
 
 const initialState: SettingUserPageState = {
-    openedSettingPage: true
+    openedSettingPage: false
 }
 
 export const SettingUserPage = createSlice({

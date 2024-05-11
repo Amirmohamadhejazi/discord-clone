@@ -21,7 +21,6 @@ const Subscriptions = () => {
                 <div className='flex flex-col gap-y-1 '>
                     <div className='flex items-center justify-between'>
                         <span className='font-semibold'>Nitro</span>
-
                         <Button className='bg-white text-blue-400 text-xs' classNames={{ root: 'px-2' }} size='xs'>
                             Re-subscribe
                         </Button>
