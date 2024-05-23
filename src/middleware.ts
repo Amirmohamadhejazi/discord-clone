@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
 import createMiddleware from 'next-intl/middleware'
 
 import { DEFAULT_LOCALE, LOCALES } from '@core/configs/i18n'
@@ -12,6 +12,12 @@ export default function middleware(request: NextRequest) {
 
     const response = intlMiddleware(request)
     response.headers.set('x-url', request.nextUrl.pathname)
+
+    const baseUrl = new URL('/', request.url).href
+
+    if (request.url === baseUrl) {
+        return NextResponse.redirect(new URL('/channels/me', request.url))
+    }
 
     return response
 }
