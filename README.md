@@ -1,37 +1,70 @@
-## Discord Clone
+# Discord Clone (Static)
 
-<img src="https://github.com/Amirmohamadhejazi/discord-clone/blob/main/public/images/discord-clone-preview.png" />
+This is a **static clone of Discord's user interface**, built to closely replicate the look and feel of the real application. It's designed for practice, portfolio purposes, or UI reference—**no backend or API integration is included**.
 
-This front-end project has been developed using next js and tailwind
-</br>
-in this project, it has been tried to repeat or improve the features and functions of the popular Discord platform as much as possible.
+![Preview](https://github.com/Amirmohamadhejazi/discord-clone/raw/main/public/images/discord-clone-preview.png)
 
-## To view the project live, refer to the link below:
+## 🌐 Live Demo
 
-<a href="https://discord-clone-seven-gamma.vercel.app/channels/me">link project live</a>
+[https://discord-clone-seven-gamma.vercel.app/](https://discord-clone-seven-gamma.vercel.app/)
 
-## Follow the steps below to run the project
+## ✨ Features
 
-First, Install the modules:
+- Clean and modern Discord-like UI
+- Responsive layout for desktop and mobile
+- Built with reusable and organized components
+- Dark theme similar to Discord’s native interface
+
+## 🛠 Tech Stack
+
+- **Framework:** React
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite or Create React App (update accordingly)
+
+## 📦 Getting Started
+
+1. **Clone the repository:**
 
 ```bash
-yarn
-# or
-pnpm
+git clone https://github.com/Amirmohamadhejazi/discord-clone.git
+cd discord-clone
 ```
 
-Second, Run proje:
+2. **Install dependencies:**
 
 ```bash
-yarn dev
-# or
-pnpm dev
+npm install
 ```
 
-<h2>Support</h2>
+3. **Start the project:**
 
-> By following and giving stars to the repository, you support and make us happy
+```bash
+npm run dev
+```
 
-## License
+## 📁 Project Structure
 
-Copyright © 2024 contributing authors (AmirmohamadHejaziRad). Licensed under the MIT.
+```
+discord-clone/
+├── public/
+│   └── images/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── assets/
+├── package.json
+└── README.md
+```
+
+## 🚧 Status
+
+This project is **static only** and not connected to any real-time services, authentication systems, or databases.
+
+## 🙌 Contributing
+
+Contributions are welcome! Feel free to fork, improve, or use the UI in your own projects.
+
+## 📄 License
+
+This project is open-source under the [MIT License](LICENSE).
