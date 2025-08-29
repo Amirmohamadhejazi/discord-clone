@@ -6,7 +6,7 @@ This is a **static clone of Discord's user interface**, built to closely replica
 
 ## 🌐 Live Demo
 
-[https://discord-clone-seven-gamma.vercel.app/](https://discord-clone-seven-gamma.vercel.app/)
+[https://discord-clone-seven-gamma.vercel.app/](https://discord-clone-rose-psi.vercel.app/)
 
 ## ✨ Features
 
